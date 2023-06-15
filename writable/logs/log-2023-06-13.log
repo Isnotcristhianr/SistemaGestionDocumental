@@ -1,0 +1,41 @@
+CRITICAL - 2023-06-13 21:24:22 --> CodeIgniter\HTTP\URI::removeDotSegments(): Argument #1 ($path) must be of type string, null given, called in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Helpers\url_helper.php on line 71
+in SYSTEMPATH\HTTP\URI.php on line 197.
+ 1 SYSTEMPATH\Helpers\url_helper.php(71): CodeIgniter\HTTP\URI::removeDotSegments(null)
+ 2 SYSTEMPATH\Helpers\url_helper.php(118): _get_uri(null, Object(Config\App))
+ 3 SYSTEMPATH\Helpers\url_helper.php(158): site_url(null, null, Object(Config\App))
+ 4 APPPATH\Views\inicio.php(8): base_url(null)
+ 5 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\inicio.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('inicio', [], true)
+ 8 APPPATH\Controllers\ControladorMain.php(9): view('inicio')
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorMain->inicio()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorMain))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 22:03:29 --> Invalid file: "vista_degrad.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('vista_degrad.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('vista_degrad', [], true)
+ 3 APPPATH\Controllers\ControladorMain.php(15): view('vista_degrad')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorMain->degrad()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorMain))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 22:06:11 --> Invalid file: "/app/Views/vistasDatosEstadisticos/vista_degrad.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/app/Views/vistasDatosEstadisticos/vista_degrad.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/app/Views/vistasDatosEstadisticos/vista_degrad.php', [], true)
+ 3 APPPATH\Controllers\ControladorMain.php(15): view('/app/Views/vistasDatosEstadisticos/vista_degrad.php')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorMain->degrad()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorMain))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 22:06:22 --> Invalid file: " vista_degrad.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile(' vista_degrad.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render(' vista_degrad', [], true)
+ 3 APPPATH\Controllers\ControladorMain.php(15): view(' vista_degrad')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorMain->degrad()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorMain))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

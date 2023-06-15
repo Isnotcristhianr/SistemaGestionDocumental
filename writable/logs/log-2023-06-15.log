@@ -1,0 +1,9 @@
+CRITICAL - 2023-06-15 21:18:28 --> Invalid file: "vista_deposgrad_matr.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('vista_deposgrad_matr.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('vista_deposgrad_matr', [], true)
+ 3 APPPATH\Controllers\ControladorPosgrado.php(15): view('vista_deposgrad_matr')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorPosgrado->deposgradMatr()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorPosgrado))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
