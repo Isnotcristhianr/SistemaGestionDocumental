@@ -53,6 +53,9 @@ $routes->get('/deTecGrad', 'ControladorTec::detecGrad');
 //Datos Estadisticos Historico Puce-I
 $routes->get('/deHistorico', 'ControladorHistorico::dehistorico');
 
+//Reportes
+$routes->get('/reporteTitulacion', 'ControladorReportes::reportes');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

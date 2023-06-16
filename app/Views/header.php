@@ -50,7 +50,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item" href="#">Matriz Graduados</a></li>
-              <li><a class="dropdown-item" href="#">Titulación</a></li>
+              <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/reporteTitulacion">Titulación</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
