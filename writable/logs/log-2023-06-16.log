@@ -53,3 +53,468 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-16 22:01:00 --> Undefined variable $tbl_periodo
+in APPPATH\Views\vistaReportes\vista_respTitulacion.php on line 33.
+ 1 APPPATH\Views\vistaReportes\vista_respTitulacion.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tbl_periodo', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\vistaReportes\\vista_respTitulacion.php', 33)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\vistaReportes\\vista_respTitulacion.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/vistaReportes/vista_respTitulacion', [], true)
+ 5 APPPATH\Controllers\ControladorReportes.php(11): view('/vistaReportes/vista_respTitulacion')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-16 22:07:51 --> Undefined variable $tbl_periodo
+in APPPATH\Views\vistaReportes\vista_respTitulacion.php on line 33.
+ 1 APPPATH\Views\vistaReportes\vista_respTitulacion.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tbl_periodo', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\vistaReportes\\vista_respTitulacion.php', 33)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\vistaReportes\\vista_respTitulacion.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/vistaReportes/vista_respTitulacion', [], true)
+ 5 APPPATH\Controllers\ControladorReportes.php(11): view('/vistaReportes/vista_respTitulacion')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-16 22:34:21 --> syntax error, unexpected token "}"
+in APPPATH\Models\modelRepTitulacion.php on line 8.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Models\\modelRepTitulacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\modelRepTitulacion')
+ 3 APPPATH\Controllers\ControladorReportes.php(15): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\modelRepTitulacion')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-16 22:37:21 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', 'gestion_documen...', 3306, '', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-16 22:37:21 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_periodo`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-16 22:38:11 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', 'gestion_documen...', 3306, '', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-16 22:38:11 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_periodo`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-16 22:40:41 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', 'gestion_documen...', 3306, '', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-16 22:40:41 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_periodo`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-16 22:40:42 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', 'gestion_documen...', 3306, '', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-16 22:40:42 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_periodo`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-16 22:40:42 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', 'gestion_documen...', 3306, '', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-16 22:40:42 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_periodo`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-16 22:41:31 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', 'gestion_documen...', 3306, '', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-16 22:41:31 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_periodo`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-16 22:41:41 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', 'gestion_documen...', 3306, '', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-16 22:41:41 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_periodo`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-16 22:43:40 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', 'gestion_documen...', 3306, '', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-16 22:43:40 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_periodo`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-16 22:45:57 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', 'gestion_documen...', 3306, '', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-16 22:45:57 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_periodo`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ControladorReportes.php(17): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-16 22:46:51 --> syntax error, unexpected token "endforeach", expecting end of file
+in APPPATH\Views\vistaReportes\vista_respTitulacion.php on line 40.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/vistaReportes/vista_respTitulacion', [], true)
+ 3 APPPATH\Controllers\ControladorReportes.php(19): view('/vistaReportes/vista_respTitulacion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-16 22:46:53 --> syntax error, unexpected token "endforeach", expecting end of file
+in APPPATH\Views\vistaReportes\vista_respTitulacion.php on line 40.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/vistaReportes/vista_respTitulacion', [], true)
+ 3 APPPATH\Controllers\ControladorReportes.php(19): view('/vistaReportes/vista_respTitulacion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-16 22:48:36 --> syntax error, unexpected token "endforeach", expecting end of file
+in APPPATH\Views\vistaReportes\vista_respTitulacion.php on line 40.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/vistaReportes/vista_respTitulacion', [], true)
+ 3 APPPATH\Controllers\ControladorReportes.php(19): view('/vistaReportes/vista_respTitulacion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-16 22:50:09 --> syntax error, unexpected token "endforeach", expecting end of file
+in APPPATH\Views\vistaReportes\vista_respTitulacion.php on line 44.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/vistaReportes/vista_respTitulacion', [], true)
+ 3 APPPATH\Controllers\ControladorReportes.php(19): view('/vistaReportes/vista_respTitulacion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-16 22:50:10 --> syntax error, unexpected token "endforeach", expecting end of file
+in APPPATH\Views\vistaReportes\vista_respTitulacion.php on line 44.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/vistaReportes/vista_respTitulacion', [], true)
+ 3 APPPATH\Controllers\ControladorReportes.php(19): view('/vistaReportes/vista_respTitulacion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-16 22:50:16 --> syntax error, unexpected token "endforeach", expecting end of file
+in APPPATH\Views\vistaReportes\vista_respTitulacion.php on line 44.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/vistaReportes/vista_respTitulacion', [], true)
+ 3 APPPATH\Controllers\ControladorReportes.php(19): view('/vistaReportes/vista_respTitulacion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-16 22:50:17 --> Undefined array key "PER_ANIO"
+in APPPATH\Views\vistaReportes\vista_respTitulacion.php on line 37.
+ 1 APPPATH\Views\vistaReportes\vista_respTitulacion.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "PER_ANIO"', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\vistaReportes\\vista_respTitulacion.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\vistaReportes\\vista_respTitulacion.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/vistaReportes/vista_respTitulacion', [], true)
+ 5 APPPATH\Controllers\ControladorReportes.php(19): view('/vistaReportes/vista_respTitulacion', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

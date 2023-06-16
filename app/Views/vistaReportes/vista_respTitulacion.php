@@ -22,7 +22,29 @@
     </div>
 
     <div id="resBusqueda">
-        <!-- No se usa en reporte Titulacion -->
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Año</th>
+                <th>Periodo</th>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($tbl_periodo as $periodo);
+                ?>
+                <tr>
+                    <td><?php echo $periodo['PER_ID']; ?></td>
+                    <td><?php echo $periodo['PER_ANO']; ?></td>
+                    <td><?php echo $periodo['PER_PERIODO']; ?></td>
+                   
+                </tr>
+                
+                <?php
+                /* Cerrar for each */
+                ?>
+            </tbody>
+        </table>
+
     </div>
 
     <div id="resRepTit">
