@@ -8,3 +8,48 @@ in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 76.
  6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
  7 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
  8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-16 21:20:50 --> Invalid file: "/vgrad/vista_degrad_grad.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/vgrad/vista_degrad_grad.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/vgrad/vista_degrad_grad', [], true)
+ 3 APPPATH\Controllers\ControladorGrado.php(19): view('/vgrad/vista_degrad_grad')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorGrado->degradGrad()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorGrado))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-16 21:26:05 --> Invalid file: "/vistaDEtec/vista_deHistorico.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/vistaDEtec/vista_deHistorico.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/vistaDEtec/vista_deHistorico', [], true)
+ 3 APPPATH\Controllers\ControladorHistorico.php(11): view('/vistaDEtec/vista_deHistorico')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->dehistorico()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-16 21:26:07 --> Invalid file: "/vistaDEtec/vista_deHistorico.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/vistaDEtec/vista_deHistorico.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/vistaDEtec/vista_deHistorico', [], true)
+ 3 APPPATH\Controllers\ControladorHistorico.php(11): view('/vistaDEtec/vista_deHistorico')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->dehistorico()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-16 21:26:07 --> Invalid file: "/vistaDEtec/vista_deHistorico.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/vistaDEtec/vista_deHistorico.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/vistaDEtec/vista_deHistorico', [], true)
+ 3 APPPATH\Controllers\ControladorHistorico.php(11): view('/vistaDEtec/vista_deHistorico')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->dehistorico()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-16 21:26:19 --> Invalid file: "/vistaDE/vista_deHistorico.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/vistaDE/vista_deHistorico.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/vistaDE/vista_deHistorico', [], true)
+ 3 APPPATH\Controllers\ControladorHistorico.php(11): view('/vistaDE/vista_deHistorico')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->dehistorico()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

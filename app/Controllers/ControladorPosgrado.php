@@ -8,15 +8,15 @@ class ControladorPosgrado extends BaseController
     //Datos Estadisticos Grado
     public function deposgrad()
     {
-        return view('header') . view('vista_deposgrad') . view('footer');
+        return view('header') . view('/vistaDEposgrad/vista_deposgrad') . view('footer');
     }
     public function deposgradMatr()
     {
-        return view('header') . view('vista_deposgrad_matr') . view('footer');
+        return view('header') . view('/vistaDEposgrad/vista_deposgrad_matr') . view('footer');
     }
     public function deposgradGrad()
     {
-        return view('header') . view('vista_deposgrad_grad') . view('footer');
+        return view('header') . view('/vistaDEposgrad/vista_deposgrad_grad') . view('footer');
     }
 }
 
