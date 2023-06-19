@@ -37,7 +37,7 @@ $routes->get('/inicio', 'ControladorMain::inicio');
 
 //Rutas Datos Estadisticos
 $routes->get('/FiltroEstadistico/(:any)', 'ControladorEstadistico::filtroEstadistico/$1');
-$routes->get('/BuscarFiltroEstadistico', 'ControladorEstadistico::BuscarFiltroEstadistico');
+$routes->post('/BuscarFiltroEstadistico', 'ControladorEstadistico::BuscarFiltroEstadistico');
 
 //Datos Estadisticos Historico Puce-I
 $routes->get('/deHistorico', 'ControladorHistorico::dehistorico');

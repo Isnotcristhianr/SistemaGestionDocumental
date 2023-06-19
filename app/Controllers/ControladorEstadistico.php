@@ -10,9 +10,11 @@ class ControladorEstadistico extends BaseController
         return view('header') . view('/DatosEstadisticos/vista_filtro_estadistico', $obtenido) . view('footer');
     }
 
-    public function BuscarFiltroEstadistico($id)
+    public function BuscarFiltroEstadistico()
     {
-        $obtenido = ["id" => $id];
-        return view('header') . view('/DatosEstadisticos/vista_filtro_estadistico', $obtenido) . view('footer');
+
+        /*$d atos = [
+            if */
+        return view('header') . view('/DatosEstadisticos/vista_filtro_estadistico') . view('footer');
     }
 }
