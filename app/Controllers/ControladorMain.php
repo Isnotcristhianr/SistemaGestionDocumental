@@ -18,6 +18,7 @@ class ControladorMain extends BaseController
     {
         return view('header') . view('vista_degrad_matr') . view('footer');
     }
+   
 }
 
 ?>

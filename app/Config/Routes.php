@@ -35,20 +35,9 @@ $routes->get('/', 'Home::index');
 $routes->get('/index', 'ControladorIndex::index');
 $routes->get('/inicio', 'ControladorMain::inicio');
 
-//Datos Estadisticos Grado
-$routes->get('/deGrado', 'ControladorGrado::degrad');
-$routes->get('/deGradoMatr', 'ControladorGrado::degradMatr');
-$routes->get('/deGradoGrad', 'ControladorGrado::degradGrad');
-
-//Datos Estadisticos Posgrado   
-$routes->get('/dePosgrado', 'ControladorPosgrado::deposgrad');
-$routes->get('/dePosgradoMatr', 'ControladorPosgrado::deposgradMatr');
-$routes->get('/dePosgradoGrad', 'ControladorPosgrado::deposgradGrad');
-
-//Datos Estadisticos Tec
-$routes->get('/deTec', 'ControladorTec::detec');
-$routes->get('/deTecMatr', 'ControladorTec::detecMatr');
-$routes->get('/deTecGrad', 'ControladorTec::detecGrad');
+//Rutas Datos Estadisticos
+$routes->get('/FiltroEstadistico/(:any)', 'ControladorEstadistico::filtroEstadistico/$1');
+$routes->get('/BuscarFiltroEstadistico', 'ControladorEstadistico::BuscarFiltroEstadistico');
 
 //Datos Estadisticos Historico Puce-I
 $routes->get('/deHistorico', 'ControladorHistorico::dehistorico');
