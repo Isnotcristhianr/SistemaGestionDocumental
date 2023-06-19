@@ -28,5 +28,7 @@
     <div id="resBusqueda">
 
     </div>
+    <div id="resRepTit">
+    </div>
 
 </div>
