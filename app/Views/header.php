@@ -59,9 +59,9 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <!-- Obtener Perdiodos BD -->
-              <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadistico/1">Grado</a></li>
-              <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadistico/2">Posgrado</a></li>
-              <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadistico/3">Tecnología</a></li>
+              <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGrado">Grado</a></li>
+              <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgrado">Posgrado</a></li>
+              <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologia">Tecnología</a></li>
 
               <li>
                 <hr class="dropdown-divider">

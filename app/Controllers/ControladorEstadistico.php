@@ -13,13 +13,27 @@ class ControladorEstadistico extends BaseController
     public function BuscarFiltroEstadistico($id, $filtro)
     {
 
-        if($id==1){
-
             $datos = ["id" => $id, "filtro" => $filtro];
             return view('header') . view('/DatosEstadisticos/Grado/vista_opcion_filtro', $datos) . view('footer');
-        }else{
-            echo "No se encontro el filtro";
-        }
 
+
+    }
+
+    //grado
+    public function filtroEstadisticoGrad()
+    {
+        return view('header') . view('/DatosEstadisticos/Grados/vista_fe_grad') . view('footer');
+    }
+
+    //popsgrado
+    public function filtroEstadisticoPosgrado()
+    {
+        return view('header') . view('/DatosEstadisticos/PosGrados/vista_fe_posgrad') . view('footer');
+    }
+
+    //tecnologia
+    public function filtroEstadisticoTecnologia()
+    {
+        return view('header') . view('/DatosEstadisticos/Tecnologias/vista_fe_tec') . view('footer');
     }
 }

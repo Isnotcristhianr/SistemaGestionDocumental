@@ -39,6 +39,15 @@ $routes->get('/inicio', 'ControladorMain::inicio');
 $routes->get('/FiltroEstadistico/(:any)', 'ControladorEstadistico::filtroEstadistico/$1');
 $routes->get('/BuscarFiltroEstadistico/(:any)/(:any)', 'ControladorEstadistico::BuscarFiltroEstadistico/$1/$2');
 
+//Datos Estadisticos Grado
+$routes->get('/FiltroEstadisticoGrado', 'ControladorEstadistico::filtroEstadisticoGrad');
+
+//Datos Estadisticos Posgrado
+$routes->get('/FiltroEstadisticoPosgrado', 'ControladorEstadistico::filtroEstadisticoPosgrado');
+
+//Datos Estadisticos Tecnologias
+$routes->get('/FiltroEstadisticoTecnologia', 'ControladorEstadistico::filtroEstadisticoTecnologia');
+
 //Datos Estadisticos Historico Puce-I
 $routes->get('/deHistorico', 'ControladorHistorico::dehistorico');
 
