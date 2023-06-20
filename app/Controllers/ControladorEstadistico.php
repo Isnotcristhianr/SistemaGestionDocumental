@@ -13,7 +13,13 @@ class ControladorEstadistico extends BaseController
     public function BuscarFiltroEstadistico($id, $filtro)
     {
 
-        $datos = ["id" => $id, "filtro" => $filtro];
-        return view('header') . view('/DatosEstadisticos/vista_opcion_filtro', $datos) . view('footer');
+        if($id==1){
+
+            $datos = ["id" => $id, "filtro" => $filtro];
+            return view('header') . view('/DatosEstadisticos/Grado/vista_opcion_filtro', $datos) . view('footer');
+        }else{
+            echo "No se encontro el filtro";
+        }
+
     }
 }

@@ -25,36 +25,42 @@
 
     <!-- Boton  Centrado-->
     <div class="row m-2 p-2 ">
-        <div class="col-12 text-center m-1 ">
-            <ul class="list-group">
+        <div class="col-12 text-center">
+            <ul class="list-group ">
                 <a href="http://localhost/SistemaGestionDocumental/index.php/BuscarFiltroEstadistico/<?php echo $id ?>/escuela" class="text-decoration-none fw-bolder">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Escuelas
-                        <span class="badge bg-primary rounded-pill">14</span>
+                        <span class="badge bg-primary rounded-pill">7</span>
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/BuscarFiltroEstadistico/<?php echo $id ?>/carrera" class="text-decoration-none fw-bolder">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Carreras
-                        <span class="badge bg-primary rounded-pill">14</span>
+                        <span class="badge bg-primary rounded-pill">79</span>
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/BuscarFiltroEstadistico/<?php echo $id ?>/periodo" class="text-decoration-none fw-bolder">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Periodos
-                        <span class="badge bg-primary rounded-pill">14</span>
+                        <span class="badge bg-primary rounded-pill">112</span>
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/BuscarFiltroEstadistico/<?php echo $id ?>/fecha" class="text-decoration-none fw-bolder">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Fechas
-                        <span class="badge bg-primary rounded-pill">14</span>
+                        <span class="badge bg-primary rounded-pill">
+                            <!-- Icono Calendar -->
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </span>
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/BuscarFiltroEstadistico/<?php echo $id ?>/general" class="text-decoration-none fw-bolder">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         General
-                        <span class="badge bg-primary rounded-pill">14</span>
+                        <span class="badge bg-primary rounded-pill">
+                            <!-- Lupa Busqueda icono-->
+                            <i class="fa-solid fa-search"></i>
+                        </span>
                     </li>
                 </a>
         </div>

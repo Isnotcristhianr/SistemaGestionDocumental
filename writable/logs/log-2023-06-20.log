@@ -1,0 +1,9 @@
+CRITICAL - 2023-06-20 22:24:34 --> Invalid file: "/DatosEstadisticos/Grado/vista_opcion_filtro.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/DatosEstadisticos/Grado/vista_opcion_filtro.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grado/vista_opcion_filtro', [], true)
+ 3 APPPATH\Controllers\ControladorEstadistico.php(19): view('/DatosEstadisticos/Grado/vista_opcion_filtro', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->BuscarFiltroEstadistico('1', 'escuela')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
