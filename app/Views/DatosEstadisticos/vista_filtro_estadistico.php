@@ -8,8 +8,10 @@
                 /* Asignar un value */
                 if ($id == 1) {
                     echo "Grado";
+                    $id = 1;
                 } else if ($id == 2) {
                     echo "Posgrado";
+                    $id = 2;
                 } else if ($id == 3) {
                     echo "Tecnología";
                 }
@@ -24,35 +26,37 @@
     <!-- Boton  Centrado-->
     <div class="row m-2 p-2 ">
         <div class="col-12 text-center m-1 ">
-            <form action="<?php base_url('/BuscarFiltroEstadistico/' . $id) ?>" method="GET"></form>
-            <div id="fitradoDatoEstadistico" class="d-flex align-items-center
-             justify-content-center text-light rounded-pill m-2" style="background-color: #164284;">
-                <div class="form-check text-center p-3">
-                    <input class="form-check-input" type="radio" name="busquedaDatEst" value="escuelas">
-                    <label for="form-check-labe text-dark">Escuelas</label>
-                </div>
-                <div class="form-check text-center p-3">
-                    <input class="form-check-input" type="radio" name="busquedaDatEst" value="carreras">
-                    <label for="text-dark">Carreras</label>
-                </div>
-                <div class="form-check text-center p-3">
-                    <input class="form-check-input" type="radio" name="busquedaDatEst" value="periodos">
-                    <label for="text-dark">Periodos</label>
-                </div>
-                <div class="form-check text-center p-3">
-                    <input class="form-check-input" type="radio" name="busquedaDatEst" value="fechas">
-                    <label for="text-dark">Fechas</label>
-                </div>
-                <div class="form-check text-center p-3">
-                    <input class="form-check-input" type="radio" name="busquedaDatEst" value="general">
-                    <label for="text-dark">General</label>
-                </div>
-            </div>
-            <br>
-            <button type="submit" class="btn btn-primary">
-                Buscar
-            </button>
-            </form>
+            <ul class="list-group">
+                <a href="http://localhost/SistemaGestionDocumental/index.php/BuscarFiltroEstadistico/<?php echo $id ?>/escuela" class="text-decoration-none fw-bolder">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Escuelas
+                        <span class="badge bg-primary rounded-pill">14</span>
+                    </li>
+                </a>
+                <a href="http://localhost/SistemaGestionDocumental/index.php/BuscarFiltroEstadistico/<?php echo $id ?>/carrera" class="text-decoration-none fw-bolder">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Carreras
+                        <span class="badge bg-primary rounded-pill">14</span>
+                    </li>
+                </a>
+                <a href="http://localhost/SistemaGestionDocumental/index.php/BuscarFiltroEstadistico/<?php echo $id ?>/periodo" class="text-decoration-none fw-bolder">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Periodos
+                        <span class="badge bg-primary rounded-pill">14</span>
+                    </li>
+                </a>
+                <a href="http://localhost/SistemaGestionDocumental/index.php/BuscarFiltroEstadistico/<?php echo $id ?>/fecha" class="text-decoration-none fw-bolder">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Fechas
+                        <span class="badge bg-primary rounded-pill">14</span>
+                    </li>
+                </a>
+                <a href="http://localhost/SistemaGestionDocumental/index.php/BuscarFiltroEstadistico/<?php echo $id ?>/general" class="text-decoration-none fw-bolder">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        General
+                        <span class="badge bg-primary rounded-pill">14</span>
+                    </li>
+                </a>
         </div>
     </div>
 </div>
