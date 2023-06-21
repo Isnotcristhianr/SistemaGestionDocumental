@@ -126,4 +126,31 @@ class ControladorEstadistico extends BaseController
     {
         return view('header') . view('/DatosEstadisticos/Tecnologias/vista_fe_tec') . view('footer');
     }
+    public function filtroEstadisticoTecnologiaBusqueda($tipo, $filtro)
+    {
+        try {
+
+            $datos = ["tipo" => $tipo, "filtro" => $filtro];
+
+            if($tipo == "Tecnologías"){
+                if($filtro == "CarrerasTécnicasyTecnológias"){
+                    return view('header')
+                    . view('/DatosEstadisticos/Tecnologias/vista_fe_option', $datos)
+                    . view('/DatosEstadisticos/Tecnologias/vista_fe_tec_escuela')
+                    . view('footer');
+                }
+
+                //////////aqui me quede completar las tecnologias
+            }else{
+                return view('header')
+                . view('/DatosEstadisticos/Tecnologias/vista_fe_tec') 
+                . view('footer');
+            }
+        } catch (\Throwable $th) {
+
+            return view('header') 
+            . view('/DatosEstadisticos/Tecnologias/vista_fe_tec') 
+            . view('footer');
+        }
+    }
 }
