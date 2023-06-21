@@ -16,25 +16,25 @@
     <div class="row m-2 p-2 ">
         <div class="col-12 text-center">
             <ul class="list-group ">
-                <a href="http://localhost/SistemaGestionDocumental/index.php/BuscarFiltroEstadistico/grado/escuela" class="text-decoration-none fw-bolder">
+                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Escuela" class="text-decoration-none fw-bolder">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Escuelas
                         <span class="badge bg-primary rounded-pill">7</span>
                     </li>
                 </a>
-                <a href="http://localhost/SistemaGestionDocumental/index.php/BuscarFiltroEstadistico/grado/carrera" class="text-decoration-none fw-bolder">
+                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Carrera" class="text-decoration-none fw-bolder">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Carreras
                         <span class="badge bg-primary rounded-pill">79</span>
                     </li>
                 </a>
-                <a href="http://localhost/SistemaGestionDocumental/index.php/BuscarFiltroEstadistico/grado/periodo" class="text-decoration-none fw-bolder">
+                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Periodo" class="text-decoration-none fw-bolder">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Periodos
                         <span class="badge bg-primary rounded-pill">112</span>
                     </li>
                 </a>
-                <a href="http://localhost/SistemaGestionDocumental/index.php/BuscarFiltroEstadistico/grado/fecha" class="text-decoration-none fw-bolder">
+                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Fecha" class="text-decoration-none fw-bolder">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Fechas
                         <span class="badge bg-primary rounded-pill">
@@ -43,7 +43,7 @@
                         </span>
                     </li>
                 </a>
-                <a href="http://localhost/SistemaGestionDocumental/index.php/BuscarFiltroEstadistico/grado/general" class="text-decoration-none fw-bolder">
+                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/General" class="text-decoration-none fw-bolder">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         General
                         <span class="badge bg-primary rounded-pill">

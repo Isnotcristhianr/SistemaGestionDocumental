@@ -31,35 +31,93 @@ class ControladorEstadistico extends BaseController
 
             if ($tipo == "Grado") {
                 if ($filtro == "Escuela") {
-                    $datos = ["tipo" => $tipo, "filtro" => $filtro];
-                    return view('header') . view('/DatosEstadisticos/Grados/vista_fe_option', $datos) . view('/DatosEstadisticos/Grados/vista_fe_grad_escuela') . view('footer');
+                    return view('header')
+                        . view('/DatosEstadisticos/Grados/vista_fe_option', $datos)
+                        . view('/DatosEstadisticos/Grados/vista_fe_grad_escuela')
+                        . view('footer');
                 } else if ($filtro == "Carrera") {
-                    $datos = ["tipo" => $tipo, "filtro" => $filtro];
-                    return view('header') . view('/DatosEstadisticos/Grados/vista_fe_option', $datos) . view('/DatosEstadisticos/Grados/vista_fe_grad_carrera') . view('footer');
+                    return view('header')
+                        . view('/DatosEstadisticos/Grados/vista_fe_option', $datos)
+                        . view('/DatosEstadisticos/Grados/vista_fe_grad_carrera')
+                        . view('footer');
                 } else if ($filtro == "Periodo") {
-                    $datos = ["tipo" => $tipo, "filtro" => $filtro];
-                    return view('header') . view('/DatosEstadisticos/Grados/vista_fe_option', $datos) . view('/DatosEstadisticos/Grados/vista_fe_grad_periodo') . view('footer');
+                    return view('header')
+                        . view('/DatosEstadisticos/Grados/vista_fe_option', $datos)
+                        . view('/DatosEstadisticos/Grados/vista_fe_grad_periodo')
+                        . view('footer');
                 } else if ($filtro == "Fecha") {
-                    $datos = ["tipo" => $tipo, "filtro" => $filtro];
-                    return view('header') . view('/DatosEstadisticos/Grados/vista_fe_option', $datos) . view('/DatosEstadisticos/Grados/vista_fe_grad_fecha') . view('footer');
+                    return view('header')
+                        . view('/DatosEstadisticos/Grados/vista_fe_option', $datos)
+                        . view('/DatosEstadisticos/Grados/vista_fe_grad_fecha')
+                        . view('footer');
                 } else if ($filtro == "General") {
-                    $datos = ["tipo" => $tipo, "filtro" => $filtro];
-                    return view('header') . view('/DatosEstadisticos/Grados/vista_fe_option', $datos) . view('/DatosEstadisticos/Grados/vista_fe_grad_general') . view('footer');
+                    return view('header')
+                        . view('/DatosEstadisticos/Grados/vista_fe_option', $datos)
+                        . view('/DatosEstadisticos/Grados/vista_fe_grad_general')
+                        . view('footer');
+                } else {
+                    echo "error";
                 }
             } else {
-                return view('header') . view('/DatosEstadisticos/Grados/vista_fe_grad') . view('footer');
+                return view('header')
+                    . view('/DatosEstadisticos/Grados/vista_fe_grad')
+                    . view('footer');
             }
         } catch (\Throwable $th) {
-            return view('header') . view('/DatosEstadisticos/Grados/vista_fe_grad') . view('footer');
+            return view('header')
+                . view('/DatosEstadisticos/Grados/vista_fe_grad')
+                . view('footer');
         }
     }
     //popsgrado
     public function filtroEstadisticoPosgrado()
     {
-        try{
+        return view('header') . view('/DatosEstadisticos/PosGrados/vista_fe_posgrad') . view('footer');
+    }
+    public function filtroEstadisticoPosgradoBusqueda($tipo, $filtro)
+    {
+        try {
 
-        }catch (\Throwable $th) {
-            return view('header') . view('/DatosEstadisticos/PosGrados/vista_fe_posgrad') . view('footer');
+            $datos = ["tipo" => $tipo, "filtro" => $filtro];
+
+            if ($tipo == "Posgrado") {
+                if ($filtro == "Escuela") {
+                    return view('header')
+                        . view('/DatosEstadisticos/PosGrados/vista_fe_option', $datos)
+                        . view('/DatosEstadisticos/PosGrados/vista_fe_posgrad_escuela')
+                        . view('footer');
+                } else if ($filtro == "Carrera") {
+                    return view('header')
+                        . view('/DatosEstadisticos/PosGrados/vista_fe_option', $datos)
+                        . view('/DatosEstadisticos/PosGrados/vista_fe_posgrad_carrera')
+                        . view('footer');
+                } else if ($filtro == "Periodo") {
+                    return view('header')
+                        . view('/DatosEstadisticos/PosGrados/vista_fe_option', $datos)
+                        . view('/DatosEstadisticos/PosGrados/vista_fe_posgrad_periodo')
+                        . view('footer');
+                } else if ($filtro == "Fecha") {
+                    return view('header')
+                        . view('/DatosEstadisticos/PosGrados/vista_fe_option', $datos)
+                        . view('/DatosEstadisticos/PosGrados/vista_fe_posgrad_fecha')
+                        . view('footer');
+                } else if ($filtro == "General") {
+                    return view('header')
+                        . view('/DatosEstadisticos/PosGrados/vista_fe_option', $datos)
+                        . view('/DatosEstadisticos/PosGrados/vista_fe_posgrad_general')
+                        . view('footer');
+                } else {
+                    echo "error";
+                }
+            } else {
+                return view('header')
+                    . view('/DatosEstadisticos/PosGrados/vista_fe_posgrad')
+                    . view('footer');
+            }
+        } catch (\Throwable $th) {
+            return view('header')
+                . view('/DatosEstadisticos/PosGrados/vista_fe_posgrad')
+                . view('footer');
         }
     }
 
