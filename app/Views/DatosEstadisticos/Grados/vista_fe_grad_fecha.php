@@ -11,7 +11,7 @@
             <input type="date" class="form-control" placeholder="FechaFin">
         </div>
         <button type="submit" class="btn btn-primary col-2 m-2">
-            <i class="fa-solid fa-magnifying-glass"> Consultar →</i>
+            <small class="fs-6 fw-semibold">Consultar </small><i class="fa-solid fa-magnifying-glass"> </i>
         </button>
     </form>
 </div>
