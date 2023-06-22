@@ -132,25 +132,43 @@ class ControladorEstadistico extends BaseController
 
             $datos = ["tipo" => $tipo, "filtro" => $filtro];
 
-            if($tipo == "Tecnologías"){
-                if($filtro == "CarrerasTécnicasyTecnológias"){
-                    return view('header')
-                    . view('/DatosEstadisticos/Tecnologias/vista_fe_option', $datos)
-                    . view('/DatosEstadisticos/Tecnologias/vista_fe_tec_escuela')
-                    . view('footer');
-                }
+            if ($tipo == "Tecnologías") {
+                if ($filtro == "CarrerasTécnicasyTecnológias") {
+                    $filtro = "Carreras Técnicas y Tecnológicas";
+                    $datos = ["tipo" => $tipo, "filtro" => $filtro];
 
-                //////////aqui me quede completar las tecnologias
-            }else{
+                    return view('header')
+                        . view('/DatosEstadisticos/Tecnologias/vista_fe_option', $datos)
+                        . view('/DatosEstadisticos/Tecnologias/vista_fe_tec_carreras')
+                        . view('footer');
+                } else if ($filtro == "Periodo") {
+                    return view('header')
+                        . view('/DatosEstadisticos/Tecnologias/vista_fe_option', $datos)
+                        . view('/DatosEstadisticos/Tecnologias/vista_fe_tec_periodos')
+                        . view('footer');
+                }else if ($filtro == "Fecha") {
+                    return view('header')
+                        . view('/DatosEstadisticos/Tecnologias/vista_fe_option', $datos)
+                        . view('/DatosEstadisticos/Tecnologias/vista_fe_tec_fecha')
+                        . view('footer');
+                } else if ($filtro == "General") {
+                    return view('header')
+                        . view('/DatosEstadisticos/Tecnologias/vista_fe_option', $datos)
+                        . view('/DatosEstadisticos/Tecnologias/vista_fe_tec_general')
+                        . view('footer');
+                } else {
+                    echo "error";
+                }
+            } else {
                 return view('header')
-                . view('/DatosEstadisticos/Tecnologias/vista_fe_tec') 
-                . view('footer');
+                    . view('/DatosEstadisticos/Tecnologias/vista_fe_tec')
+                    . view('footer');
             }
         } catch (\Throwable $th) {
 
-            return view('header') 
-            . view('/DatosEstadisticos/Tecnologias/vista_fe_tec') 
-            . view('footer');
+            return view('header')
+                . view('/DatosEstadisticos/Tecnologias/vista_fe_tec')
+                . view('footer');
         }
     }
 }
