@@ -15,7 +15,7 @@
             </h4>
         </div>
         <div class="col-12">
-            <h5 class="text-center text-secondary">↓ Resultados ↓</h5>
+            <h5 class="text-center text-secondary">↓ Selecione ↓</h5>
         </div>
     </div>
 
