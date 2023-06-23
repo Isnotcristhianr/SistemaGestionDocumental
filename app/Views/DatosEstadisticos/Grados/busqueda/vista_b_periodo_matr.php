@@ -17,7 +17,7 @@
 
     <!-- Contenido-->
     <div class="table-responsive text-center">
-        <table class="table align-middle order-column" id="tbl">
+        <table class="table align-middle order-column hover nowrap row-border stripe " id="tbl">
             <thead>
                 <th hidden>ID</th>
                 <th>Año</th>
@@ -34,7 +34,7 @@
                         <td hidden><?php echo $periodo['PER_ID']; ?></td>
                         <td><?php echo $periodo['PER_ANO']; ?></td>
                         <td><?php echo $periodo['PER_PERIODO']; ?></td>
-                        <td><a href="" class="btn btn-success">Visualizar</a></td>
+                        <td><a href="" class="btn btn-success">Visualizar →</a></td>
                     </tr>
                 <?php
                 }
