@@ -17,7 +17,7 @@
 
     <!-- Contenido-->
     <div class="table-responsive text-center">
-        <table class="table align-middle" id="tbl">
+        <table class="table table-striped align-middle order-column" id="tbl">
             <thead>
                 <th hidden>ID</th>
                 <th>Año</th>

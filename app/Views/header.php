@@ -26,17 +26,19 @@
   <!-- Nav Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark" style="background: #164284;">
     <div class="container-fluid">
-      <a class="navbar-brand fs-3" href="http://localhost/SistemaGestionDocumental/index.php/inicio">
-        <img src="<?php echo base_url('/public/imgs/logoPucesi.png') ?>" alt="" height="45" class="d-inline-block align-text-center">
+      <a class="navbar-brand fs-4" href="http://localhost/SistemaGestionDocumental/index.php/inicio">
+        <img src="<?php echo base_url('/public/imgs/logoPucesi.png') ?>" alt="" height="75" class="d-inline-block align-text-center">
         Gestión Documental PUCE-I
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="collapse navbar-collapse" id="navbarNavDropdown" style="font-size: 15px;">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="http://localhost/SistemaGestionDocumental/index.php/inicio">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="http://localhost/SistemaGestionDocumental/index.php/inicio">
+              Inicio
+            </a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
