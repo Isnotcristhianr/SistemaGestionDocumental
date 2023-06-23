@@ -9,5 +9,9 @@ class ModelFEPeriodo extends Model{
 
     protected $allowedFields = ['PER_ANIO','PER_PERIODO'];
 
-
+    /* Contar total perdidos filas */
+    public function contarPeriodos(){
+        $periodos = $this->findAll();
+        return count($periodos);
+    }
 }

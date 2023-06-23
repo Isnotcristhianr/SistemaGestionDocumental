@@ -2,6 +2,9 @@
 
 namespace App\Controllers;
 
+use App\Models\ModelFEPeriodo;
+
+
 class ControladorEstadistico extends BaseController
 {
     public function filtroEstadistico($id)
@@ -41,7 +44,6 @@ class ControladorEstadistico extends BaseController
                         . view('/DatosEstadisticos/Grados/vista_fe_grad_carrera')
                         . view('footer');
                 } else if ($filtro == "Periodo") {
-                    
                     return view('header')
                         . view('/DatosEstadisticos/Grados/vista_fe_option', $datos)
                         . view('/DatosEstadisticos/Grados/vista_fe_grad_periodo')

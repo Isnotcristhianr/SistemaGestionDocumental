@@ -1,3 +1,7 @@
+<?php
+
+use App\Models\ModelFEPeriodo;
+?>
 <!-- Datos Estadisticos -->
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
@@ -31,7 +35,13 @@
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/Periodo" class="text-decoration-none fw-bolder">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Periodos
-                        <span class="badge bg-primary rounded-pill">112</span>
+                        <span class="badge bg-primary rounded-pill">
+                            <!-- llenar periodos total filas -->
+                            <?php
+                            $obgPeriodo = new ModelFEPeriodo();
+                            echo $obgPeriodo->contarPeriodos();
+                            ?>
+                        </span>
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/Fecha" class="text-decoration-none fw-bolder">
