@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\ModelFEPeriodo;
+//use App\Models\ModelFEPeriodo;
 
 
 class ControladorEstadistico extends BaseController
