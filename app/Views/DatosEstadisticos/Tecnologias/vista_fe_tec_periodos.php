@@ -4,13 +4,13 @@
         <div class="col-12">
             <!-- btn -->
             <div class="d-grid gap-2 col-2 mx-auto m-2">
-                <a href="<?php echo base_url('') ?>" class="btn btn-dark " type="button">Matriculados</a>
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoTecnologiaPeriodo/Matriculados') ?>" class="btn btn-dark " type="button">Matriculados</a>
             </div>
 
             <div class="d-grid gap-2 col-2 mx-auto m-2">
-                <a href="<?php echo base_url('') ?>" class="btn btn-dark" type="button">Graduados</a>
-            </div>
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoTecnologiaPeriodo/Graduados') ?>" class="btn btn-dark " type="button">Graduados</a>
 
+            </div>
         </div>
     </div>
 </div>

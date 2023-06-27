@@ -58,4 +58,29 @@ class ControladorFEPeriodo extends BaseController
             echo $e->getMessage();
         }
     }
+
+    //Datos Estadisticos Tecnologia
+    public function filtroEstadisticoTecnologiaPeriodo($tipo)
+    {
+        try {
+            //modelo 
+            $obgPeriodo = new ModelFEPeriodo();
+            //periodos
+            //$data['tbl_periodo'] = $obgPeriodo->findAll();
+
+            //periodos ordenados en orden descendente en base al año desde el 2021
+            $data['tbl_periodo'] = $obgPeriodo->where('PER_ANO >=', 2021)->orderBy('PER_ANO', 'DESC')->findAll();
+            if ($tipo == "Matriculados") {
+                return view('header')
+                    . view('/DatosEstadisticos/Tecnologias/busqueda/vista_b_periodo_matr', $data)
+                    . view('footer');
+            } else if ($tipo == "Graduados") {
+                return view('header')
+                    . view('/DatosEstadisticos/Tecnologias/busqueda/vista_b_periodo_grad', $data)
+                    . view('footer');
+            }
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
 }
