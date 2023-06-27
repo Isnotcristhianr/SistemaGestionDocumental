@@ -2,8 +2,20 @@
 <html lang="es">
 
 <head>
+  <!-- Meta -->
   <meta charset="UTF-8">
   <meta name="viewport" content="d">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="PUCE-I">
+  <meta name="description" content="Sistema de Gestión Documental">
+  <meta name="keywords" content="Sistema de Gestión Documental">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#009688">
+  <meta name="msapplication-navbutton-color" content="#009688">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#009688">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+
   <title>Sistema Gestion Documental</title>
   <!-- Icono -->
   <link rel="icon" type="image/png" href="<?php echo base_url('/public/imgs/secretary.png') ?>" />
