@@ -11,7 +11,7 @@
             </h4>
         </div>
         <div class="col-12">
-            <h5 class="text-center text-secondary"> Matriculados </h5>
+            <h5 class="text-center text-secondary"> Graduados </h5>
         </div>
     </div>
 

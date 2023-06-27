@@ -8,14 +8,14 @@
                     Matriculados
                 </a>
             </div>
-            </div>
-
-            <div class="d-grid gap-2 col-2 mx-auto m-2">
-                <a href="<?php base_url('index.php/FiltroEstadisticoPosgradoPeriodo/Graduados') ?>" class="btn btn-dark" type="button">
-                    Graduados
-                </a>
-            </div>
-
         </div>
+
+        <div class="d-grid gap-2 col-2 mx-auto m-2">
+        <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgradoPeriodo/Graduados') ?>" class="btn btn-dark " type="button">
+                Graduados
+            </a>
+        </div>
+
     </div>
+</div>
 </div>
