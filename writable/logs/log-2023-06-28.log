@@ -1,0 +1,414 @@
+CRITICAL - 2023-06-28 21:03:03 --> Undefined variable $tbl_periodo
+in APPPATH\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php on line 29.
+ 1 APPPATH\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tbl_periodo', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Tecnologias\\vista_fe_tec.php', 29)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Tecnologias\\vista_fe_tec.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Tecnologias/vista_fe_tec', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisticos/Tecnologias/vista_fe_tec')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-28 21:03:04 --> Undefined variable $tbl_periodo
+in APPPATH\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php on line 29.
+ 1 APPPATH\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tbl_periodo', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Tecnologias\\vista_fe_tec.php', 29)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Tecnologias\\vista_fe_tec.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Tecnologias/vista_fe_tec', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisticos/Tecnologias/vista_fe_tec')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-28 21:03:05 --> Undefined variable $tbl_periodo
+in APPPATH\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php on line 29.
+ 1 APPPATH\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tbl_periodo', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Tecnologias\\vista_fe_tec.php', 29)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Tecnologias\\vista_fe_tec.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Tecnologias/vista_fe_tec', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisticos/Tecnologias/vista_fe_tec')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-28 21:04:46 --> Call to undefined method App\Models\ModelFEPeriodo::getPeriodo
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Views\DatosEstadisticos\PosGrados\vista_fe_posgrad.php(41): CodeIgniter\Model->__call('getPeriodo', [])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\PosGrados\\vista_fe_posgrad.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/PosGrados/vista_fe_posgrad', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(78): view('/DatosEstadisticos/PosGrados/vista_fe_posgrad')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoPosgrado()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-28 21:04:47 --> Call to undefined method App\Models\ModelFEPeriodo::getPeriodo
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Views\DatosEstadisticos\PosGrados\vista_fe_posgrad.php(41): CodeIgniter\Model->__call('getPeriodo', [])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\PosGrados\\vista_fe_posgrad.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/PosGrados/vista_fe_posgrad', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(78): view('/DatosEstadisticos/PosGrados/vista_fe_posgrad')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoPosgrado()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-28 21:04:47 --> Call to undefined method App\Models\ModelFEPeriodo::getPeriodo
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Views\DatosEstadisticos\PosGrados\vista_fe_posgrad.php(41): CodeIgniter\Model->__call('getPeriodo', [])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\PosGrados\\vista_fe_posgrad.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/PosGrados/vista_fe_posgrad', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(78): view('/DatosEstadisticos/PosGrados/vista_fe_posgrad')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoPosgrado()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-28 21:04:48 --> Call to undefined method App\Models\ModelFEPeriodo::getPeriodo
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Views\DatosEstadisticos\PosGrados\vista_fe_posgrad.php(41): CodeIgniter\Model->__call('getPeriodo', [])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\PosGrados\\vista_fe_posgrad.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/PosGrados/vista_fe_posgrad', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(78): view('/DatosEstadisticos/PosGrados/vista_fe_posgrad')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoPosgrado()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-28 21:04:49 --> Call to undefined method App\Models\ModelFEPeriodo::getPeriodo
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Views\DatosEstadisticos\PosGrados\vista_fe_posgrad.php(41): CodeIgniter\Model->__call('getPeriodo', [])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\PosGrados\\vista_fe_posgrad.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/PosGrados/vista_fe_posgrad', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(78): view('/DatosEstadisticos/PosGrados/vista_fe_posgrad')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoPosgrado()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-28 21:05:36 --> Undefined variable $tbl_periodo
+in APPPATH\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php on line 33.
+ 1 APPPATH\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tbl_periodo', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Tecnologias\\vista_fe_tec.php', 33)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Tecnologias\\vista_fe_tec.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Tecnologias/vista_fe_tec', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisticos/Tecnologias/vista_fe_tec')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-28 21:06:34 --> mysqli_sql_exception: Unknown column 'PER_ANIO' in 'where clause' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Models\ModelFEPeriodo.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(35): App\Models\ModelFEPeriodo->contarPeriodosTecnologias()
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\View\View.php(213): include('C:\\XAMPP\\htdocs...')
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisti...', Array, true)
+#11 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisti...')
+#12 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+#13 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+#14 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#15 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#16 {main}
+CRITICAL - 2023-06-28 21:06:34 --> Unknown column 'PER_ANIO' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= :PER_ANIO:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ModelFEPeriodo.php(20): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(35): App\Models\ModelFEPeriodo->contarPeriodosTecnologias()
+ 9 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Tecnologias\\vista_fe_tec.php')
+10 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Tecnologias/vista_fe_tec', [], true)
+12 APPPATH\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisticos/Tecnologias/vista_fe_tec')
+13 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+14 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+15 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-28 21:06:35 --> mysqli_sql_exception: Unknown column 'PER_ANIO' in 'where clause' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Models\ModelFEPeriodo.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(35): App\Models\ModelFEPeriodo->contarPeriodosTecnologias()
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\View\View.php(213): include('C:\\XAMPP\\htdocs...')
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisti...', Array, true)
+#11 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisti...')
+#12 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+#13 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+#14 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#15 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#16 {main}
+CRITICAL - 2023-06-28 21:06:35 --> Unknown column 'PER_ANIO' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= :PER_ANIO:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ModelFEPeriodo.php(20): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(35): App\Models\ModelFEPeriodo->contarPeriodosTecnologias()
+ 9 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Tecnologias\\vista_fe_tec.php')
+10 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Tecnologias/vista_fe_tec', [], true)
+12 APPPATH\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisticos/Tecnologias/vista_fe_tec')
+13 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+14 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+15 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-28 21:06:36 --> mysqli_sql_exception: Unknown column 'PER_ANIO' in 'where clause' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Models\ModelFEPeriodo.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(35): App\Models\ModelFEPeriodo->contarPeriodosTecnologias()
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\View\View.php(213): include('C:\\XAMPP\\htdocs...')
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisti...', Array, true)
+#11 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisti...')
+#12 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+#13 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+#14 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#15 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#16 {main}
+CRITICAL - 2023-06-28 21:06:36 --> Unknown column 'PER_ANIO' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= :PER_ANIO:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ModelFEPeriodo.php(20): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(35): App\Models\ModelFEPeriodo->contarPeriodosTecnologias()
+ 9 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Tecnologias\\vista_fe_tec.php')
+10 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Tecnologias/vista_fe_tec', [], true)
+12 APPPATH\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisticos/Tecnologias/vista_fe_tec')
+13 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+14 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+15 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-28 21:06:43 --> mysqli_sql_exception: Unknown column 'PER_ANIO' in 'where clause' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Models\ModelFEPeriodo.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(35): App\Models\ModelFEPeriodo->contarPeriodosTecnologias()
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\View\View.php(213): include('C:\\XAMPP\\htdocs...')
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisti...', Array, true)
+#11 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisti...')
+#12 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+#13 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+#14 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#15 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#16 {main}
+CRITICAL - 2023-06-28 21:06:43 --> Unknown column 'PER_ANIO' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= :PER_ANIO:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ModelFEPeriodo.php(20): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(35): App\Models\ModelFEPeriodo->contarPeriodosTecnologias()
+ 9 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Tecnologias\\vista_fe_tec.php')
+10 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Tecnologias/vista_fe_tec', [], true)
+12 APPPATH\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisticos/Tecnologias/vista_fe_tec')
+13 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+14 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+15 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-28 21:06:51 --> mysqli_sql_exception: Unknown column 'PER_ANIO' in 'where clause' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Models\ModelFEPeriodo.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(35): App\Models\ModelFEPeriodo->contarPeriodosTecnologias()
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\View\View.php(213): include('C:\\XAMPP\\htdocs...')
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisti...', Array, true)
+#11 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisti...')
+#12 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+#13 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+#14 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#15 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#16 {main}
+CRITICAL - 2023-06-28 21:06:51 --> Unknown column 'PER_ANIO' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= :PER_ANIO:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ModelFEPeriodo.php(20): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(35): App\Models\ModelFEPeriodo->contarPeriodosTecnologias()
+ 9 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Tecnologias\\vista_fe_tec.php')
+10 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Tecnologias/vista_fe_tec', [], true)
+12 APPPATH\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisticos/Tecnologias/vista_fe_tec')
+13 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+14 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+15 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-28 21:07:01 --> mysqli_sql_exception: Unknown column 'PER_ANIO' in 'where clause' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Models\ModelFEPeriodo.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(35): App\Models\ModelFEPeriodo->contarPeriodosTecnologias()
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\View\View.php(213): include('C:\\XAMPP\\htdocs...')
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisti...', Array, true)
+#11 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisti...')
+#12 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+#13 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+#14 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#15 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#16 {main}
+CRITICAL - 2023-06-28 21:07:01 --> Unknown column 'PER_ANIO' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= :PER_ANIO:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ModelFEPeriodo.php(20): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(35): App\Models\ModelFEPeriodo->contarPeriodosTecnologias()
+ 9 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Tecnologias\\vista_fe_tec.php')
+10 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Tecnologias/vista_fe_tec', [], true)
+12 APPPATH\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisticos/Tecnologias/vista_fe_tec')
+13 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+14 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+15 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-28 21:07:45 --> mysqli_sql_exception: Unknown column 'PER_ANIO' in 'where clause' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Models\ModelFEPeriodo.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(35): App\Models\ModelFEPeriodo->contarPeriodosTecnologias()
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\View\View.php(213): include('C:\\XAMPP\\htdocs...')
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisti...', Array, true)
+#11 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisti...')
+#12 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+#13 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+#14 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#15 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#16 {main}
+CRITICAL - 2023-06-28 21:07:45 --> Unknown column 'PER_ANIO' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= 2021')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_periodo`
+WHERE `PER_ANIO` >= :PER_ANIO:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ModelFEPeriodo.php(20): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(35): App\Models\ModelFEPeriodo->contarPeriodosTecnologias()
+ 9 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Tecnologias\\vista_fe_tec.php')
+10 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Tecnologias/vista_fe_tec', [], true)
+12 APPPATH\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisticos/Tecnologias/vista_fe_tec')
+13 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+14 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+15 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -40,11 +40,8 @@ class ControladorFEPeriodo extends BaseController
         try {
             //modelo 
             $obgPeriodo = new ModelFEPeriodo();
-            //periodos
-            //$data['tbl_periodo'] = $obgPeriodo->findAll();
-
-            //periodos ordenados en orden descendente en base al año
-            $data['tbl_periodo'] = $obgPeriodo->orderBy('PER_ANO', 'DESC')->findAll();
+            //periodos ordenados en orden descendente en base al año 1997
+            $data['tbl_periodo'] = $obgPeriodo->where('PER_ANO >=', 1997)->orderBy('PER_ANO', 'DESC')->findAll();
             if ($tipo == "Matriculados") {
                 return view('header')
                     . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_periodo_matr', $data)

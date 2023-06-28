@@ -1,3 +1,7 @@
+<?php
+
+use App\Models\ModelFEPeriodo;
+?>
 <!-- Datos Estadisticos -->
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
@@ -15,6 +19,17 @@
     <!-- Boton  Centrado-->
     <div class="row m-2 p-2 ">
         <div class="col-12 text-center">
+            <!-- Encabezados dividido 2 columnas, filtro y cantidad -->
+            <div>
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="text-start text-secondary">Filtro</h5>
+                    </div>
+                    <div class="col-6">
+                        <h5 class="text-end text-secondary">Cantidad</h5>
+                    </div>
+                </div>
+            </div>
             <ul class="list-group ">
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnologías/CarrerasTécnicasyTecnológias" class="text-decoration-none fw-bolder">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -25,7 +40,12 @@
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnologías/Periodo" class="text-decoration-none fw-bolder">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Periodos
-                        <span class="badge bg-primary rounded-pill">112</span>
+                        <span class="badge bg-primary rounded-pill">
+                            <?php
+                              $obgPeriodo = new ModelFEPeriodo();
+                              echo $obgPeriodo->contarPeriodosTecnologias();
+                              ?>
+                        </span>
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnologías/Fecha" class="text-decoration-none fw-bolder">
