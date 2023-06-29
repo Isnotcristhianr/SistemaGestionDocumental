@@ -15,8 +15,12 @@
     </div>
 
     <!-- Contenido-->
+    <h3 class="text text-start text-success">Vigentes</h3>
+    <a href="" class="btn btn-success ">Ver Resumen</a>
+    <br>
+    <br>
     <div class="table-responsive text-center">
-        <h3 class="text text-start text-success">Vigentes</h3>
+        <!-- Llenar tabla con activas -->
         <table class="table align-middle order-column hover nowrap row-border stripe " id="tbl">
             <thead>
                 <th hidden>ID</th>
@@ -25,30 +29,80 @@
                 <th>Acciones</th>
             </thead>
             <tbody>
-                <!-- llenar toda la tabla -->
+                <!-- llenar toda la tabla con car activas-->
                 <?php
                 foreach ($tbl_carrera as $escuelas) {
+                    if ($escuelas['CAR_ACTIVA'] == 'SÍ') {
+
                 ?>
-                    <tr>
-                        <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
-                        <td><?php
-                            /* autoincrementar */
-                            static $numero = 1;
-                            echo $numero++;
-                            ?></td>
-                        <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
-                        <td>
-                            <a href="<?php
-                                        echo base_url('index.php/ControladorFEEscuela/estadisticoGradoEscuela/' . $escuelas['CAR_ID'] . '/Matriculados')
-                                        ?>" class="btn btn-success">Visualizar →</a>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
+                            <td><?php
+                                /* autoincrementar */
+                                static $numero = 1;
+                                echo $numero++;
+                                ?></td>
+                            <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
+                            <td>
+                                <a href="<?php
+                                            echo base_url('index.php/ControladorFEEscuela/estadisticoGradoEscuela/' . $escuelas['CAR_ID'] . '/Matriculados')
+                                            ?>" class="btn btn-success">Visualizar →</a>
+                            </td>
+                        </tr>
                 <?php
+                    }
                 }
                 ?>
 
             </tbody>
         </table>
     </div>
+</div>
+
+<div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
+    <h3 class="text text-start text-primary">Histórico</h3>
+    <a href="" class="btn btn-primary">Ver Resumen</a>
+    <br>
+    <br>
+    <div class="table-responsive text-center">
+
+    <!-- Llenar tabla con no ativas -->
+    <table class="table align-middle order-column hover nowrap row-border stripe " id="tbl2">
+        <thead>
+            <th hidden>ID</th>
+            <th>Numero</th>
+            <th>Escuela</th>
+            <th>Acciones</th>
+        </thead>
+        <tbody>
+            <?php
+            foreach ($tbl_carrera as $escuelas) {
+                if ($escuelas['CAR_ACTIVA'] == 'No') {
+            ?>
+                    <tr>
+                        <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
+                        <td><?php
+                            /* autoincrementar desde 0*/
+                            static $numero2 = 1;
+                            echo $numero2++;
+                            ?></td>
+                        <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
+                        <td>
+                            <a href="<?php
+                                        echo base_url('index.php/ControladorFEEscuela/estadisticoGradoEscuela/' . $escuelas['CAR_ID'] . '/Matriculados')
+                                        ?>" class="btn btn-primary">Visualizar →</a>
+                        </td>
+                    </tr>
+            <?php
+                }
+            }
+            ?>
+        </tbody>
+    </table>
+
+
+
+
+</div>
 
 </div>
