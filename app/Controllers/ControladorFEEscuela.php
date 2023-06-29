@@ -26,24 +26,4 @@ class ControladorFEEscuela extends BaseController
     }
 
     //Datos Estadisticos PosGrado
-    public function filtroEstadisticoPosGradoPeriodo($tipo)
-    {
-        try {
-            //modelo 
-            $obgPeriodo = new ModelFEPeriodo();
-            //periodos ordenados en orden descendente en base al año 1997
-            $data['tbl_periodo'] = $obgPeriodo->where('PER_ANO >=', 1997)->orderBy('PER_ANO', 'DESC')->findAll();
-            if ($tipo == "Matriculados") {
-                return view('header')
-                    . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_periodo_matr', $data)
-                    . view('footer');
-            } else if ($tipo == "Graduados") {
-                return view('header')
-                    . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_periodo_grad', $data)
-                    . view('footer');
-            }
-        } catch (\Exception $e) {
-            echo $e->getMessage();
-        }
-    }
 }
