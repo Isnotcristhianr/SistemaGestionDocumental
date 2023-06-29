@@ -1,0 +1,108 @@
+CRITICAL - 2023-06-29 21:22:38 --> Array to string conversion
+in APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php on line 31.
+ 1 APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/vista_fe_grad', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(26): view('/DatosEstadisticos/Grados/vista_fe_grad')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoGrad()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-29 21:22:39 --> Array to string conversion
+in APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php on line 31.
+ 1 APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/vista_fe_grad', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(26): view('/DatosEstadisticos/Grados/vista_fe_grad')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoGrad()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-29 21:24:06 --> Array to string conversion
+in APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php on line 31.
+ 1 APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/vista_fe_grad', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(26): view('/DatosEstadisticos/Grados/vista_fe_grad')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoGrad()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-29 21:24:31 --> Array to string conversion
+in APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php on line 34.
+ 1 APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php', 34)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/vista_fe_grad', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(26): view('/DatosEstadisticos/Grados/vista_fe_grad')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoGrad()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-29 21:25:30 --> Array to string conversion
+in APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php on line 31.
+ 1 APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/vista_fe_grad', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(26): view('/DatosEstadisticos/Grados/vista_fe_grad')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoGrad()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-29 21:25:31 --> Array to string conversion
+in APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php on line 31.
+ 1 APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/vista_fe_grad', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(26): view('/DatosEstadisticos/Grados/vista_fe_grad')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoGrad()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-29 21:25:55 --> Array to string conversion
+in APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php on line 31.
+ 1 APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/vista_fe_grad', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(26): view('/DatosEstadisticos/Grados/vista_fe_grad')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoGrad()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-29 21:29:11 --> Call to a member function getResult() on array
+in APPPATH\Models\ModelFEescuelas.php on line 32.
+ 1 APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php(31): App\Models\ModelFEescuelas->contarEscuelasGrado()
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/vista_fe_grad', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(26): view('/DatosEstadisticos/Grados/vista_fe_grad')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoGrad()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-29 21:29:12 --> Call to a member function getResult() on array
+in APPPATH\Models\ModelFEescuelas.php on line 32.
+ 1 APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php(31): App\Models\ModelFEescuelas->contarEscuelasGrado()
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/vista_fe_grad', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(26): view('/DatosEstadisticos/Grados/vista_fe_grad')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoGrad()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-29 22:00:08 --> syntax error, unexpected token "?", expecting end of file
+in APPPATH\Views\DatosEstadisticos\Grados\busqueda\vista_b_escuela_matr.php on line 6.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_matr', [], true)
+ 3 APPPATH\Controllers\ControladorFEEscuela.php(16): view('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_matr', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFEEscuela->filtroEstadisticoGradoEscuela('Matriculados')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFEEscuela))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

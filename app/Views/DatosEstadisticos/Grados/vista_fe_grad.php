@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\ModelFEPeriodo;
+use App\Models\ModelFEescuelas;
 ?>
 <!-- Datos Estadisticos -->
 
@@ -19,11 +20,28 @@ use App\Models\ModelFEPeriodo;
     <!-- Boton  Centrado-->
     <div class="row m-2 p-2 ">
         <div class="col-12 text-center">
+            <!-- Encabezados dividido 2 columnas, filtro y cantidad -->
+            <div>
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="text-start text-secondary">Filtro</h5>
+                    </div>
+                    <div class="col-6">
+                        <h5 class="text-end text-secondary">Cantidad</h5>
+                    </div>
+                </div>
+            </div>
             <ul class="list-group ">
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/Escuela" class="text-decoration-none fw-bolder">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Escuelas
-                        <span class="badge bg-primary rounded-pill">7</span>
+                        <span class="badge bg-primary rounded-pill">
+                            <!-- llenar escuelas total filas -->
+                            <?php
+                            $obgEscuela = new ModelFEescuelas();
+                            echo $obgEscuela->contarEscuelasGrado();
+                            ?>
+                        </span>
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera" class="text-decoration-none fw-bolder">

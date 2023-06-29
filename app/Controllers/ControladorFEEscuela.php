@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\ModelFEPeriodo;
+use App\Models\ModelFEescuelas;
 
 class ControladorFEEscuela extends BaseController
 {
@@ -11,14 +11,18 @@ class ControladorFEEscuela extends BaseController
     public function filtroEstadisticoGradoEscuela($tipo)
     {
         try {
-            if($tipo == "Matriculados"){
+            //modelo
+            $objEscuela = new ModelFEescuelas();
+            //escuelas
+            $data['tbl_carrera'] = $objEscuela->where('CTIP_ID', 2)->where('CAR_ESCUELA', 1)->findAll();
+            if ($tipo == "Matriculados") {
                 return view('header')
-                . view('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_matr')
-                . view('footer');
-            }else if($tipo == "Graduados"){
+                    . view('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_matr', $data)
+                    . view('footer');
+            } else if ($tipo == "Graduados") {
                 return view('header')
-                . view('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_grad')
-                . view('footer');
+                    . view('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_grad')
+                    . view('footer');
             }
         } catch (\Exception $e) {
             echo $e->getMessage();
