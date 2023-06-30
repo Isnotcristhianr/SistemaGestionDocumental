@@ -2,7 +2,7 @@
 
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
-    <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnolog%C3%ADas/Periodo" class="btn btn-primary">← Volver</a>
+    <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnolog%C3%ADas/Periodo" class="btn btn-outline-primary">← Volver</a>
     <div class="row ">
         <div class="col-12">
             <h2 class="text-center text-primary">Datos Estadísticos Tecnologías

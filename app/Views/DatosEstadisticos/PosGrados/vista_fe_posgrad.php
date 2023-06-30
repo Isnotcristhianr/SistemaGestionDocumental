@@ -1,6 +1,7 @@
 <?php
 
-use App\Models\ModelFEPeriodo;
+    use App\Models\ModelFEPeriodo;
+    use App\Models\ModelFEescuelas;
 ?>
 <!-- Datos Estadisticos -->
 
@@ -34,7 +35,12 @@ use App\Models\ModelFEPeriodo;
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Escuela" class="text-decoration-none fw-bolder">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Escuelas
-                        <span class="badge bg-primary rounded-pill">7</span>
+                        <span class="badge bg-primary rounded-pill">
+                            <?php
+                            $obgEscuela = new ModelFEescuelas();
+                            echo $obgEscuela->contarEscuelasPosgrado();
+                            ?>
+                        </span>
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Carrera" class="text-decoration-none fw-bolder">

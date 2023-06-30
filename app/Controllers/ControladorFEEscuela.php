@@ -21,7 +21,7 @@ class ControladorFEEscuela extends BaseController
                     . view('footer');
             } else if ($tipo == "Graduados") {
                 return view('header')
-                    . view('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_grad')
+                    . view('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_grad', $data)
                     . view('footer');
             }
         } catch (\Exception $e) {
@@ -30,4 +30,25 @@ class ControladorFEEscuela extends BaseController
     }
 
     //Datos Estadisticos PosGrado
+    public function filtroEstadisticoPosgradoEscuela($tipo){
+        try {
+            //modelo
+            $objEscuela = new ModelFEescuelas();
+            //escuelas
+            $data['tbl_carrera'] = $objEscuela->where('CTIP_ID', 2)->where('CAR_ESCUELA', 1)->findAll();
+            if ($tipo == "Matriculados") {
+                return view('header')
+                    . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_escuela_matr', $data)
+                    . view('footer');
+            } else if ($tipo == "Graduados") {
+                return view('header')
+                    . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_escuela_grad', $data)
+                    . view('footer');
+            }
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+
 }

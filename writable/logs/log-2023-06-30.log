@@ -1,0 +1,22 @@
+CRITICAL - 2023-06-30 21:24:56 --> Call to undefined method App\Models\ModelFEescuelas::contarEscuelasPosgrados
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Views\DatosEstadisticos\PosGrados\vista_fe_posgrad.php(41): CodeIgniter\Model->__call('contarEscuelasPosgrados', [])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\PosGrados\\vista_fe_posgrad.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/PosGrados/vista_fe_posgrad', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(78): view('/DatosEstadisticos/PosGrados/vista_fe_posgrad')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoPosgrado()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-30 21:24:59 --> Call to undefined method App\Models\ModelFEescuelas::contarEscuelasPosgrados
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Views\DatosEstadisticos\PosGrados\vista_fe_posgrad.php(41): CodeIgniter\Model->__call('contarEscuelasPosgrados', [])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\PosGrados\\vista_fe_posgrad.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/PosGrados/vista_fe_posgrad', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(78): view('/DatosEstadisticos/PosGrados/vista_fe_posgrad')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoPosgrado()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
