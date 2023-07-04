@@ -64,11 +64,15 @@
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/516b0707c7.js" crossorigin="anonymous"></script>
 <!-- Data Table -->
-<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"></script>
 <!-- Script DataTable -->
 <script>
   $(document).ready(function() {
     $('#tbl').DataTable({
+      //salto de linea cuando se desborda de la pantalla
+      "responsive": true,
+      //para que se vea el boton de exportar
+
       "dom": 'T<"clear">lfrtip',
       "tableTools": {
         "sRowSelect": "multi",
@@ -96,6 +100,8 @@
       }
     });
     $('#tbl2').DataTable({
+      //salto de linea cuando se desborda de la pantalla
+      "responsive": true,
       "dom": 'T<"clear">lfrtip',
       "tableTools": {
         "sRowSelect": "multi",

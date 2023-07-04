@@ -26,7 +26,7 @@
  -->
 
  <!-- Data table -->
- <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+ <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.css" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="<?php echo base_url('/public/css/estilos/estiloIndex.css') ?>">

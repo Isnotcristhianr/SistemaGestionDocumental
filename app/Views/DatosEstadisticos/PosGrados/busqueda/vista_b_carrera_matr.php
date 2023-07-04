@@ -2,10 +2,10 @@
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <!-- Volver -->
-    <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera') ?>" class="btn btn-outline-primary">← Volver</a>
+    <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgrado') ?>" class="btn btn-outline-primary">← Volver</a>
     <div class="row ">
         <div class="col-12">
-            <h2 class="text-center text-primary">Datos Estadísticos Grados
+            <h2 class="text-center text-primary">Datos Estadísticos Posgrados
             </h2>
             <h4 class="text-center text-dark">Búsqueda: Carreras</h4>
         </div>
