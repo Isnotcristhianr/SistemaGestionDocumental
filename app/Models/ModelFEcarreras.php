@@ -34,5 +34,25 @@ class ModelFEcarreras extends Model
         return count($carreras);
     }
     //////////////////////Posgrados///////////////////////////////////////
-    
+    /* Contar total carreras modalidad posgrado*/
+    public function contarCarrerasPosgrado()
+    {
+        /* contar CAR_CARRERA = 1 (grado) CTIP_ID = 2 (GRADO) */
+        $carreras = $this->where('CTIP_ID', 1)->where('CAR_CARRERA', 1)->findAll();
+        return count($carreras);
+    }
+    /* Contar total carreras modalidad posgrado vigentes*/
+    public function contarCarrerasPosgradoVigentes()
+    {
+        /* contar CAR_CARRERA = 1 (grado) CTIP_ID = 2 (GRADO) ACTIVA = Si (vigente) */
+        $carreras = $this->where('CTIP_ID', 1)->where('CAR_CARRERA', 1)->where('CAR_ACTIVA', 'SÍ')->findAll();
+        return count($carreras);
+    }
+    /* Contar total escuelas modalidad posgrado no vigentes*/
+    public function contarCarrerasPosgradoNoVigentes()
+    {
+        /* contar CAR_CARRERA = 1 (grado) CTIP_ID = 2 (GRADO) ACTIVA = No (no vigente) */
+        $carreras = $this->where('CTIP_ID', 1)->where('CAR_CARRERA', 1)->where('CAR_ACTIVA', 'No')->findAll();
+        return count($carreras);
+    }
 }

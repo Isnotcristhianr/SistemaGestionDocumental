@@ -2,6 +2,7 @@
 
     use App\Models\ModelFEPeriodo;
     use App\Models\ModelFEescuelas;
+    use App\Models\ModelFEcarreras;
 ?>
 <!-- Datos Estadisticos -->
 
@@ -46,7 +47,12 @@
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Carrera" class="text-decoration-none fw-bolder">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Carreras
-                        <span class="badge bg-primary rounded-pill">79</span>
+                        <span class="badge bg-primary rounded-pill">
+                            <?php
+                            $obgCarrera = new ModelFEcarreras();
+                            echo $obgCarrera->contarCarrerasPosgrado();
+                            ?>
+                        </span>
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Periodo" class="text-decoration-none fw-bolder">
