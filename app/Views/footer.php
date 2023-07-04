@@ -66,7 +66,11 @@
 <!-- Data Table -->
 <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"></script>
 <!-- Script DataTable -->
+ 
 <script>
+ /*  import DataTable from 'datatables.net-dt';
+  import 'datatables.net-responsive-dt'; */
+
   $(document).ready(function() {
     $('#tbl').DataTable({
       //salto de linea cuando se desborda de la pantalla
