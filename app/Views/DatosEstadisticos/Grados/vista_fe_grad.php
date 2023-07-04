@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\ModelFEcarreras;
 use App\Models\ModelFEPeriodo;
 use App\Models\ModelFEescuelas;
 ?>
@@ -47,7 +48,13 @@ use App\Models\ModelFEescuelas;
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera" class="text-decoration-none fw-bolder">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Carreras
-                        <span class="badge bg-primary rounded-pill">79</span>
+                        <span class="badge bg-primary rounded-pill">
+                            <!-- llenar carreras total filas -->
+                            <?php
+                            $obgCarrera = new ModelFEcarreras();
+                            echo $obgCarrera->contarCarrerasGrado();
+                            ?>
+                        </span>
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/Periodo" class="text-decoration-none fw-bolder">

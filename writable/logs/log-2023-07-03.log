@@ -1,0 +1,30 @@
+CRITICAL - 2023-07-03 20:31:12 --> Call to undefined method App\Models\ModelFEescuelas::contarCarrerasGrado
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php(54): CodeIgniter\Model->__call('contarCarrerasGrado', [])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/vista_fe_grad', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(26): view('/DatosEstadisticos/Grados/vista_fe_grad')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoGrad()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-03 21:09:17 --> Class "App\Models\ModeloEscuela" not found
+in APPPATH\Views\DatosEstadisticos\Grados\busqueda\vista_b_carrera_matr.php on line 58.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/busqueda/vista_b_carrera_matr', [], true)
+ 4 APPPATH\Controllers\ControladorFECarrera.php(21): view('/DatosEstadisticos/Grados/busqueda/vista_b_carrera_matr', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->filtroEstadisticoGradoCarrera('Matriculados')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-03 21:40:28 --> Unclosed '{' on line 93
+in APPPATH\Views\DatosEstadisticos\Grados\busqueda\vista_b_carrera_matr.php on line 124.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/busqueda/vista_b_carrera_matr', [], true)
+ 3 APPPATH\Controllers\ControladorFECarrera.php(24): view('/DatosEstadisticos/Grados/busqueda/vista_b_carrera_matr', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->filtroEstadisticoGradoCarrera('Matriculados')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
