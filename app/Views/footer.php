@@ -66,69 +66,29 @@
 <!-- Data Table -->
 <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"></script>
 <!-- Script DataTable -->
- 
+
 <script>
- /*  import DataTable from 'datatables.net-dt';
+  /*  import DataTable from 'datatables.net-dt';
   import 'datatables.net-responsive-dt'; */
 
   $(document).ready(function() {
     $('#tbl').DataTable({
-      //salto de linea cuando se desborda de la pantalla
-      "responsive": true,
-      "dom": 'T<"clear">lfrtip',
-      "tableTools": {
-        "sRowSelect": "multi",
-        "aButtons": [{
-          "sExtends": "select_none",
-          "sButtonText": "Borrar selección"
-        }]
+      //idioma de la tabla
+      language: {
+        "url": "https://cdn.datatables.net/plug-ins/1.10.21/i18n/Spanish.json"
       },
-      "pagingType": "simple_numbers",
-      //Actualizo las etiquetas de mi tabla para mostrarlas en español
-      "language": {
-        "lengthMenu": "Mostrar _MENU_ registros por página.",
-        "zeroRecords": "No se encontró registro.",
-        "info": "  _START_ de _END_ (_TOTAL_ registros totales).",
-        "infoEmpty": "0 de 0 de 0 registros",
-        "infoFiltered": "(Encontrado de _MAX_registros)",
-        "search": "Buscar: ",
-        "processing": "Procesando la información",
-        "paginate": {
-          "first": " |< ",
-          "previous": "Ant.",
-          "next": "Sig.",
-          "last": " >| "
-        }
-      }
+      //guardar el estado de la tabla
+      stateSave: true,
+      //
     });
     $('#tbl2').DataTable({
-      //salto de linea cuando se desborda de la pantalla
-      "responsive": true,
-      "dom": 'T<"clear">lfrtip',
-      "tableTools": {
-        "sRowSelect": "multi",
-        "aButtons": [{
-          "sExtends": "select_none",
-          "sButtonText": "Borrar selección"
-        }]
+      //idioma de la tabla
+      language: {
+        "url": "https://cdn.datatables.net/plug-ins/1.10.21/i18n/Spanish.json"
       },
-      "pagingType": "simple_numbers",
-      //Actualizo las etiquetas de mi tabla para mostrarlas en español
-      "language": {
-        "lengthMenu": "Mostrar _MENU_ registros por página.",
-        "zeroRecords": "No se encontró registro.",
-        "info": "  _START_ de _END_ (_TOTAL_ registros totales).",
-        "infoEmpty": "0 de 0 de 0 registros",
-        "infoFiltered": "(Encontrado de _MAX_registros)",
-        "search": "Buscar: ",
-        "processing": "Procesando la información",
-        "paginate": {
-          "first": " |< ",
-          "previous": "Ant.",
-          "next": "Sig.",
-          "last": " >| "
-        }
-      }
+      //guardar el estado de la tabla
+      stateSave: true
+
     });
   });
 </script>
