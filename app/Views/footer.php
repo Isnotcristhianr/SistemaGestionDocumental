@@ -75,8 +75,6 @@
     $('#tbl').DataTable({
       //salto de linea cuando se desborda de la pantalla
       "responsive": true,
-      //para que se vea el boton de exportar
-
       "dom": 'T<"clear">lfrtip',
       "tableTools": {
         "sRowSelect": "multi",

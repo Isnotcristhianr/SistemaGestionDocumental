@@ -1,7 +1,9 @@
 <?php
 
-use App\Models\ModelFEPeriodo;
+    use App\Models\ModelFEPeriodo;
+    use App\Models\ModelFECarreras;
 ?>
+
 <!-- Datos Estadisticos -->
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
@@ -34,7 +36,12 @@ use App\Models\ModelFEPeriodo;
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnologías/CarrerasTécnicasyTecnológias" class="text-decoration-none fw-bolder">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Carreras Técnicas y Tecnológias
-                        <span class="badge bg-primary rounded-pill">79</span>
+                        <span class="badge bg-primary rounded-pill">
+                            <?php
+                                $obgCarrera = new ModelFECarreras();
+                                echo $obgCarrera->contarCarrerasTecnologia();
+                            ?>
+                        </span>
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnologías/Periodo" class="text-decoration-none fw-bolder">

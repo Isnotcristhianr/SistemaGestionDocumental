@@ -57,4 +57,29 @@ class ControladorFECarrera extends BaseController
             echo $e->getMessage();
         }
     }
+    //Datos Estadisticos Tecnologias
+    public function filtroEstadisticoTecnologiaCarrera($tipo)
+    {
+        try {
+            //modelo
+            $objCarreras = new ModelFEcarreras();
+            //car_nombre donde ctip = 3, car_carrera = 1
+            $data['tbl_carrera'] = $objCarreras
+                ->where('CTIP_ID', 3)
+                ->where('CAR_CARRERA', 1)
+                ->findAll();
+
+            if ($tipo == "Matriculados") {
+                return view('header')
+                    . view('/DatosEstadisticos/Tecnologias/busqueda/vista_b_carrera_matr', $data)
+                    . view('footer');
+            } else if ($tipo == "Graduados") {
+                return view('header')
+                    . view('/DatosEstadisticos/Tecnologias/busqueda/vista_b_carrera_grad', $data)
+                    . view('footer');
+            }
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
 }

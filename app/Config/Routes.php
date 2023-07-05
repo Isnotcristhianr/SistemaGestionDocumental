@@ -57,7 +57,7 @@ $routes->get('/FiltroEstadisticoPosgradoBusqueda/(:any)/(:any)', 'ControladorEst
 $routes->get('/FiltroEstadisticoTecnologia', 'ControladorEstadistico::filtroEstadisticoTecnologia');
 $routes->get('/FiltroEstadisticoTecnologiaBusqueda/(:any)/(:any)', 'ControladorEstadistico::filtroEstadisticoTecnologiaBusqueda/$1/$2');
 /* Periodos */ $routes->get('/FiltroEstadisticoTecnologiaPeriodo/(:any)', 'ControladorFEPeriodo::filtroEstadisticoTecnologiaPeriodo/$1');
-
+/*  Carreras Tecnologicas */ $routes->get('/FiltroEstadisticoTecnologiaCarrera/(:any)', 'ControladorFECarrera::filtroEstadisticoTecnologiaCarrera/$1');
 //Datos Estadisticos Historico Puce-I
 $routes->get('/deHistorico', 'ControladorHistorico::dehistorico');
 

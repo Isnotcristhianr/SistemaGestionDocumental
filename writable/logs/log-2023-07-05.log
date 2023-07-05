@@ -1,0 +1,42 @@
+CRITICAL - 2023-07-05 21:15:21 --> Call to undefined method App\Models\ModelFEcarreras::contarCarrerasTecnicasTecnologias
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(42): CodeIgniter\Model->__call('contarCarrerasTecnicasTecnologias', [])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Tecnologias\\vista_fe_tec.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Tecnologias/vista_fe_tec', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisticos/Tecnologias/vista_fe_tec')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 21:15:39 --> Call to undefined method App\Models\ModelFEcarreras::contarCarrerasTecnicasTecnologias
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(42): CodeIgniter\Model->__call('contarCarrerasTecnicasTecnologias', [])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Tecnologias\\vista_fe_tec.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Tecnologias/vista_fe_tec', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisticos/Tecnologias/vista_fe_tec')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 21:15:40 --> Call to undefined method App\Models\ModelFEcarreras::contarCarrerasTecnicasTecnologias
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Views\DatosEstadisticos\Tecnologias\vista_fe_tec.php(42): CodeIgniter\Model->__call('contarCarrerasTecnicasTecnologias', [])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Tecnologias\\vista_fe_tec.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Tecnologias/vista_fe_tec', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(130): view('/DatosEstadisticos/Tecnologias/vista_fe_tec')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoTecnologia()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 21:25:46 --> syntax error, unexpected token "<", expecting end of file
+in APPPATH\Views\DatosEstadisticos\Tecnologias\busqueda\vista_b_carrera_grad.php on line 55.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Tecnologias/busqueda/vista_b_carrera_grad', [], true)
+ 3 APPPATH\Controllers\ControladorFECarrera.php(78): view('/DatosEstadisticos/Tecnologias/busqueda/vista_b_carrera_grad', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->filtroEstadisticoTecnologiaCarrera('Graduados')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

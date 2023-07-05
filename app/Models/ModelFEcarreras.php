@@ -55,4 +55,26 @@ class ModelFEcarreras extends Model
         $carreras = $this->where('CTIP_ID', 1)->where('CAR_CARRERA', 1)->where('CAR_ACTIVA', 'No')->findAll();
         return count($carreras);
     }
+    /* //////////////////////TECNOLOGIAS///////////////////////////// */
+    /* Contar total carreras modalidad tecnologia*/
+    public function contarCarrerasTecnologia()
+    {
+        /* contar CAR_CARRERA = 1 (tecnologia) CTIP_ID = 3 (tec) */
+        $carreras = $this->where('CTIP_ID', 3)->where('CAR_CARRERA', 1)->findAll();
+        return count($carreras);
+    }
+    /* Contar total carreras modalidad tecnologia vigentes*/
+    public function contarCarrerasTecnologiaVigentes()
+    {
+        /* contar CAR_CARRERA = 1 (tecnologia) CTIP_ID = 3 (tec) ACTIVA = Si (vigente) */
+        $carreras = $this->where('CTIP_ID', 3)->where('CAR_CARRERA', 1)->where('CAR_ACTIVA', 'SÍ')->findAll();
+        return count($carreras);
+    }
+    /* Contar total escuelas modalidad tecnologia no vigentes*/
+    public function contarCarrerasTecnologiaNoVigentes()
+    {
+        /* contar CAR_CARRERA = 1 (tecnologia) CTIP_ID = 3 (tec) ACTIVA = No (no vigente) */
+        $carreras = $this->where('CTIP_ID', 3)->where('CAR_CARRERA', 1)->where('CAR_ACTIVA', 'No')->findAll();
+        return count($carreras);
+    }
 }

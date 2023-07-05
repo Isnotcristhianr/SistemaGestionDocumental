@@ -2,7 +2,7 @@
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <!-- Volver -->
-    <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgrado') ?>" class="btn btn-outline-primary">← Volver</a>
+    <a href="<?php echo base_url('index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnologías/CarrerasTécnicasyTecnológias') ?>" class="btn btn-outline-primary">← Volver</a>
     <div class="row ">
         <div class="col-12">
             <h2 class="text-center text-primary">Datos Estadísticos Posgrados
@@ -10,7 +10,7 @@
             <h4 class="text-center text-dark">Búsqueda: Carreras</h4>
         </div>
         <div class="col-12">
-            <h5 class="text-center text-secondary">↓ Graduados ↓</h5>
+            <h5 class="text-center text-secondary">↓ Matriculados ↓</h5>
         </div>
     </div>
 
@@ -43,7 +43,13 @@
                                 echo $num++;
                                 ?></td>
                             <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
-                            <td><?php echo $carreras['CAR_PADREESC']; ?></td>
+                            <td><?php 
+                              if ($carreras['CAR_PADREESC'] == 98) {
+                                echo 'Tecnología';
+                            } else {
+                                echo $carreras['CAR_PADREESC'];
+                            }
+                            ?></td>
                             <td>
                                 <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Ver →</a>
                             </td>
@@ -80,6 +86,8 @@
                 <?php
                 foreach ($tbl_carrera as $carreras) {
                     if ($carreras['CAR_ACTIVA'] == 'No') {
+                        /* CAR_PADRE SOLO SI ES IGUAL A 98 */
+                        if ($carreras['CAR_PADREESC'] == '98') {
 
                 ?>
                         <tr>
@@ -97,6 +105,7 @@
                 <?php
                     }
                 }
+            }
                 ?>
 
             </tbody>
