@@ -90,6 +90,17 @@
       stateSave: true
 
     });
+    $('#tbl3').DataTable({
+      //idioma de la tabla
+      language: {
+        "url": "https://cdn.datatables.net/plug-ins/1.10.21/i18n/Spanish.json"
+      },
+      //guardar el estado de la tabla
+      stateSave: true,
+      //ordenar por la columna 0
+
+                                                                                                                                                                                                                                
+    });
   });
 </script>
 
