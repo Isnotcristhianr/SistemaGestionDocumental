@@ -16,6 +16,7 @@
 
     <!-- Contenido-->
     <h3 class="text text-start text-success">Oferta Académica Vigentes</h3>
+    <!-- Sede Ibarra -->
     <a href="" class="btn btn-success ">Ver Resumen</a>
     <br>
     <br>
@@ -61,48 +62,91 @@
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <h3 class="text text-start text-primary">Histórico</h3>
+    <!-- Sede Ibarra -->
+    <br>
+    <h5 class="text text-primary">Campus Ibarra</h5>
     <a href="" class="btn btn-primary">Ver Resumen</a>
     <br>
     <br>
     <div class="table-responsive text-center">
 
-    <!-- Llenar tabla con no ativas -->
-    <table class="table align-middle order-column hover nowrap row-border stripe " id="tbl2">
-        <thead>
-            <th hidden>ID</th>
-            <th>Numero</th>
-            <th>Escuela</th>
-            <th>Acciones</th>
-        </thead>
-        <tbody>
-            <?php
-            foreach ($tbl_carrera as $escuelas) {
-                if ($escuelas['CAR_ACTIVA'] == 'No') {
-            ?>
-                    <tr>
-                        <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
-                        <td><?php
-                            /* autoincrementar desde 0*/
-                            static $numero2 = 1;
-                            echo $numero2++;
-                            ?></td>
-                        <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
-                        <td>
-                            <a href="<?php
-                                        echo base_url('index.php/ControladorFEEscuela/estadisticoGradoEscuela/' . $escuelas['CAR_ID'] . '/Matriculados')
-                                        ?>" class="btn btn-primary">Visualizar →</a>
-                        </td>
-                    </tr>
-            <?php
+        <!-- Llenar tabla con no ativas -->
+        <table class="table table-primary align-middle order-column hover nowrap row-border stripe " id="tbl2">
+            <thead>
+                <th hidden>ID</th>
+                <th>Numero</th>
+                <th>Escuela</th>
+                <th>Acciones</th>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($tbl_carrera as $escuelas) {
+                    if ($escuelas['CAR_ACTIVA'] == 'No') {
+                ?>
+                        <tr>
+                            <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
+                            <td><?php
+                                /* autoincrementar desde 0*/
+                                static $numero2 = 1;
+                                echo $numero2++;
+                                ?></td>
+                            <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
+                            <td>
+                                <a href="<?php
+                                            echo base_url('index.php/ControladorFEEscuela/estadisticoGradoEscuela/' . $escuelas['CAR_ID'] . '/Matriculados')
+                                            ?>" class="btn btn-primary">Visualizar →</a>
+                            </td>
+                        </tr>
+                <?php
+                    }
                 }
-            }
-            ?>
-        </tbody>
-    </table>
+                ?>
+            </tbody>
+        </table>
+    </div>
+    <!-- Sede tulcan -->
+    <br>
+    <h5 class="text text-info">Campus Tulcan</h5>
+    <a href="" class="btn btn-info ">Ver Resumen</a>
+    <br>
+    <br>
+    <div class="table-responsive text-center">
+        <!-- Llenar tabla con activas -->
+        <table class="table table-info align-middle order-column hover nowrap row-border stripe " id="tbl3">
+            <thead>
+                <th hidden>ID</th>
+                <th>Numero</th>
+                <th>Escuela</th>
+                <th>Acciones</th>
+            </thead>
+            <tbody>
+            <?php
+                foreach ($tbl_carrera as $escuelas) {
+                    if ($escuelas['CAR_ACTIVA'] == 'No') {
+                ?>
+                        <tr>
+                            <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
+                            <td><?php
+                                /* autoincrementar desde 0*/
+                                static $numero2 = 1;
+                                echo $numero2++;
+                                ?></td>
+                            <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
+                            <td>
+                                <a href="<?php
+                                            echo base_url('index.php/ControladorFEEscuela/estadisticoGradoEscuela/' . $escuelas['CAR_ID'] . '/Matriculados')
+                                            ?>" class="btn btn-info">Visualizar →</a>
+                            </td>
+                        </tr>
+                <?php
+                    }
+                }
+                ?>
 
-
-
-
+            </tbody>
+        </table>
+    </div>
 </div>
+
 
 </div>

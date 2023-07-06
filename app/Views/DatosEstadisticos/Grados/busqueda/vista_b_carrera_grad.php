@@ -117,7 +117,7 @@
     <div class="table-responsive text-center">
 
         <!-- Llenar tabla con no ativas -->
-        <table class="table table-primary align-middle order-column hover nowrap row-border stripe " id="tbl2">
+        <table class="table table-info align-middle order-column hover nowrap row-border stripe " id="tbl2">
             <thead>
                 <th hidden>ID</th>
                 <th>Numero</th>
