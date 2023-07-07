@@ -61,7 +61,7 @@
 </div>
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
-    <h3 class="text text-start text-primary">Histórico</h3>
+    <h3 class="text text-start text-primary">Oferta Académica Histórico</h3>
     <!-- Sede Ibarra -->
     <br>
     <h5 class="text text-primary">Campus Ibarra</h5>
