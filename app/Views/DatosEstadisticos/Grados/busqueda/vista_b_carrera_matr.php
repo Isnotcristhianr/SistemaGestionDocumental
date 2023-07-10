@@ -30,39 +30,40 @@
                 <th>Acciones</th>
             </thead>
             <tbody>
+
                 <!-- llenar toda la tabla con car activas-->
                 <?php
                 foreach ($tbl_carrera as $carreras) {
                     if ($carreras['CAR_ACTIVA'] == 'SÍ') {
-
+                        if ($carreras['CAR_CAMPUS'] == 1) {
                 ?>
-                        <tr>
-                            <td hidden><?php echo $carreras['CAR_ID']; ?></td>
-                            <td><?php
-                                //incrementar el numero de la tabla
-                                static $num = 1;
-                                echo $num++;
-                                ?></td>
-                            <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
-                            <td><?php echo $carreras['CAR_PADREESC']; ?></td>
-                            <td>
-                                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Ver →</a>
-                            </td>
-
-
-                        </tr>
+                            <tr>
+                                <td hidden><?php echo $carreras['CAR_ID']; ?></td>
+                                <td><?php
+                                    /* autoincrementar */
+                                    static $numero = 1;
+                                    echo $numero++;
+                                    ?></td>
+                                <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
+                                <td><?php echo $carreras['CAR_PADREESC']; ?></td>
+                                <td>
+                                    <a href="<?php
+                                                echo base_url('index.php/ControladorFECarrera/estadisticoGradoCarrera/' . $carreras['CAR_ID'] . '/Matriculados')
+                                                ?>" class="btn btn-success">Visualizar →</a>
+                                </td>
+                            </tr>
                 <?php
+                        }   
                     }
                 }
                 ?>
-
             </tbody>
         </table>
     </div>
 </div>
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
-    <h3 class="text text-start text-primary">Oferta Aceémica Histórico</h3>
+    <h3 class="text text-start text-primary">Oferta Académica Histórico</h3>
     <br>
     <!-- Sede Ibarra -->
     <h4>Campus Ibarra</h4>
@@ -82,28 +83,31 @@
             </thead>
             <tbody>
                 <!-- llenar toda la tabla con car no activas-->
+                
                 <?php
+
                 foreach ($tbl_carrera as $carreras) {
                     if ($carreras['CAR_ACTIVA'] == 'No') {
-
+                        if ($carreras['CAR_CAMPUS'] == 1) {
                 ?>
-                        <tr>
-                            <td hidden><?php echo $carreras['CAR_ID']; ?></td>
-                            <td><?php
-                                static $num2 = 1;
-                                echo $num2++;
-                                ?></td>
-                            <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
-                            <td><?php echo $carreras['CAR_PADREESC']; ?></td>
-                            <td>
-                                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Ver →</a>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td hidden><?php echo $carreras['CAR_ID']; ?></td>
+                                <td><?php
+                                    static $num = 1;
+                                    echo $num++;
+                                    ?></td>
+                                <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
+                                <td><?php echo $carreras['CAR_PADREESC']; ?></td>
+                                <td>
+                                    <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Ver →</a>
+                                </td>
+                            </tr>
                 <?php
+
+                        }
                     }
                 }
                 ?>
-
             </tbody>
         </table>
     </div>
@@ -126,24 +130,28 @@
             </thead>
             <tbody>
                 <!-- llenar toda la tabla con car no activas-->
+                
                 <?php
+
                 foreach ($tbl_carrera as $carreras) {
                     if ($carreras['CAR_ACTIVA'] == 'No') {
-
+                        if ($carreras['CAR_CAMPUS'] == 2) {
                 ?>
-                        <tr>
-                            <td hidden><?php echo $carreras['CAR_ID']; ?></td>
-                            <td><?php
-                                static $num2 = 1;
-                                echo $num2++;
-                                ?></td>
-                            <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
-                            <td><?php echo $carreras['CAR_PADREESC']; ?></td>
-                            <td>
-                                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-info">Ver →</a>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td hidden><?php echo $carreras['CAR_ID']; ?></td>
+                                <td><?php
+                                    static $num = 1;
+                                    echo $num++;
+                                    ?></td>
+                                <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
+                                <td><?php echo $carreras['CAR_PADREESC']; ?></td>
+                                <td>
+                                    <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-info">Ver →</a>
+                                </td>
+                            </tr>
                 <?php
+
+                        }
                     }
                 }
                 ?>
