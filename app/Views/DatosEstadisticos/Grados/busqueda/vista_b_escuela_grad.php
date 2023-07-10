@@ -30,26 +30,28 @@
             </thead>
             <tbody>
                 <!-- llenar toda la tabla con car activas-->
+                
                 <?php
                 foreach ($tbl_carrera as $escuelas) {
                     if ($escuelas['CAR_ACTIVA'] == 'SÍ') {
-
+                        if ($escuelas['CAR_CAMPUS'] == 1) {
                 ?>
-                        <tr>
-                            <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
-                            <td><?php
-                                /* autoincrementar */
-                                static $numero = 1;
-                                echo $numero++;
-                                ?></td>
-                            <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
-                            <td>
-                                <a href="<?php
-                                            echo base_url('index.php/ControladorFEEscuela/estadisticoGradoEscuela/' . $escuelas['CAR_ID'] . '/Matriculados')
-                                            ?>" class="btn btn-success">Visualizar →</a>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
+                                <td><?php
+                                    /* autoincrementar */
+                                    static $numero = 1;
+                                    echo $numero++;
+                                    ?></td>
+                                <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
+                                <td>
+                                    <a href="<?php
+                                                echo base_url('index.php/ControladorFEEscuela/estadisticoGradoEscuela/' . $escuelas['CAR_ID'] . '/Graduados')
+                                                ?>" class="btn btn-success">Visualizar →</a>
+                                </td>
+                            </tr>
                 <?php
+                        }
                     }
                 }
                 ?>
@@ -81,22 +83,24 @@
                 <?php
                 foreach ($tbl_carrera as $escuelas) {
                     if ($escuelas['CAR_ACTIVA'] == 'No') {
+                        if ($escuelas['CAR_CAMPUS'] == 1) {
                 ?>
-                        <tr>
-                            <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
-                            <td><?php
-                                /* autoincrementar desde 0*/
-                                static $numero2 = 1;
-                                echo $numero2++;
-                                ?></td>
-                            <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
-                            <td>
-                                <a href="<?php
-                                            echo base_url('index.php/ControladorFEEscuela/estadisticoGradoEscuela/' . $escuelas['CAR_ID'] . '/Matriculados')
-                                            ?>" class="btn btn-primary">Visualizar →</a>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
+                                <td><?php
+                                    /* autoincrementar desde 0*/
+                                    static $numero2 = 1;
+                                    echo $numero2++;
+                                    ?></td>
+                                <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
+                                <td>
+                                    <a href="<?php
+                                                echo base_url('index.php/ControladorFEEscuela/estadisticoGradoEscuela/' . $escuelas['CAR_ID'] . '/Graduados')
+                                                ?>" class="btn btn-primary">Visualizar →</a>
+                                </td>
+                            </tr>
                 <?php
+                        }
                     }
                 }
                 ?>
@@ -123,22 +127,24 @@
                 <?php
                 foreach ($tbl_carrera as $escuelas) {
                     if ($escuelas['CAR_ACTIVA'] == 'No') {
+                        if ($escuelas['CAR_CAMPUS'] == 2) {
                 ?>
-                        <tr>
-                            <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
-                            <td><?php
-                                /* autoincrementar desde 0*/
-                                static $numero2 = 1;
-                                echo $numero2++;
-                                ?></td>
-                            <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
-                            <td>
-                                <a href="<?php
-                                            echo base_url('index.php/ControladorFEEscuela/estadisticoGradoEscuela/' . $escuelas['CAR_ID'] . '/Matriculados')
-                                            ?>" class="btn btn-info">Visualizar →</a>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
+                                <td><?php
+                                    /* autoincrementar desde 0*/
+                                    static $numero3 = 1;
+                                    echo $numero3++;
+                                    ?></td>
+                                <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
+                                <td>
+                                    <a href="<?php
+                                                echo base_url('index.php/ControladorFEEscuela/estadisticoGradoEscuela/' . $escuelas['CAR_ID'] . '/Graduados')
+                                                ?>" class="btn btn-info">Visualizar →</a>
+                                </td>
+                            </tr>
                 <?php
+                        }
                     }
                 }
                 ?>

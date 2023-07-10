@@ -1,0 +1,45 @@
+CRITICAL - 2023-07-10 20:56:31 --> Unclosed '{' on line 94
+in APPPATH\Views\DatosEstadisticos\Grados\busqueda\vista_b_escuela_matr.php on line 169.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_matr', [], true)
+ 3 APPPATH\Controllers\ControladorFEEscuela.php(20): view('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_matr', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFEEscuela->filtroEstadisticoGradoEscuela('Matriculados')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFEEscuela))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-10 20:56:34 --> Unclosed '{' on line 94
+in APPPATH\Views\DatosEstadisticos\Grados\busqueda\vista_b_escuela_matr.php on line 169.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_matr', [], true)
+ 3 APPPATH\Controllers\ControladorFEEscuela.php(20): view('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_matr', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFEEscuela->filtroEstadisticoGradoEscuela('Matriculados')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFEEscuela))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-10 21:25:28 --> syntax error, unexpected token "<"
+in APPPATH\Views\DatosEstadisticos\Grados\busqueda\vista_b_escuela_matr.php on line 58.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_matr', [], true)
+ 3 APPPATH\Controllers\ControladorFEEscuela.php(20): view('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_matr', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFEEscuela->filtroEstadisticoGradoEscuela('Matriculados')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFEEscuela))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-10 21:25:30 --> syntax error, unexpected token "<"
+in APPPATH\Views\DatosEstadisticos\Grados\busqueda\vista_b_escuela_matr.php on line 58.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_matr', [], true)
+ 3 APPPATH\Controllers\ControladorFEEscuela.php(20): view('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_matr', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFEEscuela->filtroEstadisticoGradoEscuela('Matriculados')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFEEscuela))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-10 21:25:39 --> syntax error, unexpected token "<", expecting end of file
+in APPPATH\Views\DatosEstadisticos\Grados\busqueda\vista_b_escuela_matr.php on line 62.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_matr', [], true)
+ 3 APPPATH\Controllers\ControladorFEEscuela.php(20): view('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_matr', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFEEscuela->filtroEstadisticoGradoEscuela('Matriculados')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFEEscuela))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

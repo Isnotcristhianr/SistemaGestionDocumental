@@ -76,7 +76,7 @@
     <br>
     <div class="table-responsive text-center">
 
-        <!-- Llenar tabla con no ativas -->
+        <!-- Llenar tabla con no ativas  -->
         <table class="table table-primary align-middle order-column hover nowrap row-border stripe" id="tbl2">
             <thead>
                 <th hidden>ID</th>
@@ -86,13 +86,12 @@
                 <th>Acciones</th>
             </thead>
             <tbody>
-                <!-- llenar toda la tabla con car no activas-->
+                <!-- llenar toda la tabla con car no activas car_campus=1 (ibarra)-->
                 <?php
                 foreach ($tbl_carrera as $carreras) {
                     if ($carreras['CAR_ACTIVA'] == 'No') {
                         /* CAR_PADRE SOLO SI ES IGUAL A 98 */
                         if ($carreras['CAR_PADREESC'] == '98') {
-
                 ?>
                             <tr>
                                 <td hidden><?php echo $carreras['CAR_ID']; ?></td>
@@ -136,7 +135,7 @@
                 <th>Acciones</th>
             </thead>
             <tbody>
-                <!-- llenar toda la tabla con car no activas-->
+                <!-- llenar toda la tabla con car no activas -->
                 <?php
                 foreach ($tbl_carrera as $carreras) {
                     if ($carreras['CAR_ACTIVA'] == 'No') {
