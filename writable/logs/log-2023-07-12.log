@@ -1,0 +1,285 @@
+ERROR - 2023-07-12 22:07:58 --> mysqli_sql_exception: Unknown column 'CTIP_ID' in 'where clause' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorFECarrera.php(24): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->filtroEstadisticoGradoCarrera('Matriculados')
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-07-12 22:07:58 --> Unknown column 'CTIP_ID' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = 2
+AND `CAR_CARRERA` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = 2
+AND `CAR_CARRERA` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = 2
+AND `CAR_CARRERA` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = :CTIP_ID:
+AND `CAR_CARRERA` = :CAR_CARRERA:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ControladorFECarrera.php(24): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->filtroEstadisticoGradoCarrera('Matriculados')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-12 22:08:01 --> mysqli_sql_exception: Unknown column 'CTIP_ID' in 'where clause' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorFECarrera.php(24): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->filtroEstadisticoGradoCarrera('Matriculados')
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-07-12 22:08:01 --> Unknown column 'CTIP_ID' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = 2
+AND `CAR_CARRERA` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = 2
+AND `CAR_CARRERA` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = 2
+AND `CAR_CARRERA` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = :CTIP_ID:
+AND `CAR_CARRERA` = :CAR_CARRERA:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ControladorFECarrera.php(24): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->filtroEstadisticoGradoCarrera('Matriculados')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-12 22:08:29 --> mysqli_sql_exception: Unknown column 'CTIP_ID' in 'where clause' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorFECarrera.php(24): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->filtroEstadisticoGradoCarrera('Graduados')
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-07-12 22:08:29 --> Unknown column 'CTIP_ID' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = 2
+AND `CAR_CARRERA` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = 2
+AND `CAR_CARRERA` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = 2
+AND `CAR_CARRERA` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = :CTIP_ID:
+AND `CAR_CARRERA` = :CAR_CARRERA:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ControladorFECarrera.php(24): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->filtroEstadisticoGradoCarrera('Graduados')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-12 22:08:35 --> mysqli_sql_exception: Unknown column 'CTIP_ID' in 'where clause' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorFECarrera.php(24): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->filtroEstadisticoGradoCarrera('Matriculados')
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-07-12 22:08:35 --> Unknown column 'CTIP_ID' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = 2
+AND `CAR_CARRERA` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = 2
+AND `CAR_CARRERA` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = 2
+AND `CAR_CARRERA` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = :CTIP_ID:
+AND `CAR_CARRERA` = :CAR_CARRERA:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ControladorFECarrera.php(24): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->filtroEstadisticoGradoCarrera('Matriculados')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-12 22:08:51 --> mysqli_sql_exception: Unknown column 'CTIP_ID' in 'where clause' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorFECarrera.php(24): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->filtroEstadisticoGradoCarrera('Matriculados')
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-07-12 22:08:51 --> Unknown column 'CTIP_ID' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = 2
+AND `CAR_CARRERA` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = 2
+AND `CAR_CARRERA` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = 2
+AND `CAR_CARRERA` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = :CTIP_ID:
+AND `CAR_CARRERA` = :CAR_CARRERA:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ControladorFECarrera.php(24): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->filtroEstadisticoGradoCarrera('Matriculados')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-12 22:08:51 --> mysqli_sql_exception: Unknown column 'CTIP_ID' in 'where clause' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorFECarrera.php(24): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->filtroEstadisticoGradoCarrera('Matriculados')
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-07-12 22:08:51 --> Unknown column 'CTIP_ID' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = 2
+AND `CAR_CARRERA` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = 2
+AND `CAR_CARRERA` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = 2
+AND `CAR_CARRERA` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_escuela`
+WHERE `CTIP_ID` = :CTIP_ID:
+AND `CAR_CARRERA` = :CAR_CARRERA:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ControladorFECarrera.php(24): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->filtroEstadisticoGradoCarrera('Matriculados')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-12 22:18:41 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table('')
+ 2 SYSTEMPATH\Model.php(234): CodeIgniter\Model->builder()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ControladorFECarrera.php(25): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->filtroEstadisticoGradoCarrera('Matriculados')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-12 22:18:43 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table('')
+ 2 SYSTEMPATH\Model.php(234): CodeIgniter\Model->builder()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ControladorFECarrera.php(25): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->filtroEstadisticoGradoCarrera('Matriculados')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-12 22:22:14 --> Undefined variable $tbl_escuela
+in APPPATH\Views\DatosEstadisticos\Grados\busqueda\vista_b_carrera_matr.php on line 51.
+ 1 APPPATH\Views\DatosEstadisticos\Grados\busqueda\vista_b_carrera_matr.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tbl_escuela', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\busqueda\\vista_b_carrera_matr.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\busqueda\\vista_b_carrera_matr.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/busqueda/vista_b_carrera_matr', [...], true)
+ 5 APPPATH\Controllers\ControladorFECarrera.php(29): view('/DatosEstadisticos/Grados/busqueda/vista_b_carrera_matr', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->filtroEstadisticoGradoCarrera('Matriculados')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-12 22:22:15 --> Undefined variable $tbl_escuela
+in APPPATH\Views\DatosEstadisticos\Grados\busqueda\vista_b_carrera_matr.php on line 51.
+ 1 APPPATH\Views\DatosEstadisticos\Grados\busqueda\vista_b_carrera_matr.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tbl_escuela', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\busqueda\\vista_b_carrera_matr.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\busqueda\\vista_b_carrera_matr.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/busqueda/vista_b_carrera_matr', [...], true)
+ 5 APPPATH\Controllers\ControladorFECarrera.php(29): view('/DatosEstadisticos/Grados/busqueda/vista_b_carrera_matr', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->filtroEstadisticoGradoCarrera('Matriculados')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-12 22:28:44 --> Unclosed '{' on line 36
+in APPPATH\Views\DatosEstadisticos\Grados\busqueda\vista_b_carrera_matr.php on line 179.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/busqueda/vista_b_carrera_matr', [], true)
+ 3 APPPATH\Controllers\ControladorFECarrera.php(29): view('/DatosEstadisticos/Grados/busqueda/vista_b_carrera_matr', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->filtroEstadisticoGradoCarrera('Matriculados')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -45,7 +45,21 @@
                                     echo $numero++;
                                     ?></td>
                                 <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
-                                <td><?php echo $carreras['CAR_PADREESC']; ?></td>
+                                <td>
+                                    <!-- Obtener largo tbl_escuela -->
+                                    <?php
+                                    $largo = count($tbl_escuela);
+
+                                    /* comparar 2 tbl_carrera con tbl_escuela, tbl_escuela obtiene esc_padre y esc_nombre,
+                                     se compara esc_padre con CAR_PADREESC con esc_padre asignando el nombre correspondiente */
+
+                                    for ($i = 0; $i < $largo; $i++) {
+                                        if ($carreras['CAR_PADREESC'] == $tbl_escuela[$i]['esc_padre']) {
+                                            echo $tbl_escuela[$i]['esc_nombre'];
+                                        }
+                                    }
+                                    ?>
+                                </td>
                                 <td>
                                     <a href="<?php
                                                 echo base_url('index.php/ControladorFECarrera/estadisticoGradoCarrera/' . $carreras['CAR_ID'] . '/Matriculados')
@@ -53,7 +67,7 @@
                                 </td>
                             </tr>
                 <?php
-                        }   
+                        }
                     }
                 }
                 ?>
@@ -83,7 +97,7 @@
             </thead>
             <tbody>
                 <!-- llenar toda la tabla con car no activas-->
-                
+
                 <?php
 
                 foreach ($tbl_carrera as $carreras) {
@@ -130,7 +144,7 @@
             </thead>
             <tbody>
                 <!-- llenar toda la tabla con car no activas-->
-                
+
                 <?php
 
                 foreach ($tbl_carrera as $carreras) {

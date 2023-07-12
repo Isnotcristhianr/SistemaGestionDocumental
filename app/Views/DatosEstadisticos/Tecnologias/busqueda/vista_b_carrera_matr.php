@@ -5,7 +5,7 @@
     <a href="<?php echo base_url('index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnologías/CarrerasTécnicasyTecnológias') ?>" class="btn btn-outline-primary">← Volver</a>
     <div class="row ">
         <div class="col-12">
-            <h2 class="text-center text-primary">Datos Estadísticos Posgrados
+            <h2 class="text-center text-primary">Datos Estadísticos Tecnologías
             </h2>
             <h4 class="text-center text-dark">Búsqueda: Carreras</h4>
         </div>
@@ -136,14 +136,14 @@
                 foreach ($tbl_carrera as $carreras) {
                     if ($carreras['CAR_ACTIVA'] == 'No') {
                         /* CAR_PADRE SOLO SI ES IGUAL A 98 */
-                        if ($carreras['CAR_PADREESC'] == '98') {
+                        if ($carreras['CAR_PADREESC'] == '99') {
 
                 ?>
                             <tr>
                                 <td hidden><?php echo $carreras['CAR_ID']; ?></td>
                                 <td><?php
-                                    static $num2 = 1;
-                                    echo $num2++;
+                                    static $num3 = 1;
+                                    echo $num3++;
                                     ?></td>
                                 <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
                                 <td><?php echo $carreras['CAR_PADREESC']; ?></td>

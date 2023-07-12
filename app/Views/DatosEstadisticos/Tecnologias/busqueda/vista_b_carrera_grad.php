@@ -5,7 +5,7 @@
     <a href="<?php echo base_url('index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnologías/CarrerasTécnicasyTecnológias') ?>" class="btn btn-outline-primary">← Volver</a>
     <div class="row ">
         <div class="col-12">
-            <h2 class="text-center text-primary">Datos Estadísticos Posgrados
+            <h2 class="text-center text-primary">Datos Estadísticos Tecnologías
             </h2>
             <h4 class="text-center text-dark">Búsqueda: Carreras</h4>
         </div>
@@ -26,7 +26,6 @@
                 <th hidden>ID</th>
                 <th>Numero</th>
                 <th>Carrera</th>
-                <th>Escuela</th>
                 <th>Acciones</th>
             </thead>
             <tbody>
