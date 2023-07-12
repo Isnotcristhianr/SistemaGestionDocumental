@@ -66,7 +66,8 @@
 <!-- Data Table -->
 <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"></script>
 <!-- Script DataTable -->
-
+<script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
 <script>
   /*  import DataTable from 'datatables.net-dt';
   import 'datatables.net-responsive-dt'; */
@@ -79,7 +80,8 @@
       },
       //guardar el estado de la tabla
       stateSave: true,
-      //
+      //responsive
+      responsive: true,
     });
     $('#tbl2').DataTable({
       //idioma de la tabla
@@ -87,7 +89,9 @@
         "url": "https://cdn.datatables.net/plug-ins/1.10.21/i18n/Spanish.json"
       },
       //guardar el estado de la tabla
-      stateSave: true
+      stateSave: true,
+      //responsive
+      responsive: true,
 
     });
     $('#tbl3').DataTable({
@@ -97,7 +101,8 @@
       },
       //guardar el estado de la tabla
       stateSave: true,
-      //ordenar por la columna 0
+      //responsive
+      responsive: true,
 
                                                                                                                                                                                                                                 
     });
