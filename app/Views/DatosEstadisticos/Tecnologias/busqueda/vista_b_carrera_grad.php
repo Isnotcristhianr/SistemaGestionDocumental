@@ -21,7 +21,7 @@
     <br>
     <div class="table-responsive text-center">
         <!-- Llenar tabla con activas -->
-        <table class="table table-success align-middle order-column hover nowrap row-border stripe text-center" id="tbl" style="width: 100%;">
+        <table class="table table-success align-middle order-column hover row-border stripe text-center" id="tbl" style="width: 100%;">
             <thead>
                 <th hidden>ID</th>
                 <th>Numero</th>
@@ -50,7 +50,7 @@
                                 }
                                 ?></td>
                             <td>
-                                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Ver →</a>
+                                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Datos →</a>
                             </td>
 
                         </tr>
@@ -76,7 +76,7 @@
     <div class="table-responsive text-center">
 
         <!-- Llenar tabla con no ativas  -->
-        <table class="table table-primary align-middle order-column hover nowrap row-border stripe" id="tbl2">
+        <table class="table table-primary align-middle order-column hover row-border stripe" id="tbl2">
             <thead>
                 <th hidden>ID</th>
                 <th>Numero</th>
@@ -101,7 +101,7 @@
                                 <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
                                 <td><?php echo $carreras['CAR_PADREESC']; ?></td>
                                 <td>
-                                    <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Ver →</a>
+                                    <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Datos →</a>
                                 </td>
                             </tr>
                 <?php
@@ -117,7 +117,7 @@
     <br>
     <!-- Sede Tulcan -->
     <br>
-    <h5 class="text text-start text-info">Campus Tulcan</h5>
+    <h5 class="text text-start text-info">Campus Tulcán</h5>
     <br>
     <a href="" class="btn btn-info">Ver Resumen</a>
     <br>
@@ -125,7 +125,7 @@
     <div class="table-responsive text-center">
 
         <!-- Llenar tabla con no ativas -->
-        <table class="table table-info align-middle order-column hover nowrap row-border stripe" id="tbl3">
+        <table class="table table-info align-middle order-column hover row-border stripe" id="tbl3">
             <thead>
                 <th hidden>ID</th>
                 <th>Numero</th>
@@ -151,7 +151,7 @@
                                 <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
                                 <td><?php echo $carreras['CAR_PADREESC']; ?></td>
                                 <td>
-                                    <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-info">Ver →</a>
+                                    <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-info">Datos →</a>
                                 </td>
                             </tr>
                 <?php

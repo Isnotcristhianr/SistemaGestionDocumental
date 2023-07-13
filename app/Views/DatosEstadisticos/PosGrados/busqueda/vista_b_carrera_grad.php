@@ -21,7 +21,7 @@
     <br>
     <div class="table-responsive text-center">
         <!-- Llenar tabla con activas -->
-        <table class="table table-success align-middle order-column hover nowrap row-border stripe text-center" id="tbl" style="width: 100%;">
+        <table class="table table-success align-middle order-column hover row-border stripe text-center" id="tbl" style="width: 100%;">
             <thead>
                 <th hidden>ID</th>
                 <th>Numero</th>
@@ -45,7 +45,7 @@
                             <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
                             <td><?php echo $carreras['CAR_PADREESC']; ?></td>
                             <td>
-                                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Ver →</a>
+                                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Datos →</a>
                             </td>
 
                         </tr>
@@ -67,7 +67,7 @@
     <div class="table-responsive text-center">
 
         <!-- Llenar tabla con no ativas -->
-        <table class="table table-primary align-middle order-column hover nowrap row-border stripe" id="tbl2">
+        <table class="table table-primary align-middle order-column hover row-border stripe" id="tbl2">
             <thead>
                 <th hidden>ID</th>
                 <th>Numero</th>
@@ -91,7 +91,7 @@
                             <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
                             <td><?php echo $carreras['CAR_PADREESC']; ?></td>
                             <td>
-                                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Ver →</a>
+                                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Datos →</a>
                             </td>
                         </tr>
                 <?php

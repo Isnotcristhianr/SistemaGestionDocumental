@@ -21,7 +21,7 @@
     <br>
     <br>
     <div class="table-responsive text-center">
-        <table class="table table-success align-middle order-column hover nowrap row-border stripe " id="">
+        <table class="table table-success align-middle order-column hover row-border stripe " id="">
             <thead>
                 <th hidden>ID</th>
                 <th>Año</th>
@@ -39,7 +39,7 @@
                             <td hidden><?php echo $periodo['PER_ID']; ?></td>
                             <td><?php echo $periodo['PER_ANO']; ?></td>
                             <td><?php echo $periodo['PER_PERIODO']; ?></td>
-                            <td><a href="" class="btn btn-success">Visualizar →</a></td>
+                            <td><a href="" class="btn btn-success">Datos →</a></td>
                         </tr>
                 <?php
                     }
@@ -60,7 +60,7 @@
     <div class="table-responsive text-center">
 
         <!-- Llenar tabla con no ativas -->
-        <table class="table align-middle order-column hover nowrap row-border stripe " id="tbl2">
+        <table class="table align-middle order-column hover row-border stripe " id="tbl2">
             <thead>
                 <th hidden>ID</th>
                 <th>Año</th>
@@ -78,7 +78,7 @@
                             <td hidden><?php echo $periodo['PER_ID']; ?></td>
                             <td><?php echo $periodo['PER_ANO']; ?></td>
                             <td><?php echo $periodo['PER_PERIODO']; ?></td>
-                            <td><a href="" class="btn btn-primary">Visualizar →</a></td>
+                            <td><a href="" class="btn btn-primary">Datos →</a></td>
                         </tr>
                 <?php
 

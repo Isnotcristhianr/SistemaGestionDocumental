@@ -21,7 +21,7 @@
     <br>
     <div class="table-responsive text-center">
         <!-- Llenar tabla con activas -->
-        <table class="table table-success align-middle order-column hover nowrap row-border stripe " id="tbl">
+        <table class="table table-success align-middle order-column hover row-border stripe " id="tbl">
             <thead>
                 <th hidden>ID</th>
                 <th>Numero</th>
@@ -46,7 +46,7 @@
                             <td>
                                 <a href="<?php
                                             echo base_url('index.php/ControladorFEEscuela/estadisticoGradoEscuela/' . $escuelas['CAR_ID'] . '/Matriculados')
-                                            ?>" class="btn btn-success">Visualizar →</a>
+                                            ?>" class="btn btn-success">Datos →</a>
                             </td>
                         </tr>
                 <?php
@@ -67,7 +67,7 @@
     <div class="table-responsive text-center">
 
         <!-- Llenar tabla con no ativas -->
-        <table class="table align-middle order-column hover nowrap row-border stripe " id="tbl2">
+        <table class="table align-middle order-column hover row-border stripe " id="tbl2">
             <thead>
                 <th hidden>ID</th>
                 <th>Numero</th>
@@ -90,7 +90,7 @@
                             <td>
                                 <a href="<?php
                                             echo base_url('index.php/ControladorFEEscuela/estadisticoGradoEscuela/' . $escuelas['CAR_ID'] . '/Matriculados')
-                                            ?>" class="btn btn-primary">Visualizar →</a>
+                                            ?>" class="btn btn-primary">Datos →</a>
                             </td>
                         </tr>
                 <?php
