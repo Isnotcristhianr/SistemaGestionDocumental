@@ -20,7 +20,7 @@
     <br>
     <br>
     <!-- Llenar tabla con activas -->
-    <table class="table table-success align-middle order-column hover row-border stripe text-center" id="tbl" style="width: 100%;">
+    <table class="table table-success align-middle order-column hover row-border stripe text-start" id="tbl" style="width: 100%;">
         <thead>
             <th hidden>ID</th>
             <th>Numero</th>

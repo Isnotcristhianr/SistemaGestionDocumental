@@ -2,7 +2,7 @@
 
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
-    <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Periodo" class="btn btn-primary">← Volver</a>
+    <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Periodo" class="btn btn-outline-primary">← Volver</a>
     <div class="row ">
         <div class="col-12">
             <h2 class="text-center text-primary">Datos Estadísticos Posgrado
@@ -54,7 +54,7 @@
     <br>
     <br>
     <!-- Llenar tabla con no ativas -->
-    <table class="table table- align-middle order-column hover row-border stripe " id="tbl2">
+    <table class="table table-primary align-middle order-column hover row-border stripe " id="tbl2">
         <thead>
             <th hidden>ID</th>
             <th>Año</th>

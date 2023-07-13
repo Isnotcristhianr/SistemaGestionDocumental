@@ -56,7 +56,7 @@
     <br>
     <br>
     <!-- Llenar tabla con no ativas -->
-    <table class="table table- align-middle order-column hover row-border stripe " id="tbl2">
+    <table class="table table-primary align-middle order-column hover row-border stripe " id="tbl2">
         <thead>
             <th hidden>ID</th>
             <th>Año</th>
