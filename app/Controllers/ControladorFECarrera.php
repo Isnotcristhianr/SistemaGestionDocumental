@@ -44,6 +44,7 @@ class ControladorFECarrera extends BaseController
             //modelo
             $objCarreras = new ModelFEcarreras();
             $objPadre = new ModelFEpadre();
+            
             //car_nombre donde ctip = 1, car_carrera = 1
             $data['tbl_carrera'] = $objCarreras
                 ->where('CTIP_ID', 1)
@@ -54,11 +55,11 @@ class ControladorFECarrera extends BaseController
 
             if ($tipo == "Matriculados") {
                 return view('header')
-                    . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_carrera_matr', $data, $padre)
+                    . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_carrera_matr', $data + $padre)
                     . view('footer');
             } else if ($tipo == "Graduados") {
                 return view('header')
-                    . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_carrera_grad', $data, $padre)
+                    . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_carrera_grad', $data + $padre)
                     . view('footer');
             }
         } catch (\Exception $e) {
@@ -83,11 +84,11 @@ class ControladorFECarrera extends BaseController
 
             if ($tipo == "Matriculados") {
                 return view('header')
-                    . view('/DatosEstadisticos/Tecnologias/busqueda/vista_b_carrera_matr', $data, $padre)
+                    . view('/DatosEstadisticos/Tecnologias/busqueda/vista_b_carrera_matr', $data + $padre)
                     . view('footer');
             } else if ($tipo == "Graduados") {
                 return view('header')
-                    . view('/DatosEstadisticos/Tecnologias/busqueda/vista_b_carrera_grad', $data , $padre)
+                    . view('/DatosEstadisticos/Tecnologias/busqueda/vista_b_carrera_grad', $data + $padre)
                     . view('footer');
             }
         } catch (\Exception $e) {

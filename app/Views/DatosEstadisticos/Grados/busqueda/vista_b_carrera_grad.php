@@ -20,7 +20,7 @@
     <br>
     <br>
     <!-- Llenar tabla con activas -->
-    <table class="table table-success align-middle order-column hover row-border stripe text-center" id="tbl">
+    <table class="table table-success align-middle order-column hover row-border stripe text-start" id="tbl">
         <thead>
             <th hidden>ID</th>
             <th>Numero</th>
@@ -44,10 +44,22 @@
                                 echo $numero++;
                                 ?></td>
                             <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
-                            <td><?php echo $carreras['CAR_PADREESC']; ?></td>
+                            <td>
+                                <!-- Obtener largo tbl_escuela -->
+                                <?php
+                                $largo = count($tbl_escuela);
+                                /* comparar 2 tbl_carrera con tbl_escuela, tbl_escuela obtiene esc_padre y esc_nombre,
+                                     se compara esc_padre con CAR_PADREESC con esc_padre asignando el nombre correspondiente */
+                                for ($i = 0; $i < $largo; $i++) {
+                                    if ($carreras['CAR_PADREESC'] == $tbl_escuela[$i]['esc_padre']) {
+                                        echo $tbl_escuela[$i]['esc_nombre'];
+                                    }
+                                }
+                                ?>
+                            </td>
                             <td>
                                 <a href="<?php
-                                            echo base_url('index.php/ControladorFECarrera/estadisticoGradoCarrera/' . $carreras['CAR_ID'] . '/Graduados')
+                                            echo base_url('index.php/ControladorFECarrera/estadisticoGradoCarrera/' . $carreras['CAR_ID'] . '/Matriculados')
                                             ?>" class="btn btn-success">Datos →</a>
                             </td>
                         </tr>
@@ -89,13 +101,28 @@
                         <tr>
                             <td hidden><?php echo $carreras['CAR_ID']; ?></td>
                             <td><?php
-                                static $num = 1;
-                                echo $num++;
+                                /* autoincrementar */
+                                static $numero = 1;
+                                echo $numero++;
                                 ?></td>
                             <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
-                            <td><?php echo $carreras['CAR_PADREESC']; ?></td>
                             <td>
-                                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Datos →</a>
+                                <!-- Obtener largo tbl_escuela -->
+                                <?php
+                                $largo = count($tbl_escuela);
+                                /* comparar 2 tbl_carrera con tbl_escuela, tbl_escuela obtiene esc_padre y esc_nombre,
+                                     se compara esc_padre con CAR_PADREESC con esc_padre asignando el nombre correspondiente */
+                                for ($i = 0; $i < $largo; $i++) {
+                                    if ($carreras['CAR_PADREESC'] == $tbl_escuela[$i]['esc_padre']) {
+                                        echo $tbl_escuela[$i]['esc_nombre'];
+                                    }
+                                }
+                                ?>
+                            </td>
+                            <td>
+                                <a href="<?php
+                                            echo base_url('index.php/ControladorFECarrera/estadisticoGradoCarrera/' . $carreras['CAR_ID'] . '/Matriculados')
+                                            ?>" class="btn btn-success">Datos →</a>
                             </td>
                         </tr>
             <?php
@@ -131,13 +158,28 @@
                         <tr>
                             <td hidden><?php echo $carreras['CAR_ID']; ?></td>
                             <td><?php
-                                static $num = 1;
-                                echo $num++;
+                                /* autoincrementar */
+                                static $numero = 1;
+                                echo $numero++;
                                 ?></td>
                             <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
-                            <td><?php echo $carreras['CAR_PADREESC']; ?></td>
                             <td>
-                                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-info">Datos →</a>
+                                <!-- Obtener largo tbl_escuela -->
+                                <?php
+                                $largo = count($tbl_escuela);
+                                /* comparar 2 tbl_carrera con tbl_escuela, tbl_escuela obtiene esc_padre y esc_nombre,
+                                     se compara esc_padre con CAR_PADREESC con esc_padre asignando el nombre correspondiente */
+                                for ($i = 0; $i < $largo; $i++) {
+                                    if ($carreras['CAR_PADREESC'] == $tbl_escuela[$i]['esc_padre']) {
+                                        echo $tbl_escuela[$i]['esc_nombre'];
+                                    }
+                                }
+                                ?>
+                            </td>
+                            <td>
+                                <a href="<?php
+                                            echo base_url('index.php/ControladorFECarrera/estadisticoGradoCarrera/' . $carreras['CAR_ID'] . '/Matriculados')
+                                            ?>" class="btn btn-success">Datos →</a>
                             </td>
                         </tr>
             <?php

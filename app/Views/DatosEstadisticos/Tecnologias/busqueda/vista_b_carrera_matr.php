@@ -1,5 +1,4 @@
 <!-- Datos Estadisticos -->
-
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <!-- Volver -->
     <a href="<?php echo base_url('index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnologías/CarrerasTécnicasyTecnológias') ?>" class="btn btn-outline-primary">← Volver</a>
@@ -42,13 +41,19 @@
                             echo $num++;
                             ?></td>
                         <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
-                        <td><?php
-                            if ($carreras['CAR_PADREESC'] == 98) {
-                                echo 'Tecnología';
-                            } else {
-                                echo $carreras['CAR_PADREESC'];
+                        <td>
+                            <!-- Obtener largo tbl_escuela -->
+                            <?php
+                            $largo = count($tbl_escuela);
+                            /* comparar 2 tbl_carrera con tbl_escuela, tbl_escuela obtiene esc_padre y esc_nombre,
+                                     se compara esc_padre con CAR_PADREESC con esc_padre asignando el nombre correspondiente */
+                            for ($i = 0; $i < $largo; $i++) {
+                                if ($carreras['CAR_PADREESC'] == $tbl_escuela[$i]['esc_padre']) {
+                                    echo $tbl_escuela[$i]['esc_nombre'];
+                                }
                             }
-                            ?></td>
+                            ?>
+                        </td>
                         <td>
                             <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Datos →</a>
                         </td>
@@ -94,7 +99,19 @@
                                 echo $num2++;
                                 ?></td>
                             <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
-                            <td><?php echo $carreras['CAR_PADREESC']; ?></td>
+                            <td>
+                                <!-- Obtener largo tbl_escuela -->
+                                <?php
+                                $largo = count($tbl_escuela);
+                                /* comparar 2 tbl_carrera con tbl_escuela, tbl_escuela obtiene esc_padre y esc_nombre,
+                                     se compara esc_padre con CAR_PADREESC con esc_padre asignando el nombre correspondiente */
+                                for ($i = 0; $i < $largo; $i++) {
+                                    if ($carreras['CAR_PADREESC'] == $tbl_escuela[$i]['esc_padre']) {
+                                        echo $tbl_escuela[$i]['esc_nombre'];
+                                    }
+                                }
+                                ?>
+                            </td>
                             <td>
                                 <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Datos →</a>
                             </td>
@@ -136,7 +153,19 @@
                                 echo $num3++;
                                 ?></td>
                             <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
-                            <td><?php echo $carreras['CAR_PADREESC']; ?></td>
+                            <td>
+                                <!-- Obtener largo tbl_escuela -->
+                                <?php
+                                $largo = count($tbl_escuela);
+                                /* comparar 2 tbl_carrera con tbl_escuela, tbl_escuela obtiene esc_padre y esc_nombre,
+                                     se compara esc_padre con CAR_PADREESC con esc_padre asignando el nombre correspondiente */
+                                for ($i = 0; $i < $largo; $i++) {
+                                    if ($carreras['CAR_PADREESC'] == $tbl_escuela[$i]['esc_padre']) {
+                                        echo $tbl_escuela[$i]['esc_nombre'];
+                                    }
+                                }
+                                ?>
+                            </td>
                             <td>
                                 <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-info">Datos →</a>
                             </td>
