@@ -1,0 +1,33 @@
+CRITICAL - 2023-08-03 20:15:48 --> Undefined variable $tipo
+in APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php on line 44.
+ 1 APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tipo', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/vista_fe_grad', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(26): view('/DatosEstadisticos/Grados/vista_fe_grad')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoGrad()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-03 20:15:49 --> Undefined variable $tipo
+in APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php on line 44.
+ 1 APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tipo', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/vista_fe_grad', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(26): view('/DatosEstadisticos/Grados/vista_fe_grad')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoGrad()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-03 20:15:49 --> Undefined variable $tipo
+in APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php on line 44.
+ 1 APPPATH\Views\DatosEstadisticos\Grados\vista_fe_grad.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tipo', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\DatosEstadisticos\\Grados\\vista_fe_grad.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/vista_fe_grad', [], true)
+ 5 APPPATH\Controllers\ControladorEstadistico.php(26): view('/DatosEstadisticos/Grados/vista_fe_grad')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorEstadistico->filtroEstadisticoGrad()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorEstadistico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
