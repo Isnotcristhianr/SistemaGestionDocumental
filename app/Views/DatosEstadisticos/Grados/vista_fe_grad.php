@@ -37,14 +37,10 @@ use App\Models\ModelFEescuelas;
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Escuelas
                         <span class="badge bg-primary rounded-pill">
-                            <!-- llenar escuelas total filas con CAR_ACTIVA= SI-->
+                            <!-- llenar escuelas total filas-->
                             <?php
                             $obgEscuela = new ModelFEescuelas();
-                            echo $obgEscuela->contarEscuelasGradoVigentes();
-
-                            if ($obgEscuela->contarEscuelasGradoVigentes() == 0) {
-                                echo "No hay datos";
-                            }
+                            echo $obgEscuela->contarEscuelasGrado();
                             ?>
 
                         </span>
