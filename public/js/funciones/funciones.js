@@ -1,4 +1,7 @@
 /* Determinar Nivel de Busqueda */
+// The code initializes some variables and gets some elements from the document
+// The variables and elements are used later on in the code
+
 const opcionesBusqueda = document.getElementsByName("busqueda");
 const respBusqueda = document.getElementById("resBusqueda");
 const respRespTit = document.getElementById("resRepTit");
@@ -18,7 +21,7 @@ opcionesBusqueda.forEach((opcion) => {
       respBusqueda.innerHTML = ` <div class="row p-2" >
                                             <form action="/busqueda" method="POST">
                                               <div class="col">
-                                                  <label for="fechaDesde">Desde</label>
+                                                  <label for="fechaDesde" >Desde</label>
                                                   <input type="date" class="form-control" name="fechaDesde" id="fechaDesde">
                                               </div>
                                               <div class="col">
@@ -52,11 +55,11 @@ opcionesBusqueda.forEach((opcion) => {
       respBusqueda.innerHTML = ` <div class="row p-2" >
                                     <form action="/busqueda" method="POST">
                                       <div class="col">
-                                          <label for="fechaDesde">Desde</label>
+                                          <label for="fechaDesde" class="fw-bold">Desde</label>
                                           <input type="date" class="form-control" name="fechaDesde" id="fechaDesde">
                                       </div>
                                       <div class="col">
-                                          <label for="fechaHasta">Hasta</label>
+                                          <label for="fechaHasta" class="fw-bold">Hasta</label>
                                           <input type="date" class="form-control" name="fechaHasta" id="fechaHasta">
                                       </div>
                                       <div class="col text-center m-3 p-1">
