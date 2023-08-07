@@ -9,21 +9,21 @@ class ModelFEPeriodo extends Model{
 
     protected $allowedFields = ['PER_ANO','PER_PERIODO'];
 
-    /* Contar total perdidos filas Grados*/
+    /* Contar total periodos filas Grados*/
     public function contarPeriodos(){
         $periodos = $this->findAll();
         return count($periodos);
     }
 
-    /* Contar total perdidos filas Posgrados*/
+    /* Contar total periodos filas Posgrados*/
     public function contarPeriodosPosgrados(){
-        //contar desde 2021
+        //contar desde 1997 fecha posgrados
         $periodos = $this->where('PER_ANO >=', 1997)->findAll();
         return count($periodos);
     }
 
 
-    /* Contar total perdidos filas Tecnologias*/
+    /* Contar total periodos filas Tecnologias*/
     public function contarPeriodosTecnologias(){
         //contar desde 2021
         $periodos = $this->where('PER_ANO >=', 2021)->findAll();

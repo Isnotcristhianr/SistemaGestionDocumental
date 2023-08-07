@@ -20,7 +20,7 @@ use App\Models\ModelFEescuelas;
 
     <!-- Boton  Centrado-->
     <div class="row m-2 p-2 ">
-        <div class="col-12 text-center">
+        <div class="col-12 text-center ">
             <!-- Encabezados dividido 2 columnas, filtro y cantidad -->
             <div>
                 <div class="row">
@@ -32,9 +32,9 @@ use App\Models\ModelFEescuelas;
                     </div>
                 </div>
             </div>
-            <ul class="list-group ">
+            <ul class="list-group">
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/Escuela" class="text-decoration-none fw-bolder">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         Escuelas
                         <span class="badge bg-primary rounded-pill">
                             <!-- llenar escuelas total filas-->
@@ -47,7 +47,7 @@ use App\Models\ModelFEescuelas;
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera" class="text-decoration-none fw-bolder">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         Carreras
                         <span class="badge bg-primary rounded-pill">
                             <!-- llenar carreras total filas -->
@@ -59,7 +59,7 @@ use App\Models\ModelFEescuelas;
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/Periodo" class="text-decoration-none fw-bolder">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         Periodos
                         <span class="badge bg-primary rounded-pill">
                             <!-- llenar periodos total filas -->
@@ -71,7 +71,7 @@ use App\Models\ModelFEescuelas;
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/Fecha" class="text-decoration-none fw-bolder">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         Fechas
                         <span class="badge bg-primary rounded-pill">
                             <!-- Icono Calendar -->
@@ -80,7 +80,7 @@ use App\Models\ModelFEescuelas;
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/General" class="text-decoration-none fw-bolder">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         General
                         <span class="badge bg-primary rounded-pill">
                             <!-- Lupa Busqueda icono-->

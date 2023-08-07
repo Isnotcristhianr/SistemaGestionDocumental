@@ -31,6 +31,7 @@
             <?php
             foreach ($tbl_carrera as $escuelas) {
                 if ($escuelas['CAR_ACTIVA'] == 'SÍ') {
+
             ?>
                     <tr>
                         <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
@@ -71,22 +72,25 @@
             <?php
             foreach ($tbl_carrera as $escuelas) {
                 if ($escuelas['CAR_ACTIVA'] == 'No') {
+                    /* Car capus == 1 */
+                    if ($escuelas['CAR_CAMPUS'] == 1) {
             ?>
-                    <tr>
-                        <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
-                        <td><?php
-                            /* autoincrementar desde 0*/
-                            static $numero2 = 1;
-                            echo $numero2++;
-                            ?></td>
-                        <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
-                        <td>
-                            <a href="<?php
-                                        echo base_url('index.php/ControladorFEEscuela/estadisticoGradoEscuela/' . $escuelas['CAR_ID'] . '/Matriculados')
-                                        ?>" class="btn btn-primary">Datos →</a>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
+                            <td><?php
+                                /* autoincrementar desde 0*/
+                                static $numero2 = 1;
+                                echo $numero2++;
+                                ?></td>
+                            <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
+                            <td>
+                                <a href="<?php
+                                            echo base_url('index.php/ControladorFEEscuela/estadisticoGradoEscuela/' . $escuelas['CAR_ID'] . '/Matriculados')
+                                            ?>" class="btn btn-primary">Datos →</a>
+                            </td>
+                        </tr>
             <?php
+                    }
                 }
             }
             ?>

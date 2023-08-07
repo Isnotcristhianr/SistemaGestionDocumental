@@ -127,8 +127,9 @@
             foreach ($tbl_carrera as $escuelas) {
 
                 if ($escuelas['CAR_ACTIVA'] == 'No') {
-                    /* Car capus == 2 */
+                    /* Car campus == 2 */
                     if ($escuelas['CAR_CAMPUS'] == 2) {
+
             ?>
                         <tr>
                             <td hidden><?php echo $escuelas['CAR_ID']; ?></td>

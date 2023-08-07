@@ -1,7 +1,7 @@
 <?php
 
-    use App\Models\ModelFEPeriodo;
-    use App\Models\ModelFECarreras;
+use App\Models\ModelFEPeriodo;
+use App\Models\ModelFECarreras;
 ?>
 
 <!-- Datos Estadisticos -->
@@ -34,29 +34,29 @@
             </div>
             <ul class="list-group ">
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnologías/CarrerasTécnicasyTecnológias" class="text-decoration-none fw-bolder">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         Carreras Técnicas y Tecnológias
                         <span class="badge bg-primary rounded-pill">
                             <?php
-                                $obgCarrera = new ModelFECarreras();
-                                echo $obgCarrera->contarCarrerasTecnologia();
+                            $obgCarrera = new ModelFECarreras();
+                            echo $obgCarrera->contarCarrerasTecnologia();
                             ?>
                         </span>
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnologías/Periodo" class="text-decoration-none fw-bolder">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         Periodos
                         <span class="badge bg-primary rounded-pill">
                             <?php
-                              $obgPeriodo = new ModelFEPeriodo();
-                              echo $obgPeriodo->contarPeriodosTecnologias();
-                              ?>
+                            $obgPeriodo = new ModelFEPeriodo();
+                            echo $obgPeriodo->contarPeriodosTecnologias();
+                            ?>
                         </span>
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnologías/Fecha" class="text-decoration-none fw-bolder">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         Fechas
                         <span class="badge bg-primary rounded-pill">
                             <!-- Icono Calendar -->
@@ -65,7 +65,7 @@
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnologías/General" class="text-decoration-none fw-bolder">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         General
                         <span class="badge bg-primary rounded-pill">
                             <!-- Lupa Busqueda icono-->

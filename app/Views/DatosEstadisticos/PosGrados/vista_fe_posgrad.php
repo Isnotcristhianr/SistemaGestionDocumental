@@ -34,7 +34,7 @@
             </div>
             <ul class="list-group ">
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Escuela" class="text-decoration-none fw-bolder">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         Escuelas
                         <span class="badge bg-primary rounded-pill">
                             <?php
@@ -45,7 +45,7 @@
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Carrera" class="text-decoration-none fw-bolder">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         Carreras
                         <span class="badge bg-primary rounded-pill">
                             <?php
@@ -56,7 +56,7 @@
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Periodo" class="text-decoration-none fw-bolder">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         Periodos
                         <span class="badge bg-primary rounded-pill">
                             <?php 
@@ -67,7 +67,7 @@
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Fecha" class="text-decoration-none fw-bolder">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         Fechas
                         <span class="badge bg-primary rounded-pill">
                             <!-- Icono Calendar -->
@@ -76,7 +76,7 @@
                     </li>
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/General" class="text-decoration-none fw-bolder">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         General
                         <span class="badge bg-primary rounded-pill">
                             <!-- Lupa Busqueda icono-->
