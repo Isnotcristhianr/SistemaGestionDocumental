@@ -9,6 +9,11 @@ class ModelFEPeriodo extends Model{
 
     protected $allowedFields = ['PER_ANO','PER_PERIODO'];
 
+    /* Ver datos todos*/
+    public function verModelo(){
+        $periodos = $this->findAll();
+        return $periodos;
+    }
     /* Contar total periodos filas Grados*/
     public function contarPeriodos(){
         $periodos = $this->findAll();

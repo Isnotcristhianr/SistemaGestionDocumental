@@ -61,7 +61,7 @@ $routes->get('/FiltroEstadisticoTecnologiaBusqueda/(:any)/(:any)', 'ControladorE
 
 //Datos Estadisticos Historico Puce-I
 $routes->get('/deHistorico', 'ControladorHistorico::dehistorico');
-$routes->post('/busquedaHistorico', 'ControladorHistorico::busquedaHistorico');
+$routes->get('/busquedaHistorico', 'ControladorHistorico::busquedaHistorico');
 
 //Reportes
 $routes->get('/reporteTitulacion', 'ControladorReportes::reportes');

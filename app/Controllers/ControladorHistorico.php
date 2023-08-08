@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\ModelMatrizGraduados;
-//
+use App\Models\ModelFEPeriodo;
 
 
 class ControladorHistorico extends BaseController
@@ -13,17 +13,20 @@ class ControladorHistorico extends BaseController
     //Datos Estadisticos Grado
     public function dehistorico()
     {
-        //modelo
-        $modelo = new ModelMatrizGraduados();
-        //ver data
-        $data['tbl_estadistica_matriz'] = $modelo->verModelo();
-
-        return view('header') . view('/vistaDEHistorico/vista_deHistorico', $data) . view('footer');
+        return view('header') . view('/vistaDEHistorico/vista_deHistorico') . view('footer');
     }
 
     //busqueda
     public function busquedaHistorico(){
-        return view('header'). view('/graficasEstadisticas/historico/vistaEstHistorico') . view('footer');
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //modelo periodos
+        $modeloPeriodo = new ModelFEPeriodo();
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+        $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+
+        return view('header'). view('/graficasEstadisticas/historico/vistaEstHistorico', $datos + $datos2) . view('footer');
     }
 
 }

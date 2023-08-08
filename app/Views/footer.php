@@ -61,6 +61,8 @@
 <!-- Boostrap Js -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
  -->
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/516b0707c7.js" crossorigin="anonymous"></script>
 <!-- Data Table -->
@@ -104,7 +106,7 @@
       //responsive
       responsive: true,
 
-                                                                                                                                                                                                                                
+
     });
   });
 </script>

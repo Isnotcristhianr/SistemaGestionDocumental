@@ -72,10 +72,10 @@ opcionesBusqueda.forEach((opcion) => {
                                   </div>`;
     } else if (opcion.value == "nofechah") {
       respBusqueda.innerHTML = ` <div class="row p-2" >
-                                    <form action="/SistemaGestionDocumental/index.php/busquedaHistorico" method="POST">
+                                    <form action="/SistemaGestionDocumental/index.php/busquedaHistorico" method="GET">
                                       
                                       <div class="col text-center m-3 p-1">
-                                          <button type="submit" class="btn btn-primary m-1" name="consultar">Consultar</button>
+                                          <button type="submit" class="btn btn-primary m-1">Consultar</button>
                                       </div>
                                     </form>
                                   </div>`;
