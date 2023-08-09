@@ -61,13 +61,16 @@
                 }
             }
         });
+        //eliminar los datos repetidos, se usa el metodo filter para eliminar los datos repetidos
+        periodo = periodo.filter((valor, indiceActual, arreglo) => arreglo.indexOf(valor) === indiceActual);
+        
+        
         //ordenar los anios en eje y ascendente
         periodo.sort(function(a, b) {
             return a - b;
         });
-        //eliminar duplicados y sumar los totales
-        var total = total.filter((value, index) => total.indexOf(value) === index);
-        var periodo = periodo.filter((value, index) => periodo.indexOf(value) === index);
+
+
 
 
         //grafico de barras
@@ -79,7 +82,8 @@
                 //datos
                 labels: periodo,
                 datasets: [{
-                    label: 'Total de Estudiantes Historico PUCE-I',
+                    label: 'Total de Estudiantes Historico PUCE-I'+'\n'+'(1997-2022)',
+                    
                     data: total,
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
@@ -91,16 +95,10 @@
                         'rgba(54, 162, 235, 1)',
 
                     ],
-                    borderWidth: 1,
-                    //cambiar color de la linea
-                    borderColor: 'rgb(75, 192, 192)',
-                    //cambiar color de los puntos
-                    pointBackgroundColor: 'rgb(75, 192, 192)',
-                    //cambiar color de la linea
-                    pointBorderColor: 'rgb(75, 192, 192)',
+                    borderWidth: 1
                 }]
             },
-            
+
             options: {
                 //titulo
                 title: {
@@ -125,7 +123,7 @@
                     }]
                 },
                 //responsive
-                responsive: true,
+                responsive: true,                
             }
         });
     </script>
