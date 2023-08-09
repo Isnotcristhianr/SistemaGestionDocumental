@@ -65,14 +65,10 @@
         periodo.sort(function(a, b) {
             return a - b;
         });
-        //eliminar duplicados y sumar los totales de los duplicados
-        var total = total.reduce((a, b) => {
-            return a + b;
-        }, 0);
-        var periodo = periodo.filter((value, index) => {
-            return periodo.indexOf(value) === index;
-        });
-        
+        //eliminar duplicados y sumar los totales
+        var total = total.filter((value, index) => total.indexOf(value) === index);
+        var periodo = periodo.filter((value, index) => periodo.indexOf(value) === index);
+
 
         //grafico de barras
         var ctx = document.getElementById('myChart').getContext('2d');
@@ -95,9 +91,16 @@
                         'rgba(54, 162, 235, 1)',
 
                     ],
-                    borderWidth: 1
+                    borderWidth: 1,
+                    //cambiar color de la linea
+                    borderColor: 'rgb(75, 192, 192)',
+                    //cambiar color de los puntos
+                    pointBackgroundColor: 'rgb(75, 192, 192)',
+                    //cambiar color de la linea
+                    pointBorderColor: 'rgb(75, 192, 192)',
                 }]
             },
+            
             options: {
                 //titulo
                 title: {
