@@ -38,6 +38,7 @@
     <!-- Script chart -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- grafica -->
+    
     <script>
         //obtener datos de php del controlador
         var datos = <?php echo json_encode($tbl_estadistica_matriz) ?>;
