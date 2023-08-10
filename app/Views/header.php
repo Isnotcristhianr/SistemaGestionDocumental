@@ -25,8 +25,8 @@
   <!--     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
  -->
 
- <!-- Data table -->
- <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.css" />
+  <!-- Data table -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.css" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="<?php echo base_url('/public/css/estilos/estiloIndex.css') ?>">
@@ -49,7 +49,7 @@
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="http://localhost/SistemaGestionDocumental/index.php/inicio">
-              Inicio
+              <i class="fa-solid fa-house"></i> Inicio
             </a>
           </li>
           <li class="nav-item dropdown">
@@ -85,10 +85,22 @@
               </li>
               <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/deHistorico">Historico Puce-I</a></li>
 
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="">Calendario Academico</a></li>
+
+              <li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="">Calendario Academico</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Normativas</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a href="" class="dropdown-item">Normativa General</a></li>
+              <li><a href="" class="dropdown-item">Normativa Estudiantes</a></li>
+
+            </ul>
           </li>
 
         </ul>
@@ -106,9 +118,6 @@
           </ul>
         </div>
       </div>
-      <!-- Sesion Cerrar-->
-
-
 
     </div>
   </nav>

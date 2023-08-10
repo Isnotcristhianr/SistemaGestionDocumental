@@ -54,23 +54,19 @@
         //logica del periodo
         //PER_ID, PER_ANO, ESTM_PERIODO, se comparan los datos de la tabla periodo con la tabla matriz
         //si el PER_ID de la tabla periodo es igual al ESTM_PERIODO de la tabla matriz se le asigna el PER_ANO
-        periodo = datos.map(dato => {
-            for (let i = 0; i < peri.length; i++) {
-                if (peri[i].PER_ID == dato.ESTM_PERIODO) {
-                    return peri[i].PER_ANO;
+        //si se repiten los PER_ANO se agrupan en uno solo
+        //las fechas van de menor a mayor
+        var periodo = [];
+        for (let i = 0; i < peri.length; i++) {
+            for (let j = 0; j < datos.length; j++) {
+                if (peri[i].PER_ID == datos[j].ESTM_PERIODO) {
+                    periodo.push(peri[i].PER_ANO);
                 }
             }
-        });
-        //eliminar los datos repetidos, se usa el metodo filter para eliminar los datos repetidos
-        periodo = periodo.filter((valor, indiceActual, arreglo) => arreglo.indexOf(valor) === indiceActual);
+        }
+        //elmininar repetidos y ordenar de menor a mayor
         
-        
-        //ordenar los anios en eje y ascendente
-        periodo.sort(function(a, b) {
-            return a - b;
-        });
-
-
+  
 
 
         //grafico de barras
