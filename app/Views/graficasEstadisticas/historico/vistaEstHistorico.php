@@ -40,6 +40,10 @@
     <!-- Reporte Estadistico -->
     <canvas id="myChart"></canvas>
     <!-- Grafica -->
-    
-
+    <!-- Script HighChart -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!-- Logica Grafica -->
+    <script>
+        
+    </script>
 </div>
