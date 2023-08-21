@@ -63,15 +63,40 @@
         //peri tiene: PER_ID, PER_ANO
         //datos tiene: ESTM_PERIODO, ESTM_TOTAL
         //se compara PER_ID con ESTM_PERIODO y si coinciden se guarda el PER_ANO
-        //se suman datos de ESTM_TOTAL que coinciden con PER_ID y se guarda en total
+        /* 
+        1.  ESTM_PERIODO coincide con PER_ID, entonces ESTM_TOTAL tiene un ESTM_ID
+        2. Donde coincide se le asigna el ESTM_TOTAL a PER_ANO y se guarda en periodo
+        3. Se repite el proceso hasta que se recorran todos los datos
+        4. se ordena el arreglo periodo de menor a mayor
+        5. se suman los valores de ESTM_TOTAL que coincidan con PER_ANO y se asigan, los años se agrupan en uno solo
+        */
         var periodo = [];
-        for (var i = 0; i < peri.length; i++) {
-            for (var j = 0; j < datos.length; j++) {
-                if (peri[i].PER_ID == datos[j].ESTM_PERIODO) {
-                    periodo.push(peri[i].PER_ANO);
+        for (var i = 0; i < datos.length; i++) {
+            for (var j = 0; j < peri.length; j++) {
+                if (datos[i].ESTM_PERIODO == peri[j].PER_ID) {
+                    periodo.push(peri[j].PER_ANO);
                 }
             }
         }
+        periodo.sort();
+        var a = [],
+            b = [],
+            prev;
+        periodo.sort();
+        for (var i = 0; i < periodo.length; i++) {
+            if (periodo[i] !== prev) {
+                a.push(periodo[i]);
+                b.push(1);
+            } else {
+                b[b.length - 1]++;
+            }
+            prev = periodo[i];
+        }
+        periodo = a;
+        total = b;
+
+
+
 
 
         //grafico de barras
