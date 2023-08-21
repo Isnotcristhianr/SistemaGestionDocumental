@@ -49,23 +49,31 @@
         var peri = <?php echo json_encode($tbl_periodo) ?>;
 
         //preparar los datos para el grafico
-        var total = datos.map(dato => dato.ESTM_TOTAL); //eje x
-        //eje y /* logica del periodo */
-         var periodo = datos.map(dato => dato.ESTM_PERIODO);          
-        //logica del periodo
-        //PER_ID, PER_ANO, ESTM_PERIODO, se comparan los datos de la tabla periodo con la tabla matriz
-        //si el PER_ID de la tabla periodo es igual al ESTM_PERIODO de la tabla matriz se le asigna el PER_ANO
-        //si se repiten los PER_ANO se agrupan en uno solo
-        //ordenar las fechas de menor a mayor
-/*         var periodo = [];
-        for (let i = 0; i < peri.length; i++) {
-            for (let j = 0; j < datos.length; j++) {
+
+        //! eje y -> total de estudiantes graduados y matriculados
+        //? logica-> total
+        //datos tiene: ESTM_TOTAL
+        var total = datos.map(function(elem) {
+            return elem.ESTM_TOTAL;
+        });
+
+
+        //! eje x 
+        //? logica-> periodo
+        //peri tiene: PER_ID, PER_ANO
+        //datos tiene: ESTM_PERIODO, ESTM_TOTAL
+        //se compara PER_ID con ESTM_PERIODO y si coinciden se guarda el PER_ANO
+        //se suman datos de ESTM_TOTAL que coinciden con PER_ID y se guarda en total
+        var periodo = [];
+        for (var i = 0; i < peri.length; i++) {
+            for (var j = 0; j < datos.length; j++) {
                 if (peri[i].PER_ID == datos[j].ESTM_PERIODO) {
                     periodo.push(peri[i].PER_ANO);
                 }
             }
-        } */
- 
+        }
+
+
         //grafico de barras
         var ctx = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(ctx, {
@@ -75,7 +83,7 @@
                 //datos
                 labels: periodo,
                 datasets: [{
-                    label: 'Total de Estudiantes Historico PUCE-I'+'\n'+'(1997-2022)',
+                    label: 'Total de Estudiantes Historico PUCE-I' + '\n' + '(1976-2022)',
 
                     data: total,
                     backgroundColor: [
@@ -116,7 +124,7 @@
                     }]
                 },
                 //responsive
-                responsive: true,                
+                responsive: true,
             }
         });
     </script>
