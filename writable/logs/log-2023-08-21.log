@@ -18,3 +18,364 @@ in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 76.
  6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
  7 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
  8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 21:59:21 --> Unsupported operand types: array + string
+in APPPATH\Controllers\ControladorHistorico.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:01:10 --> Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 10.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 10)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(48): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:01:11 --> Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 10.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 10)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(48): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:01:12 --> Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 10.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 10)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(48): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:01:13 --> Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 10.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 10)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(48): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:02:21 --> Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 3.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(48): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:02:22 --> Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 3.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(48): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:02:23 --> Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 3.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(48): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:02:24 --> Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 3.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(48): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:02:35 --> Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 3.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(48): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:03:07 --> Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 3.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(48): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:03:08 --> Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 3.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(48): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:03:08 --> Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 3.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(48): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:03:09 --> Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 3.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(48): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:03:09 --> Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 3.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(48): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:03:09 --> Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 3.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(48): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:03:09 --> Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 3.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(48): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:04:09 --> Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 3.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(48): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:04:30 --> Undefined array key "fechaInicio"
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 3.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fechaInicio"', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(48): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:05:50 --> Undefined array key 0
+in APPPATH\Models\ModelMatrizGraduados.php on line 55.
+ 1 APPPATH\Models\ModelMatrizGraduados.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Models\\ModelMatrizGraduados.php', 55)
+ 2 APPPATH\Controllers\ControladorHistorico.php(45): App\Models\ModelMatrizGraduados->verModeloEspecifico(null, null)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:07:38 --> Undefined variable $fechaIncio
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 2.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fechaIncio', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(48): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:12:24 --> Unsupported operand types: array + string
+in APPPATH\Controllers\ControladorHistorico.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:12:39 --> view(): Argument #3 ($options) must be of type array, string given, called in C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorHistorico.php on line 48
+in SYSTEMPATH\Common.php on line 1172.
+ 1 APPPATH\Controllers\ControladorHistorico.php(48): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...], '2023-08-21')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:13:20 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorHistorico.php on line 48
+in SYSTEMPATH\Common.php on line 1172.
+ 1 APPPATH\Controllers\ControladorHistorico.php(48): view('header', '2023-08-21')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:13:20 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorHistorico.php on line 48
+in SYSTEMPATH\Common.php on line 1172.
+ 1 APPPATH\Controllers\ControladorHistorico.php(48): view('header', '2023-08-21')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:13:21 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorHistorico.php on line 48
+in SYSTEMPATH\Common.php on line 1172.
+ 1 APPPATH\Controllers\ControladorHistorico.php(48): view('header', '2023-08-21')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:13:21 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorHistorico.php on line 48
+in SYSTEMPATH\Common.php on line 1172.
+ 1 APPPATH\Controllers\ControladorHistorico.php(48): view('header', '2023-08-21')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:13:21 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorHistorico.php on line 48
+in SYSTEMPATH\Common.php on line 1172.
+ 1 APPPATH\Controllers\ControladorHistorico.php(48): view('header', '2023-08-21')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:13:21 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorHistorico.php on line 48
+in SYSTEMPATH\Common.php on line 1172.
+ 1 APPPATH\Controllers\ControladorHistorico.php(48): view('header', '2023-08-21')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:13:22 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorHistorico.php on line 48
+in SYSTEMPATH\Common.php on line 1172.
+ 1 APPPATH\Controllers\ControladorHistorico.php(48): view('header', '2023-08-21')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:13:22 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorHistorico.php on line 48
+in SYSTEMPATH\Common.php on line 1172.
+ 1 APPPATH\Controllers\ControladorHistorico.php(48): view('header', '2023-08-21')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:14:27 --> [] operator not supported for strings
+in APPPATH\Controllers\ControladorHistorico.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:14:27 --> [] operator not supported for strings
+in APPPATH\Controllers\ControladorHistorico.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:15:02 --> Cannot access offset of type string on string
+in APPPATH\Controllers\ControladorHistorico.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:15:03 --> Cannot access offset of type string on string
+in APPPATH\Controllers\ControladorHistorico.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:15:04 --> Cannot access offset of type string on string
+in APPPATH\Controllers\ControladorHistorico.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:15:04 --> Cannot access offset of type string on string
+in APPPATH\Controllers\ControladorHistorico.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:15:05 --> Cannot access offset of type string on string
+in APPPATH\Controllers\ControladorHistorico.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:15:05 --> Cannot access offset of type string on string
+in APPPATH\Controllers\ControladorHistorico.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:15:05 --> Cannot access offset of type string on string
+in APPPATH\Controllers\ControladorHistorico.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:15:31 --> Cannot access offset of type string on string
+in APPPATH\Controllers\ControladorHistorico.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-21 22:23:31 --> syntax error, unexpected token "=>", expecting "]"
+in APPPATH\Controllers\ControladorHistorico.php on line 49.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Controllers\\ControladorHistorico.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\ControladorHistorico')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\ControladorHistorico')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\ControladorHistorico', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

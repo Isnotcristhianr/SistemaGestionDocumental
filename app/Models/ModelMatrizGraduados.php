@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+//modelo periodos
+use App\Models\ModelFEPeriodo;
 
 class ModelMatrizGraduados extends Model
 {
@@ -37,4 +39,30 @@ class ModelMatrizGraduados extends Model
         return count($matrizEstadist);
     }
 
+    /* Ver Modelo Especifico */
+    public function verModeloEspecifico($fechaIncio, $fechaFin)
+    {
+        //obtener año de las fechasç
+        $anioInicio = substr($fechaIncio, 0, 4);
+        $anioFin = substr($fechaFin, 0, 4);
+        //crear campo hidden para luego leer en el controlador
+        $data = [
+            'fechaInicio' => $fechaIncio,
+            'fechaFin' => $fechaFin,
+        ];
+        
+        //TODO periodo tiene PER_ID, PER_ANO, se compara con la fecha de inicio y fin y se extrae el PER_ID
+        //TODO matrizEstadist busca donde coincide ese PER_ID con ESTM_PERIODO y se busca
+
+        //modelo periodos
+        $modeloPeriodo = new ModelFEPeriodo();
+        //ver data
+        $periodo = $modeloPeriodo->where('PER_ANO >=', $anioInicio)->where('PER_ANO <=', $anioFin)->findAll();
+        $idPeriodoInicio = $periodo[0]['PER_ID'];
+        $idPeriodoFin = $periodo[count($periodo) - 1]['PER_ID'];
+
+        $matrizEstadist = $this->where('ESTM_PERIODO >=', $idPeriodoInicio)->where('ESTM_PERIODO <=', $idPeriodoFin)->findAll();
+
+        return $matrizEstadist;
+    }
 }

@@ -53,7 +53,7 @@ opcionesBusqueda.forEach((opcion) => {
                                   </div>`;
     } else if (opcion.value == "fechah") {
       respBusqueda.innerHTML = ` <div class="row p-2" >
-                                    <form action="/busqueda" method="POST">
+                                    <form action="/SistemaGestionDocumental/index.php/busquedaHistoricoEspecifico" method="GET">
                                       <div class="col">
                                           <label for="fechaDesde" class="fw-bold">Desde</label>
                                           <input type="date" class="form-control" name="fechaDesde" id="fechaDesde">
@@ -63,10 +63,7 @@ opcionesBusqueda.forEach((opcion) => {
                                           <input type="date" class="form-control" name="fechaHasta" id="fechaHasta">
                                       </div>
                                       <div class="col text-center m-3 p-1">
-                                          <button type="submit" class="btn btn-primary m-1" name="masculino">Masculino</button>
-                                          <button type="submit" class="btn btn-info m-1" name="femenino">Femenino</button>
-                                          <button type="submit" class="btn btn-secondary m-1" name="mixto">Mixto</button>
-
+                                          <button type="submit" class="btn btn-primary m-1" name="consultar">Consultar</button>
                                       </div>
                                     </form> 
                                   </div>`;
