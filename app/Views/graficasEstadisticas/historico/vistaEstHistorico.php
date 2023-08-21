@@ -16,26 +16,6 @@
 <div class="container-center m-5 p-1 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <div class="container">
         <h4>Reporte</h4>
-        <!-- Excel Exportar -->
-        <a href="<?php echo base_url('index.php/ControladorReportes/reporteTitulacion') ?>" class="btn btn-success btn-sm">
-            <i class="fas fa-file-excel"></i> Exportar a Excel
-        </a>
-        <!-- Exportar PDF -->
-        <a href="<?php echo base_url('index.php/ControladorReportes/reporteTitulacionPDF') ?>" class="btn btn-danger btn-sm">
-            <i class="fas fa-file-pdf"></i> Exportar a PDF
-        </a>
-        <!-- Exportar Img -->
-        <a href="<?php echo base_url('index.php/ControladorReportes/reporteTitulacionImg') ?>" class="btn btn-warning btn-sm">
-            <i class="fas fa-file-image"></i> Exportar a Imagen
-        </a>
-        <!-- Imprimir -->
-        <a href="<?php echo base_url('index.php/ControladorReportes/reporteTitulacion') ?>" class="btn btn-info btn-sm">
-            <i class="fas fa-print"></i> Imprimir
-        </a>
-        <!-- ENVIAR IMG A CORREO -->
-        <a href="<?php echo base_url('index.php/ControladorReportes/reporteTitulacionImg') ?>" class="btn btn-secondary btn-sm">
-            <i class="fas fa-envelope"></i> Enviar a Correo
-        </a>
     </div>
     <!-- Reporte Estadistico -->
     <canvas id="myChart"></canvas>
@@ -44,7 +24,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     <!-- Logica Grafica -->
     <script>
-        //obtener datos de php del controlador
+        //TODO: obtener datos de php del controlador
         var datos = <?php echo json_encode($tbl_estadistica_matriz) ?>;
         var peri = <?php echo json_encode($tbl_periodo) ?>;
 
@@ -68,8 +48,9 @@
         2. Donde coincide se le asigna el ESTM_TOTAL a PER_ANO y se guarda en periodo
         3. Se repite el proceso hasta que se recorran todos los datos
         4. se ordena el arreglo periodo de menor a mayor
-        5. se suman los valores de ESTM_TOTAL que coincidan con PER_ANO y se asigan, los años se agrupan en uno solo
+        5. se suman los valores de ESTM_TOTAL que coincidan con PER_ANO y se asigan al total
         */
+
         var periodo = [];
         for (var i = 0; i < datos.length; i++) {
             for (var j = 0; j < peri.length; j++) {
@@ -78,7 +59,6 @@
                 }
             }
         }
-        periodo.sort();
         var a = [],
             b = [],
             prev;
@@ -95,7 +75,9 @@
         periodo = a;
         total = b;
 
-        //grafico de barras
+
+
+        //grafico
         var ctx = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(ctx, {
             //tipo de grafico
@@ -104,16 +86,15 @@
                 //datos
                 labels: periodo,
                 datasets: [{
-                    label: 'Total de Estudiantes Historico PUCE-I' + '\n' + '(1976-2022)',
-
+                    label: 'Total de Graduados por Periodo',
                     data: total,
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(99, 119, 255, 0.3)',
                         'rgba(54, 162, 235, 0.2)',
 
                     ],
                     borderColor: [
-                        'rgba(255, 99, 132, 1)',
+                        'rgba(0, 0, 0, 1)',
                         'rgba(54, 162, 235, 1)',
 
                     ],
@@ -125,9 +106,9 @@
                 //titulo
                 title: {
                     display: true,
-                    text: 'Total de Graduados por Periodo'
+                    text: 'Total de Estudiantes Historico PUCE-I' + '\n' + '(1976-2022)',
+                    fontSize: 15
                 },
-                //animacion
                 //leyenda
                 legend: {
                     display: true,
@@ -145,8 +126,81 @@
                     }]
                 },
                 //responsive
-                responsive: true,
+                responsive: true
             }
+        });
+    </script>
+    <br>
+    <!-- Descarga -->
+    <div class="container m-5 ">
+        <!-- Excel Exportar -->
+        <a href="#" id="export" class="btn btn-success btn-sm">
+            <i class="fas fa-file-excel"></i> Exportar Datos a Excel
+        </a>
+        <!-- Exportar PDF -->
+        <a href="<?php echo base_url('index.php/ControladorReportes/reporteTitulacionPDF') ?>" class="btn btn-danger btn-sm">
+            <i class="fas fa-file-pdf"></i> Exportar a PDF
+        </a>
+        <!-- Exportar Img -->
+        <a href="#" id="exportImg" class="btn btn-warning btn-sm">
+            <i class="fas fa-file-image"></i> Exportar a Imagen
+        </a>
+        <!-- Imprimir -->
+        <a href="#" id="exportPrint" class="btn btn-info btn-sm">
+            <i class="fas fa-print"></i> Imprimir
+        </a>
+        <!-- ENVIAR IMG A CORREO -->
+        <a href="#" id="exportEmail" class="btn btn-secondary btn-sm">
+            <i class="fas fa-envelope"></i> Enviar a Correo
+        </a>
+    </div>
+    <!-- Descargas -->
+    <script>
+        //Exportar Img
+        document.getElementById('exportImg').addEventListener('click', function() {
+            //capturar canvas
+            var canvas = document.getElementById('myChart');
+            //obtener imagen
+            var img = canvas.toDataURL('image/png');
+            //descargar imagen
+            var link = create = document.createElement('a');
+            link.href = img;
+            link.download = 'ReporteEstadisticoHistorico.png';
+            //descargar
+            link.click();
+        });
+
+        //Imprimir
+        document.getElementById('exportPrint').addEventListener('click', function() {
+            //capturar canvas
+            var canvas = document.getElementById('myChart');
+            //crear ventana para impresion
+            var win = window.open("", "_blank");
+
+            //agregar canvas a ventana emergente
+            win.document.open();
+            win.document.write('<html><head ><title>Total de Estudiantes Historico PUCE-I (1976-2022)</title></head><body onload="window.print()">');
+            win.document.write('<img src="' + canvas.toDataURL("image/png") + '" alt="Gráfico" />');
+            win.document.write('</body></html>');
+            win.document.close();
+
+            //imprimir
+            win.onload = function() {
+                win.print();
+                win.close();
+            }
+        });
+
+        //enviar a email
+        document.getElementById('exportEmail').addEventListener('click', function() {
+            //capturar canvas
+            var canvas = document.getElementById('myChart');
+            //obtener imagen
+            var img = canvas.toDataURL('image/png');
+            //enlace de correo con imagen
+            var element = 'mailto:?subject=Reporte Estadistico Historico PUCE-I&body=Total de Estudiantes Historico PUCE-I (1976-2022):%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A' + img;
+            //enviar cuadro de dialogo
+            window.location.href = element;
         });
     </script>
 </div>
