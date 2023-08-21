@@ -197,10 +197,10 @@
             var canvas = document.getElementById('myChart');
             //obtener imagen
             var img = canvas.toDataURL('image/png');
-            //enlace de correo con imagen
-            var element = 'mailto:?subject=Reporte Estadistico Historico PUCE-I&body=Total de Estudiantes Historico PUCE-I (1976-2022):%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A' + img;
-            //enviar cuadro de dialogo
-            window.location.href = element;
+            //crear ventana para enviar correo
+            var win = window.open("mailto:?subject=Reporte Estadistico Historico PUCE-I&body=Gráfico Estadistico Historico PUCE-I (1976-2022)", "_blank");
+            
+
         });
     </script>
 </div>
