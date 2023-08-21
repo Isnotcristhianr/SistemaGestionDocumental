@@ -94,7 +94,7 @@
 
                     ],
                     borderColor: [
-                        'rgba(0, 0, 0, 1)',
+                        'rgba(34, 131, 196, 1)',
                         'rgba(54, 162, 235, 1)',
 
                     ],
@@ -106,7 +106,7 @@
                 //titulo
                 title: {
                     display: true,
-                    text: 'Total de Estudiantes Historico PUCE-I' + '\n' + '(1976-2022)',
+                    text: 'Total de Estudiantes Histórico PUCE-I' + '\n' + '(1976-2022)',
                     fontSize: 15
                 },
                 //leyenda
@@ -117,17 +117,29 @@
                         fontColor: '#000'
                     }
                 },
-                //eje y
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                },
                 //responsive
-                responsive: true
+                responsive: true,
+            },
+
+            //ejes x y y
+            scales: {
+                x: {
+                    display: true,
+                    title: {
+                        display: true,
+                        text: 'Month'
+                    }
+                },
+                y: {
+                    display: true,
+                    title: {
+                        display: true,
+                        text: 'Value'
+                    }
+                }
             }
+
+
         });
     </script>
     <br>
@@ -182,7 +194,6 @@
             win.document.write('<html><head ><title>Total de Estudiantes Historico PUCE-I (1976-2022)</title></head><body onload="window.print()">');
             win.document.write('<img src="' + canvas.toDataURL("image/png") + '" alt="Gráfico" />');
             win.document.write('</body></html>');
-            win.document.close();
 
             //imprimir
             win.onload = function() {
@@ -199,7 +210,7 @@
             var img = canvas.toDataURL('image/png');
             //crear ventana para enviar correo
             var win = window.open("mailto:?subject=Reporte Estadistico Historico PUCE-I&body=Gráfico Estadistico Historico PUCE-I (1976-2022)", "_blank");
-            
+
 
         });
     </script>
