@@ -95,10 +95,6 @@
         periodo = a;
         total = b;
 
-
-
-
-
         //grafico de barras
         var ctx = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(ctx, {
