@@ -144,30 +144,46 @@
     </script>
     <br>
     <!-- Descarga -->
-    <div class="container m-5 ">
-        <!-- Excel Exportar -->
-        <a href="#" id="export" class="btn btn-success btn-sm">
-            <i class="fas fa-file-excel"></i> Exportar Datos a Excel
-        </a>
-        <!-- Exportar PDF -->
-        <a href="<?php echo base_url('index.php/ControladorReportes/reporteTitulacionPDF') ?>" class="btn btn-danger btn-sm">
-            <i class="fas fa-file-pdf"></i> Exportar a PDF
-        </a>
-        <!-- Exportar Img -->
-        <a href="#" id="exportImg" class="btn btn-warning btn-sm">
-            <i class="fas fa-file-image"></i> Exportar a Imagen
-        </a>
-        <!-- Imprimir -->
-        <a href="#" id="exportPrint" class="btn btn-info btn-sm">
-            <i class="fas fa-print"></i> Imprimir
-        </a>
-        <!-- ENVIAR IMG A CORREO -->
-        <a href="#" id="exportEmail" class="btn btn-secondary btn-sm">
-            <i class="fas fa-envelope"></i> Enviar a Correo
-        </a>
+    <div class="container my-5">
+        <div class="d-flex justify-content-center">
+            <!-- Excel Exportar -->
+            <a href="#" id="export" class="btn btn-success btn-sm m-2" hidden>
+                <i class="fas fa-file-excel"></i> Exportar Datos a Excel
+            </a>
+            <!-- Exportar PDF -->
+            <a href="#" id="exportPdf" class="btn btn-danger btn-sm  m-2" hidden>
+                <i class="fas fa-file-pdf"></i> Exportar a PDF
+            </a>
+            <!-- Exportar Img -->
+            <a href="#" id="exportImg" class="btn btn-warning btn-sm  m-2">
+                <i class="fas fa-file-image"></i> Exportar a Imagen
+            </a>
+            <!-- Imprimir -->
+            <a href="#" id="exportPrint" class="btn btn-info btn-sm  m-2">
+                <i class="fas fa-print"></i> Imprimir
+            </a>
+            <!-- ENVIAR IMG A CORREO -->
+            <a href="#" id="exportEmail" class="btn btn-secondary btn-sm  m-2">
+                <i class="fas fa-envelope"></i> Enviar a Correo
+            </a>
+        </div>
     </div>
+
     <!-- Descargas -->
+    <!-- Chartjs to pdf -->
     <script>
+        //Exportar a pdf
+        document.getElementById('exportPdf').addEventListener('click', function() {
+            //obtener canvas
+            var canvas = document.getElementById('myChart');
+            //obtener imagen
+            var img = canvas.toDataURL('image/png');
+            //doc pdf
+            var doc = new jsPDF();
+            //descargar 
+            doc.addImage(img, 'png', 10, 10);
+        });
+
         //Exportar Img
         document.getElementById('exportImg').addEventListener('click', function() {
             //capturar canvas
@@ -208,10 +224,8 @@
             var canvas = document.getElementById('myChart');
             //obtener imagen
             var img = canvas.toDataURL('image/png');
-            //crear ventana para enviar correo
+            //crear ventana para enviar correo con img adjunta
             var win = window.open("mailto:?subject=Reporte Estadistico Historico PUCE-I&body=Gráfico Estadistico Historico PUCE-I (1976-2022)", "_blank");
-
-
         });
     </script>
 </div>
