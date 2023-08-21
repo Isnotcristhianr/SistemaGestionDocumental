@@ -1,4 +1,3 @@
-
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <!-- Volver -->
     <a href="<?php echo base_url('index.php/deHistorico') ?>" class="btn btn-outline-primary">← Volver</a>
@@ -7,8 +6,8 @@
             <h2 class="text-center text-primary">Datos Estadísticos Historico PUCE-I Por Fechas
             </h2>
             <h4 class="text-center text-dark">Búsqueda
-                 Desde: <?php echo $fechaInicio ?>
-                  Hasta: <?php echo $fechaFin ?> </h4>
+                Desde: <?php echo $fechaInicio ?>
+                Hasta: <?php echo $fechaFin ?> </h4>
         </div>
         <div class="col-12">
             <h5 class="text-center text-secondary">↓ Reporte ↓</h5>
@@ -31,8 +30,13 @@
         var datos = <?php echo json_encode($tbl_estadistica_matriz) ?>;
         var peri = <?php echo json_encode($tbl_periodo) ?>;
 
-        //preparar los datos para el grafico
+        var inicio = <?php echo json_encode($fechaInicio) ?>;
+        var fin = <?php echo json_encode($fechaFin) ?>;
+        //obtener solo el año
+        inicio = inicio.substring(0, 4);
+        fin = fin.substring(0, 4);
 
+        //TODO preparar los datos para el grafico
         //! eje y -> total de estudiantes graduados y matriculados
         //? logica-> total
         //datos tiene: ESTM_TOTAL
@@ -45,8 +49,11 @@
         //? logica-> periodo
         //peri tiene: PER_ID, PER_ANO
         //datos tiene: ESTM_PERIODO, ESTM_TOTAL
-        //se compara PER_ID con ESTM_PERIODO y si coinciden se guarda el PER_ANO
+        //rangos se obtienen de inicio y fin, las fechas de los años
+        //se compara PER_ID con ESTM_PERIODO y si coinciden se guarda el PER_ANO, deben estar dentro del rango de fechas seleccionado
+        //los años guardados deben estar dentro del rango de fechas seleccionado
         /* 
+        0. Debe estar dentro del rango de fechas inicio y fin
         1.  ESTM_PERIODO coincide con PER_ID, entonces ESTM_TOTAL tiene un ESTM_ID
         2. Donde coincide se le asigna el ESTM_TOTAL a PER_ANO y se guarda en periodo
         3. Se repite el proceso hasta que se recorran todos los datos
@@ -58,7 +65,9 @@
         for (var i = 0; i < datos.length; i++) {
             for (var j = 0; j < peri.length; j++) {
                 if (datos[i].ESTM_PERIODO == peri[j].PER_ID) {
-                    periodo.push(peri[j].PER_ANO);
+                    if (peri[j].PER_ANO >= inicio && peri[j].PER_ANO <= fin) {
+                        periodo.push(peri[j].PER_ANO);
+                    }
                 }
             }
         }
@@ -77,8 +86,6 @@
         }
         periodo = a;
         total = b;
-
-
 
         //grafico
         var ctx = document.getElementById('myChart').getContext('2d');
@@ -109,7 +116,7 @@
                 //titulo
                 title: {
                     display: true,
-                    text: 'Total de Estudiantes Histórico PUCE-I' + '\n' + '(<?php echo "Desde: ". $fechaInicio ?>-<?php echo "Hasta: ". $fechaFin ?>)',
+                    text: 'Total de Estudiantes Histórico PUCE-I' + '\n' + '(<?php echo "Desde: " . $fechaInicio ?> <?php echo " Hasta: " . $fechaFin ?>)',
                     fontSize: 15
                 },
                 //leyenda
