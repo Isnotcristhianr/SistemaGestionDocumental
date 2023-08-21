@@ -23,7 +23,6 @@ class ModelMatrizGraduados extends Model
         'ESTM_DISCAPACIDAD_H', 'ESTM_DISCAPACIDAD_M', 'ESTM_TOTAL', 'ESTM_SEDE', 'ESTM_ESTADO',
     ];
 
-    
     /* Ver datos todos*/
     public function verModelo()
     {
