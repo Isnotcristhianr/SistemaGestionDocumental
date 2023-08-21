@@ -40,10 +40,84 @@
     <!-- Reporte Estadistico -->
     <canvas id="myChart"></canvas>
     <!-- Grafica -->
-    <!-- Script HighChart -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!-- Script chartJs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     <!-- Logica Grafica -->
     <script>
-        
+        //obtener datos de php del controlador
+        var datos = <?php echo json_encode($tbl_estadistica_matriz) ?>;
+        var peri = <?php echo json_encode($tbl_periodo) ?>;
+
+        //preparar los datos para el grafico
+        var total = datos.map(dato => dato.ESTM_TOTAL); //eje x
+        //eje y /* logica del periodo */
+         var periodo = datos.map(dato => dato.ESTM_PERIODO);          
+        //logica del periodo
+        //PER_ID, PER_ANO, ESTM_PERIODO, se comparan los datos de la tabla periodo con la tabla matriz
+        //si el PER_ID de la tabla periodo es igual al ESTM_PERIODO de la tabla matriz se le asigna el PER_ANO
+        //si se repiten los PER_ANO se agrupan en uno solo
+        //ordenar las fechas de menor a mayor
+/*         var periodo = [];
+        for (let i = 0; i < peri.length; i++) {
+            for (let j = 0; j < datos.length; j++) {
+                if (peri[i].PER_ID == datos[j].ESTM_PERIODO) {
+                    periodo.push(peri[i].PER_ANO);
+                }
+            }
+        } */
+ 
+        //grafico de barras
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            //tipo de grafico
+            type: 'line',
+            data: {
+                //datos
+                labels: periodo,
+                datasets: [{
+                    label: 'Total de Estudiantes Historico PUCE-I'+'\n'+'(1997-2022)',
+
+                    data: total,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+
+                    ],
+                    borderWidth: 1
+                }]
+            },
+
+            options: {
+                //titulo
+                title: {
+                    display: true,
+                    text: 'Total de Graduados por Periodo'
+                },
+                //animacion
+                //leyenda
+                legend: {
+                    display: true,
+                    position: 'bottom',
+                    labels: {
+                        fontColor: '#000'
+                    }
+                },
+                //eje y
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                },
+                //responsive
+                responsive: true,                
+            }
+        });
     </script>
 </div>
