@@ -19,6 +19,13 @@
     </div>
     <!-- Reporte Estadistico -->
     <canvas id="myChart"></canvas>
+    <label for=""><b>Fuente: </b>Secretaria General
+        <!-- Tomar año actual -->
+        <?php
+        $fecha = date('Y');
+        echo $fecha;
+        ?>
+    </label>
     <!-- Grafica -->
     <!-- Script chartJs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
@@ -86,10 +93,10 @@
                 //datos
                 labels: periodo,
                 datasets: [{
-                    label: 'Total de Graduados por Periodo',
+                    label: 'Total de Estudiantes Historico PUCE-I',
                     data: total,
                     backgroundColor: [
-                        'rgba(99, 119, 255, 0.3)',
+                        'rgba(22, 66, 132, 1)',
                         'rgba(54, 162, 235, 0.2)',
 
                     ],
@@ -98,7 +105,11 @@
                         'rgba(54, 162, 235, 1)',
 
                     ],
-                    borderWidth: 1
+                    borderWidth: 1,
+                    fill: false,
+                    pointStyle: 'circle',
+                    pointRadius: 10,
+                    pointHoverRadius: 10
                 }]
             },
 
@@ -147,11 +158,11 @@
     <div class="container my-5">
         <div class="d-flex justify-content-center">
             <!-- Excel Exportar -->
-            <a href="#" id="export" class="btn btn-success btn-sm m-2" hidden>
+            <a href="#" id="export" class="btn btn-success btn-sm m-2">
                 <i class="fas fa-file-excel"></i> Exportar Datos a Excel
             </a>
             <!-- Exportar PDF -->
-            <a href="#" id="exportPdf" class="btn btn-danger btn-sm  m-2" hidden>
+            <a href="#" id="exportPdf" class="btn btn-danger btn-sm  m-2">
                 <i class="fas fa-file-pdf"></i> Exportar a PDF
             </a>
             <!-- Exportar Img -->
@@ -174,14 +185,7 @@
     <script>
         //Exportar a pdf
         document.getElementById('exportPdf').addEventListener('click', function() {
-            //obtener canvas
-            var canvas = document.getElementById('myChart');
-            //obtener imagen
-            var img = canvas.toDataURL('image/png');
-            //doc pdf
-            var doc = new jsPDF();
-            //descargar 
-            doc.addImage(img, 'png', 10, 10);
+            
         });
 
         //Exportar Img
