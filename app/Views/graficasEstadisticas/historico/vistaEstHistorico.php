@@ -35,52 +35,61 @@
         var datos = <?php echo json_encode($tbl_estadistica_matriz) ?>;
         var peri = <?php echo json_encode($tbl_periodo) ?>;
 
-        //preparar los datos para el grafico
+        //datos tiene: ESTM_TOTAL(total por periodo), ESTM_PERIODO(id de PER_ID)
+        //peri tiene: PER_ID(id), PER_ANO(año), PER_PERIODO(nombre del periodo)
 
-        //! eje y -> total de estudiantes graduados y matriculados
+        //TODO preparar los datos para el grafico
+        //* eje y -> total de estudiantes min 0 y max suma de ESTM_TOTAL
         //? logica-> total
-        //datos tiene: ESTM_TOTAL
-        var total = datos.map(function(elem) {
-            return elem.ESTM_TOTAL;
-        });
+        var total = [];
+        //recorrer datos
+        for (let i = 0; i < datos.length; i++) {
+            //agregar total
+            total.push(datos[i].ESTM_TOTAL);
+        }
 
-
-        //! eje x 
+        //* eje x -> periodo
         //? logica-> periodo
-        //peri tiene: PER_ID, PER_ANO
-        //datos tiene: ESTM_PERIODO, ESTM_TOTAL
-        //se compara PER_ID con ESTM_PERIODO y si coinciden se guarda el PER_ANO
-        /* 
-        1.  ESTM_PERIODO coincide con PER_ID, entonces ESTM_TOTAL tiene un ESTM_ID
-        2. Donde coincide se le asigna el ESTM_TOTAL a PER_ANO y se guarda en periodo
-        3. Se repite el proceso hasta que se recorran todos los datos
-        4. se ordena el arreglo periodo de menor a mayor
-        5. se suman los valores de ESTM_TOTAL que coincidan con PER_ANO y se asigan al total
-        */
-
         var periodo = [];
-        for (var i = 0; i < datos.length; i++) {
-            for (var j = 0; j < peri.length; j++) {
+        //recorrer datos
+        for (let i = 0; i < datos.length; i++) {
+            //recorrer peri
+            for (let j = 0; j < peri.length; j++) {
+                //comparar PER_ID con ESTM_PERIODO
                 if (datos[i].ESTM_PERIODO == peri[j].PER_ID) {
+                    //agregar PER_ANO a periodo
                     periodo.push(peri[j].PER_ANO);
                 }
             }
         }
-        var a = [],
-            b = [],
-            prev;
-        periodo.sort();
-        for (var i = 0; i < periodo.length; i++) {
-            if (periodo[i] !== prev) {
-                a.push(periodo[i]);
-                b.push(1);
-            } else {
-                b[b.length - 1]++;
+        //sumar los totales de cada año y mostrar por consola el total de cada año, transformar string a int para sumar
+        //recorrer periodo
+        for (let i = 0; i < periodo.length; i++) {
+            //acumulador
+            var suma = 0;
+            //recorrer datos
+            for (let j = 0; j < datos.length; j++) {
+                //recorrer peri
+                for (let k = 0; k < peri.length; k++) {
+                    //comparar PER_ID con ESTM_PERIODO
+                    if (datos[j].ESTM_PERIODO == peri[k].PER_ID) {
+                        //comparar PER_ANO con periodo
+                        if (peri[k].PER_ANO == periodo[i]) {
+                            //acumular total
+                            suma += parseInt(datos[j].ESTM_TOTAL);
+                        }
+                    }
+                }
             }
-            prev = periodo[i];
+            //eliminar años repetidos de periodo y su total asignado
+            periodo = periodo.filter((value, index) => periodo.indexOf(value) === index);
+
+            //mostrar total por cada año
+            console.log(" Total de Estudiantes " + periodo[i] + ": " + suma);
         }
-        periodo = a;
-        total = b;
+
+        
+
 
 
 
@@ -107,9 +116,9 @@
                     ],
                     borderWidth: 1,
                     fill: false,
-                    pointStyle: 'circle',
+                    /* pointStyle: 'circle',
                     pointRadius: 10,
-                    pointHoverRadius: 10
+                    pointHoverRadius: 10 */
                 }]
             },
 
@@ -185,7 +194,7 @@
     <script>
         //Exportar a pdf
         document.getElementById('exportPdf').addEventListener('click', function() {
-            
+
         });
 
         //Exportar Img
