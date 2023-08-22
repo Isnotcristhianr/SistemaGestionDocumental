@@ -320,19 +320,12 @@
                         }
                     }],
                 },
-                //Plugins
-                plugins: {
-                    datalabels: {
-                        display: true,
-                        align: 'top', // Ajusta la alineación según tus preferencias
-                        formatter: function(value, context) {
-                            return value; // Muestra el valor del punto en la etiqueta
-                        },
-                    },
+                //animacion
+                animation: {
+                    duration: 1000,
+                    easing: 'easeOutBounce'
                 },
             },
-
-
         });
     </script>
 
