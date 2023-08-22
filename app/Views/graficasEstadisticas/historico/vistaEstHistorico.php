@@ -121,7 +121,9 @@
                     fill: false,
                     pointStyle: 'circle',
                     pointRadius: 10,
-                    pointHoverRadius: 10
+                    pointHoverRadius: 10,
+                    pointBackgroundColor: 'rgba(22, 66, 132, 1)',
+                    pointBorderColor: 'rgba(22, 66, 132, 1)',
                 }]
             },
 
