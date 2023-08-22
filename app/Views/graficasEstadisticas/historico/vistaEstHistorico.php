@@ -242,8 +242,6 @@
                         pointEnd: 0,
                         //relleno
                         fill: false,
-                        //valor
-                        value: 0,
                     },
                     {
                         //nombre de la grafica
@@ -285,7 +283,7 @@
                 //titulo
                 title: {
                     display: true,
-                    text: 'Total de Estudiantes Histórico PUCE-I' + '\n' + '(1976-2022)',
+                    text: 'Total de Estudiantes Histórico PUCE-I' + '\n' + '(1976-2023)',
                     fontSize: 15
                 },
                 //leyenda
@@ -298,7 +296,40 @@
                 },
                 //responsive
                 responsive: true,
-
+                //valor etiquetas por punto
+                tooltips: {
+                    mode: 'nearest',
+                    intersect: false,
+                },
+                //ejes
+                scales: {
+                    //eje x
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Años'
+                        }
+                    }],
+                    //eje y
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Total de Estudiantes'
+                        }
+                    }],
+                },
+                //Plugins
+                plugins: {
+                    datalabels: {
+                        display: true,
+                        align: 'top', // Ajusta la alineación según tus preferencias
+                        formatter: function(value, context) {
+                            return value; // Muestra el valor del punto en la etiqueta
+                        },
+                    },
+                },
             },
 
 

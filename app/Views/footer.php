@@ -65,6 +65,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 <!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- PuglinsChartjs -->
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/516b0707c7.js" crossorigin="anonymous"></script>
 <!-- Data Table -->
