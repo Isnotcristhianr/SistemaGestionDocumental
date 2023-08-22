@@ -86,12 +86,15 @@
 
             //mostrar total por cada año
             console.log(" Total de Estudiantes " + periodo[i] + ": " + suma);
+
+            //enviar a la grafica
+            total[i] = suma;
+
+            //ordenar periodo de menor a mayor
+            periodo.sort(function(a, b) {
+                return a - b;
+            });
         }
-
-        
-
-
-
 
         //grafico
         var ctx = document.getElementById('myChart').getContext('2d');
@@ -116,9 +119,9 @@
                     ],
                     borderWidth: 1,
                     fill: false,
-                    /* pointStyle: 'circle',
+                    pointStyle: 'circle',
                     pointRadius: 10,
-                    pointHoverRadius: 10 */
+                    pointHoverRadius: 10
                 }]
             },
 
