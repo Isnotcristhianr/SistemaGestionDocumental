@@ -242,8 +242,6 @@
                     },
                     enableMouseTracking: true
                 },
-                pointStart: 0,
-                pointEnd: 0
             },
             series: [{
                     name: 'Total',
@@ -272,13 +270,7 @@
                     }
                 }]
             },
-            exporting: {
-                buttons: {
-                    contextButton: {
-                        menuItems: ["viewFullscreen", "printChart", "separator", "downloadPNG", "downloadJPEG", "downloadPDF", "downloadSVG", "separator", "downloadXLS", "downloadCSV"]
-                    }
-                }
-            },
+           
             credits: {
                 enabled: true,
                 href: "https://www.pucesi.edu.ec/webs2/",
