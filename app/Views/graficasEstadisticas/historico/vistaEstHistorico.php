@@ -19,7 +19,7 @@
     </div>
     <!-- Reporte Estadistico -->
     <canvas id="myChart"></canvas>
-    <label for=""><b>Fuente: </b>Secretaria General
+    <label for="" id="fuente"><b>Fuente: </b>Secretaria General
         <!-- Tomar año actual -->
         <?php
         $fecha = date('Y');
@@ -29,6 +29,9 @@
     <!-- Grafica -->
     <!-- Script chartJs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <!-- CDN de html2pdf.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
     <!-- Logica Grafica -->
     <script>
         //TODO: obtener datos de php del controlador
@@ -320,12 +323,18 @@
                         }
                     }],
                 },
-                //animacion
-                animation: {
-                    duration: 1000,
-                    easing: 'easeOutBounce'
-                },
+                //? eticas en los puntos -> no se ve bien
+                /*  plugins: {
+                     datalabels: {
+                         anchor: 'end', // Puedes ajustar la posición de la etiqueta
+                         align: 'top', // Puedes ajustar la posición de la etiqueta
+                         formatter: function(value, context) {
+                             return value; // Esto mostrará el valor en cada nodo
+                         }
+                     }
+                 } */
             },
+
         });
     </script>
 
@@ -341,6 +350,7 @@
             <a href="#" id="exportPdf" class="btn btn-danger btn-sm  m-2">
                 <i class="fas fa-file-pdf"></i> Exportar a PDF
             </a>
+            
             <!-- Exportar Img -->
             <a href="#" id="exportImg" class="btn btn-warning btn-sm  m-2">
                 <i class="fas fa-file-image"></i> Exportar a Imagen
@@ -361,8 +371,35 @@
     <script>
         //Exportar a pdf
         document.getElementById('exportPdf').addEventListener('click', function() {
-
+            //capturar canvas
+            var canvas = document.getElementById('myChart');
+            //capturar fuente
+            var fuente = document.getElementById('fuente');
+            //instancia html2pdf
+            var pdf = new window.html2pdf();
+            //ajustar imagen
+            pdf.set({
+                margin: 1,
+                filename: 'ReporteEstadisticoHistorico.pdf',
+                image: {
+                    type: 'png',
+                    quality: 1
+                },
+                html2canvas: {
+                    scale: 3, // A mayor escala, mejores gráficos, pero más peso
+                    letterRendering: true,
+                },
+                jsPDF: {
+                    unit: "in",
+                    format: "a4",
+                    orientation: 'portrait' // landscape o portrait
+                }
+            });
+            //agregar imagen
+            pdf.from(canvas).save();
+            
         });
+
 
         //Exportar Img
         document.getElementById('exportImg').addEventListener('click', function() {
