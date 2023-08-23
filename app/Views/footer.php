@@ -68,9 +68,8 @@
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/516b0707c7.js" crossorigin="anonymous"></script>
 <!-- Animacion de carga -->
-<!-- CDN de spin.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
-
+<!-- CDN de TOASTR JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <!-- Data Table -->
 <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"></script>
 <!-- Script DataTable -->
