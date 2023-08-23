@@ -557,7 +557,7 @@
             for (let i = 0; i < periodo.length; i++) {
                 //agregar datos
                 data.push({
-                    Año: periodo[i],
+                    Periodo: periodo[i],
                     Total: total[i],
                     Hombres: totalH[i],
                     Mujeres: totalM[i]
