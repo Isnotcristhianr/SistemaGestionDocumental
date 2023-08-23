@@ -8,3 +8,14 @@ in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 76.
  6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
  7 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
  8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-23 20:56:51 --> Undefined variable $datos
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistorico.php on line 50.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistorico.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistorico.php', 50)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistorico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistorico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(30): view('/graficasEstadisticas/historico/vistaEstHistorico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistorico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

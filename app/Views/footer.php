@@ -73,6 +73,7 @@
 <!-- Exportar a Excel -->
 <!-- Incluye la biblioteca xlsx desde el CDN de cdnjs -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+
 <!-- Data Table -->
 <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"></script>
 <!-- Script DataTable -->
