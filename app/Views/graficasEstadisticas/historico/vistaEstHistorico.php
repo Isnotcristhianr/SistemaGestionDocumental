@@ -329,6 +329,29 @@
                         }
                     }],
                 },
+                tooltips: {
+                    callbacks: {
+                        label: function(tooltipItem, data) {
+                            var datasetLabel = data.datasets[tooltipItem.datasetIndex].label || '';
+                            return datasetLabel + ': ' + tooltipItem.yLabel;
+                        }
+                    }
+                },
+                showTooltips: false,
+                onAnimationComplete: function() {
+
+                    var ctx = this.chart.ctx;
+                    ctx.font = this.scale.font;
+                    ctx.fillStyle = this.scale.textColor
+                    ctx.textAlign = "center";
+                    ctx.textBaseline = "bottom";
+
+                    this.datasets.forEach(function(dataset) {
+                        dataset.points.forEach(function(points) {
+                            ctx.fillText(points.value, points.x, points.y - 10);
+                        });
+                    })
+                }
             },
 
         });
