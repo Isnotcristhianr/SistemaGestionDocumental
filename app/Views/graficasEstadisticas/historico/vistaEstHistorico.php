@@ -33,6 +33,36 @@
         var datos = <?php echo json_encode($tbl_estadistica_matriz) ?>;
         var peri = <?php echo json_encode($tbl_periodo) ?>;
 
+        function getYears(data) {
+            var years = [];
+            //logica -> periodo
+            //recorrer datos
+            for (let i = 0; i < data.length; i++) {
+                //recorrer peri
+                for (let j = 0; j < peri.length; j++) {
+                    //comparar PER_ID con ESTM_PERIODO
+                    if (data[i].ESTM_PERIODO == peri[j].PER_ID) {
+                        //agregar PER_ANO a periodo
+                        years.push(peri[j].PER_ANO);
+                    }
+                }
+            }
+
+            //eliminar años repetidos de periodo y su total asignado
+            years = years.filter((value, index) => years.indexOf(value) === index);
+
+            //ordenar periodo de menor a mayor
+            years.sort(function(a, b) {
+                return a - b;
+            });
+
+            return years;
+
+        }
+
+        // Obtener los años de los datos
+        var years = getYears(datos);
+
         //! Por Años General
         {
             // Objeto para asociar periodos con totales
@@ -63,7 +93,6 @@
                 return periodoTotalMap[periodoKey];
             });
         }
-
 
         //! Por Años Genero Masculino -> ESTM_GENERO_H
         {
@@ -96,7 +125,6 @@
             });
         }
 
-
         //! Por Años Genero Femenino -> ESTM_GENERO_M
         {
             // Objeto para asociar periodos con totales de género femenino
@@ -127,36 +155,6 @@
                 return periodoMTotalMap[periodoKey];
             });
         }
-
-        function getYears(data) {
-            var years = [];
-            //logica -> periodo
-            //recorrer datos
-            for (let i = 0; i < data.length; i++) {
-                //recorrer peri
-                for (let j = 0; j < peri.length; j++) {
-                    //comparar PER_ID con ESTM_PERIODO
-                    if (data[i].ESTM_PERIODO == peri[j].PER_ID) {
-                        //agregar PER_ANO a periodo
-                        years.push(peri[j].PER_ANO);
-                    }
-                }
-            }
-
-            //eliminar años repetidos de periodo y su total asignado
-            years = years.filter((value, index) => years.indexOf(value) === index);
-
-            //ordenar periodo de menor a mayor
-            years.sort(function(a, b) {
-                return a - b;
-            });
-
-            return years;
-
-        }
-
-        // Obtener los años de los datos
-        var years = getYears(datos);
 
         //grafica
         Highcharts.chart('container', {

@@ -36,3 +36,25 @@ in APPPATH\Models\ModelMatrizGraduados.php on line 61.
  4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
  5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-24 17:14:08 --> Undefined variable $fechaInicio
+in APPPATH\Views\graficasEstadisticas\grado\vistaGradGenMatr.php on line 8.
+ 1 APPPATH\Views\graficasEstadisticas\grado\vistaGradGenMatr.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fechaInicio', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\grado\\vistaGradGenMatr.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\grado\\vistaGradGenMatr.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/grado/vistaGradGenMatr', [], true)
+ 5 APPPATH\Controllers\ControladorReportes.php(34): view('/graficasEstadisticas/grado/vistaGradGenMatr', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reporteGeneralMatriculados()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-24 17:14:29 --> Undefined variable $fechaInicio
+in APPPATH\Views\graficasEstadisticas\grado\vistaGradGenMatr.php on line 8.
+ 1 APPPATH\Views\graficasEstadisticas\grado\vistaGradGenMatr.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fechaInicio', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\grado\\vistaGradGenMatr.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\grado\\vistaGradGenMatr.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/grado/vistaGradGenMatr', [], true)
+ 5 APPPATH\Controllers\ControladorReportes.php(34): view('/graficasEstadisticas/grado/vistaGradGenMatr', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reporteGeneralMatriculados()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
