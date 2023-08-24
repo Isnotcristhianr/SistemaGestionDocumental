@@ -35,85 +35,97 @@
 
         //! Por Años General
         {
-            // Arrays para almacenar los datos
-            var total = [];
-            var periodo = [];
+            // Objeto para asociar periodos con totales
+            var periodoTotalMap = {};
 
             // Recorrer los datos y el período
             for (let i = 0; i < datos.length; i++) {
                 for (let j = 0; j < peri.length; j++) {
                     if (datos[i].ESTM_PERIODO == peri[j].PER_ID) {
-                        // Agregar PER_ANO a periodo si no está en la lista
-                        if (!periodo.includes(peri[j].PER_ANO)) {
-                            periodo.push(peri[j].PER_ANO);
-                            total.push(0); // Inicializar el total para este año en 0
+                        // Agregar PER_ANO a periodo si no está en el objeto
+                        if (!periodoTotalMap.hasOwnProperty(peri[j].PER_ANO)) {
+                            periodoTotalMap[peri[j].PER_ANO] = 0; // Inicializar el total para este año en 0
                         }
                         // Acumular el total
-                        total[periodo.indexOf(peri[j].PER_ANO)] += parseInt(datos[i].ESTM_TOTAL);
+                        periodoTotalMap[peri[j].PER_ANO] += parseInt(datos[i].ESTM_TOTAL);
                     }
                 }
             }
 
-            // Mostrar los totales por año
-            for (let i = 0; i < periodo.length; i++) {
-                console.log("Total de Estudiantes " + periodo[i] + ": " + total[i]);
-            }
+            // Obtener periodos únicos y ordenarlos en orden ascendente
+            var periodo = Object.keys(periodoTotalMap).map(Number);
+            periodo.sort(function(a, b) {
+                return a - b;
+            });
+
+            // Obtener los totales ordenados de acuerdo con el nuevo orden de periodos
+            var total = periodo.map(function(periodoKey) {
+                return periodoTotalMap[periodoKey];
+            });
         }
 
-        //!Por Años Genero Masculino -> ESTM_GENERO_H
+
+        //! Por Años Genero Masculino -> ESTM_GENERO_H
         {
-            // NUEVO TOTAL DE ESTUDIANTES H
-            var totalH = [];
-            var periodoH = [];
+            // Objeto para asociar periodos con totales de género masculino
+            var periodoHTotalMap = {};
 
             // Recorrer los datos y el período
             for (let i = 0; i < datos.length; i++) {
                 for (let j = 0; j < peri.length; j++) {
                     if (datos[i].ESTM_PERIODO == peri[j].PER_ID) {
-                        // Agregar PER_ANO a periodoH si no está en la lista
-                        if (!periodoH.includes(peri[j].PER_ANO)) {
-                            periodoH.push(peri[j].PER_ANO);
-                            totalH.push(0); // Inicializar el total para este año en 0
+                        // Agregar PER_ANO a periodoH si no está en el objeto
+                        if (!periodoHTotalMap.hasOwnProperty(peri[j].PER_ANO)) {
+                            periodoHTotalMap[peri[j].PER_ANO] = 0; // Inicializar el total para este año en 0
                         }
-                        // Acumular el total
-                        totalH[periodoH.indexOf(peri[j].PER_ANO)] += parseInt(datos[i].ESTM_GENERO_H);
+                        // Acumular el total de género masculino
+                        periodoHTotalMap[peri[j].PER_ANO] += parseInt(datos[i].ESTM_GENERO_H);
                     }
                 }
             }
 
-            // Mostrar los totales por año para estudiantes masculinos
-            for (let i = 0; i < periodoH.length; i++) {
-                console.log("Total de Estudiantes Masculino " + periodoH[i] + ": " + totalH[i]);
-            }
+            // Obtener periodos únicos y ordenarlos en orden ascendente
+            var periodoH = Object.keys(periodoHTotalMap).map(Number);
+            periodoH.sort(function(a, b) {
+                return a - b;
+            });
+
+            // Obtener los totales de género masculino ordenados de acuerdo con el nuevo orden de periodos
+            var totalH = periodoH.map(function(periodoKey) {
+                return periodoHTotalMap[periodoKey];
+            });
         }
+
 
         //! Por Años Genero Femenino -> ESTM_GENERO_M
         {
-            // Nuevo total de estudiantes M
-            var totalM = [];
-            var periodoM = [];
+            // Objeto para asociar periodos con totales de género femenino
+            var periodoMTotalMap = {};
 
             // Recorrer los datos y el período
             for (let i = 0; i < datos.length; i++) {
                 for (let j = 0; j < peri.length; j++) {
                     if (datos[i].ESTM_PERIODO == peri[j].PER_ID) {
-                        // Agregar PER_ANO a periodoM si no está en la lista
-                        if (!periodoM.includes(peri[j].PER_ANO)) {
-                            periodoM.push(peri[j].PER_ANO);
-                            totalM.push(0); // Inicializar el total para este año en 0
+                        // Agregar PER_ANO a periodoM si no está en el objeto
+                        if (!periodoMTotalMap.hasOwnProperty(peri[j].PER_ANO)) {
+                            periodoMTotalMap[peri[j].PER_ANO] = 0; // Inicializar el total para este año en 0
                         }
-                        // Acumular el total
-                        totalM[periodoM.indexOf(peri[j].PER_ANO)] += parseInt(datos[i].ESTM_GENERO_M);
+                        // Acumular el total de género femenino
+                        periodoMTotalMap[peri[j].PER_ANO] += parseInt(datos[i].ESTM_GENERO_M);
                     }
                 }
             }
 
-            // Mostrar los totales por año para estudiantes femeninos
-            for (let i = 0; i < periodoM.length; i++) {
-                console.log("Total de Estudiantes Femenino " + periodoM[i] + ": " + totalM[i]);
-            }
+            // Obtener periodos únicos y ordenarlos en orden ascendente
+            var periodoM = Object.keys(periodoMTotalMap).map(Number);
+            periodoM.sort(function(a, b) {
+                return a - b;
+            });
 
-
+            // Obtener los totales de género femenino ordenados de acuerdo con el nuevo orden de periodos
+            var totalM = periodoM.map(function(periodoKey) {
+                return periodoMTotalMap[periodoKey];
+            });
         }
 
         function getYears(data) {
@@ -149,16 +161,27 @@
         //grafica
         Highcharts.chart('container', {
             chart: {
-                type: 'line'
+                type: 'line',
+                //marca de agua
+                events: {
+                    load: function() {
+                        //imagen opaca fondo
+                        this.renderer.image('<?php echo base_url('/public/imgs/logoPucesi.png') ?>')
+                            .css({
+                                opacity: 0.35
+                            })
+                            .add();
+                    }
+                }
             },
             title: {
-                text: 'Total de Estudiantes Historico PUCE-I '
+                text: 'Total de Estudiantes Histórico PUCE-I '
             },
             subtitle: {
                 text: 'Desde 1976 Hasta 2023'
             },
             xAxis: {
-                categories: years,
+                categories: periodo,
                 title: {
                     text: 'Año'
                 },
@@ -182,11 +205,11 @@
                 },
 
                 {
-                    name: 'Hombres',
+                    name: '👨‍🦱 Hombres',
                     data: totalH
                 },
                 {
-                    name: 'Mujeres',
+                    name: '👩‍🦰 Mujeres',
                     data: totalM
                 }
             ],
@@ -204,11 +227,10 @@
                     }
                 }]
             },
-
             credits: {
                 enabled: true,
                 href: "https://www.pucesi.edu.ec/webs2/",
-                text: "Secretaria General PuceI",
+                text: "Secretaria General PUCE-I",
                 style: {
                     color: "#666666",
                     cursor: "pointer",
