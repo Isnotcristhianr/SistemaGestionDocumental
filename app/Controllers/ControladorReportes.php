@@ -104,4 +104,47 @@ class ControladorReportes extends BaseController
 
         return view('header') . view('/graficasEstadisticas/posgrado/vistaPosGenGrad', $datos + $datos2) . view('footer');
     }
+
+    //! Datos Estadisticos Tecnologia
+    //Reporte General
+    public function reporteGeneralTecnologia()
+    {
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //modelo periodos
+        $modeloPeriodo = new ModelFEPeriodo();
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+        $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+
+        return view('header') . view('/graficasEstadisticas/tecnologia/vistaTecGen', $datos + $datos2) . view('footer');
+    }
+
+    //Reporte General Matriculados
+    public function reporteGeneralMatriculadosTecnologia()
+    {
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //modelo periodos
+        $modeloPeriodo = new ModelFEPeriodo();
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+        $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+
+        return view('header') . view('/graficasEstadisticas/tecnologia/vistaTecGenMatr', $datos + $datos2) . view('footer');
+    }
+
+    //Reporte General Graduados
+    public function reporteGeneralGraduadosTecnologia()
+    {
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //modelo periodos
+        $modeloPeriodo = new ModelFEPeriodo();
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+        $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+
+        return view('header') . view('/graficasEstadisticas/tecnologia/vistaTecGenGrad', $datos + $datos2) . view('footer');
+    }
 }
