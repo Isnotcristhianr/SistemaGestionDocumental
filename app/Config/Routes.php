@@ -52,6 +52,8 @@ $routes->get('/FiltroEstadisticoGradoCarrera/(:any)', 'ControladorFECarrera::fil
 $routes ->get('/ReporteGeneralMatriculados', 'ControladorReportes::reporteGeneralMatriculados');
 /* Reporte General Graduados*/
 $routes ->get('/ReporteGeneralGraduados', 'ControladorReportes::reporteGeneralGraduados');
+/* Reporte General */
+$routes ->get('/ReporteGeneral', 'ControladorReportes::reporteGeneral');
 
 //Datos Estadisticos Posgrado
 $routes->get('/FiltroEstadisticoPosgrado', 'ControladorEstadistico::filtroEstadisticoPosgrado');

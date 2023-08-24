@@ -47,4 +47,18 @@ class ControladorReportes extends BaseController
 
         return view('header') . view('/graficasEstadisticas/grado/vistaGradGenGrad', $datos + $datos2) . view('footer');
     }
+
+    //Reporte General
+    public function reporteGeneral()
+    {
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //modelo periodos
+        $modeloPeriodo = new ModelFEPeriodo();
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+        $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+
+        return view('header') . view('/graficasEstadisticas/grado/vistaGradGen', $datos + $datos2) . view('footer');
+    }
 }
