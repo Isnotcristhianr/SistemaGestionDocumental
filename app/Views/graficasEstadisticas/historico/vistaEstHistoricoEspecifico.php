@@ -16,226 +16,236 @@
 </div>
 <!-- Contenido-->
 <div class="container-center m-5 p-1 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
-    <div class="container">
-        <h4>Reporte</h4>
+    <div id="exportContainer">
+
+        <!-- Reporte Estadistico -->
+        <figure class="highcharts-figure">
+            <div id="container"></div>
+        </figure>
     </div>
-    <!-- Reporte Estadistico -->
-    <canvas id="myChart"></canvas>
+
+    <!-- Hichart -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     <!-- Grafica -->
-    <!-- Script chartJs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-    <!-- Logica Grafica -->
     <script>
         //TODO: obtener datos de php del controlador
         var datos = <?php echo json_encode($tbl_estadistica_matriz) ?>;
         var peri = <?php echo json_encode($tbl_periodo) ?>;
 
-        var inicio = <?php echo json_encode($fechaInicio) ?>;
-        var fin = <?php echo json_encode($fechaFin) ?>;
-        //obtener solo el año
-        inicio = inicio.substring(0, 4);
-        fin = fin.substring(0, 4);
+        //! Por Años General
+        {
+            // Objeto para asociar periodos con totales
+            var periodoTotalMap = {};
 
-        //TODO preparar los datos para el grafico
-        //! eje y -> total de estudiantes graduados y matriculados
-        //? logica-> total
-        //datos tiene: ESTM_TOTAL
-        var total = datos.map(function(elem) {
-            return elem.ESTM_TOTAL;
+            // Recorrer los datos y el período
+            for (let i = 0; i < datos.length; i++) {
+                for (let j = 0; j < peri.length; j++) {
+                    if (datos[i].ESTM_PERIODO == peri[j].PER_ID) {
+                        // Agregar PER_ANO a periodo si no está en el objeto
+                        if (!periodoTotalMap.hasOwnProperty(peri[j].PER_ANO)) {
+                            periodoTotalMap[peri[j].PER_ANO] = 0; // Inicializar el total para este año en 0
+                        }
+                        // Acumular el total
+                        periodoTotalMap[peri[j].PER_ANO] += parseInt(datos[i].ESTM_TOTAL);
+                    }
+                }
+            }
+
+            // Obtener periodos únicos y ordenarlos en orden ascendente
+            var periodo = Object.keys(periodoTotalMap).map(Number);
+            periodo.sort(function(a, b) {
+                return a - b;
+            });
+
+            // Obtener los totales ordenados de acuerdo con el nuevo orden de periodos
+            var total = periodo.map(function(periodoKey) {
+                return periodoTotalMap[periodoKey];
+            });
+        }
+
+
+        //! Por Años Genero Masculino -> ESTM_GENERO_H
+        {
+            // Objeto para asociar periodos con totales de género masculino
+            var periodoHTotalMap = {};
+
+            // Recorrer los datos y el período
+            for (let i = 0; i < datos.length; i++) {
+                for (let j = 0; j < peri.length; j++) {
+                    if (datos[i].ESTM_PERIODO == peri[j].PER_ID) {
+                        // Agregar PER_ANO a periodoH si no está en el objeto
+                        if (!periodoHTotalMap.hasOwnProperty(peri[j].PER_ANO)) {
+                            periodoHTotalMap[peri[j].PER_ANO] = 0; // Inicializar el total para este año en 0
+                        }
+                        // Acumular el total de género masculino
+                        periodoHTotalMap[peri[j].PER_ANO] += parseInt(datos[i].ESTM_GENERO_H);
+                    }
+                }
+            }
+
+            // Obtener periodos únicos y ordenarlos en orden ascendente
+            var periodoH = Object.keys(periodoHTotalMap).map(Number);
+            periodoH.sort(function(a, b) {
+                return a - b;
+            });
+
+            // Obtener los totales de género masculino ordenados de acuerdo con el nuevo orden de periodos
+            var totalH = periodoH.map(function(periodoKey) {
+                return periodoHTotalMap[periodoKey];
+            });
+        }
+
+
+        //! Por Años Genero Femenino -> ESTM_GENERO_M
+        {
+            // Objeto para asociar periodos con totales de género femenino
+            var periodoMTotalMap = {};
+
+            // Recorrer los datos y el período
+            for (let i = 0; i < datos.length; i++) {
+                for (let j = 0; j < peri.length; j++) {
+                    if (datos[i].ESTM_PERIODO == peri[j].PER_ID) {
+                        // Agregar PER_ANO a periodoM si no está en el objeto
+                        if (!periodoMTotalMap.hasOwnProperty(peri[j].PER_ANO)) {
+                            periodoMTotalMap[peri[j].PER_ANO] = 0; // Inicializar el total para este año en 0
+                        }
+                        // Acumular el total de género femenino
+                        periodoMTotalMap[peri[j].PER_ANO] += parseInt(datos[i].ESTM_GENERO_M);
+                    }
+                }
+            }
+
+            // Obtener periodos únicos y ordenarlos en orden ascendente
+            var periodoM = Object.keys(periodoMTotalMap).map(Number);
+            periodoM.sort(function(a, b) {
+                return a - b;
+            });
+
+            // Obtener los totales de género femenino ordenados de acuerdo con el nuevo orden de periodos
+            var totalM = periodoM.map(function(periodoKey) {
+                return periodoMTotalMap[periodoKey];
+            });
+        }
+
+        //transformar fecha inicio y fin a año
+        var fechaInicio = new Date('<?php echo $fechaInicio ?>');
+        var fechaFin = new Date('<?php echo $fechaFin ?>');
+        //solo año
+        var añoInicio = fechaInicio.getFullYear();
+        var añoFin = fechaFin.getFullYear();
+
+        // Filtrar periodos y totales dentro del rango de inicio y fin
+        var periodoFiltrado = periodo.filter(function(periodo) {
+            return periodo >= añoInicio && periodo <= añoFin;
+        });
+        var totalFiltrado = total.filter(function(total, index) {
+            return periodo[index] >= añoInicio && periodo[index] <= añoFin;
+        });
+
+        // Filtrar periodos y totales de género masculino dentro del rango de inicio y fin
+        var periodoHFiltrado = periodoH.filter(function(periodoH) {
+            return periodoH >= añoInicio && periodoH <= añoFin;
+        });
+        var totalHFiltrado = totalH.filter(function(totalH, index) {
+            return periodoH[index] >= añoInicio && periodoH[index] <= añoFin;
+        });
+
+        // Filtrar periodos y totales de género femenino dentro del rango de inicio y fin
+        var periodoMFiltrado = periodoM.filter(function(periodoM) {
+            return periodoM >= añoInicio && periodoM <= añoFin;
+        });
+        var totalMFiltrado = totalM.filter(function(totalM, index) {
+            return periodoM[index] >= añoInicio && periodoM[index] <= añoFin;
         });
 
 
-        //! eje x 
-        //? logica-> periodo
-        //peri tiene: PER_ID, PER_ANO
-        //datos tiene: ESTM_PERIODO, ESTM_TOTAL
-        //rangos se obtienen de inicio y fin, las fechas de los años
-        //se compara PER_ID con ESTM_PERIODO y si coinciden se guarda el PER_ANO, deben estar dentro del rango de fechas seleccionado
-        //los años guardados deben estar dentro del rango de fechas seleccionado
-        /* 
-        0. Debe estar dentro del rango de fechas inicio y fin
-        1.  ESTM_PERIODO coincide con PER_ID, entonces ESTM_TOTAL tiene un ESTM_ID
-        2. Donde coincide se le asigna el ESTM_TOTAL a PER_ANO y se guarda en periodo
-        3. Se repite el proceso hasta que se recorran todos los datos
-        4. se ordena el arreglo periodo de menor a mayor
-        5. se suman los valores de ESTM_TOTAL que coincidan con PER_ANO y se asigan al total
-        */
-
-        var periodo = [];
-        for (var i = 0; i < datos.length; i++) {
-            for (var j = 0; j < peri.length; j++) {
-                if (datos[i].ESTM_PERIODO == peri[j].PER_ID) {
-                    if (peri[j].PER_ANO >= inicio && peri[j].PER_ANO <= fin) {
-                        periodo.push(peri[j].PER_ANO);
+        //grafica
+        Highcharts.chart('container', {
+            chart: {
+                type: 'line',
+                //marca de agua
+                events: {
+                    load: function() {
+                        //imagen opaca fondo
+                        this.renderer.image('<?php echo base_url('/public/imgs/logoPucesi.png') ?>')
+                            .css({
+                                opacity: 0.35
+                            })
+                            .add();
                     }
                 }
-            }
-        }
-        var a = [],
-            b = [],
-            prev;
-        periodo.sort();
-        for (var i = 0; i < periodo.length; i++) {
-            if (periodo[i] !== prev) {
-                a.push(periodo[i]);
-                b.push(1);
-            } else {
-                b[b.length - 1]++;
-            }
-            prev = periodo[i];
-        }
-        periodo = a;
-        total = b;
+            },
+            title: {
+                text: 'Total de Estudiantes Histórico PUCE-I '
+            },
+            subtitle: {
+                text: '<b>📅 Desde: </b> ' +
+                    '<?php echo $fechaInicio ?>' +
+                    ' <b>📅 Hasta: </b> ' +
+                    '<?php echo $fechaFin ?>'
+            },
+            xAxis: {
+                categories: periodoFiltrado,
+                title: {
+                    text: 'Año'
+                },
+            },
+            yAxis: {
+                title: {
+                    text: 'Total de Estudiantes'
+                }
+            },
+            plotOptions: {
+                line: {
+                    dataLabels: {
+                        enabled: true
+                    },
+                    enableMouseTracking: true
+                },
+            },
+            series: [{
+                    name: 'Total',
+                    data: totalFiltrado
+                },
 
-        //grafico
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var myChart = new Chart(ctx, {
-            //tipo de grafico
-            type: 'line',
-            data: {
-                //datos
-                labels: periodo,
-                datasets: [{
-                    label: 'Total de Graduados por Año Especifico',
-                    data: total,
-                    backgroundColor: [
-                        'rgba(99, 119, 255, 0.3)',
-                        'rgba(54, 162, 235, 0.2)',
-
-                    ],
-                    borderColor: [
-                        'rgba(34, 131, 196, 1)',
-                        'rgba(54, 162, 235, 1)',
-
-                    ],
-                    borderWidth: 1
+                {
+                    name: '👨‍🦱 Hombres',
+                    data: totalHFiltrado
+                },
+                {
+                    name: '👩‍🦰 Mujeres',
+                    data: totalMFiltrado
+                }
+            ],
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
                 }]
             },
-
-            options: {
-                //titulo
-                title: {
-                    display: true,
-                    text: 'Total de Estudiantes Histórico PUCE-I' + '\n' + '(<?php echo "Desde: " . $fechaInicio ?> <?php echo " Hasta: " . $fechaFin ?>)',
-                    fontSize: 15
+            credits: {
+                enabled: true,
+                href: "https://www.pucesi.edu.ec/webs2/",
+                text: "Secretaria General PUCE-I",
+                style: {
+                    color: "#666666",
+                    cursor: "pointer",
+                    fontSize: "15px"
                 },
-                //leyenda
-                legend: {
-                    display: true,
-                    position: 'bottom',
-                    labels: {
-                        fontColor: '#000'
-                    }
-                },
-                //responsive
-                responsive: true,
-            },
-
-            //ejes x y y
-            scales: {
-                x: {
-                    display: true,
-                    title: {
-                        display: true,
-                        text: 'Month'
-                    }
-                },
-                y: {
-                    display: true,
-                    title: {
-                        display: true,
-                        text: 'Value'
-                    }
-                }
             }
-
-
         });
     </script>
     <br>
-    <!-- Descarga -->
-    <div class="container my-5">
-        <div class="d-flex justify-content-center">
-            <!-- Excel Exportar -->
-            <a href="#" id="export" class="btn btn-success btn-sm m-2" hidden>
-                <i class="fas fa-file-excel"></i> Exportar Datos a Excel
-            </a>
-            <!-- Exportar PDF -->
-            <a href="#" id="exportPdf" class="btn btn-danger btn-sm  m-2" hidden>
-                <i class="fas fa-file-pdf"></i> Exportar a PDF
-            </a>
-            <!-- Exportar Img -->
-            <a href="#" id="exportImg" class="btn btn-warning btn-sm  m-2">
-                <i class="fas fa-file-image"></i> Exportar a Imagen
-            </a>
-            <!-- Imprimir -->
-            <a href="#" id="exportPrint" class="btn btn-info btn-sm  m-2">
-                <i class="fas fa-print"></i> Imprimir
-            </a>
-            <!-- ENVIAR IMG A CORREO -->
-            <a href="#" id="exportEmail" class="btn btn-secondary btn-sm  m-2">
-                <i class="fas fa-envelope"></i> Enviar a Correo
-            </a>
-        </div>
-    </div>
 
-    <!-- Descargas -->
-    <!-- Chartjs to pdf -->
-    <script>
-        //Exportar a pdf
-        document.getElementById('exportPdf').addEventListener('click', function() {
-            //obtener canvas
-            var canvas = document.getElementById('myChart');
-            //obtener imagen
-            var img = canvas.toDataURL('image/png');
-            //doc pdf
-            var doc = new jsPDF();
-            //descargar 
-            doc.addImage(img, 'png', 10, 10);
-        });
-
-        //Exportar Img
-        document.getElementById('exportImg').addEventListener('click', function() {
-            //capturar canvas
-            var canvas = document.getElementById('myChart');
-            //obtener imagen
-            var img = canvas.toDataURL('image/png');
-            //descargar imagen
-            var link = create = document.createElement('a');
-            link.href = img;
-            link.download = 'ReporteEstadisticoHistorico.png';
-            //descargar
-            link.click();
-        });
-
-        //Imprimir
-        document.getElementById('exportPrint').addEventListener('click', function() {
-            //capturar canvas
-            var canvas = document.getElementById('myChart');
-            //crear ventana para impresion
-            var win = window.open("", "_blank");
-
-            //agregar canvas a ventana emergente
-            win.document.open();
-            win.document.write('<html><head ><title>Total de Estudiantes Historico PUCE-I (1976-2022)</title></head><body onload="window.print()">');
-            win.document.write('<img src="' + canvas.toDataURL("image/png") + '" alt="Gráfico" />');
-            win.document.write('</body></html>');
-
-            //imprimir
-            win.onload = function() {
-                win.print();
-                win.close();
-            }
-        });
-
-        //enviar a email
-        document.getElementById('exportEmail').addEventListener('click', function() {
-            //capturar canvas
-            var canvas = document.getElementById('myChart');
-            //obtener imagen
-            var img = canvas.toDataURL('image/png');
-            //crear ventana para enviar correo con img adjunta
-            var win = window.open("mailto:?subject=Reporte Estadistico Historico PUCE-I&body=Gráfico Estadistico Historico PUCE-I (1976-2022)", "_blank");
-        });
-    </script>
 </div>

@@ -1,0 +1,38 @@
+CRITICAL - 2023-08-24 16:38:15 --> Undefined variable $añoInicio
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 134.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $añoInicio', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 134)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(52): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-24 16:38:18 --> Undefined variable $añoInicio
+in APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php on line 134.
+ 1 APPPATH\Views\graficasEstadisticas\historico\vistaEstHistoricoEspecifico.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $añoInicio', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php', 134)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\historico\\vistaEstHistoricoEspecifico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [], true)
+ 5 APPPATH\Controllers\ControladorHistorico.php(52): view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-24 16:55:45 --> Undefined array key 0
+in APPPATH\Models\ModelMatrizGraduados.php on line 61.
+ 1 APPPATH\Models\ModelMatrizGraduados.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Models\\ModelMatrizGraduados.php', 61)
+ 2 APPPATH\Controllers\ControladorHistorico.php(47): App\Models\ModelMatrizGraduados->verModeloEspecifico('', '')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-24 16:56:13 --> Undefined array key 0
+in APPPATH\Models\ModelMatrizGraduados.php on line 61.
+ 1 APPPATH\Models\ModelMatrizGraduados.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Models\\ModelMatrizGraduados.php', 61)
+ 2 APPPATH\Controllers\ControladorHistorico.php(47): App\Models\ModelMatrizGraduados->verModeloEspecifico('', '')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorHistorico->busquedaHistoricoEspecifico()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorHistorico))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
