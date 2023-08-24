@@ -35,185 +35,117 @@
 
         //! Por Años General
         {
-            //* eje y -> total de estudiantes min 0 y max suma de ESTM_TOTAL
-            //? logica-> total
+            // Arrays para almacenar los datos
             var total = [];
-            //recorrer datos
-            for (let i = 0; i < datos.length; i++) {
-                //agregar total
-                total.push(datos[i].ESTM_TOTAL);
-            }
-
-            //* eje x -> periodo
-            //? logica-> periodo
             var periodo = [];
-            //recorrer datos
+
+            // Recorrer los datos y el período
             for (let i = 0; i < datos.length; i++) {
-                //recorrer peri
                 for (let j = 0; j < peri.length; j++) {
-                    //comparar PER_ID con ESTM_PERIODO
                     if (datos[i].ESTM_PERIODO == peri[j].PER_ID) {
-                        //agregar PER_ANO a periodo
-                        periodo.push(peri[j].PER_ANO);
+                        // Agregar PER_ANO a periodo si no está en la lista
+                        if (!periodo.includes(peri[j].PER_ANO)) {
+                            periodo.push(peri[j].PER_ANO);
+                            total.push(0); // Inicializar el total para este año en 0
+                        }
+                        // Acumular el total
+                        total[periodo.indexOf(peri[j].PER_ANO)] += parseInt(datos[i].ESTM_TOTAL);
                     }
                 }
             }
-            //sumar los totales de cada año y mostrar por consola el total de cada año, transformar string a int para sumar
-            //recorrer periodo
+
+            // Mostrar los totales por año
             for (let i = 0; i < periodo.length; i++) {
-                //acumulador
-                var suma = 0;
-                //recorrer datos
-                for (let j = 0; j < datos.length; j++) {
-                    //recorrer peri
-                    for (let k = 0; k < peri.length; k++) {
-                        //comparar PER_ID con ESTM_PERIODO
-                        if (datos[j].ESTM_PERIODO == peri[k].PER_ID) {
-                            //comparar PER_ANO con periodo
-                            if (peri[k].PER_ANO == periodo[i]) {
-                                //acumular total
-                                suma += parseInt(datos[j].ESTM_TOTAL);
-                            }
-                        }
-                    }
-                }
-                //eliminar años repetidos de periodo y su total asignado
-                periodo = periodo.filter((value, index) => periodo.indexOf(value) === index);
-
-                //mostrar total por cada año
-                console.log(" Total de Estudiantes " + periodo[i] + ": " + suma);
-
-                //enviar a la grafica
-                total[i] = suma;
-
-                //ordenar periodo de menor a mayor
-                periodo.sort(function(a, b) {
-                    return a - b;
-                });
+                console.log("Total de Estudiantes " + periodo[i] + ": " + total[i]);
             }
         }
 
         //!Por Años Genero Masculino -> ESTM_GENERO_H
         {
-            //NUEVO TOTAL DE ESTUDIANTES H
+            // NUEVO TOTAL DE ESTUDIANTES H
             var totalH = [];
-            //recorrer datos
-            for (let i = 0; i < datos.length; i++) {
-                //agregar total
-                totalH.push(datos[i].ESTM_GENERO_H);
-            }
-
-            //* eje x -> periodo
-            //? logica-> periodo
             var periodoH = [];
-            //recorrer datos
+
+            // Recorrer los datos y el período
             for (let i = 0; i < datos.length; i++) {
-                //recorrer peri
                 for (let j = 0; j < peri.length; j++) {
-                    //comparar PER_ID con ESTM_PERIODO
                     if (datos[i].ESTM_PERIODO == peri[j].PER_ID) {
-                        //agregar PER_ANO a periodo
-                        periodoH.push(peri[j].PER_ANO);
+                        // Agregar PER_ANO a periodoH si no está en la lista
+                        if (!periodoH.includes(peri[j].PER_ANO)) {
+                            periodoH.push(peri[j].PER_ANO);
+                            totalH.push(0); // Inicializar el total para este año en 0
+                        }
+                        // Acumular el total
+                        totalH[periodoH.indexOf(peri[j].PER_ANO)] += parseInt(datos[i].ESTM_GENERO_H);
                     }
                 }
             }
-            //sumar los ESTM_GENERO_M de cada año y mostrar por consola el total de cada año, transformar string a int para sumar
-            //recorrer periodo
+
+            // Mostrar los totales por año para estudiantes masculinos
             for (let i = 0; i < periodoH.length; i++) {
-                //acumulador
-                var sumaH = 0;
-                //recorrer datos
-                for (let j = 0; j < datos.length; j++) {
-                    //recorrer peri
-                    for (let k = 0; k < peri.length; k++) {
-                        //comparar PER_ID con ESTM_PERIODO
-                        if (datos[j].ESTM_PERIODO == peri[k].PER_ID) {
-                            //comparar PER_ANO con periodo
-                            if (peri[k].PER_ANO == periodoH[i]) {
-                                //acumular total
-                                sumaH += parseInt(datos[j].ESTM_GENERO_H);
-                            }
-                        }
-                    }
-                }
-                //eliminar años repetidos de periodo y su total asignado
-                periodoH = periodoH.filter((value, index) => periodoH.indexOf(value) === index);
-
-                //mostrar total por cada año
-                console.log(" Total de Estudiantes Masculino " + periodoH[i] + ": " + sumaH);
-
-                //enviar a la grafica
-                totalH[i] = sumaH;
-
-                //ordenar periodo de menor a mayor
-                periodoH.sort(function(a, b) {
-                    return a - b;
-                });
+                console.log("Total de Estudiantes Masculino " + periodoH[i] + ": " + totalH[i]);
             }
         }
 
         //! Por Años Genero Femenino -> ESTM_GENERO_M
         {
-            //Nuevo total de estudiantes M
+            // Nuevo total de estudiantes M
             var totalM = [];
-            //recorrer datos
-            for (let i = 0; i < datos.length; i++) {
-                //agregar total
-                totalM.push(datos[i].ESTM_GENERO_M);
-            }
-
-            //* eje x -> periodo
-            //? logica-> periodo
             var periodoM = [];
-            //recorrer datos
+
+            // Recorrer los datos y el período
             for (let i = 0; i < datos.length; i++) {
-                //recorrer peri
                 for (let j = 0; j < peri.length; j++) {
-                    //comparar PER_ID con ESTM_PERIODO
                     if (datos[i].ESTM_PERIODO == peri[j].PER_ID) {
-                        //agregar PER_ANO a periodo
-                        periodoM.push(peri[j].PER_ANO);
+                        // Agregar PER_ANO a periodoM si no está en la lista
+                        if (!periodoM.includes(peri[j].PER_ANO)) {
+                            periodoM.push(peri[j].PER_ANO);
+                            totalM.push(0); // Inicializar el total para este año en 0
+                        }
+                        // Acumular el total
+                        totalM[periodoM.indexOf(peri[j].PER_ANO)] += parseInt(datos[i].ESTM_GENERO_M);
                     }
                 }
             }
-            //sumar los ESTM_GENERO_M de cada año y mostrar por consola el total de cada año, transformar string a int para sumar
-            //recorrer periodo
+
+            // Mostrar los totales por año para estudiantes femeninos
             for (let i = 0; i < periodoM.length; i++) {
-                //acumulador
-                var sumaM = 0;
-                //recorrer datos
-                for (let j = 0; j < datos.length; j++) {
-                    //recorrer peri
-                    for (let k = 0; k < peri.length; k++) {
-                        //comparar PER_ID con ESTM_PERIODO
-                        if (datos[j].ESTM_PERIODO == peri[k].PER_ID) {
-                            //comparar PER_ANO con periodo
-                            if (peri[k].PER_ANO == periodoM[i]) {
-                                //acumular total
-                                sumaM += parseInt(datos[j].ESTM_GENERO_M);
-                            }
-                        }
-                    }
-                }
-                //eliminar años repetidos de periodo y su total asignado
-                periodoM = periodoM.filter((value, index) => periodoM.indexOf(value) === index);
-
-                //mostrar total por cada año
-                console.log(" Total de Estudiantes Femenino " + periodoM[i] + ": " + sumaM);
-
-                //enviar a la grafica
-                totalM[i] = sumaM;
-
-                //ordenar periodo de menor a mayor
-                periodoM.sort(function(a, b) {
-                    return a - b;
-                });
+                console.log("Total de Estudiantes Femenino " + periodoM[i] + ": " + totalM[i]);
             }
 
 
         }
 
-        
+        function getYears(data) {
+            var years = [];
+            //logica -> periodo
+            //recorrer datos
+            for (let i = 0; i < data.length; i++) {
+                //recorrer peri
+                for (let j = 0; j < peri.length; j++) {
+                    //comparar PER_ID con ESTM_PERIODO
+                    if (data[i].ESTM_PERIODO == peri[j].PER_ID) {
+                        //agregar PER_ANO a periodo
+                        years.push(peri[j].PER_ANO);
+                    }
+                }
+            }
+
+            //eliminar años repetidos de periodo y su total asignado
+            years = years.filter((value, index) => years.indexOf(value) === index);
+
+            //ordenar periodo de menor a mayor
+            years.sort(function(a, b) {
+                return a - b;
+            });
+
+            return years;
+
+        }
+
+        // Obtener los años de los datos
+        var years = getYears(datos);
+
         //grafica
         Highcharts.chart('container', {
             chart: {
@@ -226,7 +158,7 @@
                 text: 'Desde 1976 Hasta 2023'
             },
             xAxis: {
-                categories: periodo,
+                categories: years,
                 title: {
                     text: 'Año'
                 },
@@ -248,6 +180,7 @@
                     name: 'Total',
                     data: total
                 },
+
                 {
                     name: 'Hombres',
                     data: totalH
