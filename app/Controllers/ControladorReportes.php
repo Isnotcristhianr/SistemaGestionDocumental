@@ -20,6 +20,7 @@ class ControladorReportes extends BaseController
         return view('header') . view('/vistaReportes/vista_respTitulacion', $data) . view('footer');
     }
 
+    //! Datos Estadisticos Grado
     //Reporte General Matriculados
     public function reporteGeneralMatriculados()
     {
@@ -60,5 +61,47 @@ class ControladorReportes extends BaseController
         $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
 
         return view('header') . view('/graficasEstadisticas/grado/vistaGradGen', $datos + $datos2) . view('footer');
+    }
+
+    //! Datos Estadisticos Posgrado
+    //Reporte General	
+    public function reporteGeneralPosgrado()
+    {
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //modelo periodos
+        $modeloPeriodo = new ModelFEPeriodo();
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+        $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+
+        return view('header') . view('/graficasEstadisticas/posgrado/vistaPosGen', $datos + $datos2) . view('footer');
+    }
+
+    //Reporte General Matriculados
+    public function reporteGeneralMatriculadosPosgrado()
+    {
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //modelo periodos
+        $modeloPeriodo = new ModelFEPeriodo();
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+        $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+
+        return view('header') . view('/graficasEstadisticas/posgrado/vistaPosGenMatr', $datos + $datos2) . view('footer');
+    }
+    //Reporte General Graduados
+    public function reporteGeneralGraduadosPosgrado()
+    {
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //modelo periodos
+        $modeloPeriodo = new ModelFEPeriodo();
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+        $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+
+        return view('header') . view('/graficasEstadisticas/posgrado/vistaPosGenGrad', $datos + $datos2) . view('footer');
     }
 }

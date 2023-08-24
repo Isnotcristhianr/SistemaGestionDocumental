@@ -31,15 +31,15 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-//Rutas Sistema 
+//? Rutas Sistema 
 $routes->get('/index', 'ControladorIndex::index');
 $routes->get('/inicio', 'ControladorMain::inicio');
 
-//Rutas Datos Estadisticos
+//? Rutas Datos Estadisticos
 $routes->get('/FiltroEstadistico/(:any)', 'ControladorEstadistico::filtroEstadistico/$1');
 $routes->get('/BuscarFiltroEstadistico/(:any)/(:any)', 'ControladorEstadistico::BuscarFiltroEstadistico/$1/$2');
 
-//Datos Estadisticos Grado
+//? Datos Estadisticos Grado
 $routes->get('/FiltroEstadisticoGrado', 'ControladorEstadistico::filtroEstadisticoGrad');
 $routes->get('/FiltroEstadisticoGradoBusqueda/(:any)/(:any)', 'ControladorEstadistico::filtroEstadisticoGradoBusqueda/$1/$2');
 /* Periodos */
@@ -55,7 +55,7 @@ $routes ->get('/ReporteGeneralGraduados', 'ControladorReportes::reporteGeneralGr
 /* Reporte General */
 $routes ->get('/ReporteGeneral', 'ControladorReportes::reporteGeneral');
 
-//Datos Estadisticos Posgrado
+//? Datos Estadisticos Posgrado
 $routes->get('/FiltroEstadisticoPosgrado', 'ControladorEstadistico::filtroEstadisticoPosgrado');
 $routes->get('/FiltroEstadisticoPosgradoBusqueda/(:any)/(:any)', 'ControladorEstadistico::filtroEstadisticoPosgradoBusqueda/$1/$2');
 /* Periodos */
@@ -64,8 +64,14 @@ $routes->get('/FiltroEstadisticoPosgradoPeriodo/(:any)', 'ControladorFEPeriodo::
 $routes->get('/FiltroEstadisticoPosgradoEscuela/(:any)', 'ControladorFEEscuela::filtroEstadisticoPosgradoEscuela/$1');
 /* Carreras */
 $routes->get('/FiltroEstadisticoPosgradoCarrera/(:any)', 'ControladorFECarrera::filtroEstadisticoPosgradoCarrera/$1');
+/* Reporte General */
+$routes ->get('/ReporteGeneralPosgrado', 'ControladorReportes::reporteGeneralPosgrado');
+/* Reporte General Matriculados */
+$routes ->get('/ReporteGeneralMatriculadosPosgrado', 'ControladorReportes::reporteGeneralMatriculadosPosgrado');
+/* Reporte General Graduados*/
+$routes ->get('/ReporteGeneralGraduadosPosgrado', 'ControladorReportes::reporteGeneralGraduadosPosgrado');
 
-//Datos Estadisticos Tecnologias
+//? Datos Estadisticos Tecnologias
 $routes->get('/FiltroEstadisticoTecnologia', 'ControladorEstadistico::filtroEstadisticoTecnologia');
 $routes->get('/FiltroEstadisticoTecnologiaBusqueda/(:any)/(:any)', 'ControladorEstadistico::filtroEstadisticoTecnologiaBusqueda/$1/$2');
 /* Periodos */
@@ -73,13 +79,13 @@ $routes->get('/FiltroEstadisticoTecnologiaPeriodo/(:any)', 'ControladorFEPeriodo
 /*  Carreras Tecnologicas */
 $routes->get('/FiltroEstadisticoTecnologiaCarrera/(:any)', 'ControladorFECarrera::filtroEstadisticoTecnologiaCarrera/$1');
 
-//Datos Estadisticos Historico Puce-I
+//? Datos Estadisticos Historico Puce-I
 $routes->get('/deHistorico', 'ControladorHistorico::dehistorico');
 $routes->get('/busquedaHistorico', 'ControladorHistorico::busquedaHistorico');
 $routes->get('/busquedaHistoricoEspecifico', 'ControladorHistorico::busquedaHistoricoEspecifico');
 
 
-//Reportes
+//? Reportes
 $routes->get('/reporteTitulacion', 'ControladorReportes::reportes');
 
 /*
