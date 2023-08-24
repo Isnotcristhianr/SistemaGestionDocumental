@@ -213,6 +213,7 @@
 
         }
 
+        
         //grafica
         Highcharts.chart('container', {
             chart: {
@@ -228,7 +229,7 @@
                 categories: periodo,
                 title: {
                     text: 'Año'
-                }
+                },
             },
             yAxis: {
                 title: {
@@ -270,15 +271,15 @@
                     }
                 }]
             },
-           
+
             credits: {
                 enabled: true,
                 href: "https://www.pucesi.edu.ec/webs2/",
-                text: "Secretaria General PuceI" ,
+                text: "Secretaria General PuceI",
                 style: {
                     color: "#666666",
                     cursor: "pointer",
-                    fontSize: "20px"
+                    fontSize: "15px"
                 },
             }
         });
