@@ -50,8 +50,8 @@ $routes->get('/FiltroEstadisticoGradoEscuela/(:any)', 'ControladorFEEscuela::fil
 $routes->get('/FiltroEstadisticoGradoCarrera/(:any)', 'ControladorFECarrera::filtroEstadisticoGradoCarrera/$1');
 /* Reporte General Matriculados */
 $routes ->get('/ReporteGeneralMatriculados', 'ControladorReportes::reporteGeneralMatriculados');
-/* Reporte General Matriculados Especifico */
-$routes ->get('/ReporteGeneralMatriculadosEspecifico', 'ControladorReportes::reporteGeneralMatriculadosEspecifico');
+/* Reporte General Graduados*/
+$routes ->get('/ReporteGeneralGraduados', 'ControladorReportes::reporteGeneralGraduados');
 
 //Datos Estadisticos Posgrado
 $routes->get('/FiltroEstadisticoPosgrado', 'ControladorEstadistico::filtroEstadisticoPosgrado');

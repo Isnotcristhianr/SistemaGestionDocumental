@@ -34,8 +34,8 @@ class ControladorReportes extends BaseController
         return view('header') . view('/graficasEstadisticas/grado/vistaGradGenMatr', $datos + $datos2) . view('footer');
     }
 
-    //Reporte General Matriculados Especifico
-    public function reporteGeneralMatriculadosEspecifico()
+    //Reporte General Graduados
+    public function reporteGeneralGraduados()
     {
         //modelo matriz
         $modelo = new ModelMatrizGraduados();
@@ -45,6 +45,6 @@ class ControladorReportes extends BaseController
         $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
         $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
 
-        return view('header') . view('/graficasEstadisticas/grado/vistaGradEspMatr', $datos + $datos2) . view('footer');
+        return view('header') . view('/graficasEstadisticas/grado/vistaGradGenGrad', $datos + $datos2) . view('footer');
     }
 }

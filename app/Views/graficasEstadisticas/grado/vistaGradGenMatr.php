@@ -1,6 +1,6 @@
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
 
-    <a href="<?php echo base_url('index.php/deHistorico') ?>" class="btn btn-outline-primary">← Volver</a>
+    <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/General" class="btn btn-outline-primary">← Volver</a>
     <div class="row ">
         <div class="col-12">
             <h2 class="text-center text-primary">Datos Estadísticos Grado PUCE-I
@@ -66,9 +66,9 @@
 
         // Filtrar datos por ESTM_TIPO y ESTM_CONDICION
         var filteredData = datos.filter(function(dato) {
-            return dato.ESTM_TIPO === '2' && dato.ESTM_CONDICION === '3';
+            return dato.ESTM_TIPO === '2' && dato.ESTM_CONDICION === '1';
         });
-
+        
         //! Por Años General
         {
             // Objeto para asociar periodos con totales
