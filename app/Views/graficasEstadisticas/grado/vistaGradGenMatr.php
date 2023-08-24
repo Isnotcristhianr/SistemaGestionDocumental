@@ -179,10 +179,10 @@
                 }
             },
             title: {
-                text: 'Total de Estudiantes Histórico PUCE-I '
+                text: 'Estudiantes Grado PUCE-I '
             },
             subtitle: {
-                text: 'Desde 1976 Hasta 2023'
+                text: 'Matriculados'
             },
             xAxis: {
                 categories: periodo,
@@ -234,7 +234,7 @@
             credits: {
                 enabled: true,
                 href: "https://www.pucesi.edu.ec/webs2/",
-                text: "Secretaria General PUCE-I",
+                text: "Secretaría General PUCE-I",
                 style: {
                     color: "#666666",
                     cursor: "pointer",
