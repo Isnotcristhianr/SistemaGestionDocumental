@@ -63,6 +63,10 @@ $routes->get('/ReporteFechaGeneralBusqueda', 'ControladorReportes::reporteFechaG
 $routes->get('/ReporteFechaMatriculados', 'ControladorReportes::reporteFechaMatriculados');
 /* Reporte Fecha Matriculados Busqueda */
 $routes->get('/ReporteFechaMatriculadosBusqueda', 'ControladorReportes::reporteFechaMatriculadosBusqueda');
+/* Reporte Fecha Graduados */
+$routes->get('/ReporteFechaGraduados', 'ControladorReportes::reporteFechaGraduados');
+/* Reporte Fecha Graduados Busqueda */
+$routes->get('/ReporteFechaGraduadosBusqueda', 'ControladorReportes::reporteFechaGraduadosBusqueda');
 
 //? Datos Estadisticos Posgrado
 $routes->get('/FiltroEstadisticoPosgrado', 'ControladorEstadistico::filtroEstadisticoPosgrado');
