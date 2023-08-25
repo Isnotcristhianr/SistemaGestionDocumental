@@ -96,6 +96,39 @@ class ControladorReportes extends BaseController
         return view('header') . view('/graficasEstadisticas/grado/fechas/vistaGradFechaBusqueda', $datos + $datos2 + $fechas) . view('footer');
     }
 
+    //Reporte Fecha Matriculados
+    public function reporteFechaMatriculados()
+    {
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+
+        return view('header') . view('/graficasEstadisticas/grado/fechas/vistaGradFechaMatr', $datos) . view('footer');
+    }
+
+    //Reporte Fecha Matriculados Busqueda
+    public function ReporteFechaMatriculadosBusqueda()
+    {
+        //capturamos las fechas
+        $fechaInicio = $this->request->getGet('fechaInicio');
+        $fechaFin = $this->request->getGet('fechaFin');
+
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //modelo periodos
+        $modeloPeriodo = new ModelFEPeriodo();
+
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModeloEspecifico($fechaInicio, $fechaFin);
+        $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+
+        //fechas
+        $fechas = ["fechaInicio" => $fechaInicio, "fechaFin" => $fechaFin];
+
+        return view('header') . view('/graficasEstadisticas/grado/fechas/vistaGradFechaMatrBusqueda', $datos + $datos2 + $fechas) . view('footer');
+    }
+
     //! Datos Estadisticos Posgrado
     //Reporte General	
     public function reporteGeneralPosgrado()

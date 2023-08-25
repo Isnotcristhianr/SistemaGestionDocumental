@@ -50,15 +50,19 @@ $routes->get('/FiltroEstadisticoGradoEscuela/(:any)', 'ControladorFEEscuela::fil
 /* Carreras */
 $routes->get('/FiltroEstadisticoGradoCarrera/(:any)', 'ControladorFECarrera::filtroEstadisticoGradoCarrera/$1');
 /* Reporte General Matriculados */
-$routes ->get('/ReporteGeneralMatriculados', 'ControladorReportes::reporteGeneralMatriculados');
+$routes->get('/ReporteGeneralMatriculados', 'ControladorReportes::reporteGeneralMatriculados');
 /* Reporte General Graduados*/
-$routes ->get('/ReporteGeneralGraduados', 'ControladorReportes::reporteGeneralGraduados');
+$routes->get('/ReporteGeneralGraduados', 'ControladorReportes::reporteGeneralGraduados');
 /* Reporte General */
-$routes ->get('/ReporteGeneral', 'ControladorReportes::reporteGeneral');
+$routes->get('/ReporteGeneral', 'ControladorReportes::reporteGeneral');
 /* Reporte Fecha General */
-$routes ->get('/ReporteFechaGeneral', 'ControladorReportes::reporteFechaGeneral');
-/* Fecha General Busqueda */
-$routes ->get('/ReporteFechaGeneralBusqueda', 'ControladorReportes::reporteFechaGeneralBusqueda');
+$routes->get('/ReporteFechaGeneral', 'ControladorReportes::reporteFechaGeneral');
+/*Reporte Fecha General Busqueda */
+$routes->get('/ReporteFechaGeneralBusqueda', 'ControladorReportes::reporteFechaGeneralBusqueda');
+/* Reporte Fecha Matriculados */
+$routes->get('/ReporteFechaMatriculados', 'ControladorReportes::reporteFechaMatriculados');
+/* Reporte Fecha Matriculados Busqueda */
+$routes->get('/ReporteFechaMatriculadosBusqueda', 'ControladorReportes::reporteFechaMatriculadosBusqueda');
 
 //? Datos Estadisticos Posgrado
 $routes->get('/FiltroEstadisticoPosgrado', 'ControladorEstadistico::filtroEstadisticoPosgrado');
@@ -70,11 +74,11 @@ $routes->get('/FiltroEstadisticoPosgradoEscuela/(:any)', 'ControladorFEEscuela::
 /* Carreras */
 $routes->get('/FiltroEstadisticoPosgradoCarrera/(:any)', 'ControladorFECarrera::filtroEstadisticoPosgradoCarrera/$1');
 /* Reporte General */
-$routes ->get('/ReporteGeneralPosgrado', 'ControladorReportes::reporteGeneralPosgrado');
+$routes->get('/ReporteGeneralPosgrado', 'ControladorReportes::reporteGeneralPosgrado');
 /* Reporte General Matriculados */
-$routes ->get('/ReporteGeneralMatriculadosPosgrado', 'ControladorReportes::reporteGeneralMatriculadosPosgrado');
+$routes->get('/ReporteGeneralMatriculadosPosgrado', 'ControladorReportes::reporteGeneralMatriculadosPosgrado');
 /* Reporte General Graduados*/
-$routes ->get('/ReporteGeneralGraduadosPosgrado', 'ControladorReportes::reporteGeneralGraduadosPosgrado');
+$routes->get('/ReporteGeneralGraduadosPosgrado', 'ControladorReportes::reporteGeneralGraduadosPosgrado');
 
 //? Datos Estadisticos Tecnologias
 $routes->get('/FiltroEstadisticoTecnologia', 'ControladorEstadistico::filtroEstadisticoTecnologia');
@@ -84,11 +88,11 @@ $routes->get('/FiltroEstadisticoTecnologiaPeriodo/(:any)', 'ControladorFEPeriodo
 /*  Carreras Tecnologicas */
 $routes->get('/FiltroEstadisticoTecnologiaCarrera/(:any)', 'ControladorFECarrera::filtroEstadisticoTecnologiaCarrera/$1');
 /* Reporte General */
-$routes ->get('/ReporteGeneralTecnologia', 'ControladorReportes::reporteGeneralTecnologia');
+$routes->get('/ReporteGeneralTecnologia', 'ControladorReportes::reporteGeneralTecnologia');
 /* Reporte  General Matriculados */
-$routes ->get('/ReporteGeneralMatriculadosTecnologia', 'ControladorReportes::reporteGeneralMatriculadosTecnologia');
+$routes->get('/ReporteGeneralMatriculadosTecnologia', 'ControladorReportes::reporteGeneralMatriculadosTecnologia');
 /* Reporte General Graduados */
-$routes ->get('/ReporteGeneralGraduadosTecnologia', 'ControladorReportes::reporteGeneralGraduadosTecnologia');
+$routes->get('/ReporteGeneralGraduadosTecnologia', 'ControladorReportes::reporteGeneralGraduadosTecnologia');
 
 //? Datos Estadisticos Historico Puce-I
 $routes->get('/deHistorico', 'ControladorHistorico::dehistorico');
