@@ -205,6 +205,105 @@ class ControladorReportes extends BaseController
         return view('header') . view('/graficasEstadisticas/posgrado/vistaPosGenGrad', $datos + $datos2) . view('footer');
     }
 
+    //Reporte Fecha General
+    public function reporteFechaGeneralPosgrado()
+    {
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+
+        return view('header') . view('/graficasEstadisticas/posgrado/fechas/vistaPosFecha', $datos) . view('footer');
+    }
+
+    //Reporte Fecha General Busqueda
+    public function ReporteFechaGeneralPosgradoBusqueda()
+    {
+        //capturamos las fechas
+        $fechaInicio = $this->request->getGet('fechaInicio');
+        $fechaFin = $this->request->getGet('fechaFin');
+
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //modelo periodos
+        $modeloPeriodo = new ModelFEPeriodo();
+
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModeloEspecifico($fechaInicio, $fechaFin);
+        $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+
+        //fechas
+        $fechas = ["fechaInicio" => $fechaInicio, "fechaFin" => $fechaFin];
+
+        return view('header') . view('/graficasEstadisticas/posgrado/fechas/vistaPosFechaBusqueda', $datos + $datos2 + $fechas) . view('footer');
+    }
+
+    //Reporte Fecha Matriculados
+    public function reporteFechaMatriculadosPosgrado()
+    {
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+
+        return view('header') . view('/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr', $datos) . view('footer');
+    }
+
+    //Reporte Fecha Matriculados Busqueda
+    public function ReporteFechaMatriculadosPosgradoBusqueda()
+    {
+        //capturamos las fechas
+        $fechaInicio = $this->request->getGet('fechaInicio');
+        $fechaFin = $this->request->getGet('fechaFin');
+
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //modelo periodos
+        $modeloPeriodo = new ModelFEPeriodo();
+
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModeloEspecifico($fechaInicio, $fechaFin);
+        $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+
+        //fechas
+        $fechas = ["fechaInicio" => $fechaInicio, "fechaFin" => $fechaFin];
+
+        return view('header') . view('/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatrBusqueda', $datos + $datos2 + $fechas) . view('footer');
+    }
+
+    //Reporte Fecha Graduados
+    public function reporteFechaGraduadosPosgrado()
+    {
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+
+        return view('header') . view('/graficasEstadisticas/posgrado/fechas/vistaPosFechaGrad', $datos) . view('footer');
+    }
+
+    //Reporte Fecha Graduados Busqueda
+    public function ReporteFechaGraduadosPosgradoBusqueda()
+    {
+        //capturamos las fechas
+        $fechaInicio = $this->request->getGet('fechaInicio');
+        $fechaFin = $this->request->getGet('fechaFin');
+
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //modelo periodos
+        $modeloPeriodo = new ModelFEPeriodo();
+
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModeloEspecifico($fechaInicio, $fechaFin);
+        $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+
+        //fechas
+        $fechas = ["fechaInicio" => $fechaInicio, "fechaFin" => $fechaFin];
+
+        return view('header') . view('/graficasEstadisticas/posgrado/fechas/vistaPosFechaGradBusqueda', $datos + $datos2 + $fechas) . view('footer');
+    }
+
     //! Datos Estadisticos Tecnologia
     //Reporte General
     public function reporteGeneralTecnologia()

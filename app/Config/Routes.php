@@ -83,6 +83,18 @@ $routes->get('/ReporteGeneralPosgrado', 'ControladorReportes::reporteGeneralPosg
 $routes->get('/ReporteGeneralMatriculadosPosgrado', 'ControladorReportes::reporteGeneralMatriculadosPosgrado');
 /* Reporte General Graduados*/
 $routes->get('/ReporteGeneralGraduadosPosgrado', 'ControladorReportes::reporteGeneralGraduadosPosgrado');
+/* Reporte Fecha General */
+$routes->get('/ReporteFechaGeneralPosgrado', 'ControladorReportes::reporteFechaGeneralPosgrado');
+/* Reporte Fecha General Busqueda */
+$routes->get('/ReporteFechaGeneralPosgradoBusqueda', 'ControladorReportes::reporteFechaGeneralPosgradoBusqueda');
+/* Reporte Fecha Matriculados */
+$routes->get('/ReporteFechaMatriculadosPosgrado', 'ControladorReportes::reporteFechaMatriculadosPosgrado');
+/* Reporte Fecha Matriculados Busqueda */
+$routes->get('/ReporteFechaMatriculadosPosgradoBusqueda', 'ControladorReportes::reporteFechaMatriculadosPosgradoBusqueda');
+/* Reporte Fecha Graduados */
+$routes->get('/ReporteFechaGraduadosPosgrado', 'ControladorReportes::reporteFechaGraduadosPosgrado');
+/* Reporte Fecha Graduados Busqueda */
+$routes->get('/ReporteFechaGraduadosPosgradoBusqueda', 'ControladorReportes::reporteFechaGraduadosPosgradoBusqueda');
 
 //? Datos Estadisticos Tecnologias
 $routes->get('/FiltroEstadisticoTecnologia', 'ControladorEstadistico::filtroEstadisticoTecnologia');

@@ -96,3 +96,56 @@ in SYSTEMPATH\Model.php on line 842.
  3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
  4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-25 21:20:10 --> Undefined array key 0
+in APPPATH\Models\ModelMatrizGraduados.php on line 61.
+ 1 APPPATH\Models\ModelMatrizGraduados.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Models\\ModelMatrizGraduados.php', 61)
+ 2 APPPATH\Controllers\ControladorReportes.php(232): App\Models\ModelMatrizGraduados->verModeloEspecifico(null, null)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->ReporteFechaGeneralPosgradoBusqueda()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-25 21:31:24 --> Invalid file: "/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr', [], true)
+ 3 APPPATH\Controllers\ControladorReportes.php(249): view('/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reporteFechaMatriculadosPosgrado()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-25 21:31:43 --> Invalid file: "/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr', [], true)
+ 3 APPPATH\Controllers\ControladorReportes.php(249): view('/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reporteFechaMatriculadosPosgrado()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-25 21:31:46 --> Invalid file: "/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr', [], true)
+ 3 APPPATH\Controllers\ControladorReportes.php(249): view('/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reporteFechaMatriculadosPosgrado()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-25 21:32:07 --> Invalid file: "/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr', [], true)
+ 3 APPPATH\Controllers\ControladorReportes.php(249): view('/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reporteFechaMatriculadosPosgrado()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-25 21:33:29 --> Invalid file: "/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr', [], true)
+ 3 APPPATH\Controllers\ControladorReportes.php(249): view('/graficasEstadisticas/posgrado/fechas/vistaPosFechaMatr', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reporteFechaMatriculadosPosgrado()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
