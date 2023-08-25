@@ -148,7 +148,7 @@ class ControladorEstadistico extends BaseController
                         . view('/DatosEstadisticos/Tecnologias/vista_fe_option', $datos)
                         . view('/DatosEstadisticos/Tecnologias/vista_fe_tec_periodos')
                         . view('footer');
-                }else if ($filtro == "Fecha") {
+                } else if ($filtro == "Fecha") {
                     return view('header')
                         . view('/DatosEstadisticos/Tecnologias/vista_fe_option', $datos)
                         . view('/DatosEstadisticos/Tecnologias/vista_fe_tec_fecha')

@@ -1,13 +1,15 @@
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <!-- Volver -->
-    <a href="<?php echo base_url('index.php/deHistorico') ?>" class="btn btn-outline-primary">← Volver</a>
+    <a href="http://localhost/SistemaGestionDocumental/index.php/ReporteFechaGeneral" class="btn btn-outline-primary">← Volver</a>
     <div class="row ">
         <div class="col-12">
-            <h2 class="text-center text-primary">Datos Estadísticos Historico PUCE-I Por Fechas
+            <h2 class="text-center text-primary">Datos Estadísticos Grado PUCE-I Por Fechas
             </h2>
             <h4 class="text-center text-dark">Búsqueda
                 Desde: <?php echo $fechaInicio ?>
                 Hasta: <?php echo $fechaFin ?> </h4>
+            <h5 class="text-center text-secondary"> Matriculados - Graduados
+            </h5>
         </div>
         <div class="col-12">
             <h5 class="text-center text-secondary">↓ Reporte ↓</h5>
@@ -29,6 +31,7 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
     <!-- Grafica -->
     <script>
         //TODO: obtener datos de php del controlador
@@ -137,29 +140,20 @@
         var añoInicio = fechaInicio.getFullYear();
         var añoFin = fechaFin.getFullYear();
 
-        // Filtrar periodos y totales dentro del rango de inicio y fin
-        var periodoFiltrado = periodo.filter(function(periodo) {
-            return periodo >= añoInicio && periodo <= añoFin;
-        });
-        var totalFiltrado = total.filter(function(total, index) {
-            return periodo[index] >= añoInicio && periodo[index] <= añoFin;
-        });
+        //filtrar por fecha, tipo y condicion
+        var periodoFiltrado = [];
+        var totalFiltrado = [];
+        var totalHFiltrado = [];
+        var totalMFiltrado = [];
+        for (let i = 0; i < periodo.length; i++) {
+            if (periodo[i] >= añoInicio && periodo[i] <= añoFin) {
+                periodoFiltrado.push(periodo[i]);
+                totalFiltrado.push(total[i]);
+                totalHFiltrado.push(totalH[i]);
+                totalMFiltrado.push(totalM[i]);
+            }
+        }
 
-        // Filtrar periodos y totales de género masculino dentro del rango de inicio y fin
-        var periodoHFiltrado = periodoH.filter(function(periodoH) {
-            return periodoH >= añoInicio && periodoH <= añoFin;
-        });
-        var totalHFiltrado = totalH.filter(function(totalH, index) {
-            return periodoH[index] >= añoInicio && periodoH[index] <= añoFin;
-        });
-
-        // Filtrar periodos y totales de género femenino dentro del rango de inicio y fin
-        var periodoMFiltrado = periodoM.filter(function(periodoM) {
-            return periodoM >= añoInicio && periodoM <= añoFin;
-        });
-        var totalMFiltrado = totalM.filter(function(totalM, index) {
-            return periodoM[index] >= añoInicio && periodoM[index] <= añoFin;
-        });
 
 
         //grafica

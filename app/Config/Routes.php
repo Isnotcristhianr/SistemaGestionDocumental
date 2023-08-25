@@ -41,6 +41,7 @@ $routes->get('/BuscarFiltroEstadistico/(:any)/(:any)', 'ControladorEstadistico::
 
 //? Datos Estadisticos Grado
 $routes->get('/FiltroEstadisticoGrado', 'ControladorEstadistico::filtroEstadisticoGrad');
+/* Fechas */
 $routes->get('/FiltroEstadisticoGradoBusqueda/(:any)/(:any)', 'ControladorEstadistico::filtroEstadisticoGradoBusqueda/$1/$2');
 /* Periodos */
 $routes->get('/FiltroEstadisticoGradoPeriodo/(:any)', 'ControladorFEPeriodo::filtroEstadisticoGradoPeriodo/$1');
@@ -54,6 +55,10 @@ $routes ->get('/ReporteGeneralMatriculados', 'ControladorReportes::reporteGenera
 $routes ->get('/ReporteGeneralGraduados', 'ControladorReportes::reporteGeneralGraduados');
 /* Reporte General */
 $routes ->get('/ReporteGeneral', 'ControladorReportes::reporteGeneral');
+/* Reporte Fecha General */
+$routes ->get('/ReporteFechaGeneral', 'ControladorReportes::reporteFechaGeneral');
+/* Fecha General Busqueda */
+$routes ->get('/ReporteFechaGeneralBusqueda', 'ControladorReportes::reporteFechaGeneralBusqueda');
 
 //? Datos Estadisticos Posgrado
 $routes->get('/FiltroEstadisticoPosgrado', 'ControladorEstadistico::filtroEstadisticoPosgrado');
