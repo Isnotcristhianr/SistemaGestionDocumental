@@ -37,7 +37,11 @@
         //TODO: obtener datos de php del controlador
         var datos = <?php echo json_encode($tbl_estadistica_matriz) ?>;
         var peri = <?php echo json_encode($tbl_periodo) ?>;
+        var fechasEnRango = [];
 
+        for (var i = fechaDesde; i <= fechaHasta; i++) {
+            fechasEnRango.push(i.toString()); // Convierte de nuevo a cadena de texto si es necesario
+        }
 
         function getYears(data) {
             var years = [];
@@ -74,6 +78,10 @@
         // Obtener los años de los datos filtrados
         var yearsFiltered = getYears(filteredData);
 
+        // Obtener los periodos de los datos fecha desde y hasta
+        var periodoFiltrado = getYears(filteredData);
+
+
         //! Por Años General
         {
             // Objeto para asociar periodos con totales
@@ -93,14 +101,8 @@
                 }
             }
 
-            // Obtener periodos únicos y ordenarlos en orden ascendente
-            var periodo = Object.keys(periodoTotalMap).map(Number);
-            periodo.sort(function(a, b) {
-                return a - b;
-            });
-
             // Obtener los totales ordenados de acuerdo con el nuevo orden de periodos
-            var total = periodo.map(function(periodoKey) {
+            var total = yearsFiltered.map(function(periodoKey) {
                 return periodoTotalMap[periodoKey];
             });
         }
@@ -114,18 +116,18 @@
             for (let i = 0; i < filteredData.length; i++) { // Cambiado a filteredData
                 for (let j = 0; j < peri.length; j++) {
                     if (filteredData[i].ESTM_PERIODO == peri[j].PER_ID) { // Cambiado a filteredData
-                        // Agregar PER_ANO a periodo si no está en el objeto
+                        // Agregar PER_ANO a periodoH si no está en el objeto
                         if (!periodoHTotalMap.hasOwnProperty(peri[j].PER_ANO)) {
                             periodoHTotalMap[peri[j].PER_ANO] = 0; // Inicializar el total para este año en 0
                         }
-                        // Acumular el total
+                        // Acumular el total de género masculino
                         periodoHTotalMap[peri[j].PER_ANO] += parseInt(filteredData[i].ESTM_GENERO_H); // Cambiado a filteredData
                     }
                 }
             }
 
-            // Obtener los totales ordenados de acuerdo con el nuevo orden de periodos
-            var totalH = periodo.map(function(periodoKey) {
+            // Obtener los totales de género masculino ordenados de acuerdo con el nuevo orden de periodos
+            var totalH = yearsFiltered.map(function(periodoKey) {
                 return periodoHTotalMap[periodoKey];
             });
         }
@@ -139,23 +141,23 @@
             for (let i = 0; i < filteredData.length; i++) { // Cambiado a filteredData
                 for (let j = 0; j < peri.length; j++) {
                     if (filteredData[i].ESTM_PERIODO == peri[j].PER_ID) { // Cambiado a filteredData
-                        // Agregar PER_ANO a periodo si no está en el objeto
+                        // Agregar PER_ANO a periodoM si no está en el objeto
                         if (!periodoMTotalMap.hasOwnProperty(peri[j].PER_ANO)) {
                             periodoMTotalMap[peri[j].PER_ANO] = 0; // Inicializar el total para este año en 0
                         }
-                        // Acumular el total
+                        // Acumular el total de género femenino
                         periodoMTotalMap[peri[j].PER_ANO] += parseInt(filteredData[i].ESTM_GENERO_M); // Cambiado a filteredData
                     }
                 }
             }
 
-            // Obtener los totales ordenados de acuerdo con el nuevo orden de periodos
-            var totalM = periodo.map(function(periodoKey) {
+            // Obtener los totales de género femenino ordenados de acuerdo con el nuevo orden de periodos
+            var totalM = yearsFiltered.map(function(periodoKey) {
                 return periodoMTotalMap[periodoKey];
             });
         }
 
-        
+
         //grafica
         Highcharts.chart('container', {
             chart: {
@@ -182,7 +184,7 @@
                     '<?php echo $fechaFin ?>'
             },
             xAxis: {
-                categories: periodo,
+                categories: fechasEnRango,
                 title: {
                     text: 'Año'
                 },
