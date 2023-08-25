@@ -109,6 +109,9 @@ $routes->get('/ReporteGeneralTecnologia', 'ControladorReportes::reporteGeneralTe
 $routes->get('/ReporteGeneralMatriculadosTecnologia', 'ControladorReportes::reporteGeneralMatriculadosTecnologia');
 /* Reporte General Graduados */
 $routes->get('/ReporteGeneralGraduadosTecnologia', 'ControladorReportes::reporteGeneralGraduadosTecnologia');
+/* Reporte Fecha General */
+$routes->get('/ReporteFechaGeneralTecnologia', 'ControladorReportes::reporteFechaGeneralTecnologia');
+/* Reporte Fecha General Busqueda */
 
 //? Datos Estadisticos Historico Puce-I
 $routes->get('/deHistorico', 'ControladorHistorico::dehistorico');

@@ -346,4 +346,15 @@ class ControladorReportes extends BaseController
 
         return view('header') . view('/graficasEstadisticas/tecnologia/vistaTecGenGrad', $datos + $datos2) . view('footer');
     }
+
+    //Reporte Fecha General
+    public function reporteFechaGeneralTecnologia()
+    {
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+
+        return view('header') . view('/graficasEstadisticas/tecnologia/fechas/vistaTecFecha', $datos) . view('footer');
+    }
 }
