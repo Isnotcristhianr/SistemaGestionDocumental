@@ -37,11 +37,13 @@
         //TODO: obtener datos de php del controlador
         var datos = <?php echo json_encode($tbl_estadistica_matriz) ?>;
         var peri = <?php echo json_encode($tbl_periodo) ?>;
-        var fechasEnRango = [];
 
-        for (var i = fechaDesde; i <= fechaHasta; i++) {
-            fechasEnRango.push(i.toString()); // Convierte de nuevo a cadena de texto si es necesario
-        }
+        //transformar fecha inicio y fin a año
+        var fechaInicio = new Date('<?php echo $fechaInicio ?>');
+        var fechaFin = new Date('<?php echo $fechaFin ?>');
+        //solo año
+        var añoInicio = fechaInicio.getFullYear();
+        var añoFin = fechaFin.getFullYear();
 
         function getYears(data) {
             var years = [];
@@ -75,12 +77,10 @@
             return dato.ESTM_TIPO === '2' && (dato.ESTM_CONDICION === '1' || dato.ESTM_CONDICION === '3');
         });
 
-        // Obtener los años de los datos filtrados
-        var yearsFiltered = getYears(filteredData);
-
-        // Obtener los periodos de los datos fecha desde y hasta
-        var periodoFiltrado = getYears(filteredData);
-
+        // Obtener los años de los datos filtrados desde la fecha de inicio hasta la fecha de fin
+        var yearsFiltered = getYears(filteredData).filter(function(year) {
+            return year >= añoInicio && year <= añoFin;
+        });
 
         //! Por Años General
         {
@@ -158,6 +158,7 @@
         }
 
 
+
         //grafica
         Highcharts.chart('container', {
             chart: {
@@ -175,16 +176,16 @@
                 }
             },
             title: {
-                text: 'Total de Estudiantes Histórico PUCE-I '
+                text: 'Total Estudiantes Grado PUCE-I '
             },
             subtitle: {
-                text: '<b>📅 Desde: </b> ' +
+                text: 'Gradudados - Matriculados '+'<br>'+' <b>📅 Desde: </b> ' +
                     '<?php echo $fechaInicio ?>' +
                     ' <b>📅 Hasta: </b> ' +
                     '<?php echo $fechaFin ?>'
             },
             xAxis: {
-                categories: fechasEnRango,
+                categories: yearsFiltered,
                 title: {
                     text: 'Año'
                 },
