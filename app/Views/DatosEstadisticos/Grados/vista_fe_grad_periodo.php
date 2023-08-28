@@ -12,6 +12,10 @@
                 <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoPeriodo/Graduados') ?>" class="btn btn-dark" type="button">Graduados</a>
             </div>
 
+            <div class="d-grid gap-2 col-2 mx-auto m-2">
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoPeriodo/General') ?>" class="btn btn-dark" type="button">General</a>
+            </div>
+
         </div>
     </div>
 </div>

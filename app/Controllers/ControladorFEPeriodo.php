@@ -3,14 +3,15 @@
 namespace App\Controllers;
 
 use App\Models\ModelFEPeriodo;
+use App\Models\modelRepTitulacion;
+use App\Models\ModelMatrizGraduados;
 
 class ControladorFEPeriodo extends BaseController
 {
 
-    //Datos Estadisticos Grado
+    //? Datos Estadisticos Grado
     public function filtroEstadisticoGradoPeriodo($tipo)
     {
-
         try {
             //modelo 
             $obgPeriodo = new ModelFEPeriodo();
@@ -27,13 +28,41 @@ class ControladorFEPeriodo extends BaseController
                 return view('header')
                     . view('/DatosEstadisticos/Grados/busqueda/vista_b_periodo_grad', $data)
                     . view('footer');
+            } else if ($tipo == "General") {
+                return view('header')
+                    . view('/DatosEstadisticos/Grados/busqueda/vista_b_periodo_general', $data)
+                    . view('footer');
             }
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
     }
 
-    //Datos Estadisticos PosGrado
+    //Reporte Grado Periodo General
+    public function reporteGradoPeriodoGeneral($perid)
+    {
+        try {
+            //modelo matriz
+            $modelo = new ModelMatrizGraduados();
+            //modelo periodos
+            $modeloPeriodo = new ModelFEPeriodo();
+
+            //ver data
+            $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+            $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+            //capturar id $perid
+            $datos['perid'] = $perid; // Pasar el ID como parte del array $datos
+            
+
+            return view('header')
+                . view('/graficasEstadisticas/grado/periodos/vistaPeriodoGeneral', $datos + $datos2)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //? Datos Estadisticos PosGrado
     public function filtroEstadisticoPosGradoPeriodo($tipo)
     {
 
@@ -56,7 +85,7 @@ class ControladorFEPeriodo extends BaseController
         }
     }
 
-    //Datos Estadisticos Tecnologia
+    //? Datos Estadisticos Tecnologia
     public function filtroEstadisticoTecnologiaPeriodo($tipo)
     {
         try {
