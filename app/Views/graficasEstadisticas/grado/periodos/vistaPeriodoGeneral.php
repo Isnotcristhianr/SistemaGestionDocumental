@@ -128,17 +128,46 @@
         //grafica pie chart
         Highcharts.chart('container', {
             chart: {
-                type: 'column'
+                type: 'column',
+                //marca de agua
+                events: {
+                    load: function() {
+                        //imagen opaca fondo
+                        this.renderer.image('<?php echo base_url('/public/imgs/logoPucesi.png') ?>')
+                            .css({
+                                opacity: 0.35
+                            })
+                            .add();
+                    }
+                }
             },
             title: {
-                text: 'Matriculados y Graduados'
+                text: 'Total Estudiantes Grado PUCE-I'
             },
             subtitle: {
-                text: 'Periodo: ' + perid
+                text: 'Matriculados - Graduados <br> <b>Periodo: </b>' +
+                    /* nombre del periodo */
+                    <?php
+                    foreach ($tbl_periodo as $periodo) {
+                        if ($periodo['PER_ID'] == $perid) {
+                            echo "'" . $periodo['PER_PERIODO'] . "'";
+                        }
+                    }
+                    ?>
             },
             xAxis: {
-                categories: periodos,
-                crosshair: true
+                crosshair: true,
+                /* Nombre Periodo */
+                categories: [
+                    <?php
+                    foreach ($tbl_periodo as $periodo) {
+                        if ($periodo['PER_ID'] == $perid) {
+                            echo "'" . $periodo['PER_PERIODO'] . "'";
+                        }
+                    }
+                    ?>
+                ]
+
             },
             yAxis: {
                 min: 0,
@@ -146,19 +175,19 @@
                     text: 'Cantidad de Estudiantes'
                 }
             },
-            tooltip: {
-                headerFormat: '<span style="font-size:10px">Periodo: {point.key}</span><table>',
-                pointFormat: '<tr><td style="color:{series.color};padding:0">Total: </td>' +
-                    '<td style="padding:0"><b>{point.y:.1f} Estudiantes</b></td></tr>',
-                footerFormat: '</table>',
-                shared: true,
-                useHTML: true
-            },
-            plotOptions: {
 
+            plotOptions: {
                 column: {
                     pointPadding: 0.2,
-                    borderWidth: 0
+                    borderWidth: 0,
+                    dataLabels: {
+                        enabled: true, // Habilita etiquetas de datos
+                        format: '{y}', // Muestra el valor de Y (cantidad de estudiantes)
+                        style: {
+                            fontWeight: 'bold',
+                            color: 'black' // Color de las etiquetas
+                        }
+                    }
                 }
             },
             series: [{
@@ -173,9 +202,32 @@
                     name: 'Total',
                     data: totales
                 },
-            ]
+            ],
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            },
+            credits: {
+                enabled: true,
+                href: "https://www.pucesi.edu.ec/webs2/",
+                text: "Secretaria General PUCE-I",
+                style: {
+                    color: "#666666",
+                    cursor: "pointer",
+                    fontSize: "10px"
+                },
+            }
         });
-       
     </script>
     <br>
 </div>
