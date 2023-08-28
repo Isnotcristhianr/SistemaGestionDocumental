@@ -380,4 +380,63 @@ class ControladorReportes extends BaseController
         return view('header') . view('/graficasEstadisticas/tecnologia/fechas/vistaTecFechaBusqueda', $datos + $datos2 + $fechas) . view('footer');
     }
 
+    //Reporte Fecha Matriculados
+    public function reporteFechaMatriculadosTecnologia()
+    {
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+
+        return view('header') . view('/graficasEstadisticas/tecnologia/fechas/vistaTecFechaMatr', $datos) . view('footer');
+    }
+
+    //Reporte Fecha Matriculados Busqueda
+    public function reporteFechaMatriculadosTecnologiaBusqueda()
+    {
+        //capturamos las fechas
+        $fechaInicio = $this->request->getGet('fechaInicio');
+        $fechaFin = $this->request->getGet('fechaFin');
+
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //modelo periodos
+        $modeloPeriodo = new ModelFEPeriodo();
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModeloEspecifico($fechaInicio, $fechaFin);
+        $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+
+        //fechas
+        $fechas = ["fechaInicio" => $fechaInicio, "fechaFin" => $fechaFin];
+
+        return view('header') . view('/graficasEstadisticas/tecnologia/fechas/vistaTecFechaMatrBusqueda', $datos + $datos2 + $fechas) . view('footer');
+    }
+
+    //Reporte Fecha Graduados
+    public function reporteFechaGraduadosTecnologia()
+    {
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+        return view('header') . view('/graficasEstadisticas/tecnologia/fechas/vistaTecFechaGrad', $datos) . view('footer');
+    }
+
+    //Reporte Fecha Graduados Busqueda
+    public function reporteFechaGraduadosTecnologiaBusqueda()
+    {
+        //capturamos las fechas
+        $fechaInicio = $this->request->getGet('fechaInicio');
+        $fechaFin = $this->request->getGet('fechaFin');
+        //modelo matriz
+        $modelo = new ModelMatrizGraduados();
+        //modelo periodos
+        $modeloPeriodo = new ModelFEPeriodo();
+        //ver data
+        $datos['tbl_estadistica_matriz'] = $modelo->verModeloEspecifico($fechaInicio, $fechaFin);
+        $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+        //fechas
+        $fechas = ["fechaInicio" => $fechaInicio, "fechaFin" => $fechaFin];
+        return view('header') . view('/graficasEstadisticas/tecnologia/fechas/vistaTecFechaGradBusqueda', $datos + $datos2 + $fechas) . view('footer');
+    }
 }

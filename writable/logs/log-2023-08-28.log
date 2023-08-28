@@ -1,0 +1,54 @@
+CRITICAL - 2023-08-28 13:58:38 --> Undefined variable $tbl_periodo
+in APPPATH\Views\graficasEstadisticas\tecnologia\fechas\vistaTecFechaMatrBusqueda.php on line 39.
+ 1 APPPATH\Views\graficasEstadisticas\tecnologia\fechas\vistaTecFechaMatrBusqueda.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tbl_periodo', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\tecnologia\\fechas\\vistaTecFechaMatrBusqueda.php', 39)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\tecnologia\\fechas\\vistaTecFechaMatrBusqueda.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/tecnologia/fechas/vistaTecFechaMatrBusqueda', [], true)
+ 5 APPPATH\Controllers\ControladorReportes.php(409): view('/graficasEstadisticas/tecnologia/fechas/vistaTecFechaMatrBusqueda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reporteFechaMatriculadosTecnologiaBusqueda()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-28 13:58:41 --> Undefined variable $tbl_periodo
+in APPPATH\Views\graficasEstadisticas\tecnologia\fechas\vistaTecFechaMatrBusqueda.php on line 39.
+ 1 APPPATH\Views\graficasEstadisticas\tecnologia\fechas\vistaTecFechaMatrBusqueda.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tbl_periodo', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\tecnologia\\fechas\\vistaTecFechaMatrBusqueda.php', 39)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\tecnologia\\fechas\\vistaTecFechaMatrBusqueda.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/tecnologia/fechas/vistaTecFechaMatrBusqueda', [], true)
+ 5 APPPATH\Controllers\ControladorReportes.php(409): view('/graficasEstadisticas/tecnologia/fechas/vistaTecFechaMatrBusqueda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reporteFechaMatriculadosTecnologiaBusqueda()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-28 13:58:43 --> Undefined variable $tbl_periodo
+in APPPATH\Views\graficasEstadisticas\tecnologia\fechas\vistaTecFechaMatrBusqueda.php on line 39.
+ 1 APPPATH\Views\graficasEstadisticas\tecnologia\fechas\vistaTecFechaMatrBusqueda.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tbl_periodo', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\tecnologia\\fechas\\vistaTecFechaMatrBusqueda.php', 39)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\tecnologia\\fechas\\vistaTecFechaMatrBusqueda.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/tecnologia/fechas/vistaTecFechaMatrBusqueda', [], true)
+ 5 APPPATH\Controllers\ControladorReportes.php(409): view('/graficasEstadisticas/tecnologia/fechas/vistaTecFechaMatrBusqueda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reporteFechaMatriculadosTecnologiaBusqueda()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-28 13:58:50 --> Undefined variable $tbl_periodo
+in APPPATH\Views\graficasEstadisticas\tecnologia\fechas\vistaTecFechaMatrBusqueda.php on line 39.
+ 1 APPPATH\Views\graficasEstadisticas\tecnologia\fechas\vistaTecFechaMatrBusqueda.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tbl_periodo', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\tecnologia\\fechas\\vistaTecFechaMatrBusqueda.php', 39)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\tecnologia\\fechas\\vistaTecFechaMatrBusqueda.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/tecnologia/fechas/vistaTecFechaMatrBusqueda', [], true)
+ 5 APPPATH\Controllers\ControladorReportes.php(409): view('/graficasEstadisticas/tecnologia/fechas/vistaTecFechaMatrBusqueda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorReportes->reporteFechaMatriculadosTecnologiaBusqueda()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorReportes))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-28 14:04:30 --> unlink(C:\XAMPP\htdocs\SistemaGestionDocumental\writable\debugbar/debugbar_1693230755.759598.json): No such file or directory
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\writable\\debugbar/debugbar_1693230755.759598.json): No such file or directory', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\system\\Debug\\Toolbar\\Collectors\\History.php', 76)
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(76): unlink('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\writable\\debugbar/debugbar_1693230755.759598.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1693231468.782835', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(474): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
