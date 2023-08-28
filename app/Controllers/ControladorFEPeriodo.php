@@ -125,7 +125,80 @@ class ControladorFEPeriodo extends BaseController
                 return view('header')
                     . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_periodo_grad', $data)
                     . view('footer');
+            }else if ($tipo == "General") {
+                return view('header')
+                    . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_periodo_general', $data)
+                    . view('footer');
             }
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //Reporte Posgrado Periodo General
+    public function reportePosgradoPeriodoGeneral($perid)
+    {
+        try {
+            //modelo matriz
+            $modelo = new ModelMatrizGraduados();
+            //modelo periodos
+            $modeloPeriodo = new ModelFEPeriodo();
+
+            //ver data
+            $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+            $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+            //capturar id $perid
+            $datos['perid'] = $perid; // Pasar el ID como parte del array $datos
+
+            return view('header')
+                . view('/graficasEstadisticas/posgrado/periodos/vistaPeriodoGeneral', $datos + $datos2)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //Reporte Posgrado Periodo Matriculados
+    public function reportePosgradoPeriodoMatriculados($perid)
+    {
+        try {
+            //modelo matriz
+            $modelo = new ModelMatrizGraduados();
+            //modelo periodos
+            $modeloPeriodo = new ModelFEPeriodo();
+
+            //ver data
+            $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+            $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+            //capturar id $perid
+            $datos['perid'] = $perid; // Pasar el ID como parte del array $datos
+
+            return view('header')
+                . view('/graficasEstadisticas/posgrado/periodos/vistaPeriodoMatriculados', $datos + $datos2)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //Reporte Posgrado Periodo Graduados
+    public function reportePosgradoPeriodoGraduados($perid)
+    {
+        try {
+            //modelo matriz
+            $modelo = new ModelMatrizGraduados();
+            //modelo periodos
+            $modeloPeriodo = new ModelFEPeriodo();
+
+            //ver data
+            $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+            $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+            //capturar id $perid
+            $datos['perid'] = $perid; // Pasar el ID como parte del array $datos
+
+            return view('header')
+                . view('/graficasEstadisticas/posgrado/periodos/vistaPeriodoGraduados', $datos + $datos2)
+                . view('footer');
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
