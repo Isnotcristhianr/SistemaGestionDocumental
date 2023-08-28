@@ -2,7 +2,7 @@
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <!-- Volver -->
-    <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Fecha" class="btn btn-outline-primary">← Volver</a>
+    <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnolog%C3%ADas/Fecha" class="btn btn-outline-primary">← Volver</a>
     <div class="row ">
         <div class="col-12">
             <h2 class="text-center text-primary">Datos Estadísticos Tecnologías
@@ -22,7 +22,7 @@
 </div>
 <!-- Buton busqueda -->
 <div class="container-center m-5 p-3 bg-light rounded shadow-lg p-3 mb-5 bg-body rounded ">
-    <form action="/SistemaGestionDocumental/index.php/ReporteFechaGeneralPosgradoBusqueda" method="GET" class="form d-flex" style="justify-content: center;">
+    <form action="/SistemaGestionDocumental/index.php/ReporteFechaGeneralTecnologiaBusqueda" method="GET" class="form d-flex" style="justify-content: center;">
         <div class="input-group-text m-2">
             <label for="">Desde: </label>
             <input type="date" class="form-control" placeholder="FechaInicio" min="1976-01-01" max="<?php echo date("Y-m-d"); ?>" id="fechaInicio" name="fechaInicio" required>

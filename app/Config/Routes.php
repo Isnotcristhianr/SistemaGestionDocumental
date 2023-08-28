@@ -112,6 +112,7 @@ $routes->get('/ReporteGeneralGraduadosTecnologia', 'ControladorReportes::reporte
 /* Reporte Fecha General */
 $routes->get('/ReporteFechaGeneralTecnologia', 'ControladorReportes::reporteFechaGeneralTecnologia');
 /* Reporte Fecha General Busqueda */
+$routes->get('/ReporteFechaGeneralTecnologiaBusqueda', 'ControladorReportes::reporteFechaGeneralTecnologiaBusqueda');
 
 //? Datos Estadisticos Historico Puce-I
 $routes->get('/deHistorico', 'ControladorHistorico::dehistorico');
