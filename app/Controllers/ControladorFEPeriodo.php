@@ -62,6 +62,52 @@ class ControladorFEPeriodo extends BaseController
         }
     }
 
+    //Reporte Grado Periodo Matriculados
+    public function reporteGradoPeriodoMatriculados($perid)
+    {
+        try {
+            //modelo matriz
+            $modelo = new ModelMatrizGraduados();
+            //modelo periodos
+            $modeloPeriodo = new ModelFEPeriodo();
+
+            //ver data
+            $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+            $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+            //capturar id $perid
+            $datos['perid'] = $perid; // Pasar el ID como parte del array $datos
+
+            return view('header')
+                . view('/graficasEstadisticas/grado/periodos/vistaPeriodoMatriculados', $datos + $datos2)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //Reporte Grado Periodo Graduados
+    public function reporteGradoPeriodoGraduados($perid)
+    {
+        try {
+            //modelo matriz
+            $modelo = new ModelMatrizGraduados();
+            //modelo periodos
+            $modeloPeriodo = new ModelFEPeriodo();
+
+            //ver data
+            $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+            $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+            //capturar id $perid
+            $datos['perid'] = $perid; // Pasar el ID como parte del array $datos
+
+            return view('header')
+                . view('/graficasEstadisticas/grado/periodos/vistaPeriodoGraduados', $datos + $datos2)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
     //? Datos Estadisticos PosGrado
     public function filtroEstadisticoPosGradoPeriodo($tipo)
     {
