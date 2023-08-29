@@ -29,13 +29,24 @@
             <!-- llenar toda la tabla con fecha de año actual-->
             <?php
             foreach ($tbl_periodo as $periodo) {
-                if ($periodo['PER_ANO'] == date('Y')) {
+                if (
+                    /* Logica obtener ultimo periodo
+                    1. ultimo id
+                    2. debe pertenecer al año actual
+                    3. debe estar activo
+                    */
+                    $periodo['PER_ID'] == $tbl_periodo[0]['PER_ID'] && $periodo['PER_ANO'] == date('Y') && $periodo['PER_ULTIMO'] == 1
+                ) {
+
             ?>
                     <tr>
                         <td hidden><?php echo $periodo['PER_ID']; ?></td>
                         <td><?php echo $periodo['PER_ANO']; ?></td>
                         <td><?php echo $periodo['PER_PERIODO']; ?></td>
-                        <td><a href="" class="btn btn-success">Datos →</a></td>
+                        <!-- Capturar id -->
+                        <td>
+                            <a href="<?php echo base_url('index.php/ReporteTecnologiaPeriodoGraduados/' . $periodo['PER_ID']) ?>" class="btn btn-success">Datos →</a>
+                        </td>
                     </tr>
             <?php
                 }
@@ -68,7 +79,10 @@
                         <td hidden><?php echo $periodo['PER_ID']; ?></td>
                         <td><?php echo $periodo['PER_ANO']; ?></td>
                         <td><?php echo $periodo['PER_PERIODO']; ?></td>
-                        <td><a href="" class="btn btn-primary">Datos →</a></td>
+                        <!-- Capturar id -->
+                        <td>
+                            <a href="<?php echo base_url('index.php/ReporteTecnologiaPeriodoGraduados/' . $periodo['PER_ID']) ?>" class="btn btn-primary">Datos →</a>
+                        </td>
                     </tr>
             <?php
                 }

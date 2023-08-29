@@ -223,7 +223,80 @@ class ControladorFEPeriodo extends BaseController
                 return view('header')
                     . view('/DatosEstadisticos/Tecnologias/busqueda/vista_b_periodo_grad', $data)
                     . view('footer');
+            }else if ($tipo == "General") {
+                return view('header')
+                    . view('/DatosEstadisticos/Tecnologias/busqueda/vista_b_periodo_general', $data)
+                    . view('footer');
             }
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //Reporte Tecnologia Periodo General
+    public function reporteTecnologiaPeriodoGeneral($perid)
+    {
+        try {
+            //modelo matriz
+            $modelo = new ModelMatrizGraduados();
+            //modelo periodos
+            $modeloPeriodo = new ModelFEPeriodo();
+
+            //ver data
+            $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+            $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+            //capturar id $perid
+            $datos['perid'] = $perid; // Pasar el ID como parte del array $datos
+
+            return view('header')
+                . view('/graficasEstadisticas/tecnologia/periodos/vistaPeriodoGeneral', $datos + $datos2)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //Reporte Tecnologia Periodo Matriculados
+    public function reporteTecnologiaPeriodoMatriculados($perid)
+    {
+        try {
+            //modelo matriz
+            $modelo = new ModelMatrizGraduados();
+            //modelo periodos
+            $modeloPeriodo = new ModelFEPeriodo();
+
+            //ver data
+            $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+            $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+            //capturar id $perid
+            $datos['perid'] = $perid; // Pasar el ID como parte del array $datos
+
+            return view('header')
+                . view('/graficasEstadisticas/tecnologia/periodos/vistaPeriodoMatriculados', $datos + $datos2)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //Reporte Tecnologia Periodo Graduados
+    public function reporteTecnologiaPeriodoGraduados($perid)
+    {
+        try {
+            //modelo matriz
+            $modelo = new ModelMatrizGraduados();
+            //modelo periodos
+            $modeloPeriodo = new ModelFEPeriodo();
+
+            //ver data
+            $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+            $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+            //capturar id $perid
+            $datos['perid'] = $perid; // Pasar el ID como parte del array $datos
+
+            return view('header')
+                . view('/graficasEstadisticas/tecnologia/periodos/vistaPeriodoGraduados', $datos + $datos2)
+                . view('footer');
         } catch (\Exception $e) {
             echo $e->getMessage();
         }

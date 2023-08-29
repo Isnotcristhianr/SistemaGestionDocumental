@@ -133,6 +133,12 @@ $routes->get('/ReporteFechaMatriculadosTecnologiaBusqueda', 'ControladorReportes
 $routes->get('/ReporteFechaGraduadosTecnologia', 'ControladorReportes::reporteFechaGraduadosTecnologia');
 /* Reporte Fecha Graduados Busqueda */
 $routes->get('/ReporteFechaGraduadosTecnologiaBusqueda', 'ControladorReportes::reporteFechaGraduadosTecnologiaBusqueda');
+//* Reporte Tecnologia Periodo General
+$routes->get('/ReporteTecnologiaPeriodoGeneral/(:any)', 'ControladorFEPeriodo::reporteTecnologiaPeriodoGeneral/$1');
+//* Reporte Tecnologia Periodo Matriculados
+$routes->get('/ReporteTecnologiaPeriodoMatriculados/(:any)', 'ControladorFEPeriodo::reporteTecnologiaPeriodoMatriculados/$1');
+//* Reporte Tecnologia Periodo Graduados
+$routes->get('/ReporteTecnologiaPeriodoGraduados/(:any)', 'ControladorFEPeriodo::reporteTecnologiaPeriodoGraduados/$1');
 
 //? Datos Estadisticos Historico Puce-I
 $routes->get('/deHistorico', 'ControladorHistorico::dehistorico');
