@@ -1,0 +1,175 @@
+ERROR - 2023-08-30 21:24:50 --> mysqli_sql_exception: Unknown column 'ESTM_CARRERA' in 'where clause' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorFECarrera.php(56): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->reporteGradoCarreraGeneral('15')
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-30 21:24:50 --> Unknown column 'ESTM_CARRERA' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_carrera`
+WHERE `ESTM_CARRERA` = \'15\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_carrera`
+WHERE `ESTM_CARRERA` = \'15\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_carrera`
+WHERE `ESTM_CARRERA` = \'15\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_carrera`
+WHERE `ESTM_CARRERA` = :ESTM_CARRERA:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ControladorFECarrera.php(56): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->reporteGradoCarreraGeneral('15')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-30 21:25:03 --> mysqli_sql_exception: Unknown column 'ESTM_CARRERA' in 'where clause' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorFECarrera.php(56): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->reporteGradoCarreraGeneral('15')
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-30 21:25:03 --> Unknown column 'ESTM_CARRERA' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_carrera`
+WHERE `ESTM_CARRERA` = \'15\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_carrera`
+WHERE `ESTM_CARRERA` = \'15\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_carrera`
+WHERE `ESTM_CARRERA` = \'15\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_carrera`
+WHERE `ESTM_CARRERA` = :ESTM_CARRERA:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ControladorFECarrera.php(56): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->reporteGradoCarreraGeneral('15')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-30 21:26:12 --> mysqli_sql_exception: Unknown column 'ESTM_CARRERA' in 'where clause' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorFECarrera.php(56): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->reporteGradoCarreraGeneral('15')
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-30 21:26:12 --> Unknown column 'ESTM_CARRERA' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_carrera`
+WHERE `ESTM_CARRERA` = \'15\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_carrera`
+WHERE `ESTM_CARRERA` = \'15\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_carrera`
+WHERE `ESTM_CARRERA` = \'15\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_carrera`
+WHERE `ESTM_CARRERA` = :ESTM_CARRERA:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ControladorFECarrera.php(56): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->reporteGradoCarreraGeneral('15')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-30 21:26:14 --> mysqli_sql_exception: Unknown column 'ESTM_CARRERA' in 'where clause' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorFECarrera.php(56): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->reporteGradoCarreraGeneral('15')
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-30 21:26:14 --> Unknown column 'ESTM_CARRERA' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_carrera`
+WHERE `ESTM_CARRERA` = \'15\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_carrera`
+WHERE `ESTM_CARRERA` = \'15\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_carrera`
+WHERE `ESTM_CARRERA` = \'15\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_carrera`
+WHERE `ESTM_CARRERA` = :ESTM_CARRERA:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ControladorFECarrera.php(56): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->reporteGradoCarreraGeneral('15')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-30 21:26:20 --> mysqli_sql_exception: Unknown column 'ESTM_CARRERA' in 'where clause' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorFECarrera.php(56): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->reporteGradoCarreraGeneral('15')
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-30 21:26:20 --> Unknown column 'ESTM_CARRERA' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_carrera`
+WHERE `ESTM_CARRERA` = \'15\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_carrera`
+WHERE `ESTM_CARRERA` = \'15\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_carrera`
+WHERE `ESTM_CARRERA` = \'15\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_carrera`
+WHERE `ESTM_CARRERA` = :ESTM_CARRERA:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ControladorFECarrera.php(56): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->reporteGradoCarreraGeneral('15')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
