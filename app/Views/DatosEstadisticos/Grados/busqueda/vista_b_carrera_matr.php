@@ -55,9 +55,11 @@
                                 ?>
                             </td>
                             <td>
+                                <!-- Obtener id de la carrera -->
                                 <a href="<?php
-                                            echo base_url('index.php/ControladorFECarrera/estadisticoGradoCarrera/' . $carreras['CAR_ID'] . '/Matriculados')
+                                            echo base_url('index.php/ReporteGradoCarreraMatriculados/' . $carreras['CAR_ID'])
                                             ?>" class="btn btn-success">Datos →</a>
+                            </td>
                             </td>
                         </tr>
             <?php
@@ -114,7 +116,10 @@
                                 ?>
                             </td>
                             <td>
-                                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Datos →</a>
+                                <!-- Obtener id de la carrera -->
+                                <a href="<?php
+                                            echo base_url('index.php/ReporteGradoCarreraMatriculados/' . $carreras['CAR_ID'])
+                                            ?>" class="btn btn-primary">Datos →</a>
                             </td>
                         </tr>
             <?php
@@ -167,7 +172,10 @@
                                 ?>
                             </td>
                             <td>
-                                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-info">Datos →</a>
+                                <!-- Obtener id de la carrera -->
+                                <a href="<?php
+                                            echo base_url('index.php/ReporteGradoCarreraMatriculados/' . $carreras['CAR_ID'])
+                                            ?>" class="btn btn-info">Datos →</a>
                             </td>
                         </tr>
             <?php

@@ -75,6 +75,8 @@ $routes->get('/ReporteGradoPeriodoMatriculados/(:any)', 'ControladorFEPeriodo::r
 $routes->get('/ReporteGradoPeriodoGraduados/(:any)', 'ControladorFEPeriodo::reporteGradoPeriodoGraduados/$1');
 //! Reporte Grado Carrera General
 $routes->get('/ReporteGradoCarreraGeneral/(:any)', 'ControladorFECarrera::reporteGradoCarreraGeneral/$1');
+//! Reporte Grado Carrera Matriculados
+$routes->get('/ReporteGradoCarreraMatriculados/(:any)', 'ControladorFECarrera::reporteGradoCarreraMatriculados/$1');
 
 //? Datos Estadisticos Posgrado
 $routes->get('/FiltroEstadisticoPosgrado', 'ControladorEstadistico::filtroEstadisticoPosgrado');
