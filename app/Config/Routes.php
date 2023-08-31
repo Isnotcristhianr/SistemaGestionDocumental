@@ -79,6 +79,8 @@ $routes->get('/ReporteGradoCarreraGeneral/(:any)', 'ControladorFECarrera::report
 $routes->get('/ReporteGradoCarreraMatriculados/(:any)', 'ControladorFECarrera::reporteGradoCarreraMatriculados/$1');
 //! Reporte Grado Carrera Graduados
 $routes->get('/ReporteGradoCarreraGraduados/(:any)', 'ControladorFECarrera::reporteGradoCarreraGraduados/$1');
+//TODO Reporte Escuela General
+$routes->get('/ReporteEscuelaGeneral/(:any)', 'ControladorFEEscuela::reporteEscuelaGeneral/$1/');
 
 //? Datos Estadisticos Posgrado
 $routes->get('/FiltroEstadisticoPosgrado', 'ControladorEstadistico::filtroEstadisticoPosgrado');
@@ -157,6 +159,7 @@ $routes->get('/ReporteTecnologiaCarreraGeneral/(:any)', 'ControladorFECarrera::r
 $routes->get('/ReporteTecnologiaCarreraMatriculados/(:any)', 'ControladorFECarrera::reporteTecnologiaCarreraMatriculados/$1');
 //! Reporte Tecnologia Carrera Graduados
 $routes->get('/ReporteTecnologiaCarreraGraduados/(:any)', 'ControladorFECarrera::reporteTecnologiaCarreraGraduados/$1');
+
 
 //? Datos Estadisticos Historico Puce-I
 $routes->get('/deHistorico', 'ControladorHistorico::dehistorico');
