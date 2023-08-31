@@ -194,7 +194,7 @@
                 }
             },
             series: [{
-                    name: 'Hommbres',
+                    name: 'Hombres',
                     data: totalesH
                 },
                 {
