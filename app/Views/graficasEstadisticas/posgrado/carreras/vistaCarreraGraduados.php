@@ -1,6 +1,6 @@
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <!-- Volver -->
-    <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoCarrera/Matriculados" class="btn btn-outline-primary">← Volver</a>
+    <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoCarrera/Graduados" class="btn btn-outline-primary">← Volver</a>
     <div class="row ">
         <div class="col-12">
             <h2 class="text-center text-primary">Datos Estadísticos PosGrado PUCE-I
@@ -18,7 +18,7 @@
 
                 ?>
             </h4>
-            <h5 class="text-center text-secondary"> Matriculados
+            <h5 class="text-center text-secondary"> Graduados
             </h5>
         </div>
         <div class="col-12">
@@ -55,7 +55,7 @@
 
         // Filtrar datos por ESTM_TIPO y ESTM_CONDICION con la carrera seleccionada, por ESTM_TIPO y ESTM_CONDICION
         var filteredData = datos.filter(function(dato) {
-            return dato.ESTM_CARRERA == carid && (dato.ESTM_TIPO === '1' && dato.ESTM_CONDICION === '1');
+            return dato.ESTM_CARRERA == carid && (dato.ESTM_TIPO === '1' && dato.ESTM_CONDICION === '3');
         });
 
         //! Por Años General
@@ -148,7 +148,7 @@
                 text: 'Total Estudiantes PosGrado PUCE-I'
             },
             subtitle: {
-                text: 'Matriculados <br> <b>Carrera: </b>' +
+                text: 'Graduados <br> <b>Carrera: </b>' +
                     /* nombre de la carrera */
                     <?php
                     foreach ($tbl_carrera as $carrera) {

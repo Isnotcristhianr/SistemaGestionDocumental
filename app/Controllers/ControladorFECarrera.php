@@ -187,6 +187,28 @@ class ControladorFECarrera extends BaseController
             echo $e->getMessage();
         }
     }
+
+    //Reporte Posgrado Carrera Graduados
+    public function reportePosgradoCarreraGraduados($id)
+    {
+        try {
+            //modelo
+            $objEstadMatr = new ModelMatrizGraduados();
+            //carrera
+            $objCarrera = new ModelFEcarreras();
+            //tbl_estadistica_matriz tiene ESTM_CARRERA comparar con $id
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->where('ESTM_CARRERA', $id)->findAll();
+            $carreras['tbl_carrera'] = $objCarrera->findAll();
+
+            //capturar id como car_id
+            $data['car_id'] = $id;
+            return view('header')
+                . view('/graficasEstadisticas/posgrado/carreras/vistaCarreraGraduados', $data + $carreras)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
     //? Datos Estadisticos Tecnologias
     public function filtroEstadisticoTecnologiaCarrera($tipo)
     {

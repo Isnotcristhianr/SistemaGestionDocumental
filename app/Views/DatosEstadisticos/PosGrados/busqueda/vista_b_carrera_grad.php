@@ -55,8 +55,7 @@
                             ?>
                         </td>
                         <td>
-                            <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Datos →</a>
-                        </td>
+                            <a href="<?php echo base_url('index.php/ReportePosgradoCarreraGraduados/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Datos →</a>
                     </tr>
             <?php
                 }
@@ -108,8 +107,7 @@
                             ?>
                         </td>
                         <td>
-                            <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera/Matriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Datos →</a>
-                        </td>
+                            <a href="<?php echo base_url('index.php/ReportePosgradoCarreraGraduados/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Datos →</a>
                     </tr>
             <?php
                 }
