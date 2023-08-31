@@ -28,7 +28,7 @@ class ControladorFEEscuela extends BaseController
                 return view('header')
                     . view('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_grad', $data)
                     . view('footer');
-            }else if($tipo == "General"){
+            } else if ($tipo == "General") {
                 return view('header')
                     . view('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_general', $data)
                     . view('footer');
@@ -42,25 +42,31 @@ class ControladorFEEscuela extends BaseController
     public function reporteEscuelaGeneral($id)
     {
         try {
-           //modelo
-           $objEstadMatr = new ModelMatrizGraduados();
-           //escuela
-           $objEsc = new ModelFEescuelas();
-           //obtener datos de la escuela
-           $escuela['tbl_carrera'] = $objEsc->findAll();
+            //modelo
+            $objEstadMatr = new ModelMatrizGraduados();
+            //escuela
+            $objEsc = new ModelFEescuelas();
+            //obtener datos de la escuela
+            $escuela['tbl_carrera'] = $objEsc->findAll();
 
-           //buscar escuela acorde a la carrera en tbl_estadistica matriz
-           //1. $id = id de la escuela, se compara con CAR_ID y se asigna variable $esc
-           //2. $esc se compara con CAR_PADREESC y se obtienen todas las que pertenecen
+            //obtener id
+            $data['id'] = $id;
+
+            //vistas
+            return view('header')
+            . view('/graficasEstadisticas/grado/escuelas/vistaEscuelaGeneral', $data + $escuela)
+            . view('footer');
+
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
     }
-    
+
 
 
     //Datos Estadisticos PosGrado
-    public function filtroEstadisticoPosgradoEscuela($tipo){
+    public function filtroEstadisticoPosgradoEscuela($tipo)
+    {
         try {
             //modelo
             $objEscuela = new ModelFEescuelas();
@@ -79,6 +85,4 @@ class ControladorFEEscuela extends BaseController
             echo $e->getMessage();
         }
     }
-
-
 }
