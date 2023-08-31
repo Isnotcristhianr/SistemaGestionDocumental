@@ -110,7 +110,7 @@ class ControladorFECarrera extends BaseController
             echo $e->getMessage();
         }
     }
-    //Datos Estadisticos Posgrado
+    //? Datos Estadisticos Posgrado
     public function filtroEstadisticoPosgradoCarrera($tipo)
     {
         try {
@@ -134,12 +134,60 @@ class ControladorFECarrera extends BaseController
                 return view('header')
                     . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_carrera_grad', $data + $padre)
                     . view('footer');
+            }else if ($tipo == "General") {
+                return view('header')
+                    . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_carrera_general', $data + $padre)
+                    . view('footer');
             }
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
     }
-    //Datos Estadisticos Tecnologias
+
+    //Reporte Posgrado Carrera General
+    public function reportePosgradoCarreraGeneral($id)
+    {
+        try {
+            //modelo
+            $objEstadMatr = new ModelMatrizGraduados();
+            //carrera
+            $objCarrera = new ModelFEcarreras();
+            //tbl_estadistica_matriz tiene ESTM_CARRERA comparar con $id
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->where('ESTM_CARRERA', $id)->findAll();
+            $carreras['tbl_carrera'] = $objCarrera->findAll();
+
+            //capturar id como car_id
+            $data['car_id'] = $id;
+            return view('header')
+                . view('/graficasEstadisticas/posgrado/carreras/vistaCarreraGeneral', $data + $carreras)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //Reporte Posgrado Carrera Matriculados
+    public function reportePosgradoCarreraMatriculados($id)
+    {
+        try {
+            //modelo
+            $objEstadMatr = new ModelMatrizGraduados();
+            //carrera
+            $objCarrera = new ModelFEcarreras();
+            //tbl_estadistica_matriz tiene ESTM_CARRERA comparar con $id
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->where('ESTM_CARRERA', $id)->findAll();
+            $carreras['tbl_carrera'] = $objCarrera->findAll();
+
+            //capturar id como car_id
+            $data['car_id'] = $id;
+            return view('header')
+                . view('/graficasEstadisticas/posgrado/carreras/vistaCarreraMatriculados', $data + $carreras)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+    //? Datos Estadisticos Tecnologias
     public function filtroEstadisticoTecnologiaCarrera($tipo)
     {
         try {
