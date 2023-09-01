@@ -44,7 +44,7 @@
                             <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
                             <td>
                                 <a href="<?php
-                                            echo base_url('index.php/ReporteEscuelaGeneral/' . $escuelas['CAR_ID'])
+                                            echo base_url('index.php/ReporteEscuelaGeneralVigente/' . $escuelas['CAR_ID'])
                                             ?>" class="btn btn-success">Datos →</a>
                             </td>
                         </tr>

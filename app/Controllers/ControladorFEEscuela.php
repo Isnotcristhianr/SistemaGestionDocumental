@@ -38,8 +38,8 @@ class ControladorFEEscuela extends BaseController
         }
     }
 
-    //Reporte Escuela Grado General
-    public function reporteEscuelaGeneral($id)
+    //Reporte Escuela Grado General Vigente
+    public function reporteEscuelaGeneralVigente($id)
     {
         try {
             //modelo
