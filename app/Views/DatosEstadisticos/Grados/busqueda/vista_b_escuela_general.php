@@ -90,7 +90,7 @@
                             <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
                             <td>
                                 <a href="<?php
-                                            echo base_url('index.php/ReporteEscuelaGeneral/' . $escuelas['CAR_ID'])
+                                            echo base_url('index.php/ReporteEscuelaGeneralHistorico/' . $escuelas['CAR_ID'])
                                             ?>" class="btn btn-primary">Datos →</a>
                             </td>
                         </tr>
@@ -131,7 +131,7 @@
                             <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
                             <td>
                                 <a href="<?php
-                                            echo base_url('index.php/ControladorFEEscuela/estadisticoGradoEscuela/' . $escuelas['CAR_ID'] . '/Graduados')
+                                            echo base_url('index.php/ReporteEscuelaGeneralTulcan/' . $escuelas['CAR_ID'])
                                             ?>" class="btn btn-info">Datos →</a>
                             </td>
                         </tr>

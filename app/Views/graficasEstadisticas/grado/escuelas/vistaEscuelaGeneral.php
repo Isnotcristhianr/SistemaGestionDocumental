@@ -24,6 +24,7 @@
         </div>
     </div>
 </div>
+
 <!-- Contenido-->
 <div class="container-center m-5 p-1 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <div id="exportContainer">
@@ -57,7 +58,7 @@
                 carreras.push(carrera[i].CAR_ID);
             }
         }
-        alert(carreras);
+        //alert(carreras);
         //mostrar nombres de carreras segun el id
         var nombreCarreras = [];
         for (var i = 0; i < carreras.length; i++) {
