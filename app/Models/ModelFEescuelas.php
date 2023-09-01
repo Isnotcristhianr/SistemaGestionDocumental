@@ -9,7 +9,7 @@ class ModelFEescuelas extends Model
     protected $table =  'tbl_carrera';
     protected $primaryKey = 'CAR_ID';
 
-    protected $allowedFields = ['CTIP_ID', 'CAR_NOMBRE', 'CAR_CARRERA', 'CAR_ESCUELA', 'CAR_PADREESC', 'CAR_ACTIVA', 'CAR_ESTADO'];
+    protected $allowedFields = ['CTIP_ID', 'CAR_NOMBRE', 'CAR_CARRERA', 'CAR_ESCUELA', 'CAR_PADREESC', 'CAR_ACTIVA', 'CAR_CAMPUS', 'CAR_ESTADO'];
 
     /* //////////////////////GRADOS///////////////////////////// */
     /* Contar total escuelas modalidad grado*/

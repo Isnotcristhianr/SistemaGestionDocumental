@@ -46,8 +46,14 @@ class ControladorFEEscuela extends BaseController
             $objEstadMatr = new ModelMatrizGraduados();
             //escuela
             $objEsc = new ModelFEescuelas();
-            //obtener datos de la escuela
-            $escuela['tbl_carrera'] = $objEsc->findAll();
+            
+            //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
+            $idEscuela = $id;
+            //obtener datos de la escuela y las carreras que contiene
+            $escuela['tbl_carrera'] = $objEsc->where('CAR_PADREESC', $idEscuela)->findAll();
+
+            //datos estadisticos
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
 
             //obtener id
             $data['id'] = $id;

@@ -28,7 +28,6 @@
 </div>
 <!-- Contenido-->
 
-<!--! ERROR DESDE AQUI REVISAR -->
 <div class="container-center m-5 p-1 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <div id="exportContainer">
 
