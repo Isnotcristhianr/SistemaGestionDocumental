@@ -52,10 +52,15 @@
         //guardar los id de las carreras en un array, se guardan los id de CAR_ID que corresponden a la escuela
         //CTIP_ID debe ser 2 (GRADO), CAR_CARRERA = 1 (CARRERA)
         //CAR_ACTIVA = SÍ
+        //condicion ESTM_TIPO = 2 (Egresado), ESTM_CONDICION = 1 (MATRICULADO) o 3 (Graduado)
         var carreras = [];
         for (var i = 0; i < carrera.length; i++) {
             if (carrera[i].CAR_PADREESC == <?php echo $id ?> && carrera[i].CTIP_ID == 2 && carrera[i].CAR_CARRERA == 1 && carrera[i].CAR_ACTIVA == 'No') {
-                carreras.push(carrera[i].CAR_ID);
+                for (var j = 0; j < datos.length; j++) {
+                    if ((datos[j].ESTM_SEDE === "1" && datos[j].ESTM_TIPO === '2' && (datos[j].ESTM_CONDICION === '1' || datos[j].ESTM_CONDICION === '3'))) {
+                        carreras.push(carrera[i].CAR_ID);
+                    }
+                }
             }
         }
 
@@ -90,7 +95,7 @@
 
             }
         }
-        
+
         //Obtener array con nombres de las carreras
         var carrerasNombre = [];
         for (var i = 0; i < carrera.length; i++) {
