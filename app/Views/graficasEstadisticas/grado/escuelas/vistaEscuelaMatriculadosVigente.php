@@ -55,15 +55,8 @@
         var carreras = [];
         for (var i = 0; i < carrera.length; i++) {
             if (carrera[i].CAR_PADREESC == <?php echo $id ?> && carrera[i].CTIP_ID == 2 && carrera[i].CAR_CARRERA == 1 && carrera[i].CAR_ACTIVA == 'SÍ') {
-                //condicion ESTM_TIPO = 2 (Egresado), ESTM_CONDICION = 1 (MATRICULADO) o 3 (Graduado)
-                for (var j = 0; j < datos.length; j++) {
-                    if (datos[j].ESTM_CARRERA == carrera[i].CAR_ID && (datos[j].ESTM_TIPO === '2' && (datos[j].ESTM_CONDICION === '1' || datos[j].ESTM_CONDICION === '3'))) {
-                        carreras.push(carrera[i].CAR_ID);
-                    }
-                }
+                carreras.push(carrera[i].CAR_ID);
             }
-
-
         }
 
         //mostrar nombre de la escuela según el id
@@ -81,7 +74,7 @@
         // Recorrer los datos y las carreras
         for (let i = 0; i < datos.length; i++) {
             var dato = datos[i];
-            if (carreras.includes(dato.ESTM_CARRERA) && (dato.ESTM_TIPO === '2' && (dato.ESTM_CONDICION === '1' || dato.ESTM_CONDICION === '3'))) {
+            if (carreras.includes(dato.ESTM_CARRERA) && (dato.ESTM_TIPO === '2' && (dato.ESTM_CONDICION === '1'))) {
                 // Agregar la escuela si no está en el objeto
                 if (!escuelaTotalMap[nombreEscuela]) {
                     escuelaTotalMap[nombreEscuela] = {

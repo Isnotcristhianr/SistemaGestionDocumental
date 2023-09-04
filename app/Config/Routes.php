@@ -87,6 +87,8 @@ $routes->get('/ReporteEscuelaGeneralHistorico/(:any)', 'ControladorFEEscuela::re
 $routes->get('/ReporteEscuelaGeneralTulcan/(:any)', 'ControladorFEEscuela::reporteEscuelaGeneralTulcan/$1/'); 
 //TODO Reporte Escuela Matriculados Vigente
 $routes->get('/ReporteEscuelaMatriculadosVigente/(:any)', 'ControladorFEEscuela::reporteEscuelaMatriculadosVigente/$1/');
+//Todo Reporte Escuela Matriculados Historico
+$routes->get('/ReporteEscuelaMatriculadosHistorico/(:any)', 'ControladorFEEscuela::reporteEscuelaMatriculadosHistorico/$1/');
 
 //? Datos Estadisticos Posgrado
 $routes->get('/FiltroEstadisticoPosgrado', 'ControladorEstadistico::filtroEstadisticoPosgrado');
