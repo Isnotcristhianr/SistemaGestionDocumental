@@ -128,7 +128,7 @@
                 }
             },
             title: {
-                text: 'Total Estudiantes Grado PUCE-I'
+                text: 'Total Estudiantes Histórico Grado PUCE-I'
             },
             subtitle: {
                 text: 'Matriculados - Graduados <br> <b>Escuela: </b>' +

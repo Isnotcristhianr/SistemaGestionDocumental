@@ -54,102 +54,64 @@
         //CAR_ACTIVA = SÍ
         var carreras = [];
         for (var i = 0; i < carrera.length; i++) {
-            if (carrera[i].CAR_PADREESC == <?php echo $id ?> && carrera[i].CTIP_ID == 2 && carrera[i].CAR_CARRERA == 1 && carrera[i].CAR_ACTIVA == 'SÍ') {
+            if (carrera[i].CAR_PADREESC == <?php echo $id ?> && carrera[i].CTIP_ID == 2 && carrera[i].CAR_CARRERA == 1 && carrera[i].CAR_ACTIVA == 'No') {
                 carreras.push(carrera[i].CAR_ID);
             }
         }
-        //alert(carreras);
-        //mostrar nombres de carreras segun el id
-        var nombreCarreras = [];
-        for (var i = 0; i < carreras.length; i++) {
-            for (var j = 0; j < carrera.length; j++) {
-                if (carreras[i] == carrera[j].CAR_ID) {
-                    nombreCarreras.push(carrera[j].CAR_NOMBRE);
-                }
+
+        //mostrar nombre de la escuela según el id
+        var nombreEscuela = '';
+        for (var i = 0; i < carrera.length; i++) {
+            if (carrera[i].CAR_ID == <?php echo $id ?>) {
+                nombreEscuela = carrera[i].CAR_NOMBRE;
+                break;
             }
         }
-        document.getElementById("carreras").innerHTML = nombreCarreras;
 
-        //graficar datos acorde a las carreras
-        var carid = carreras;
+        // Objeto para asociar escuela con totales
+        var escuelaTotalMap = {};
 
-        // Filtrar datos por ESTM_TIPO y ESTM_CONDICION con las carreras seleccionada, por ESTM_TIPO y ESTM_CONDICION
-        var filteredData = datos.filter(function(dato) {
-            return carid.includes(dato.ESTM_CARRERA) && (dato.ESTM_TIPO === '2' && (dato.ESTM_CONDICION === '1' || dato.ESTM_CONDICION === '3'));
+        // Recorrer los datos y las carreras
+        for (let i = 0; i < datos.length; i++) {
+            var dato = datos[i];
+            if (carreras.includes(dato.ESTM_CARRERA) && (dato.ESTM_TIPO === '2' && (dato.ESTM_CONDICION === '1' || dato.ESTM_CONDICION === '3'))) {
+                // Agregar la escuela si no está en el objeto
+                if (!escuelaTotalMap[nombreEscuela]) {
+                    escuelaTotalMap[nombreEscuela] = {
+                        hombres: 0,
+                        mujeres: 0,
+                        total: 0
+                    };
+                }
+                // Sumar los totales
+                escuelaTotalMap[nombreEscuela].hombres += parseInt(dato.ESTM_GENERO_H);
+                escuelaTotalMap[nombreEscuela].mujeres += parseInt(dato.ESTM_GENERO_M);
+                escuelaTotalMap[nombreEscuela].total += parseInt(dato.ESTM_TOTAL);
+
+            }
+        }
+        
+        //Obtener array con nombres de las carreras
+        var carrerasNombre = [];
+        for (var i = 0; i < carrera.length; i++) {
+            if (carreras.includes(carrera[i].CAR_ID)) {
+                carrerasNombre.push(carrera[i].CAR_NOMBRE);
+            }
+        }
+        // Obtener los nombres de escuela y sus totales
+        var escuelas = Object.keys(escuelaTotalMap);
+        var totalesH = escuelas.map(function(escuela) {
+            return escuelaTotalMap[escuela].hombres;
+        });
+        var totalesM = escuelas.map(function(escuela) {
+            return escuelaTotalMap[escuela].mujeres;
+        });
+        var totales = escuelas.map(function(escuela) {
+            return escuelaTotalMap[escuela].total;
         });
 
-        //! Por Años General
-        {
-            // Objeto para asociar carreras con totales
-            var carreraTotalMap = {};
 
-            // Recorrer los datos y las carreras
-            for (let i = 0; i < filteredData.length; i++) { // Cambiado a filteredData
-                var carrera = filteredData[i].ESTM_CARRERA; // Obtener la carrera directamente
-                // Agregar la carrera si no está en el objeto
-                if (!carreraTotalMap[carrera]) {
-                    carreraTotalMap[carrera] = 0;
-                }
-                // Sumar el total
-                carreraTotalMap[carrera] += parseInt(filteredData[i].ESTM_TOTAL);
-            }
-
-            // Obtener las carreras y sus totales
-            var carreras = Object.keys(carreraTotalMap).map(Number);
-            var totales = carreras.map(function(carrera) {
-                return carreraTotalMap[carrera];
-            });
-
-
-        }
-
-        //! Por Años Genero Masculino -> ESTM_GENERO_H
-        {
-            // Objeto para asociar carreras con totales
-            var carreraTotalMap = {};
-
-            // Recorrer los datos y las carreras
-            for (let i = 0; i < filteredData.length; i++) { // Cambiado a filteredData
-                var carrera = filteredData[i].ESTM_CARRERA; // Obtener la carrera directamente
-                // Agregar la carrera si no está en el objeto
-                if (!carreraTotalMap[carrera]) {
-                    carreraTotalMap[carrera] = 0;
-                }
-                // Sumar el total
-                carreraTotalMap[carrera] += parseInt(filteredData[i].ESTM_GENERO_H);
-            }
-
-            // Obtener las carreras y sus totales
-            var carreras = Object.keys(carreraTotalMap).map(Number);
-            var totalesH = carreras.map(function(carrera) {
-                return carreraTotalMap[carrera];
-            });
-        }
-
-        //! Por Años Genero Femenino -> ESTM_GENERO_M
-        {
-            // Objeto para asociar carreras con totales
-            var carreraTotalMap = {};
-
-            // Recorrer los datos y las carreras
-            for (let i = 0; i < filteredData.length; i++) { // Cambiado a filteredData
-                var carrera = filteredData[i].ESTM_CARRERA; // Obtener la carrera directamente
-                // Agregar la carrera si no está en el objeto
-                if (!carreraTotalMap[carrera]) {
-                    carreraTotalMap[carrera] = 0;
-                }
-                // Sumar el total
-                carreraTotalMap[carrera] += parseInt(filteredData[i].ESTM_GENERO_M);
-            }
-
-            // Obtener las carreras y sus totales
-            var carreras = Object.keys(carreraTotalMap).map(Number);
-            var totalesM = carreras.map(function(carrera) {
-                return carreraTotalMap[carrera];
-            });
-        }
-
-        //grafica
+        // Graficar
         Highcharts.chart('container', {
             chart: {
                 type: 'column',
@@ -166,35 +128,20 @@
                 }
             },
             title: {
-                text: 'Total Estudiantes Grado PUCE-I'
+                text: 'Total Estudiantes Vigente Grado PUCE-I'
             },
             subtitle: {
                 text: 'Matriculados - Graduados <br> <b>Escuela: </b>' +
                     /* nombre de la escuela */
-                    <?php
-                    foreach ($tbl_carrera as $row) {
-                        if ($row['CAR_ID'] == $id) {
-                            echo "'" . $row['CAR_NOMBRE'] . "'";
-                        }
-                    }
-                    ?> +
-                    '<br> <b>Carreras: </b>' +
-                    /* nombre de las carreras */
-                    nombreCarreras
+                    nombreEscuela +
+                    /* Carreras nombre */
+                    '<br><b>Carreras: </b>' +
+                    carrerasNombre
             },
             xAxis: {
                 crosshair: true,
                 /* Nombre escuela */
-                categories: [
-                    <?php
-                    foreach ($tbl_carrera as $row) {
-                        if ($row['CAR_ID'] == $id) {
-                            echo "'" . $row['CAR_NOMBRE'] . "'";
-                        }
-                    }
-                    ?>
-                ]
-
+                categories: escuelas,
             },
             yAxis: {
                 min: 0,
@@ -202,7 +149,6 @@
                     text: 'Cantidad de Estudiantes'
                 }
             },
-
             plotOptions: {
                 column: {
                     pointPadding: 0.2,
