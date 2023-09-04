@@ -44,210 +44,157 @@
     <!-- Grafica -->
     <script>
         //TODO: obtener datos de php del controlador
-        var datos = <?php echo json_encode($tbl_estadistica_matriz) ?>;
-        var carrera = <?php echo json_encode($tbl_carrera) ?>;
+var datos = <?php echo json_encode($tbl_estadistica_matriz) ?>;
+var carrera = <?php echo json_encode($tbl_carrera) ?>;
 
-        //tbl_carrera tiene car_padreesc que se compara con el id de la escuela
-        //se obtiene un conjunto de carreras que corresponden a la escuela
-        //guardar los id de las carreras en un array, se guardan los id de CAR_ID que corresponden a la escuela
-        //CTIP_ID debe ser 2 (GRADO), CAR_CARRERA = 1 (CARRERA)
-        //CAR_ACTIVA = SÍ
-        var carreras = [];
-        for (var i = 0; i < carrera.length; i++) {
-            if (carrera[i].CAR_PADREESC == <?php echo $id ?> && carrera[i].CTIP_ID == 2 && carrera[i].CAR_CARRERA == 1 && carrera[i].CAR_ACTIVA == 'No') {
-                carreras.push(carrera[i].CAR_ID);
+//tbl_carrera tiene car_padreesc que se compara con el id de la escuela
+//se obtiene un conjunto de carreras que corresponden a la escuela
+//guardar los id de las carreras en un array, se guardan los id de CAR_ID que corresponden a la escuela
+//CTIP_ID debe ser 2 (GRADO), CAR_CARRERA = 1 (CARRERA)
+//CAR_ACTIVA = SÍ
+var carreras = [];
+for (var i = 0; i < carrera.length; i++) {
+    if (carrera[i].CAR_PADREESC == <?php echo $id ?> && carrera[i].CTIP_ID == 2 && carrera[i].CAR_CARRERA == 1 && carrera[i].CAR_ACTIVA == 'No') {
+        carreras.push(carrera[i].CAR_ID);
+    }
+}
+
+//mostrar nombre de la escuela según el id
+var nombreEscuela = '';
+for (var i = 0; i < carrera.length; i++) {
+    if (carrera[i].CAR_ID == <?php echo $id ?>) {
+        nombreEscuela = carrera[i].CAR_NOMBRE;
+        break;
+    }
+}
+
+// Objeto para asociar escuela con totales
+var escuelaTotalMap = {};
+
+// Recorrer los datos y las carreras
+for (let i = 0; i < datos.length; i++) {
+    var dato = datos[i];
+    if (carreras.includes(dato.ESTM_CARRERA) && (dato.ESTM_TIPO === '2' && (dato.ESTM_CONDICION === '1' || dato.ESTM_CONDICION === '3'))) {
+        // Agregar la escuela si no está en el objeto
+        if (!escuelaTotalMap[nombreEscuela]) {
+            escuelaTotalMap[nombreEscuela] = {
+                hombres: 0,
+                mujeres: 0,
+                total: 0
+            };
+        }
+        // Sumar los totales
+        escuelaTotalMap[nombreEscuela].hombres += parseInt(dato.ESTM_GENERO_H);
+        escuelaTotalMap[nombreEscuela].mujeres += parseInt(dato.ESTM_GENERO_M);
+        escuelaTotalMap[nombreEscuela].total += parseInt(dato.ESTM_TOTAL);
+    }
+}
+
+// Sumar totales de otras escuelas
+for (let i = 0; i < datos.length; i++) {
+    var dato = datos[i];
+    if (!carreras.includes(dato.ESTM_CARRERA) && (dato.ESTM_TIPO === '2' && (dato.ESTM_CONDICION === '1' || dato.ESTM_CONDICION === '3'))) {
+        // Sumar los totales de otras escuelas
+        escuelaTotalMap[nombreEscuela].hombres += parseInt(dato.ESTM_GENERO_H);
+        escuelaTotalMap[nombreEscuela].mujeres += parseInt(dato.ESTM_GENERO_M);
+        escuelaTotalMap[nombreEscuela].total += parseInt(dato.ESTM_TOTAL);
+    }
+}
+
+// Obtener los nombres de escuela y sus totales
+var escuelas = [nombreEscuela]; // Solo la escuela actual
+var totalesH = [escuelaTotalMap[nombreEscuela].hombres];
+var totalesM = [escuelaTotalMap[nombreEscuela].mujeres];
+var totales = [escuelaTotalMap[nombreEscuela].total];
+
+// Graficar
+Highcharts.chart('container', {
+    chart: {
+        type: 'column',
+        //marca de agua
+        events: {
+            load: function () {
+                //imagen opaca fondo
+                this.renderer.image('<?php echo base_url('/public/imgs/logoPucesi.png') ?>')
+                    .css({
+                        opacity: 0.35
+                    })
+                    .add();
             }
         }
-        //alert(carreras);
-
-        //mostrar nombres de carreras segun el id
-        var nombreCarreras = [];
-        for (var i = 0; i < carreras.length; i++) {
-            for (var j = 0; j < carrera.length; j++) {
-                if (carreras[i] == carrera[j].CAR_ID) {
-                    nombreCarreras.push(carrera[j].CAR_NOMBRE);
-                }
-            }
+    },
+    title: {
+        text: 'Total Estudiantes Grado PUCE-I'
+    },
+    subtitle: {
+        text: 'Matriculados - Graduados <br> <b>Escuela: </b>' +
+            /* nombre de la escuela */
+            nombreEscuela
+    },
+    xAxis: {
+        crosshair: true,
+        /* Nombre escuela */
+        categories: escuelas
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Cantidad de Estudiantes'
         }
-        document.getElementById("carreras").innerHTML = nombreCarreras;
-
-        //graficar datos acorde a las carreras
-        var carid = carreras;
-
-        // Filtrar datos por ESTM_TIPO y ESTM_CONDICION con las carreras seleccionada, por ESTM_TIPO y ESTM_CONDICION
-        var filteredData = datos.filter(function(dato) {
-            return carid.includes(dato.ESTM_CARRERA) && (dato.ESTM_TIPO === '2' && (dato.ESTM_CONDICION === '1' || dato.ESTM_CONDICION === '3'));
-        });
-
-        //! Por Años General
-        {
-            // Objeto para asociar carreras con totales
-            var carreraTotalMap = {};
-
-            // Recorrer los datos y las carreras
-            for (let i = 0; i < filteredData.length; i++) { // Cambiado a filteredData
-                var carrera = filteredData[i].ESTM_CARRERA; // Obtener la carrera directamente
-                // Agregar la carrera si no está en el objeto
-                if (!carreraTotalMap[carrera]) {
-                    carreraTotalMap[carrera] = 0;
-                }
-                // Sumar el total
-                carreraTotalMap[carrera] += parseInt(filteredData[i].ESTM_TOTAL);
-            }
-
-            // Obtener las carreras y sus totales
-            var carreras = Object.keys(carreraTotalMap).map(Number);
-            var totales = carreras.map(function(carrera) {
-                return carreraTotalMap[carrera];
-            });
-
-
-        }
-
-        //! Por Años Genero Masculino -> ESTM_GENERO_H
-        {
-            // Objeto para asociar carreras con totales
-            var carreraTotalMap = {};
-
-            // Recorrer los datos y las carreras
-            for (let i = 0; i < filteredData.length; i++) { // Cambiado a filteredData
-                var carrera = filteredData[i].ESTM_CARRERA; // Obtener la carrera directamente
-                // Agregar la carrera si no está en el objeto
-                if (!carreraTotalMap[carrera]) {
-                    carreraTotalMap[carrera] = 0;
-                }
-                // Sumar el total
-                carreraTotalMap[carrera] += parseInt(filteredData[i].ESTM_GENERO_H);
-            }
-
-            // Obtener las carreras y sus totales
-            var carreras = Object.keys(carreraTotalMap).map(Number);
-            var totalesH = carreras.map(function(carrera) {
-                return carreraTotalMap[carrera];
-            });
-        }
-
-        //! Por Años Genero Femenino -> ESTM_GENERO_M
-        {
-            // Objeto para asociar carreras con totales
-            var carreraTotalMap = {};
-
-            // Recorrer los datos y las carreras
-            for (let i = 0; i < filteredData.length; i++) { // Cambiado a filteredData
-                var carrera = filteredData[i].ESTM_CARRERA; // Obtener la carrera directamente
-                // Agregar la carrera si no está en el objeto
-                if (!carreraTotalMap[carrera]) {
-                    carreraTotalMap[carrera] = 0;
-                }
-                // Sumar el total
-                carreraTotalMap[carrera] += parseInt(filteredData[i].ESTM_GENERO_M);
-            }
-
-            // Obtener las carreras y sus totales
-            var carreras = Object.keys(carreraTotalMap).map(Number);
-            var totalesM = carreras.map(function(carrera) {
-                return carreraTotalMap[carrera];
-            });
-        }
-
-        //grafica
-        Highcharts.chart('container', {
-            chart: {
-                type: 'column',
-                //marca de agua
-                events: {
-                    load: function() {
-                        //imagen opaca fondo
-                        this.renderer.image('<?php echo base_url('/public/imgs/logoPucesi.png') ?>')
-                            .css({
-                                opacity: 0.35
-                            })
-                            .add();
-                    }
-                }
-            },
-            title: {
-                text: 'Total Estudiantes Grado PUCE-I'
-            },
-            subtitle: {
-                text: 'Matriculados - Graduados <br> <b>Escuela: </b>' +
-                    /* nombre de la escuela */
-                    <?php
-                    foreach ($tbl_carrera as $row) {
-                        if ($row['CAR_ID'] == $id) {
-                            echo "'" . $row['CAR_NOMBRE'] . "'";
-                        }
-                    }
-                    ?> +
-                    '<br> <b>Carreras: </b>' +
-                    /* nombre de las carreras */
-                    nombreCarreras
-            },
-            xAxis: {
-                crosshair: true,
-                /* Nombre escuela */
-                categories: nombreCarreras
-
-            },
-            yAxis: {
-                min: 0,
-                title: {
-                    text: 'Cantidad de Estudiantes'
-                }
-            },
-
-            plotOptions: {
-                column: {
-                    pointPadding: 0.2,
-                    borderWidth: 0,
-                    dataLabels: {
-                        enabled: true, // Habilita etiquetas de datos
-                        format: '{y}', // Muestra el valor de Y (cantidad de estudiantes)
-                        style: {
-                            fontWeight: 'bold',
-                            color: 'black' // Color de las etiquetas
-                        }
-                    }
-                }
-            },
-            series: [{
-                    name: 'Hombres',
-                    data: totalesH
-                },
-                {
-                    name: 'Mujeres',
-                    data: totalesM
-                },
-                {
-                    name: 'Total',
-                    data: totales
-                },
-            ],
-            responsive: {
-                rules: [{
-                    condition: {
-                        maxWidth: 500
-                    },
-                    chartOptions: {
-                        legend: {
-                            layout: 'horizontal',
-                            align: 'center',
-                            verticalAlign: 'bottom'
-                        }
-                    }
-                }]
-            },
-            credits: {
-                enabled: true,
-                href: "https://www.pucesi.edu.ec/webs2/",
-                text: "Secretaria General PUCE-I",
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true, // Habilita etiquetas de datos
+                format: '{y}', // Muestra el valor de Y (cantidad de estudiantes)
                 style: {
-                    color: "#666666",
-                    cursor: "pointer",
-                    fontSize: "10px"
-                },
+                    fontWeight: 'bold',
+                    color: 'black' // Color de las etiquetas
+                }
             }
-        });
+        }
+    },
+    series: [{
+        name: 'Hombres',
+        data: totalesH
+    },
+    {
+        name: 'Mujeres',
+        data: totalesM
+    },
+    {
+        name: 'Total',
+        data: totales
+    },
+    ],
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    },
+    credits: {
+        enabled: true,
+        href: "https://www.pucesi.edu.ec/webs2/",
+        text: "Secretaria General PUCE-I",
+        style: {
+            color: "#666666",
+            cursor: "pointer",
+            fontSize: "10px"
+        },
+    }
+});
+
     </script>
     <br>
 </div>
