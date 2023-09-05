@@ -55,7 +55,11 @@
         var carreras = [];
         for (var i = 0; i < carrera.length; i++) {
             if (carrera[i].CAR_PADREESC == <?php echo $id ?> && carrera[i].CTIP_ID == 2 && carrera[i].CAR_CARRERA == 1 && carrera[i].CAR_ACTIVA == 'SÍ') {
-                carreras.push(carrera[i].CAR_ID);
+                for (var j = 0; j < datos.length; j++) {
+                    if (datos[j].ESTM_SEDE === "1" && datos[j].ESTM_TIPO === '2' && (datos[j].ESTM_CONDICION === '1' || datos[j].ESTM_CONDICION === '2')) {
+                        carreras.push(carrera[i].CAR_ID);
+                    }
+                }
             }
         }
 
@@ -90,7 +94,7 @@
 
             }
         }
-        
+
         //Obtener array con nombres de las carreras
         var carrerasNombre = [];
         for (var i = 0; i < carrera.length; i++) {

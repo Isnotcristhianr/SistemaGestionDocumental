@@ -141,7 +141,7 @@
                             <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
                             <td>
                                 <a href="<?php
-                                            echo base_url('index.php/ControladorFEEscuela/estadisticoGradoEscuela/' . $escuelas['CAR_ID'] . '/Matriculados')
+                                            echo base_url('index.php/ReporteEscuelaMatriculadosTulcan/' . $escuelas['CAR_ID'])
                                             ?>" class="btn btn-info">Datos →</a>
                             </td>
                         </tr>
