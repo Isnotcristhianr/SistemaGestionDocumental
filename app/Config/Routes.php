@@ -137,6 +137,8 @@ $routes->get('/ReportePosgradoCarreraGeneral/(:any)', 'ControladorFECarrera::rep
 $routes->get('/ReportePosgradoCarreraMatriculados/(:any)', 'ControladorFECarrera::reportePosgradoCarreraMatriculados/$1');
 //! Reporte Posgrado Carrera Graduados
 $routes->get('/ReportePosgradoCarreraGraduados/(:any)', 'ControladorFECarrera::reportePosgradoCarreraGraduados/$1');
+//Todo Reporte Posgrado Escuela General Vigente
+$routes->get('/ReportePosgradoEscuelaGeneralVigente/(:any)', 'ControladorFEEscuela::reportePosgradoEscuelaGeneralVigente/$1/');
 
 //? Datos Estadisticos Tecnologias
 $routes->get('/FiltroEstadisticoTecnologia', 'ControladorEstadistico::filtroEstadisticoTecnologia');

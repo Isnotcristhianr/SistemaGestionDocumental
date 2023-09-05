@@ -325,7 +325,40 @@ class ControladorFEEscuela extends BaseController
                 return view('header')
                     . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_escuela_grad', $data)
                     . view('footer');
+            }else if ($tipo == "General") {
+                return view('header')
+                    . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_escuela_general', $data)
+                    . view('footer');
             }
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //Reporte Escuela Posgrado General Vigente
+    public function reportePosgradoEscuelaGeneralVigente($id){
+        try {
+            //modelo
+            $objEstadMatr = new ModelMatrizGraduados();
+            //escuela
+            $objEsc = new ModelFEcarreras();
+            
+            //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
+            $idCarrera = $id;
+            //obtener datos de la escuela y las carreras que contiene
+            $escuela['tbl_carrera'] = $objEsc->where('CAR_ID', $idCarrera)->findAll();
+
+            //datos estadisticos
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+            
+            //obtener id
+            $data['id'] = $id;
+
+            //vistas
+            return view('header')
+            . view('graficasEstadisticas/posgrado/escuelas/vistaEscuelaGeneralVigente', $data + $escuela)
+            . view('footer');
+
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
