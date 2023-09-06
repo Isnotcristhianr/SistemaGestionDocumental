@@ -53,7 +53,6 @@
         //CTIP_ID debe ser 2 (GRADO), CAR_CARRERA = 1 (CARRERA)
         //CAR_ACTIVA = SÍ
         var carreras = [];
-        var carreras = [];
         for (var i = 0; i < carrera.length; i++) {
             if (carrera[i].CAR_PADREESC == <?php echo $id ?> && carrera[i].CTIP_ID == 2 && carrera[i].CAR_CARRERA == 1 && carrera[i].CAR_ACTIVA == 'SÍ') {
                 carreras.push(carrera[i].CAR_ID);
