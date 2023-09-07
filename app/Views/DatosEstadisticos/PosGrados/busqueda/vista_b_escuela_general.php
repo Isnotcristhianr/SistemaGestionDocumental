@@ -85,7 +85,7 @@
                             <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
                             <td>
                                 <a href="<?php
-                                            echo base_url('index.php/ControladorFEEscuela/estadisticoGradoEscuela/' . $escuelas['CAR_ID'] . '/Matriculados')
+                                            echo base_url('index.php/ReportePosgradoEscuelaGeneralHistorico/' . $escuelas['CAR_ID'])
                                             ?>" class="btn btn-primary">Datos →</a>
                             </td>
                         </tr>

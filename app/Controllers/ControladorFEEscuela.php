@@ -363,4 +363,149 @@ class ControladorFEEscuela extends BaseController
             echo $e->getMessage();
         }
     }
+
+    //Reporte Escuela Posgrado General Historico
+    public function reportePosgradoEscuelaGeneralHistorico($id){
+        try {
+           //modelo
+           $objEstadMatr = new ModelMatrizGraduados();
+           //escuela
+           $objEsc = new ModelFEescuelas();
+           
+           //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
+           $idEscuela = $id;
+           //obtener datos de la escuela y las carreras que contiene
+           $escuela['tbl_carrera'] = $objEsc->where('CAR_PADREESC', $idEscuela)->findAll();
+
+           //datos estadisticos
+           $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+
+           //obtener id
+           $data['id'] = $id;
+
+            //vistas
+            return view('header')
+            . view('graficasEstadisticas/posgrado/escuelas/vistaEscuelaGeneralHistorico', $data + $escuela)
+            . view('footer');
+
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //Reporte Escuela Posgrado Matriculados Vigente
+    public function reportePosgradoEscuelaMatriculadosVigente($id){
+        try {
+           //modelo
+           $objEstadMatr = new ModelMatrizGraduados();
+           //escuela
+           $objEsc = new ModelFEescuelas();
+           
+           //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
+           $idEscuela = $id;
+           //obtener datos de la escuela y las carreras que contiene
+           $escuela['tbl_carrera'] = $objEsc->where('CAR_PADREESC', $idEscuela)->findAll();
+
+           //datos estadisticos
+           $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+
+           //obtener id
+           $data['id'] = $id;
+
+            //vistas
+            return view('header')
+            . view('graficasEstadisticas/posgrado/escuelas/vistaEscuelaMatriculadosVigente', $data + $escuela)
+            . view('footer');
+
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //Reporte Escuela Posgrado Matriculados Historico
+    public function reportePosgradoEscuelaMatriculadosHistorico($id){
+        try {
+           //modelo
+           $objEstadMatr = new ModelMatrizGraduados();
+           //escuela
+           $objEsc = new ModelFEescuelas();
+           
+           //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
+           $idEscuela = $id;
+           //obtener datos de la escuela y las carreras que contiene
+           $escuela['tbl_carrera'] = $objEsc->where('CAR_PADREESC', $idEscuela)->findAll();
+
+           //datos estadisticos
+           $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+
+           //obtener id
+           $data['id'] = $id;
+
+            //vistas
+            return view('header')
+            . view('graficasEstadisticas/posgrado/escuelas/vistaEscuelaMatriculadosHistorico', $data + $escuela)
+            . view('footer');
+
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //Reporte Escuela Posgrado Graduados Vigente
+    public function reportePosgradoEscuelaGraduadosVigente($id){
+        try {
+           //modelo
+           $objEstadMatr = new ModelMatrizGraduados();
+           //escuela
+           $objEsc = new ModelFEescuelas();
+           
+           //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
+           $idEscuela = $id;
+           //obtener datos de la escuela y las carreras que contiene
+           $escuela['tbl_carrera'] = $objEsc->where('CAR_PADREESC', $idEscuela)->findAll();
+
+           //datos estadisticos
+           $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+
+           //obtener id
+           $data['id'] = $id;
+
+            //vistas
+            return view('header')
+            . view('graficasEstadisticas/posgrado/escuelas/vistaEscuelaGraduadosVigente', $data + $escuela)
+            . view('footer');
+
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //Reporte Escuela Posgrado Graduados Historico
+    public function reportePosgradoEscuelaGraduadosHistorico($id){
+        try {
+           //modelo
+           $objEstadMatr = new ModelMatrizGraduados();
+           //escuela
+           $objEsc = new ModelFEescuelas();
+           
+           //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
+           $idEscuela = $id;
+           //obtener datos de la escuela y las carreras que contiene
+           $escuela['tbl_carrera'] = $objEsc->where('CAR_PADREESC', $idEscuela)->findAll();
+
+           //datos estadisticos
+           $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+
+           //obtener id
+           $data['id'] = $id;
+
+            //vistas
+            return view('header')
+            . view('graficasEstadisticas/posgrado/escuelas/vistaEscuelaGraduadosHistorico', $data + $escuela)
+            . view('footer');
+
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
 }
