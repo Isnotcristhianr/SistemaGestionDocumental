@@ -47,6 +47,9 @@
         var datos = <?php echo json_encode($tbl_estadistica_matriz) ?>;
         var carrera = <?php echo json_encode($tbl_carrera) ?>;
 
+        console.log('Datos:', datos);
+        console.log('Carrera:', carrera);
+
         //tbl_carrera tiene car_padreesc que se compara con el id de la escuela
         //se obtiene un conjunto de carreras que corresponden a la escuela
         //guardar los id de las carreras en un array, se guardan los id de CAR_ID que corresponden a la escuela

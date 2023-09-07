@@ -338,21 +338,21 @@ class ControladorFEEscuela extends BaseController
     //Reporte Escuela Posgrado General Vigente
     public function reportePosgradoEscuelaGeneralVigente($id){
         try {
-            //modelo
-            $objEstadMatr = new ModelMatrizGraduados();
-            //escuela
-            $objEsc = new ModelFEcarreras();
-            
-            //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
-            $idCarrera = $id;
-            //obtener datos de la escuela y las carreras que contiene
-            $escuela['tbl_carrera'] = $objEsc->where('CAR_ID', $idCarrera)->findAll();
+           //modelo
+           $objEstadMatr = new ModelMatrizGraduados();
+           //escuela
+           $objEsc = new ModelFEescuelas();
+           
+           //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
+           $idEscuela = $id;
+           //obtener datos de la escuela y las carreras que contiene
+           $escuela['tbl_carrera'] = $objEsc->where('CAR_PADREESC', $idEscuela)->findAll();
 
-            //datos estadisticos
-            $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
-            
-            //obtener id
-            $data['id'] = $id;
+           //datos estadisticos
+           $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+
+           //obtener id
+           $data['id'] = $id;
 
             //vistas
             return view('header')
