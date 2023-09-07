@@ -39,7 +39,7 @@
     <div class="row">
       <div class="col-md-8 col-sm-6 col-xs-12">
         <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
-          <a href="https://isnotcristhianr.me/">IsnotCristhianr</a>.
+          <a href="https://isnotcristhianr.me/" target="_blank">IsnotCristhianr</a>.
         </p>
       </div>
 

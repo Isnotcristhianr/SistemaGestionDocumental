@@ -73,7 +73,7 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Datos Estadisticos
+              Datos
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <!-- Obtener Perdiodos BD -->
@@ -89,7 +89,7 @@
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="">Calendario Academico</a></li>
+              <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/calendarioAcademico">Calendario Academico</a></li>
 
               <li>
             </ul>

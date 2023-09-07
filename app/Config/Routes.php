@@ -198,6 +198,9 @@ $routes->get('/busquedaHistoricoEspecifico', 'ControladorHistorico::busquedaHist
 //? Reportes
 $routes->get('/reporteTitulacion', 'ControladorReportes::reportes');
 
+//?Calendario Academico
+$routes->get('/calendarioAcademico', 'ControladorCalendario::calendarioAcademico');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
