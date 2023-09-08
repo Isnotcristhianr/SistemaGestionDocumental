@@ -38,3 +38,14 @@ in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 76.
  6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
  7 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
  8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-07 21:10:21 --> Undefined variable $directorio
+in APPPATH\Views\calendarioAcademico\calendarioAcademico.php on line 17.
+ 1 APPPATH\Views\calendarioAcademico\calendarioAcademico.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $directorio', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\calendarioAcademico\\calendarioAcademico.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\calendarioAcademico\\calendarioAcademico.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('calendarioAcademico/calendarioAcademico', [], true)
+ 5 APPPATH\Controllers\ControladorCalendario.php(25): view('calendarioAcademico/calendarioAcademico', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorCalendario->calendarioAcademico()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

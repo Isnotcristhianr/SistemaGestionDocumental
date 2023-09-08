@@ -11,6 +11,23 @@
     </div>
 
     <!-- Contenido-->
+    <div class="container mt-4">
+        <div class="row">
+            <?php foreach ($archivos as $archivo) : ?>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow">
+                        <div class="card-body d-flex justify-content-center align-items-center">
+                            <h5 class="card-title">
+                                <img src="../public//imgs/files.png" alt="files">
+                                <?= $archivo; ?>
+                            </h5>
+                            <a href="<?= base_url('/calendarios/ver/' . $archivo); ?>" class="btn btn-primary m-4">Ver -></a>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
 
 
 </div>
