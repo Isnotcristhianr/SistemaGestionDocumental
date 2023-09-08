@@ -21,7 +21,7 @@
                                 <img src="../public//imgs/files.png" alt="files">
                                 <?= $archivo; ?>
                             </h5>
-                            <a href="<?= base_url('/calendarios/ver/' . $archivo); ?>" class="btn btn-primary m-4">Ver -></a>
+                            <a href="<?= base_url('/index.php/calendarios/ver/' . $archivo); ?>" class="btn btn-primary m-4">Ver →</a>
                         </div>
                     </div>
                 </div>

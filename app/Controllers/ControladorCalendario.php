@@ -29,34 +29,22 @@ class ControladorCalendario extends BaseController
     //ver calendario academico
     public function ver($nombre)
     {
-        // Directorio donde se encuentran los calendarios académicos
-        $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS';
+        try {
 
-        // Obtener la lista de archivos en el directorio
-        $archivos = scandir($directorio);
+            if ($nombre = 'POSGRADO') {
+                $ruta = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\POSGRADO';
+                $archivo = $ruta . '\\' . $nombre;
+                $ext = pathinfo($archivo, PATHINFO_EXTENSION);
+                $data = file_get_contents($archivo);
+                header('Content-Type: application/pdf');
+                header('Content-Disposition: inline; filename="' . $nombre . '"');
+                header('Content-Length: ' . filesize($archivo));
+                header('Accept-Ranges: bytes');
+                echo $data;
+            } 
 
-        // Filtrar los archivos y directorios "." y ".."
-        $archivos = array_diff($archivos, array('.', '..'));
-
-        // Verificar que el archivo exista
-        if (in_array($nombre, $archivos)) {
-
-            // Ruta completa del archivo
-            $ruta = $directorio . DIRECTORY_SEPARATOR . $nombre;
-
-            // Obtener información del archivo
-            $finfo = finfo_open(FILEINFO_MIME_TYPE);
-            $tipo = finfo_file($finfo, $ruta);
-
-            // Cabeceras HTTP
-            header('Content-Type: ' . $tipo);
-            header('Content-Length: ' . filesize($ruta));
-
-            // Enviar archivo al navegador
-            readfile($ruta);
-             
-        } else {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('El archivo no existe: ' . $nombre);
+        } catch (\Exception $e) {
+            die($e->getMessage());
         }
     }
 }

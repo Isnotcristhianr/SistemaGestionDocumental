@@ -1,0 +1,107 @@
+CRITICAL - 2023-09-08 14:54:59 --> scandir(/var/www/html/calendarios/): El sistema no puede encontrar la ruta especifica (code: 3)
+in APPPATH\Views\calendarioAcademico\calendarioAcademico.php on line 55.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'scandir(/var/www/html/calendarios/): El sistema no puede encontrar la ruta especifica (code: 3)', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\calendarioAcademico\\calendarioAcademico.php', 55)
+ 2 APPPATH\Views\calendarioAcademico\calendarioAcademico.php(55): scandir('/var/www/html/calendarios/')
+ 3 APPPATH\Views\calendarioAcademico\calendarioAcademico.php(80): listarArchivos('/var/www/html/calendarios/')
+ 4 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\calendarioAcademico\\calendarioAcademico.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('calendarioAcademico/calendarioAcademico', [], true)
+ 7 APPPATH\Controllers\ControladorCalendario.php(25): view('calendarioAcademico/calendarioAcademico', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorCalendario->calendarioAcademico()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-08 14:55:01 --> scandir(/var/www/html/calendarios/): El sistema no puede encontrar la ruta especifica (code: 3)
+in APPPATH\Views\calendarioAcademico\calendarioAcademico.php on line 55.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'scandir(/var/www/html/calendarios/): El sistema no puede encontrar la ruta especifica (code: 3)', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\calendarioAcademico\\calendarioAcademico.php', 55)
+ 2 APPPATH\Views\calendarioAcademico\calendarioAcademico.php(55): scandir('/var/www/html/calendarios/')
+ 3 APPPATH\Views\calendarioAcademico\calendarioAcademico.php(80): listarArchivos('/var/www/html/calendarios/')
+ 4 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\calendarioAcademico\\calendarioAcademico.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('calendarioAcademico/calendarioAcademico', [], true)
+ 7 APPPATH\Controllers\ControladorCalendario.php(25): view('calendarioAcademico/calendarioAcademico', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorCalendario->calendarioAcademico()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-08 15:58:57 --> file_get_contents(C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\POSGRADO\POSGRADO): Failed to open stream: Permission denied
+in APPPATH\Config\Routes.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\public\\files\\CALENDARIOS ACADÉMICOS\\POSGRADO\\POSGRADO): Failed to open stream: Permission denied', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Config\\Routes.php', 206)
+ 2 APPPATH\Config\Routes.php(206): file_get_contents('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\public\\files\\CALENDARIOS ACADÉMICOS\\POSGRADO\\POSGRADO')
+ 3 SYSTEMPATH\Router\RouteCollection.php(267): require('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Config\\Routes.php')
+ 4 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 5 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-08 15:59:03 --> file_get_contents(C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\POSGRADO\POSGRADO): Failed to open stream: Permission denied
+in APPPATH\Config\Routes.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\public\\files\\CALENDARIOS ACADÉMICOS\\POSGRADO\\POSGRADO): Failed to open stream: Permission denied', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Config\\Routes.php', 206)
+ 2 APPPATH\Config\Routes.php(206): file_get_contents('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\public\\files\\CALENDARIOS ACADÉMICOS\\POSGRADO\\POSGRADO')
+ 3 SYSTEMPATH\Router\RouteCollection.php(267): require('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Config\\Routes.php')
+ 4 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 5 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-08 16:00:40 --> file_get_contents(C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\POSGRADO\POSGRADO): Failed to open stream: Permission denied
+in APPPATH\Config\Routes.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\public\\files\\CALENDARIOS ACADÉMICOS\\POSGRADO\\POSGRADO): Failed to open stream: Permission denied', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Config\\Routes.php', 206)
+ 2 APPPATH\Config\Routes.php(206): file_get_contents('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\public\\files\\CALENDARIOS ACADÉMICOS\\POSGRADO\\POSGRADO')
+ 3 SYSTEMPATH\Router\RouteCollection.php(267): require('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Config\\Routes.php')
+ 4 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 5 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-08 16:00:40 --> file_get_contents(C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\POSGRADO\POSGRADO): Failed to open stream: Permission denied
+in APPPATH\Config\Routes.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\public\\files\\CALENDARIOS ACADÉMICOS\\POSGRADO\\POSGRADO): Failed to open stream: Permission denied', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Config\\Routes.php', 206)
+ 2 APPPATH\Config\Routes.php(206): file_get_contents('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\public\\files\\CALENDARIOS ACADÉMICOS\\POSGRADO\\POSGRADO')
+ 3 SYSTEMPATH\Router\RouteCollection.php(267): require('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Config\\Routes.php')
+ 4 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 5 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-08 16:00:41 --> file_get_contents(C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\POSGRADO\POSGRADO): Failed to open stream: Permission denied
+in APPPATH\Config\Routes.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\public\\files\\CALENDARIOS ACADÉMICOS\\POSGRADO\\POSGRADO): Failed to open stream: Permission denied', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Config\\Routes.php', 206)
+ 2 APPPATH\Config\Routes.php(206): file_get_contents('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\public\\files\\CALENDARIOS ACADÉMICOS\\POSGRADO\\POSGRADO')
+ 3 SYSTEMPATH\Router\RouteCollection.php(267): require('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Config\\Routes.php')
+ 4 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 5 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-08 16:00:42 --> file_get_contents(C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\POSGRADO\POSGRADO): Failed to open stream: Permission denied
+in APPPATH\Config\Routes.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\public\\files\\CALENDARIOS ACADÉMICOS\\POSGRADO\\POSGRADO): Failed to open stream: Permission denied', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Config\\Routes.php', 206)
+ 2 APPPATH\Config\Routes.php(206): file_get_contents('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\public\\files\\CALENDARIOS ACADÉMICOS\\POSGRADO\\POSGRADO')
+ 3 SYSTEMPATH\Router\RouteCollection.php(267): require('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Config\\Routes.php')
+ 4 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 5 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-08 16:00:50 --> file_get_contents(C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\POSGRADO\POSGRADO): Failed to open stream: Permission denied
+in APPPATH\Config\Routes.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\public\\files\\CALENDARIOS ACADÉMICOS\\POSGRADO\\POSGRADO): Failed to open stream: Permission denied', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Config\\Routes.php', 206)
+ 2 APPPATH\Config\Routes.php(206): file_get_contents('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\public\\files\\CALENDARIOS ACADÉMICOS\\POSGRADO\\POSGRADO')
+ 3 SYSTEMPATH\Router\RouteCollection.php(267): require('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Config\\Routes.php')
+ 4 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 5 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-08 16:00:56 --> file_get_contents(C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\POSGRADO\POSGRADO): Failed to open stream: Permission denied
+in APPPATH\Config\Routes.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\public\\files\\CALENDARIOS ACADÉMICOS\\POSGRADO\\POSGRADO): Failed to open stream: Permission denied', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Config\\Routes.php', 206)
+ 2 APPPATH\Config\Routes.php(206): file_get_contents('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\public\\files\\CALENDARIOS ACADÉMICOS\\POSGRADO\\POSGRADO')
+ 3 SYSTEMPATH\Router\RouteCollection.php(267): require('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Config\\Routes.php')
+ 4 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 5 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-08 16:01:01 --> file_get_contents(C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\POSGRADO\POSGRADO): Failed to open stream: Permission denied
+in APPPATH\Config\Routes.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\public\\files\\CALENDARIOS ACADÉMICOS\\POSGRADO\\POSGRADO): Failed to open stream: Permission denied', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Config\\Routes.php', 206)
+ 2 APPPATH\Config\Routes.php(206): file_get_contents('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\public\\files\\CALENDARIOS ACADÉMICOS\\POSGRADO\\POSGRADO')
+ 3 SYSTEMPATH\Router\RouteCollection.php(267): require('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Config\\Routes.php')
+ 4 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 5 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

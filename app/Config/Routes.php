@@ -202,6 +202,7 @@ $routes->get('/reporteTitulacion', 'ControladorReportes::reportes');
 $routes->get('/calendarioAcademico', 'ControladorCalendario::calendarioAcademico');
 //calendario academico ver
 $routes->get('/calendarios/ver/(:any)', 'ControladorCalendario::ver/$1');
+//
 
 /*
  * --------------------------------------------------------------------
