@@ -27,40 +27,53 @@ class ControladorCalendario extends BaseController
     }
 
     // Ver calendario académico
-public function ver($nombre)
+    public function ver($nombre)
+    {
+        try {
+            $directorio = '';
+
+            if ($nombre == 'POSGRADO') {
+                $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\POSGRADO';
+            } elseif ($nombre == 'PREGRADO') {
+                $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\PREGRADO';
+            } elseif ($nombre == 'PUCETEC') {
+                $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\PUCETEC';
+            }
+
+            // Obtener la lista de archivos y directorios en el directorio
+            $archivos = scandir($directorio);
+
+            // Filtrar los archivos y directorios "." y ".."
+            $archivos = array_diff($archivos, array('.', '..'));
+
+            echo view('header');
+            echo view('calendarioAcademico/ver', ['archivos' => $archivos, 'nombre' => $nombre]);
+            echo view('footer');
+
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    //ver archivo
+    public function verArchivo($nombre, $archivo)
 {
     try {
+        // Construye la ruta completa al archivo
+        $rutaArchivo = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\\' . $nombre . '\\' . $archivo;
 
-        if ($nombre == 'POSGRADO') {
-            $ruta = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS';
-            $archivo = $ruta . '\\' . $nombre;
-            $ext = pathinfo($archivo, PATHINFO_EXTENSION);
-            $data = file_get_contents($archivo);
-            header('Content-Type: application/pdf');
-            header('Content-Disposition: inline; filename="' . $nombre . '"');
-            header('Content-Length: ' . filesize($archivo));
-            header('Accept-Ranges: bytes');
-            echo $data;
-        } else if ($nombre == 'PREGRADO') {
-            $ruta = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS';
-            $archivo = $ruta . '\\' . $nombre;
-            $ext = pathinfo($archivo, PATHINFO_EXTENSION);
-            $data = file_get_contents($archivo);
-            header('Content-Type: application/pdf');
-            header('Content-Disposition: inline; filename="' . $nombre . '"');
-            header('Content-Length: ' . filesize($archivo));
-            header('Accept-Ranges: bytes');
-            echo $data;
-        } else if ($nombre == 'PUCETEC') {
-            $ruta = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS';
-            $archivo = $ruta . '\\' . $nombre;
-            $ext = pathinfo($archivo, PATHINFO_EXTENSION);
-            $data = file_get_contents($archivo);
-            header('Content-Type: application/pdf');
-            header('Content-Disposition: inline; filename="' . $nombre . '"');
-            header('Content-Length: ' . filesize($archivo));
-            header('Accept-Ranges: bytes');
-            echo $data;
+        // Comprueba si el archivo existe y es accesible
+        if (file_exists($rutaArchivo)) {
+            // Configura las cabeceras para mostrar o descargar el archivo
+            header('Content-Type: application/pdf'); // Cambia el tipo de archivo según sea necesario
+            header('Content-Disposition: inline; filename="' . $archivo . '"');
+            header('Content-Length: ' . filesize($rutaArchivo));
+
+            // Lee y muestra el contenido del archivo
+            readfile($rutaArchivo);
+        } else {
+            // Si el archivo no existe, puedes mostrar un mensaje de error o redirigir a una página de error.
+            echo 'El archivo no existe o no es accesible.';
         }
     } catch (\Exception $e) {
         die($e->getMessage());
