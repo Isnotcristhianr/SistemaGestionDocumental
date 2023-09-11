@@ -8,9 +8,12 @@ class MenuControler extends BaseController
     //Datos Estadisticos Grado
     public function menu()
     {
-        return view('header') . view('/vistaDEtec/vista_detec') . view('footer');
+        try{
+
+            return view('header') . view('/vistaDEtec/vista_detec') . view('footer');
+        }catch(\Exception $e) {
+            die($e->getMessage());
+        }
     }
     
 }
-
-?>

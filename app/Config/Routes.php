@@ -208,6 +208,8 @@ $routes->get('/calendarioAcademico/verPeriodo/(:any)', 'ControladorCalendario::v
 $routes->get('/calendarioAcademico/descargar/(:any)/(:any)/(:any)', 'ControladorCalendario::descargar/$1/$2/$3');
 //ver pdf
 $routes->get('/calendarioAcademico/verPdf/(:any)/(:any)/(:any)', 'ControladorCalendario::verPdf/$1/$2/$3');
+//editar calendario academico
+$routes->get('/calendarioAcademico/editar/(:any)/(:any)', 'ControladorCalendario::editar/$1/$2');
 
 /*
  * --------------------------------------------------------------------

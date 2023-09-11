@@ -13,42 +13,56 @@ class ControladorHistorico extends BaseController
     //Datos Estadisticos Grado
     public function dehistorico()
     {
-        return view('header') . view('/vistaDEHistorico/vista_deHistorico') . view('footer');
+        try {
+
+            return view('header') . view('/vistaDEHistorico/vista_deHistorico') . view('footer');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     //busqueda
     public function busquedaHistorico()
     {
-        //modelo matriz
-        $modelo = new ModelMatrizGraduados();
-        //modelo periodos
-        $modeloPeriodo = new ModelFEPeriodo();
-        //ver data
-        $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
-        $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+        try {
 
-        return view('header') . view('/graficasEstadisticas/historico/vistaEstHistorico', $datos + $datos2) . view('footer');
+            //modelo matriz
+            $modelo = new ModelMatrizGraduados();
+            //modelo periodos
+            $modeloPeriodo = new ModelFEPeriodo();
+            //ver data
+            $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+            $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+
+            return view('header') . view('/graficasEstadisticas/historico/vistaEstHistorico', $datos + $datos2) . view('footer');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     //busqueda especifica
     public function busquedaHistoricoEspecifico()
     {
+        try {
 
-        //capturamos las fechas
-        $fechaInicio = $this->request->getGet('fechaDesde');
-        $fechaFin = $this->request->getGet('fechaHasta');
+            //capturamos las fechas
+            $fechaInicio = $this->request->getGet('fechaDesde');
+            $fechaFin = $this->request->getGet('fechaHasta');
 
-        //modelo matriz
-        $modelo = new ModelMatrizGraduados();
-        //modelo periodos
-        $modeloPeriodo = new ModelFEPeriodo();
+            //modelo matriz
+            $modelo = new ModelMatrizGraduados();
+            //modelo periodos
+            $modeloPeriodo = new ModelFEPeriodo();
 
-        //ver data
-        $datos['tbl_estadistica_matriz'] = $modelo->verModeloEspecifico($fechaInicio, $fechaFin);
-        $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+            //ver data
+            $datos['tbl_estadistica_matriz'] = $modelo->verModeloEspecifico($fechaInicio, $fechaFin);
+            $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
 
-        //fechas
-        $fechas = ["fechaInicio" => $fechaInicio, "fechaFin" => $fechaFin];
-        return view('header') . view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', $datos + $datos2 + $fechas) . view('footer');
+            //fechas
+            $fechas = ["fechaInicio" => $fechaInicio, "fechaFin" => $fechaFin];
+            return view('header') . view('/graficasEstadisticas/historico/vistaEstHistoricoEspecifico', $datos + $datos2 + $fechas) . view('footer');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
     }
 }

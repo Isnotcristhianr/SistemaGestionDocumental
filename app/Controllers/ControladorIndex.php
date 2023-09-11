@@ -6,7 +6,12 @@ class ControladorIndex extends BaseController
 {
     public function index()
     {
-        return view('index.php');
+        try{
+
+            return view('index.php');
+        }catch (\Exception $e) {
+            die($e->getMessage());
+        }
+        
     }
 }
-?>

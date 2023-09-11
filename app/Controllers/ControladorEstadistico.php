@@ -9,21 +9,36 @@ class ControladorEstadistico extends BaseController
 {
     public function filtroEstadistico($id)
     {
-        $obtenido = ["id" => $id];
-        return view('header') . view('/DatosEstadisticos/vista_filtro_estadistico', $obtenido) . view('footer');
+        try {
+
+            $obtenido = ["id" => $id];
+            return view('header') . view('/DatosEstadisticos/vista_filtro_estadistico', $obtenido) . view('footer');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     public function BuscarFiltroEstadistico($id, $filtro)
     {
-        $datos = ["id" => $id, "filtro" => $filtro];
-        return view('header') . view('/DatosEstadisticos/vista_opcion_filtro', $datos) . view('footer');
+        try {
+
+            $datos = ["id" => $id, "filtro" => $filtro];
+            return view('header') . view('/DatosEstadisticos/vista_opcion_filtro', $datos) . view('footer');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     //grado
     public function filtroEstadisticoGrad()
     {
-        return view('header') . view('/DatosEstadisticos/Grados/vista_fe_grad') . view('footer');
+        try {
+            return view('header') . view('/DatosEstadisticos/Grados/vista_fe_grad') . view('footer');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
     }
+
     public function filtroEstadisticoGradoBusqueda($tipo, $filtro)
     {
 
@@ -71,11 +86,17 @@ class ControladorEstadistico extends BaseController
                 . view('footer');
         }
     }
+
     //popsgrado
     public function filtroEstadisticoPosgrado()
     {
-        return view('header') . view('/DatosEstadisticos/PosGrados/vista_fe_posgrad') . view('footer');
+        try {
+            return view('header') . view('/DatosEstadisticos/PosGrados/vista_fe_posgrad') . view('footer');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
     }
+
     public function filtroEstadisticoPosgradoBusqueda($tipo, $filtro)
     {
         try {
@@ -126,8 +147,13 @@ class ControladorEstadistico extends BaseController
     //tecnologia
     public function filtroEstadisticoTecnologia()
     {
-        return view('header') . view('/DatosEstadisticos/Tecnologias/vista_fe_tec') . view('footer');
+        try {
+            return view('header') . view('/DatosEstadisticos/Tecnologias/vista_fe_tec') . view('footer');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
     }
+    
     public function filtroEstadisticoTecnologiaBusqueda($tipo, $filtro)
     {
         try {

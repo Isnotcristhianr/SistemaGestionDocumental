@@ -6,19 +6,30 @@ class ControladorMain extends BaseController
 {
     public function inicio()
     {
-        return view('header') . view('inicio') . view('footer');
+        try {
+            return view('header') . view('inicio') . view('footer');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     //Datos Estadisticos Grado
     public function degrad()
     {
-        return view('header') . view('vista_degrad') . view('footer');
+        try {
+
+            return view('header') . view('vista_degrad') . view('footer');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
     }
     public function degradMatr()
     {
-        return view('header') . view('vista_degrad_matr') . view('footer');
-    }
-   
-}
+        try {
 
-?>
+            return view('header') . view('vista_degrad_matr') . view('footer');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
+    }
+}

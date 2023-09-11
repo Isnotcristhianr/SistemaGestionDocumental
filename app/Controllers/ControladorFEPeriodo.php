@@ -111,7 +111,6 @@ class ControladorFEPeriodo extends BaseController
     //? Datos Estadisticos PosGrado
     public function filtroEstadisticoPosGradoPeriodo($tipo)
     {
-
         try {
             //modelo 
             $obgPeriodo = new ModelFEPeriodo();

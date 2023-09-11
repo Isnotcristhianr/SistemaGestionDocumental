@@ -11,19 +11,23 @@ class ControladorCalendario extends BaseController
     //calendario academico
     public function calendarioAcademico()
     {
+        try {
 
-        // Directorio donde se encuentran los calendarios académicos
-        $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS';
+            // Directorio donde se encuentran los calendarios académicos
+            $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS';
 
-        // Obtener la lista de archivos en el directorio
-        $archivos = scandir($directorio);
+            // Obtener la lista de archivos en el directorio
+            $archivos = scandir($directorio);
 
-        // Filtrar los archivos y directorios "." y ".."
-        $archivos = array_diff($archivos, array('.', '..'));
+            // Filtrar los archivos y directorios "." y ".."
+            $archivos = array_diff($archivos, array('.', '..'));
 
-        echo view('header');
-        echo view('calendarioAcademico/calendarioAcademico', ['archivos' => $archivos]);
-        echo view('footer');
+            echo view('header');
+            echo view('calendarioAcademico/calendarioAcademico', ['archivos' => $archivos]);
+            echo view('footer');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     // Ver calendario académico
@@ -145,12 +149,15 @@ class ControladorCalendario extends BaseController
                 $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\PUCETEC';
             }
 
-            //ver carpeta periodo
-            $directorioPeriodo = $directorio . '\\' . $periodo . '\\' . $archivo;
             //ver archivo pdf nueva pestaña sin descargar
             return redirect()->to(base_url('public/files/CALENDARIOS ACADÉMICOS/' . $nombre . '/' . $periodo . '/' . $archivo));
         } catch (\Exception $e) {
             die($e->getMessage());
         }
+    }
+
+    //editar calendario academico
+    public function editar($nombre, $ruta)
+    {
     }
 }
