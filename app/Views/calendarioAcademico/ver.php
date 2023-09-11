@@ -7,6 +7,10 @@
     </div>
     <div class="card m-3 p-3 shadow">
         <h3>Archivos de: <?= $nombre; ?></h3>
+        <div>
+            <label for="searchBox">Búsqueda: </label>
+            <input type="text" id="searchBox" placeholder="Buscar archivos..." class="rounded">
+        </div>
         <div class="card-body">
             <!-- Lista de archivos, cuadricula horizontal -->
             <label for="" class="fs-2">Vista</label>
@@ -24,13 +28,14 @@
             <div id="vista">
                 <!-- Contenedor para la vista de lista -->
                 <div id="listaArchivos" style="display: block;">
-                    <ul>
+
+                    <ul class="list-group m-1">
                         <?php foreach ($archivos as $archivo) : ?>
-                            <li>
-                                <a href="<?= base_url('index.php/calendarioAcademico/verArchivo/' . $nombre . '/' . $archivo); ?>" style="text-decoration: none;" class="color">
+                            <a href="<?= base_url('index.php/calendarioAcademico/verArchivo/' . $nombre . '/' . $archivo); ?>" style="text-decoration: none;">
+                                <li class="list-group-item list-group-item-action">
                                     <img src="../../../public/imgs/files.png" alt="files" width="80">
                                     <?= $archivo; ?>
-                                </a>
+                            </a>
                             </li>
                         <?php endforeach; ?>
                     </ul>
@@ -38,8 +43,9 @@
 
                 <!-- Contenedor para la vista de cuadrícula (inicialmente oculto) -->
                 <div id="gridArchivos" style="display: none;">
+
                     <?php foreach ($archivos as $archivo) : ?>
-                        <div style="display: inline-block; margin: 10px;" class="card">
+                        <div style="display: inline-block; margin: 10px;" class="card p-2 shadow">
                             <a href="<?= base_url('index.php/calendarioAcademico/verArchivo/' . $nombre . '/' . $archivo); ?>" style="text-decoration: none;" class="color">
                                 <img src="../../../public/imgs/files.png" alt="files" width="100">
                                 <br>
@@ -56,10 +62,14 @@
                 const grid = document.getElementById('grid');
                 const listaArchivos = document.getElementById('listaArchivos');
                 const gridArchivos = document.getElementById('gridArchivos');
+                const searchBox = document.getElementById('searchBox');
 
                 // Agregar oyentes de eventos para los radio buttons
                 list.addEventListener('change', mostrarVista);
                 grid.addEventListener('change', mostrarVista);
+
+                // Agregar oyente de evento para el cuadro de búsqueda
+                searchBox.addEventListener('input', filtrarArchivos);
 
                 function mostrarVista() {
                     if (list.checked) {
@@ -70,7 +80,32 @@
                         gridArchivos.style.display = 'block';
                     }
                 }
+
+                function filtrarArchivos() {
+                    const textoBuscado = searchBox.value.toLowerCase();
+                    const elementosLista = listaArchivos.querySelectorAll('li');
+                    const elementosGrid = gridArchivos.querySelectorAll('.card');
+
+                    elementosLista.forEach((elemento) => {
+                        const textoElemento = elemento.textContent.toLowerCase();
+                        if (textoElemento.includes(textoBuscado)) {
+                            elemento.style.display = 'block';
+                        } else {
+                            elemento.style.display = 'none';
+                        }
+                    });
+
+                    elementosGrid.forEach((elemento) => {
+                        const textoElemento = elemento.textContent.toLowerCase();
+                        if (textoElemento.includes(textoBuscado)) {
+                            elemento.style.display = 'block';
+                        } else {
+                            elemento.style.display = 'none';
+                        }
+                    });
+                }
             </script>
+
         </div>
     </div>
 </div>
