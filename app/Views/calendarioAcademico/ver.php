@@ -1,38 +1,38 @@
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
-    <!-- volver -->
-    <div class="row">
+
+    <div class="row ">
         <div class="col-12">
             <a href="<?= base_url('/index.php/calendarioAcademico'); ?>" class="btn btn-outline-primary m-4">← Volver</a>
         </div>
-    </div>
-    <div class="row ">
-        <div class="col-12">
-            <h2 class="text-center text-primary">Calendarios Académicos</h2>
-            <h4 class="text-center text-dark"><?= $nombre; ?></h4>
-        </div>
-    </div>
-    <div class="card m-3 p-3 shadow">
+        <div class="card-body text-center"> <!-- Agregamos la clase text-center para centrar horizontalmente -->
         <h3 class="text-primary">Archivos de: <?= $nombre; ?></h3>
-        <div class="m-2 p-1">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">🔍</span>
-                </div>
-                <input type="text" id="searchBox" placeholder="Buscar archivos..." class="rounded">
-            </div>
-        </div>
-        <div class="card-body">
-            <!-- Lista de archivos, cuadricula horizontal -->
+
+            <!-- Lista de archivos, cuadrícula horizontal -->
             <label for="" class="fs-2">Vista</label>
             <div>
                 <input type="radio" name="grupo" id="list">
                 <label for="list">
                     <i class="fa-solid fa-list"></i>
-                    Lista</label>
+                    Lista
+                </label>
                 <input type="radio" name="grupo" id="grid" checked>
                 <label for="grid">
                     <i class="fa-solid fa-grip"></i>
-                    Cuadricula</label>
+                    Cuadrícula
+                </label>
+            </div>
+        </div>
+
+
+        <div class="card m-3 p-3 shadow">
+
+            <div class="m-2 p-1">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">🔍</span>
+                    </div>
+                    <input type="text" id="searchBox" placeholder="Buscar archivos..." class="rounded">
+                </div>
             </div>
 
             <div id="vista">
@@ -54,7 +54,7 @@
                 <!-- Contenedor para la vista de cuadrícula (inicialmente oculto) -->
                 <div id="gridArchivos" style="display: block;">
 
-        
+
                     <?php foreach ($archivos as $archivo) : ?>
                         <div style="display: inline-block; margin: 5px;" class="card p-1 shadow">
                             <a href="<?= base_url('index.php/calendarioAcademico/verPeriodo/' . $nombre . '/' . $archivo); ?>" style="text-decoration: none;">

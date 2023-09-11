@@ -141,15 +141,7 @@ class ControladorCalendario extends BaseController
     {
         try {
 
-            if ($nombre == 'POSGRADO') {
-                $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\POSGRADO';
-            } elseif ($nombre == 'PREGRADO') {
-                $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\PREGRADO';
-            } elseif ($nombre == 'PUCETEC') {
-                $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\PUCETEC';
-            }
-
-            //ver archivo pdf nueva pestaña sin descargar
+            //ver archivo pdf en nueva pestaña target blank
             return redirect()->to(base_url('public/files/CALENDARIOS ACADÉMICOS/' . $nombre . '/' . $periodo . '/' . $archivo));
         } catch (\Exception $e) {
             die($e->getMessage());
