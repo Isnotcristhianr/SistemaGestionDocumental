@@ -65,7 +65,7 @@
                         <div style="display: inline-block; margin: 5px;" class="card p-1 shadow">
                             <a href="<?= base_url('index.php/calendarioAcademico/descargar/' . $nombre . '/' .
                                             /* periodo */
-                                            $archivo
+                                            $periodo
                                             . '/'
                                             . $archivo); ?>" style="text-decoration: none;">
                                 <img src="../../../../public/imgs/pdf-file.png" alt="pdf" width="80">

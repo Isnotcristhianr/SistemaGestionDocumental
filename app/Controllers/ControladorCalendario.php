@@ -86,6 +86,9 @@ class ControladorCalendario extends BaseController
             //convertir tamaño del archivo
             $tamañoArchivo = round($tamañoArchivo / 1024, 2);
 
+            //periodo = archivo
+            $periodo = $archivo;
+
             echo view('header');
             echo view(
                 'calendarioAcademico/verPeriodo',
@@ -94,7 +97,8 @@ class ControladorCalendario extends BaseController
                     'nombre' => $nombre,
                     'archivo' => $archivo,
                     'fechaModificacion' => $fechaModificacion,
-                    'tamañoArchivo' => $tamañoArchivo
+                    'tamañoArchivo' => $tamañoArchivo,
+                    'periodo' => $periodo
                 ]
             );
             echo view('footer');
@@ -119,14 +123,10 @@ class ControladorCalendario extends BaseController
             //ver carpeta periodo
             $directorioPeriodo = $directorio . '\\' . $periodo . '\\' . $archivo;
 
-            echo $directorioPeriodo;
-
-
             //descargar archivo pdf
-            // $this->response->download($directorioPeriodo, null);
+            return $this->response->download($directorioPeriodo, null);
 
-
-
+            return redirect()->to(base_url('index.php/calendarioAcademico/verPeriodo/' . $nombre . '/' . $archivo));
         } catch (\Exception $e) {
             die($e->getMessage());
         }
