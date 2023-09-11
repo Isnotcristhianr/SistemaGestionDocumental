@@ -25,7 +25,7 @@
             <!-- Lista de archivos, cuadricula horizontal -->
             <label for="" class="fs-2">Vista</label>
             <div>
-                <input type="radio" name="grupo" id="list" >
+                <input type="radio" name="grupo" id="list">
                 <label for="list">
                     <i class="fa-solid fa-list"></i>
                     Lista</label>
@@ -45,6 +45,14 @@
                                 <li class="list-group-item list-group-item-action">
                                     <img src="../../../../public/imgs/pdf-file.png" alt="pdf" width="60">
                                     <?= $archivo; ?>
+                                    <div class="text-dark">
+                                        <!-- fecha modificacion -->
+                                        <br>
+                                        <?php echo "Fecha de modificación: " . $fechaModificacion; ?>
+                                        <!-- tamaño archivo -->
+                                        <br>
+                                        <?php echo "Tamaño del archivo: " . $tamañoArchivo . " KB"; ?>
+                                    </div>
                             </a>
                             </li>
                         <?php endforeach; ?>
@@ -58,8 +66,16 @@
                         <div style="display: inline-block; margin: 5px;" class="card p-1 shadow">
                             <a href="<?= base_url('index.php/calendarioAcademico/verPeriodo/' . $nombre . '/' . $archivo); ?>" style="text-decoration: none;">
                                 <img src="../../../../public/imgs/pdf-file.png" alt="pdf" width="80">
-                                <br>
                                 <?= $archivo; ?>
+                                <div class="text-dark">
+                                    <!-- fecha modificacion -->
+                                    <br>
+                                    <?php echo "Fecha de modificación: " . $fechaModificacion; ?>
+                                    <!-- tamaño archivo -->
+                                    <br>
+                                    <?php echo "Tamaño del archivo: " . $tamañoArchivo . " KB"; ?>
+                                </div>
+
                             </a>
                         </div>
                     <?php endforeach; ?>

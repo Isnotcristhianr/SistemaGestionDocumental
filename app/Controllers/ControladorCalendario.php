@@ -76,8 +76,27 @@ class ControladorCalendario extends BaseController
             // Filtrar los archivos y directorios "." y ".."
             $archivos = array_diff($archivos, array('.', '..'));
 
+            //obtener fecha de modificacion
+            $fechaModificacion = filemtime($directorioPeriodo);
+            //convertir fecha de modificacion
+            $fechaModificacion = date("d-m-Y", $fechaModificacion);
+
+            //obtener tamaño del archivo
+            $tamañoArchivo = filesize($directorioPeriodo);
+            //convertir tamaño del archivo
+            $tamañoArchivo = round($tamañoArchivo / 1024, 2);
+
             echo view('header');
-            echo view('calendarioAcademico/verPeriodo', ['archivos' => $archivos, 'nombre' => $nombre, 'archivo' => $archivo]);
+            echo view(
+                'calendarioAcademico/verPeriodo',
+                [
+                    'archivos' => $archivos,
+                    'nombre' => $nombre,
+                    'archivo' => $archivo,
+                    'fechaModificacion' => $fechaModificacion,
+                    'tamañoArchivo' => $tamañoArchivo
+                ]
+            );
             echo view('footer');
         } catch (\Exception $e) {
             die($e->getMessage());
