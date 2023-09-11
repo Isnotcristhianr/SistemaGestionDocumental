@@ -80,6 +80,13 @@
                                 </div>
 
                             </a>
+                            <div class="md-3">
+                                <!-- editar -->
+                                <a href="<?= base_url('index.php/calendarioAcademico/editar/' . $nombre . '/' . $archivo); ?>" class="btn btn-warning m-1 d-flex justify-content-end"> ✏</a>
+                                <!-- eliminar -->
+                                <a href="<?= base_url('index.php/calendarioAcademico/eliminar/' . $nombre . '/' . $archivo); ?>" class="btn btn-danger m-1 d-flex justify-content-end"> 🗑</a>
+                            </div>
+
                         </div>
                     <?php endforeach; ?>
                 </div>

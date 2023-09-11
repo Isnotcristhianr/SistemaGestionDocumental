@@ -67,3 +67,12 @@ in APPPATH\Controllers\ControladorCalendario.php on line 58.
  2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-11 17:53:00 --> syntax error, unexpected token "<"
+in APPPATH\Views\calendarioAcademico\verPeriodo.php on line 68.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('calendarioAcademico/verPeriodo', [], true)
+ 3 APPPATH\Controllers\ControladorCalendario.php(101): view('calendarioAcademico/verPeriodo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorCalendario->verPeriodo('PREGRADO', '2014-2015')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
