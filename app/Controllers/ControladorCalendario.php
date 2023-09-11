@@ -131,4 +131,26 @@ class ControladorCalendario extends BaseController
             die($e->getMessage());
         }
     }
+
+    //ver calendario academico pdf
+    public function verPdf($nombre, $periodo, $archivo)
+    {
+        try {
+
+            if ($nombre == 'POSGRADO') {
+                $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\POSGRADO';
+            } elseif ($nombre == 'PREGRADO') {
+                $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\PREGRADO';
+            } elseif ($nombre == 'PUCETEC') {
+                $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\PUCETEC';
+            }
+
+            //ver carpeta periodo
+            $directorioPeriodo = $directorio . '\\' . $periodo . '\\' . $archivo;
+            //ver archivo pdf nueva pestaña sin descargar
+            return redirect()->to(base_url('public/files/CALENDARIOS ACADÉMICOS/' . $nombre . '/' . $periodo . '/' . $archivo));
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }

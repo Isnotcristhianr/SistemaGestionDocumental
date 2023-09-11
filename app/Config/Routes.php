@@ -206,7 +206,8 @@ $routes->get('/calendarios/ver/(:any)', 'ControladorCalendario::ver/$1');
 $routes->get('/calendarioAcademico/verPeriodo/(:any)', 'ControladorCalendario::verPeriodo/$1');
 //descargar archivo
 $routes->get('/calendarioAcademico/descargar/(:any)/(:any)/(:any)', 'ControladorCalendario::descargar/$1/$2/$3');
-//ver
+//ver pdf
+$routes->get('/calendarioAcademico/verPdf/(:any)/(:any)/(:any)', 'ControladorCalendario::verPdf/$1/$2/$3');
 
 /*
  * --------------------------------------------------------------------
