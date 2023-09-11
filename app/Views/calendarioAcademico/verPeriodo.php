@@ -41,7 +41,7 @@
 
                     <ul class="list-group m-1">
                         <?php foreach ($archivos as $archivo) : ?>
-                            <a href="<?= base_url('index.php/calendarioAcademico/verPeriodo/' . $nombre . '/' . $archivo); ?>" style="text-decoration: none;">
+                            <a href="<?= base_url('index.php/calendarioAcademico/descargar/' . $nombre . '/' . $archivo); ?>" style="text-decoration: none;">
                                 <li class="list-group-item list-group-item-action">
                                     <img src="../../../../public/imgs/pdf-file.png" alt="pdf" width="60">
                                     <?= $archivo; ?>
@@ -61,10 +61,13 @@
 
                 <!-- Contenedor para la vista de cuadrícula (inicialmente oculto) -->
                 <div id="gridArchivos" style="display: block;">
-
                     <?php foreach ($archivos as $archivo) : ?>
                         <div style="display: inline-block; margin: 5px;" class="card p-1 shadow">
-                            <a href="<?= base_url('index.php/calendarioAcademico/verPeriodo/' . $nombre . '/' . $archivo); ?>" style="text-decoration: none;">
+                            <a href="<?= base_url('index.php/calendarioAcademico/descargar/' . $nombre . '/' .
+                                            /* periodo */
+                                            $archivo
+                                            . '/'
+                                            . $archivo); ?>" style="text-decoration: none;">
                                 <img src="../../../../public/imgs/pdf-file.png" alt="pdf" width="80">
                                 <?= $archivo; ?>
                                 <div class="text-dark">

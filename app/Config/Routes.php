@@ -84,7 +84,7 @@ $routes->get('/ReporteEscuelaGeneralVigente/(:any)', 'ControladorFEEscuela::repo
 //TODO Reporte Escuela General Historico
 $routes->get('/ReporteEscuelaGeneralHistorico/(:any)', 'ControladorFEEscuela::reporteEscuelaGeneralHistorico/$1/');
 //TODO Reporte Escuela General Tulcan
-$routes->get('/ReporteEscuelaGeneralTulcan/(:any)', 'ControladorFEEscuela::reporteEscuelaGeneralTulcan/$1/'); 
+$routes->get('/ReporteEscuelaGeneralTulcan/(:any)', 'ControladorFEEscuela::reporteEscuelaGeneralTulcan/$1/');
 //TODO Reporte Escuela Matriculados Vigente
 $routes->get('/ReporteEscuelaMatriculadosVigente/(:any)', 'ControladorFEEscuela::reporteEscuelaMatriculadosVigente/$1/');
 //Todo Reporte Escuela Matriculados Historico
@@ -204,8 +204,9 @@ $routes->get('/calendarioAcademico', 'ControladorCalendario::calendarioAcademico
 $routes->get('/calendarios/ver/(:any)', 'ControladorCalendario::ver/$1');
 //ver carpeta periodo
 $routes->get('/calendarioAcademico/verPeriodo/(:any)', 'ControladorCalendario::verPeriodo/$1');
-//ver archivo
-$routes->get('/calendarioAcademico/verArchivo/(:any)/(:any)', 'ControladorCalendario::verArchivo/$1/$2');
+//descargar archivo
+$routes->get('/calendarioAcademico/descargar/(:any)/(:any)/(:any)', 'ControladorCalendario::descargar/$1/$2/$3');
+
 
 /*
  * --------------------------------------------------------------------

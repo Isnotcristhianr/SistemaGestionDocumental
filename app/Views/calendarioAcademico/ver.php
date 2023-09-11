@@ -25,7 +25,7 @@
             <!-- Lista de archivos, cuadricula horizontal -->
             <label for="" class="fs-2">Vista</label>
             <div>
-                <input type="radio" name="grupo" id="list" >
+                <input type="radio" name="grupo" id="list">
                 <label for="list">
                     <i class="fa-solid fa-list"></i>
                     Lista</label>
@@ -54,6 +54,7 @@
                 <!-- Contenedor para la vista de cuadrícula (inicialmente oculto) -->
                 <div id="gridArchivos" style="display: block;">
 
+        
                     <?php foreach ($archivos as $archivo) : ?>
                         <div style="display: inline-block; margin: 5px;" class="card p-1 shadow">
                             <a href="<?= base_url('index.php/calendarioAcademico/verPeriodo/' . $nombre . '/' . $archivo); ?>" style="text-decoration: none;">

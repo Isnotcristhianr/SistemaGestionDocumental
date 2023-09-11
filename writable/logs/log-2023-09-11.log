@@ -37,3 +37,33 @@ in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 76.
  6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
  7 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
  8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-11 17:35:02 --> Too few arguments to function App\Controllers\ControladorCalendario::verPeriodo(), 2 passed in C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php on line 934 and exactly 3 expected
+in APPPATH\Controllers\ControladorCalendario.php on line 58.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorCalendario->verPeriodo('POSGRADO', '2019-2020')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-11 17:35:05 --> Too few arguments to function App\Controllers\ControladorCalendario::verPeriodo(), 2 passed in C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php on line 934 and exactly 3 expected
+in APPPATH\Controllers\ControladorCalendario.php on line 58.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorCalendario->verPeriodo('POSGRADO', '2019-2020')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-11 17:35:11 --> Too few arguments to function App\Controllers\ControladorCalendario::verPeriodo(), 2 passed in C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php on line 934 and exactly 3 expected
+in APPPATH\Controllers\ControladorCalendario.php on line 58.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorCalendario->verPeriodo('POSGRADO', '2017-2018')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-11 17:37:02 --> Too few arguments to function App\Controllers\ControladorCalendario::verPeriodo(), 2 passed in C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php on line 934 and exactly 3 expected
+in APPPATH\Controllers\ControladorCalendario.php on line 58.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorCalendario->verPeriodo('POSGRADO', '2019-2020')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-11 17:37:16 --> Too few arguments to function App\Controllers\ControladorCalendario::verPeriodo(), 2 passed in C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php on line 934 and exactly 3 expected
+in APPPATH\Controllers\ControladorCalendario.php on line 58.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorCalendario->verPeriodo('POSGRADO', '2019-2020')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
