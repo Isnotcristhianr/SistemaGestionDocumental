@@ -67,8 +67,18 @@ class ControladorCalendario extends BaseController
                 $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\PUCETEC';
             }
 
-            // Construye la ruta completa al archivo
-            $rutaArchivo = $directorio . '\\' . $archivo;
+            //ver carpeta periodo
+            $directorioPeriodo = $directorio . '\\' . $archivo;
+
+            // Obtener la lista de archivos y directorios en el directorio
+            $archivos = scandir($directorioPeriodo);
+
+            // Filtrar los archivos y directorios "." y ".."
+            $archivos = array_diff($archivos, array('.', '..'));
+
+            echo view('header');
+            echo view('calendarioAcademico/verPeriodo', ['archivos' => $archivos, 'nombre' => $nombre, 'archivo' => $archivo]);
+            echo view('footer');
         } catch (\Exception $e) {
             die($e->getMessage());
         }

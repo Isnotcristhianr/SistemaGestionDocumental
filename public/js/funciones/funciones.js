@@ -112,3 +112,4 @@ opcionesBusqueda.forEach((opcion) => {
     }
   });
 });
+

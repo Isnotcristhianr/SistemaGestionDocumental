@@ -203,7 +203,7 @@ $routes->get('/calendarioAcademico', 'ControladorCalendario::calendarioAcademico
 //calendario academico ver
 $routes->get('/calendarios/ver/(:any)', 'ControladorCalendario::ver/$1');
 //ver carpeta periodo
-$routes->get('/calendarioAcademico/verPeriodo/(:any)', 'ControladorCalendario::ver/$1');
+$routes->get('/calendarioAcademico/verPeriodo/(:any)', 'ControladorCalendario::verPeriodo/$1');
 //ver archivo
 $routes->get('/calendarioAcademico/verArchivo/(:any)/(:any)', 'ControladorCalendario::verArchivo/$1/$2');
 

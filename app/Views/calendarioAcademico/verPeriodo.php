@@ -2,7 +2,7 @@
     <!-- volver -->
     <div class="row">
         <div class="col-12">
-            <a href="<?= base_url('/index.php/calendarioAcademico'); ?>" class="btn btn-outline-primary m-4">← Volver</a>
+            <a href="<?= base_url('/index.php/calendarios/ver/' . $nombre); ?>" class="btn btn-outline-primary m-4">← Volver</a>
         </div>
     </div>
     <div class="row ">
@@ -43,7 +43,7 @@
                         <?php foreach ($archivos as $archivo) : ?>
                             <a href="<?= base_url('index.php/calendarioAcademico/verPeriodo/' . $nombre . '/' . $archivo); ?>" style="text-decoration: none;">
                                 <li class="list-group-item list-group-item-action">
-                                    <img src="../../../public/imgs/files.png" alt="files" width="80">
+                                    <img src="../../../../public/imgs/pdf-file.png" alt="pdf" width="60">
                                     <?= $archivo; ?>
                             </a>
                             </li>
@@ -57,7 +57,7 @@
                     <?php foreach ($archivos as $archivo) : ?>
                         <div style="display: inline-block; margin: 5px;" class="card p-1 shadow">
                             <a href="<?= base_url('index.php/calendarioAcademico/verPeriodo/' . $nombre . '/' . $archivo); ?>" style="text-decoration: none;">
-                                <img src="../../../public/imgs/files.png" alt="files" width="100">
+                                <img src="../../../../public/imgs/pdf-file.png" alt="pdf" width="80">
                                 <br>
                                 <?= $archivo; ?>
                             </a>
@@ -65,7 +65,6 @@
                     <?php endforeach; ?>
                 </div>
             </div>
-
             <script>
                 // Obtener elementos HTML
                 const list = document.getElementById('list');
@@ -142,7 +141,6 @@
 
                 }
             </script>
-
         </div>
     </div>
 </div>
