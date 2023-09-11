@@ -18,7 +18,7 @@
                     <div class="card mb-4 shadow">
                         <div class="card-body d-flex justify-content-center align-items-center">
                             <h5 class="card-title">
-                                <img src="../public//imgs/files.png" alt="files">
+                                <img src="../public//imgs/files.png" alt="files" width="60">
                                 <?= $archivo; ?>
                             </h5>
                             <a href="<?= base_url('/index.php/calendarios/ver/' . $archivo); ?>" class="btn btn-primary m-4">Ver →</a>

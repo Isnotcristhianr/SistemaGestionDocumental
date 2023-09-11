@@ -80,11 +80,23 @@
                                 </div>
 
                             </a>
-                            <div class="md-3">
+                            <div style=" align-items: center; display: flex;">
                                 <!-- editar -->
-                                <a href="<?= base_url('index.php/calendarioAcademico/editar/' . $nombre . '/' . $archivo); ?>" class="btn btn-warning m-1 d-flex justify-content-end"> ✏</a>
+                                <a href="<?= base_url('index.php/calendarioAcademico/editar/' . $nombre . '/' . $archivo); ?>" class="btn btn-warning m-1 d-flex justify-content-end">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
                                 <!-- eliminar -->
-                                <a href="<?= base_url('index.php/calendarioAcademico/eliminar/' . $nombre . '/' . $archivo); ?>" class="btn btn-danger m-1 d-flex justify-content-end"> 🗑</a>
+                                <a href="<?= base_url('index.php/calendarioAcademico/eliminar/' . $nombre . '/' . $archivo); ?>" class="btn btn-danger m-1 d-flex justify-content-end">
+                                    <i class="fa-solid fa-trash"></i>
+                                </a>
+                                <!-- ver -->
+                                <a href="<?= base_url('index.php/calendarioAcademico/ver/' . $nombre . '/' . $archivo); ?>" class="btn btn-primary m-1 d-flex justify-content-end">
+                                    <i class="fa-solid fa-eye"></i>
+                                </a>
+                                <!-- Descargar -->
+                                <a href="<?= base_url('index.php/calendarioAcademico/descargar/' . $nombre . '/' . $periodo . '/' . $archivo); ?>" style="text-decoration: none;" class="btn btn-success m-1 d-flex justify-content-end">
+                                    <i class="fa-solid fa-download"></i>
+                                </a>
                             </div>
 
                         </div>
