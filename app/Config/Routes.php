@@ -212,6 +212,11 @@ $routes->get('/calendarioAcademico/verPdf/(:any)/(:any)/(:any)', 'ControladorCal
 $routes->get('/calendarioAcademico/editar/(:any)/(:any)', 'ControladorCalendario::editar/$1/$2');
 //insertar calendario academico
 $routes->post('/calendarioAcademico/insertar/(:any)', 'ControladorCalendario::insertar/$1');
+//eliminar calendario academico
+$routes->get('/calendarioAcademico/eliminar/(:any)/(:any)/(:any)', 'ControladorCalendario::eliminar/$1/$2/$3');
+//editar calendario academico
+$routes->post('/calendarioAcademico/editar/(:any)/(:any)/(:any)', 'ControladorCalendario::editar/$1/$2/$3');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

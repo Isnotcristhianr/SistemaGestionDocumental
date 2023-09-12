@@ -104,7 +104,7 @@
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
                             <!-- eliminar -->
-                            <a href="<?= base_url('index.php/calendarioAcademico/eliminar/' . $nombre . '/' . $archivo); ?>" class="btn btn-danger m-1 d-flex justify-content-end">
+                            <a href="<?= base_url('index.php/calendarioAcademico/eliminar/' . $nombre . '/' . $periodo . '/' . $archivo); ?>" class="btn btn-danger m-1 d-flex justify-content-end">
                                 <i class="fa-solid fa-trash"></i>
                             </a>
                             <!-- ver -->
@@ -148,7 +148,7 @@
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
                             <!-- eliminar -->
-                            <a href="<?= base_url('index.php/calendarioAcademico/eliminar/' . $nombre . '/' . $archivo); ?>" class="btn btn-danger m-1 d-flex justify-content-end">
+                            <a href="<?= base_url('index.php/calendarioAcademico/eliminar/' . $nombre . '/' . $periodo . '/' . $archivo); ?>" class="btn btn-danger m-1 d-flex justify-content-end">
                                 <i class="fa-solid fa-trash"></i>
                             </a>
                             <!-- ver -->
