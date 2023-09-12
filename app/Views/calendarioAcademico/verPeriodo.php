@@ -9,14 +9,41 @@
                 <h3 class="text-primary">Calendarios Academicos: <?= $nombre; ?></h3>
 
                 <!-- Insertar -->
-                <div class="row justify-content-center">
-                    <div class="col-12">
-                        <a href="<?= base_url('index.php/calendarioAcademico/insertar/' . $nombre); ?>" class="btn btn-success">
-                            <i class="fa-solid fa-circle-plus fa-xl"></i>
-                            Subir Calendario
-                        </a>
-                    </div>
-                </div>
+                <button onclick="showModal();" class="btn btn-success">
+                    <i class="fa-solid fa-file-circle-plus fa-xl"></i>
+                    Subir Calendario
+                </button>
+
+
+
+
+                <!-- Modal subir calendario -->
+                <dialog id="modal" class="modal-dialog ">
+                    <form action="<?= base_url('index.php/calendarioAcademico/subir/' . $nombre); ?>" method="post" enctype="multipart/form-data">
+                        <div class="modal-content text-center d-flex">
+                            <div class="modal-header">
+                                <h3 class="modal-title text-primary">Nuevo Calendario Académico</h3>
+                                <h5 class="text-secondary"><b>Fichero: </b><?php echo $periodo; ?></h5>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="archivo" class="form-label"><b>Subir archivo: </b></label>
+                                    <input type="file" name="archivo" id="archivo" class="form-control" required>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <label for="name" class="form-label"><b>Nombre del Calendario:</b></label>
+                                    <input type="text" name="name" id="name" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-success">Subir</button>
+                                <button onclick="closeModal();" class="btn btn-danger"><i class="fa-solid fa-rectangle-xmark"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </dialog>
+
 
                 <!-- Lista de archivos, cuadrícula horizontal -->
                 <label for="" class="fs-2">Vista</label>
@@ -130,6 +157,42 @@
             </div>
         </div>
         <script>
+            //todo MODAL
+            // Función para abrir el modal y mostrar el fondo opaco
+            function showModal() {
+                const modal = document.querySelector('#modal');
+                const overlay = document.querySelector('#overlay');
+
+                // Centrar  modal
+                const windowHeight = window.innerHeight;
+                const modalHeight = modal.clientHeight;
+                const topOffset = (windowHeight - modalHeight) / 2;
+                modal.style.top = topOffset + 'px';
+
+                modal.showModal();
+                overlay.style.display = 'block';
+            }
+
+            // Función para cerrar el modal y ocultar el fondo opaco
+            function closeModal() {
+                const modal = document.querySelector('#modal');
+                const overlay = document.querySelector('#overlay');
+                modal.close();
+                overlay.style.display = 'none';
+                document.body.style.overflow = ''; // Habilita el scroll del cuerpo nuevamente
+            }
+
+
+
+
+            // Agregar oyente de evento para cerrar el modal
+            const cerrarModalButton = document.querySelector('#cerrarModalButton');
+
+            cerrarModalButton.addEventListener('click', () => {
+                modal.hide();
+            });
+
+
             // Obtener elementos HTML
             const list = document.getElementById('list');
             const grid = document.getElementById('grid');
@@ -208,3 +271,5 @@
     </div>
 </div>
 </div>
+
+<div id="overlay" class="overlay"></div>

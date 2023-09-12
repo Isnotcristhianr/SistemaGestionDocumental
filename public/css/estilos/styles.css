@@ -121,3 +121,15 @@ body {
 input[type="number"] {
     min-width: 50px;
 }
+
+/* modal */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo opaco */
+    z-index: 999; /* Asegura que esté por encima del contenido */
+    display: none; /* Inicialmente oculto */
+}
