@@ -144,9 +144,43 @@
                         </a>
                         <div style=" align-items: center; display: flex;">
                             <!-- editar -->
-                            <a href="<?= base_url('index.php/calendarioAcademico/editar/' . $nombre . '/' . $archivo); ?>" class="btn btn-warning m-1 d-flex justify-content-end">
+                            <a href="#" class="btn btn-warning m-1 d-flex justify-content-end" onclick="showEditModal('<?= $archivo; ?>');">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
+
+                            <!-- Modal editar -->
+                            <dialog id="editModal" class="modal-dialog">
+                                <form action="<?= base_url('index.php/calendarioAcademico/editar/' . $nombre . '/' . $periodo . '/' . $archivo); ?>" method="post" enctype="multipart/form-data">
+                                    <div class="modal-content text-center d-flex">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title text-primary">Editar Calendario</h3>
+                                            <h5 class="text-secondary"><b>Fichero: <?= $archivo; ?></b></h5>
+                                        </div>
+                                        <label for="text" class="text-secondary"><b>Modifique al menos un atributo</b></label>
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <label for="archivo" class="form-label"><b>Cambiar archivo PDF <i class="fa-solid fa-arrow-up-from-bracket"></i> (opcional)</b></label>
+
+                                                <div class="input-group mb-3">
+                                                    <input type="file" name="nuevo_archivo" id="inputGroupFile02" class="form-control" accept="application/pdf" value="<?= $archivo; ?>">
+                                                    <label class="input-group-text" for="inputGroupFile02">.pdf</label>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="name" class="form-label"><b>Nuevo nombre del Calendario (opcional)</b></label>
+                                                <input type="text" name="nuevo_nombre" id="name" class="form-control text-center" placeholder="Ingrese el nuevo nombre del Archivo...">
+                                            </div>
+                                            <input type="hidden" name="archivo_actual" value="<?= $archivo; ?>">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-success">Guardar Cambios</button>
+                                            <button onclick="closeEditModal();" class="btn btn-danger"><i class="fa-solid fa-rectangle-xmark"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </dialog>
+
                             <!-- eliminar -->
                             <a href="<?= base_url('index.php/calendarioAcademico/eliminar/' . $nombre . '/' . $periodo . '/' . $archivo); ?>" class="btn btn-danger m-1 d-flex justify-content-end">
                                 <i class="fa-solid fa-trash"></i>
@@ -166,7 +200,7 @@
             </div>
         </div>
         <script>
-            //todo MODAL
+            //todo MODAL insertar
             // Función para abrir el modal y mostrar el fondo opaco
             function showModal() {
                 const modal = document.querySelector('#modal');
@@ -187,6 +221,29 @@
                 const modal = document.querySelector('#modal');
                 const overlay = document.querySelector('#overlay');
                 modal.close();
+                overlay.style.display = 'none';
+                document.body.style.overflow = ''; // Habilita el scroll del cuerpo nuevamente
+            }
+
+            //todo modal editar
+            function showEditModal(archivo) {
+                const editModal = document.querySelector('#editModal');
+                const overlay = document.querySelector('#overlay');
+
+                // Centrar el modal
+                const windowHeight = window.innerHeight;
+                const modalHeight = editModal.clientHeight;
+                const topOffset = (windowHeight - modalHeight) / 2;
+                editModal.style.top = topOffset + 'px';
+                editModal.showModal();
+                overlay.style.display = 'block';
+            }
+
+            // Función para cerrar el modal de edición
+            function closeEditModal() {
+                const editModal = document.querySelector('#editModal');
+                const overlay = document.querySelector('#overlay');
+                editModal.close();
                 overlay.style.display = 'none';
                 document.body.style.overflow = ''; // Habilita el scroll del cuerpo nuevamente
             }

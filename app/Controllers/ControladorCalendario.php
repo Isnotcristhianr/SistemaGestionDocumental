@@ -150,11 +150,6 @@ class ControladorCalendario extends BaseController
 
     //! CRUD
 
-    //todo editar calendario academico
-    public function editar($nombre, $ruta)
-    {
-    }
-
     //todo insertar calendario academico
     public function insertar($tipo)
     {
@@ -229,5 +224,50 @@ class ControladorCalendario extends BaseController
         }
     }
 
-    
+    //todo editar calendario academico
+    public function editar($nombre, $periodo, $archivo)
+{
+    try {
+        // Directorio base según el nombre
+        $directorioBase = '';
+        if ($nombre == 'POSGRADO') {
+            $directorioBase = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\POSGRADO';
+        } elseif ($nombre == 'PREGRADO') {
+            $directorioBase = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\PREGRADO';
+        } elseif ($nombre == 'PUCETEC') {
+            $directorioBase = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\PUCETEC';
+        }
+
+        // Rutas del archivo actual y del nuevo archivo (si se cambió)
+        $directorioActual = $directorioBase . '\\' . $periodo . '\\' . $archivo;
+        $rutaNuevoArchivo = '';
+
+        // Verificar si se cambió el nombre del archivo
+        $nuevoNombreArchivo = $this->request->getPost('nuevo_nombre');
+        if (!empty($nuevoNombreArchivo)) {
+            $extension = pathinfo($archivo, PATHINFO_EXTENSION);
+            $rutaNuevoArchivo = $directorioBase . '\\' . $periodo . '\\' . $nuevoNombreArchivo . '.' . $extension;
+            // Renombrar el archivo si se proporcionó un nuevo nombre
+            rename($directorioActual, $rutaNuevoArchivo);
+        }
+
+        // Verificar si se cargó un nuevo archivo
+        $nuevoArchivo = $this->request->getFile('nuevo_archivo');
+        if ($nuevoArchivo->isValid() && $nuevoArchivo->getClientMimeType() == 'application/pdf') {
+            // Eliminar el archivo actual si se proporciona un nuevo archivo PDF válido
+            if (file_exists($directorioActual)) {
+                unlink($directorioActual);
+            }
+            // Mover el nuevo archivo al directorio destino
+            $nuevoArchivo->move($directorioBase . '\\' . $periodo, $nuevoArchivo->getName());
+        }
+
+        // Redireccionar después de la operación exitosa
+        return redirect()->to(base_url("index.php/calendarioAcademico/verPeriodo/{$nombre}/{$periodo}"));
+    } catch (\Exception $e) {
+        die($e->getMessage());
+    }
+}
+
+
 }
