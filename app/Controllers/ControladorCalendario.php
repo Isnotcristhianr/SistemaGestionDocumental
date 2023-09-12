@@ -159,12 +159,11 @@ class ControladorCalendario extends BaseController
     public function insertar($tipo)
     {
         try {
-            //obtener datos get
-            $archivo = $_GET['archivo'];
-            $periodo = $_GET['periodo'];
-            $nombre = $_GET['name'];
+            // Obtener datos 
+            $periodo = $this->request->getPost('periodo');
+            $nombre = $this->request->getPost('name');
 
-            //ruta
+            // Ruta
             if ($tipo == 'POSGRADO') {
                 $ruta = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\POSGRADO' . '/' . $periodo;
             } elseif ($tipo == 'PREGRADO') {
@@ -173,16 +172,32 @@ class ControladorCalendario extends BaseController
                 $ruta = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\PUCETEC' . '/' . $periodo;
             }
 
-            //verificar si existe la carpeta
+            // Verificar si existe la carpeta
             if (!file_exists($ruta)) {
-                //alerta de que no existe la carpeta
+                // Alerta de que no existe la carpeta
                 echo "<script>alert('No existe la carpeta');</script>";
             } else {
+                $archivo = $this->request->getFile('archivo');
+                // Obtener datos del archivo
+                $nombreArchivo = $archivo->getName();
+                $tipoArchivo = $archivo->getClientMimeType();
+                $tamañoArchivo = $archivo->getSize();
+                $rutaArchivo = $archivo->getTempName();
+                $extensionArchivo = $archivo->getExtension();
+                $errorArchivo = $archivo->getError();
 
-                echo "archivo: " . $archivo . "<br>"
-                    . "periodo: " . $periodo . "<br>"
-                    . "nombre: " . $nombre . "<br>"
-                    . "ruta: " . $ruta . "<br>";
+                // Controlar error archivo pdf
+                if ($errorArchivo === 0) {
+                    // Mover el archivo al directorio destino
+                    $archivo->move($ruta, $nombre . '.' . $extensionArchivo);
+
+                    // Redirigir después de la operación exitosa
+                    return redirect()->to(base_url("index.php/calendarioAcademico/verPeriodo/{$tipo}/{$periodo}"));
+              
+                } else {
+                    echo "<script>alert('Error al subir el archivo; error: {$errorArchivo}');</script>";
+                    return redirect()->to(base_url("index.php/calendarioAcademico/verPeriodo/{$tipo}/{$periodo}"));
+                }
             }
         } catch (\Exception $e) {
             die($e->getMessage());

@@ -235,3 +235,17 @@ in APPPATH\Controllers\ControladorCalendario.php on line 183.
  2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-12 20:54:37 --> scandir(): Argument #1 ($directory) cannot be empty
+in APPPATH\Controllers\ControladorCalendario.php on line 48.
+ 1 APPPATH\Controllers\ControladorCalendario.php(48): scandir('')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorCalendario->ver('3')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-12 20:54:41 --> scandir(): Argument #1 ($directory) cannot be empty
+in APPPATH\Controllers\ControladorCalendario.php on line 48.
+ 1 APPPATH\Controllers\ControladorCalendario.php(48): scandir('')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorCalendario->ver('3')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

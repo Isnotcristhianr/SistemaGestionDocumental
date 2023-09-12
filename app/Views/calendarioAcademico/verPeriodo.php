@@ -19,7 +19,7 @@
 
                 <!-- Modal subir calendario -->
                 <dialog id="modal" class="modal-dialog ">
-                    <form action="<?= base_url('index.php/calendarioAcademico/insertar/'.$nombre); ?>" method="POST" enctype="multipart/form-data">
+                    <form action="<?= base_url('index.php/calendarioAcademico/insertar/' . $nombre); ?>" method="POST" enctype="multipart/form-data">
                         <div class="modal-content text-center d-flex">
                             <div class="modal-header">
                                 <h3 class="modal-title text-primary">Nuevo Calendario</h3>
@@ -190,7 +190,7 @@
                 overlay.style.display = 'none';
                 document.body.style.overflow = ''; // Habilita el scroll del cuerpo nuevamente
             }
-            
+
             // Obtener elementos HTML
             const list = document.getElementById('list');
             const grid = document.getElementById('grid');
