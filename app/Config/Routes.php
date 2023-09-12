@@ -211,7 +211,7 @@ $routes->get('/calendarioAcademico/verPdf/(:any)/(:any)/(:any)', 'ControladorCal
 //editar calendario academico
 $routes->get('/calendarioAcademico/editar/(:any)/(:any)', 'ControladorCalendario::editar/$1/$2');
 //insertar calendario academico
-$routes->get('/calendarioAcademico/insertar/(:any)', 'ControladorCalendario::insertar/$1');
+$routes->post('/calendarioAcademico/insertar/(:any)', 'ControladorCalendario::insertar/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

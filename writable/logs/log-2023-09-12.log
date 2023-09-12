@@ -187,3 +187,51 @@ in APPPATH\Controllers\ControladorCalendario.php on line 191.
  5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-12 20:07:01 --> Cannot access offset of type string on string
+in APPPATH\Controllers\ControladorCalendario.php on line 183.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorCalendario->insertar('POSGRADO')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-12 20:07:01 --> Cannot access offset of type string on string
+in APPPATH\Controllers\ControladorCalendario.php on line 183.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorCalendario->insertar('POSGRADO')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-12 20:07:02 --> Cannot access offset of type string on string
+in APPPATH\Controllers\ControladorCalendario.php on line 183.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorCalendario->insertar('POSGRADO')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-12 20:07:02 --> Cannot access offset of type string on string
+in APPPATH\Controllers\ControladorCalendario.php on line 183.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorCalendario->insertar('POSGRADO')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-12 20:07:03 --> Cannot access offset of type string on string
+in APPPATH\Controllers\ControladorCalendario.php on line 183.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorCalendario->insertar('POSGRADO')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-12 20:07:03 --> Cannot access offset of type string on string
+in APPPATH\Controllers\ControladorCalendario.php on line 183.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorCalendario->insertar('POSGRADO')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-12 20:07:03 --> Cannot access offset of type string on string
+in APPPATH\Controllers\ControladorCalendario.php on line 183.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorCalendario->insertar('POSGRADO')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-12 20:07:07 --> Cannot access offset of type string on string
+in APPPATH\Controllers\ControladorCalendario.php on line 183.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorCalendario->insertar('POSGRADO')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

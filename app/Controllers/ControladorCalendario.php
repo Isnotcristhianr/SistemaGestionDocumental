@@ -178,6 +178,7 @@ class ControladorCalendario extends BaseController
                 //alerta de que no existe la carpeta
                 echo "<script>alert('No existe la carpeta');</script>";
             } else {
+
                 echo "archivo: " . $archivo . "<br>"
                     . "periodo: " . $periodo . "<br>"
                     . "nombre: " . $nombre . "<br>"
