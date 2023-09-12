@@ -148,8 +148,43 @@ class ControladorCalendario extends BaseController
         }
     }
 
-    //editar calendario academico
+    //! CRUD
+
+    //todo editar calendario academico
     public function editar($nombre, $ruta)
     {
+    }
+
+    //todo insertar calendario academico
+    public function insertar($tipo)
+    {
+        try {
+            //obtener datos get
+            $archivo = $_GET['archivo'];
+            $periodo = $_GET['periodo'];
+            $nombre = $_GET['name'];
+
+            //ruta
+            if ($tipo == 'POSGRADO') {
+                $ruta = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\POSGRADO' . '/' . $periodo;
+            } elseif ($tipo == 'PREGRADO') {
+                $ruta = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\PREGRADO' . '/' . $periodo;
+            } elseif ($tipo == 'PUCETEC') {
+                $ruta = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\PUCETEC' . '/' . $periodo;
+            }
+
+            //verificar si existe la carpeta
+            if (!file_exists($ruta)) {
+                //alerta de que no existe la carpeta
+                echo "<script>alert('No existe la carpeta');</script>";
+            } else {
+                echo "archivo: " . $archivo . "<br>"
+                    . "periodo: " . $periodo . "<br>"
+                    . "nombre: " . $nombre . "<br>"
+                    . "ruta: " . $ruta . "<br>";
+            }
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
     }
 }
