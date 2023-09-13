@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col-12">
             <div class="d-flex justify-content-center">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#crearDirectorioModal">
+                <button type="button" class="btn btn-primary m-3" data-bs-toggle="modal" data-bs-target="#crearDirectorioModal">
                     <i class="fa-solid fa-folder-plus fa-xl"></i> Crear Directorio
                 </button>
             </div>
@@ -51,18 +51,19 @@
         </div>
     </div>
 
-    <div class="input-group mb-3 d-flex">
+    <!-- Campo de búsqueda -->
+    <div class="input-group mb-3">
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">🔍</span>
         </div>
-        <input type="text" id="searchBox" placeholder="Buscar archivos..." class="rounded" onkeyup="filtrarArchivos()">
+        <input type="text" id="searchBox" class="form-control" placeholder="Buscar archivos..." onkeyup="filtrarArchivos()">
     </div>
 
     <div class="container mt-4">
         <!-- Vista tipo grid de carpetas  -->
-        <ul id="listaArchivos">
+        <ul id="listaArchivos" class="list-unstyled d-flex flex-wrap">
             <?php foreach ($carpetas as $carpeta) : ?>
-                <li style="display: inline-block; margin: 5px;" class="card p-1 shadow">
+                <li style="margin: 5px;" class="card p-1 shadow">
                     <a href="<?php echo base_url('/public/files/Reglamento General de Estudiantes/' . $carpeta) ?>" target="_blank" style="text-decoration: none;">
                         <img src="<?php echo base_url('/public/imgs/files.png') ?>" alt="files" width="100">
                         <div class="card-body">
@@ -74,7 +75,7 @@
 
             <!-- Vista tipo grid de archivos  -->
             <?php foreach ($archivos as $archivo) : ?>
-                <li style="display: inline-block; margin: 5px;" class="card p-1 shadow">
+                <li style="margin: 5px;" class="card p-1 shadow">
                     <a href="<?php echo base_url('/public/files/Reglamento General de Estudiantes/' . $archivo) ?>" target="_blank" style="text-decoration: none;">
 
                         <!-- asignar icono pdf y word -->
@@ -101,7 +102,6 @@
         </ul>
     </div>
 </div>
-
 <script>
     function filtrarArchivos() {
         // Variables

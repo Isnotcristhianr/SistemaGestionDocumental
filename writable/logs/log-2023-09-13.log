@@ -66,3 +66,9 @@ in APPPATH\Views\normativas\reglamentoGeneralEstudiantes.php on line 62.
  7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
  8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 20:46:15 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ControladorCalendario.php on line 251.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorCalendario->editar('POSGRADO', '2021-02', 'septiembre 2021-enero 2022.pdf')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
