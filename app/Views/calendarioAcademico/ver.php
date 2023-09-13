@@ -1,10 +1,10 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-12">
-            <a href="<?= base_url('/index.php/calendarioAcademico'); ?>" class="btn btn-outline-primary mb-4">← Volver</a>
-        </div>
-        <div class="col-12">
             <div class="card bg-light shadow-lg p-3 mb-5 rounded">
+                <div class="col-12">
+                    <a href="<?= base_url('/index.php/calendarioAcademico'); ?>" class="btn btn-outline-primary mb-4">← Volver</a>
+                </div>
                 <div class="card-body text-center">
                     <h3 class="text-primary">Archivos de: <?= $nombre; ?></h3>
                 </div>
