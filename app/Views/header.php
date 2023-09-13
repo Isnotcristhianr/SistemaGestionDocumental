@@ -95,7 +95,7 @@
               Normativas</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a href="" class="dropdown-item">Normativa General</a></li>
-              <li><a href="" class="dropdown-item">Reglamento General Estudiantes</a></li>
+              <li><a href="<?php echo base_url('/index.php//normativas/reglamentoGeneralEstudiantes')?>" class="dropdown-item">Reglamento General Estudiantes</a></li>
 
             </ul>
           </li>

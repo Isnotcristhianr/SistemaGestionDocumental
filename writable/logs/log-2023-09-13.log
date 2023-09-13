@@ -13,3 +13,56 @@ in APPPATH\Controllers\ControladorCalendario.php on line 228.
  2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorCalendario))
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 15:59:34 --> Invalid file: "normativas/reglamentoGeneralEstudiantes.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('normativas/reglamentoGeneralEstudiantes.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('normativas/reglamentoGeneralEstudiantes', [], true)
+ 3 APPPATH\Controllers\ControladorNormativas.php(14): view('normativas/reglamentoGeneralEstudiantes')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->reglamentoGeneralEstudiantes()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 16:30:25 --> Undefined variable $archivos_y_carpetas
+in APPPATH\Views\normativas\reglamentoGeneralEstudiantes.php on line 62.
+ 1 APPPATH\Views\normativas\reglamentoGeneralEstudiantes.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $archivos_y_carpetas', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\normativas\\reglamentoGeneralEstudiantes.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\normativas\\reglamentoGeneralEstudiantes.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('normativas/reglamentoGeneralEstudiantes', [], true)
+ 5 APPPATH\Controllers\ControladorNormativas.php(54): view('normativas/reglamentoGeneralEstudiantes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->reglamentoGeneralEstudiantes()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 16:30:26 --> Undefined variable $archivos_y_carpetas
+in APPPATH\Views\normativas\reglamentoGeneralEstudiantes.php on line 62.
+ 1 APPPATH\Views\normativas\reglamentoGeneralEstudiantes.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $archivos_y_carpetas', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\normativas\\reglamentoGeneralEstudiantes.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\normativas\\reglamentoGeneralEstudiantes.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('normativas/reglamentoGeneralEstudiantes', [], true)
+ 5 APPPATH\Controllers\ControladorNormativas.php(54): view('normativas/reglamentoGeneralEstudiantes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->reglamentoGeneralEstudiantes()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 16:30:27 --> Undefined variable $archivos_y_carpetas
+in APPPATH\Views\normativas\reglamentoGeneralEstudiantes.php on line 62.
+ 1 APPPATH\Views\normativas\reglamentoGeneralEstudiantes.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $archivos_y_carpetas', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\normativas\\reglamentoGeneralEstudiantes.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\normativas\\reglamentoGeneralEstudiantes.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('normativas/reglamentoGeneralEstudiantes', [], true)
+ 5 APPPATH\Controllers\ControladorNormativas.php(54): view('normativas/reglamentoGeneralEstudiantes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->reglamentoGeneralEstudiantes()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 16:30:58 --> Undefined variable $archivos_y_carpetas
+in APPPATH\Views\normativas\reglamentoGeneralEstudiantes.php on line 62.
+ 1 APPPATH\Views\normativas\reglamentoGeneralEstudiantes.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $archivos_y_carpetas', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\normativas\\reglamentoGeneralEstudiantes.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\normativas\\reglamentoGeneralEstudiantes.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('normativas/reglamentoGeneralEstudiantes', [], true)
+ 5 APPPATH\Controllers\ControladorNormativas.php(55): view('normativas/reglamentoGeneralEstudiantes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->reglamentoGeneralEstudiantes()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
