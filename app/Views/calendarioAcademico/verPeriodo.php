@@ -240,7 +240,6 @@
                 <?php endforeach; ?>
             </div>
         </div>
-        
         <script>
             //todo MODAL insertar
             // Función para abrir el modal y mostrar el fondo opaco
