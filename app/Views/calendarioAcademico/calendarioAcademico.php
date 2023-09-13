@@ -5,7 +5,11 @@
         <div class="col-12">
             <h2 class="text-center text-primary">Calendarios Academicos
             </h2>
-            <h4 class="text-center text-dark">1977 - 2023
+            <h4 class="text-center text-dark">1977 - 
+                <?php
+                $fecha = date('Y');
+                echo $fecha;
+                ?>
             </h4>
         </div>
     </div>

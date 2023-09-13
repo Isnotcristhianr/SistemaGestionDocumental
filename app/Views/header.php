@@ -75,25 +75,21 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Datos
             </a>
+
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <!-- Obtener Perdiodos BD -->
               <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGrado">Grado</a></li>
               <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgrado">Posgrado</a></li>
               <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologia">Tecnología</a></li>
-
-              <li>
-                <hr class="dropdown-divider">
-              </li>
               <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/deHistorico">Historico Puce-I</a></li>
 
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/calendarioAcademico">Calendario Academico</a></li>
 
-              <li>
+              <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/calendarioAcademico">Calendario Academico</a></li>
             </ul>
           </li>
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Normativas</a>

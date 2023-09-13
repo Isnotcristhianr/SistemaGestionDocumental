@@ -217,6 +217,8 @@ $routes->get('/calendarioAcademico/eliminar/(:any)/(:any)/(:any)', 'ControladorC
 //editar calendario academico
 $routes->post('/calendarioAcademico/editar/(:any)/(:any)/(:any)', 'ControladorCalendario::editar/$1/$2/$3');
 
+
+//?Normativas
 /*
  * --------------------------------------------------------------------
  * Additional Routing
