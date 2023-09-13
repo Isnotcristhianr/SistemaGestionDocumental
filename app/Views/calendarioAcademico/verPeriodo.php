@@ -7,23 +7,12 @@
                     <a href="<?= base_url('/index.php/calendarios/ver/' . $nombre); ?>" class="btn btn-outline-primary m-4">← Volver</a>
                 </div>
                 <h3 class="text-primary">Calendarios Academicos: <?= $nombre; ?></h3>
-
-                <!-- Lista de archivos, cuadrícula horizontal -->
-                <div class="text-center">
-                    <input type="radio" name="grupo" id="list">
-                    <label for="list">
-                        <i class="fa-solid fa-list"></i>
-                        Lista</label>
-                    <input type="radio" name="grupo" id="grid" checked>
-                    <label for="grid">
-                        <i class="fa-solid fa-grip"></i>
-                        Cuadrícula</label>
-                </div>
+                <br>
             </div>
         </div>
     </div>
 
-    <div class="card m-3 p-3 shadow">
+    <div class="card m-3 p-3 shadow"  style="background-color: rgba(175, 175, 175, 0.16);">
         <div class="justify-content-center">
 
             <!-- Directorio Raiz -->
@@ -84,86 +73,86 @@
 
 
         </div>
-    </div>
-
-    <!-- Contenedor para la vista de cuadrícula (inicialmente oculto) -->
-    <div id="gridArchivos" style="display: block;">
-        <?php foreach ($archivos as $archivo) : ?>
-            <div style="display: inline-block; margin: 5px;" class="card p-1 shadow">
-                <a href="<?= base_url('index.php/calendarioAcademico/descargar/' . $nombre . '/' .
-                                /* periodo */
-                                $periodo
-                                . '/'
-                                . $archivo); ?>" style="text-decoration: none;">
-                    <img src="../../../../public/imgs/pdf-file.png" alt="pdf" width="80">
-                    <?= $archivo; ?>
-                    <div class="text-dark">
-                        <!-- fecha modificacion -->
-                        <br>
-                        <?php echo "Fecha de modificación: " . $fechaModificacion; ?>
-                        <!-- tamaño archivo -->
-                        <br>
-                        <?php echo "Tamaño del archivo: " . $tamañoArchivo . " KB"; ?>
-                    </div>
-                </a>
-                <div style=" align-items: center; display: flex;">
-                    <!-- Botón para editar -->
-                    <button type="button" class="btn btn-warning m-1 d-flex justify-content-end" data-bs-toggle="modal" data-bs-target="#editarcalendariomodal">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                    </button>
-
-                    <!-- Modal editar calendario -->
-                    <div class="modal fade" id="editarcalendariomodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <!-- Formulario para editar el calendario -->
-                                <form action="<?= base_url('index.php/calendarioAcademico/editar/' . $nombre . '/' . $periodo . '/' . $archivo); ?>" method="post" enctype="multipart/form-data">
-                                    <div class="modal-content text-center d-flex">
-                                        <div class="modal-header">
-                                            <h3 class="modal-title text-primary">Editar Calendario</h3>
-                                            <h5 class="text-secondary"><b>Fichero: <?= $archivo; ?></b></h5>
-                                        </div>
-                                        <label for="text" class="text-secondary"><b>Modifique al menos un atributo</b></label>
-                                        <div class="modal-body">
-                                            <div class="form-group">
-                                                <label for="archivo" class="form-label"><b>Cambiar archivo PDF <i class="fa-solid fa-arrow-up-from-bracket"></i> (opcional)</b></label>
-                                                <div class="input-group mb-3">
-                                                    <input type="file" name="nuevo_archivo" id="inputGroupFile02" class="form-control" accept="application/pdf" value="<?= $archivo; ?>">
-                                                    <label class="input-group-text" for="inputGroupFile02">.pdf</label>
+        <!-- Contenedor para la vista de cuadrícula (inicialmente oculto) -->
+        <div id="gridArchivos" style="display: block;">
+            <?php foreach ($archivos as $archivo) : ?>
+                <div style="display: inline-block; margin: 5px;" class="card p-3 shadow">
+                    <a href="<?= base_url('index.php/calendarioAcademico/descargar/' . $nombre . '/' .
+                                    /* periodo */
+                                    $periodo
+                                    . '/'
+                                    . $archivo); ?>" style="text-decoration: none;">
+                        <img src="../../../../public/imgs/pdf-file.png" alt="pdf" width="80">
+                        <?= $archivo; ?>
+                        <div class="text-dark">
+                            <!-- fecha modificacion -->
+                            <br>
+                            <?php echo "Fecha de modificación: " . $fechaModificacion; ?>
+                            <!-- tamaño archivo -->
+                            <br>
+                            <?php echo "Tamaño del archivo: " . $tamañoArchivo . " KB"; ?>
+                        </div>
+                    </a>
+                    <div style=" align-items: center; display: flex;">
+                        <!-- Botón para editar -->
+                        <button type="button" class="btn btn-warning m-1 d-flex justify-content-end" data-bs-toggle="modal" data-bs-target="#editarcalendariomodal">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+    
+                        <!-- Modal editar calendario -->
+                        <div class="modal fade" id="editarcalendariomodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <!-- Formulario para editar el calendario -->
+                                    <form action="<?= base_url('index.php/calendarioAcademico/editar/' . $nombre . '/' . $periodo . '/' . $archivo); ?>" method="post" enctype="multipart/form-data">
+                                        <div class="modal-content text-center d-flex">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title text-primary">Editar Calendario</h3>
+                                                <h5 class="text-secondary"><b>Fichero: <?= $archivo; ?></b></h5>
+                                            </div>
+                                            <label for="text" class="text-secondary"><b>Modifique al menos un atributo</b></label>
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label for="archivo" class="form-label"><b>Cambiar archivo PDF <i class="fa-solid fa-arrow-up-from-bracket"></i> (opcional)</b></label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="file" name="nuevo_archivo" id="inputGroupFile02" class="form-control" accept="application/pdf" value="<?= $archivo; ?>">
+                                                        <label class="input-group-text" for="inputGroupFile02">.pdf</label>
+                                                    </div>
                                                 </div>
+                                                <div class="form-group">
+                                                    <label for="name" class="form-label"><b>Nuevo nombre del Calendario (opcional)</b></label>
+                                                    <input type="text" name="nuevo_nombre" id="name" class="form-control text-center" placeholder="Ingrese el nuevo nombre del Archivo...">
+                                                </div>
+                                                <input type="hidden" name="archivo_actual" value="<?= $archivo; ?>">
                                             </div>
-                                            <div class="form-group">
-                                                <label for="name" class="form-label"><b>Nuevo nombre del Calendario (opcional)</b></label>
-                                                <input type="text" name="nuevo_nombre" id="name" class="form-control text-center" placeholder="Ingrese el nuevo nombre del Archivo...">
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-success">Guardar Cambios</button>
+                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="fa-solid fa-rectangle-xmark"></i></button>
                                             </div>
-                                            <input type="hidden" name="archivo_actual" value="<?= $archivo; ?>">
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="submit" class="btn btn-success">Guardar Cambios</button>
-                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="fa-solid fa-rectangle-xmark"></i></button>
-                                        </div>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
                             </div>
                         </div>
+    
+                        <!-- eliminar -->
+                        <a href="<?= base_url('index.php/calendarioAcademico/eliminar/' . $nombre . '/' . $periodo . '/' . $archivo); ?>" class="btn btn-danger m-1 d-flex justify-content-end">
+                            <i class="fa-solid fa-trash"></i>
+                        </a>
+                        <!-- ver -->
+                        <a href="<?= base_url('index.php/calendarioAcademico/verPdf/'  . $nombre . '/' . $periodo . '/' . $archivo); ?>" class="btn btn-primary m-1 d-flex justify-content-end" target="_blank">
+                            <i class="fa-solid fa-eye"></i>
+                        </a>
+                        <!-- Descargar -->
+                        <a href="<?= base_url('index.php/calendarioAcademico/descargar/' . $nombre . '/' . $periodo . '/' . $archivo); ?>" class="btn btn-secondary m-1 d-flex justify-content-end">
+                            <i class="fa-solid fa-download"></i>
+                        </a>
                     </div>
-
-                    <!-- eliminar -->
-                    <a href="<?= base_url('index.php/calendarioAcademico/eliminar/' . $nombre . '/' . $periodo . '/' . $archivo); ?>" class="btn btn-danger m-1 d-flex justify-content-end">
-                        <i class="fa-solid fa-trash"></i>
-                    </a>
-                    <!-- ver -->
-                    <a href="<?= base_url('index.php/calendarioAcademico/verPdf/'  . $nombre . '/' . $periodo . '/' . $archivo); ?>" class="btn btn-primary m-1 d-flex justify-content-end" target="_blank">
-                        <i class="fa-solid fa-eye"></i>
-                    </a>
-                    <!-- Descargar -->
-                    <a href="<?= base_url('index.php/calendarioAcademico/descargar/' . $nombre . '/' . $periodo . '/' . $archivo); ?>" class="btn btn-secondary m-1 d-flex justify-content-end">
-                        <i class="fa-solid fa-download"></i>
-                    </a>
                 </div>
-            </div>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+        </div>
     </div>
+
 </div>
 
 <div id="overlay" class="overlay"></div>
@@ -173,8 +162,6 @@
     const gridArchivos = document.getElementById('gridArchivos');
     const searchBox = document.getElementById('searchBox');
 
-    // Agregar oyentes de eventos para el radio button
-    grid.addEventListener('change', mostrarVista);
 
     // Agregar oyente de evento para el cuadro de búsqueda
     searchBox.addEventListener('input', filtrarArchivos);
