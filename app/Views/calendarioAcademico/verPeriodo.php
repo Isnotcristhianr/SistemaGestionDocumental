@@ -2,60 +2,16 @@
 
     <div class="row ">
         <div class="col-12">
-            <a href="<?= base_url('/index.php/calendarios/ver/' . $nombre); ?>" class="btn btn-outline-primary m-4">← Volver</a>
-        </div>
-        <div class="col-12">
             <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded text-center">
+                <div class="col-12 d-flex">
+                    <a href="<?= base_url('/index.php/calendarios/ver/' . $nombre); ?>" class="btn btn-outline-primary m-4">← Volver</a>
+                </div>
                 <h3 class="text-primary">Calendarios Academicos: <?= $nombre; ?></h3>
 
-                <!-- Insertar -->
-                <button onclick="showModal();" class="btn btn-success">
-                    <i class="fa-solid fa-file-circle-plus fa-xl"></i>
-                    Subir Calendario
-                </button>
-
-                <br>
-
-
-                <!-- Modal subir calendario -->
-                <dialog id="modal" class="modal-dialog ">
-                    <form action="<?= base_url('index.php/calendarioAcademico/insertar/' . $nombre); ?>" method="POST" enctype="multipart/form-data">
-                        <div class="modal-content text-center d-flex">
-                            <div class="modal-header">
-                                <h3 class="modal-title text-primary">Nuevo Calendario</h3>
-                                <h5 class="text-secondary"><b>Fichero: </b> <br><?php echo $periodo; ?></h5>
-                            </div>
-                            <label for="text" class="text-secondary"><b>Solo se adminten archivos <i class="fa-regular fa-file-pdf fa-xl"></i></b></label>
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label for="archivo" class="form-label"><b>Subir archivo <i class="fa-solid fa-arrow-up-from-bracket"></i> </b></label>
-
-                                    <div class="input-group mb-3">
-                                        <input type="file" name="archivo" id="inputGroupFile02" class="form-control" accept="application/pdf" required>
-                                        <label class="input-group-text" for="inputGroupFile02">.pdf</label>
-                                    </div>
-
-                                </div>
-                                <br>
-                                <div class="form-group">
-                                    <label for="name" class="form-label"><b>Nombre del Calendario:</b></label>
-                                    <input type="text" name="name" id="name" class="form-control text-center" placeholder="Ingrese el nombre del Archivo..." required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="periodo" id="periodo" class="form-control text-center" value="<?php echo $periodo ?>" hidden>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-success">Subir</button>
-                                <button onclick="closeModal();" class="btn btn-danger"><i class="fa-solid fa-rectangle-xmark"></i></button>
-                            </div>
-                        </div>
-                    </form>
-                </dialog>
 
 
                 <!-- Lista de archivos, cuadrícula horizontal -->
-                <label for="" class="fs-2">Vista</label>
+                <label for="" class="fs-2 m-2">Vista</label>
                 <div class="text-center">
                     <input type="radio" name="grupo" id="list">
                     <label for="list">
@@ -72,12 +28,64 @@
     </div>
     <div class="card m-3 p-3 shadow">
         <div class="justify-content-center">
-            <div class="input-group mb-3">
+
+            <!-- Directorio Raiz -->
+            <div class="container d-flex">
+                <img src="../../../../public/imgs/files.png" alt="file" width="100">
+                <h4 class=" text-center mt-5 text-primary">Directorio: <?php echo $periodo ?></h4>
+            </div>
+            <div class="input-group mb-3 d-flex">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">🔍</span>
                 </div>
                 <input type="text" id="searchBox" placeholder="Buscar archivos..." class="rounded">
+                <div class="m-2"></div>
+                <!-- Insertar -->
+                <button onclick="showModal();" class="btn btn-success">
+                    <i class="fa-solid fa-file-circle-plus fa-xl"></i>
+                    Subir Calendario
+                </button>
             </div>
+
+
+            <br>
+            <!-- Modal subir calendario -->
+            <dialog id="modal" class="modal-dialog ">
+                <form action="<?= base_url('index.php/calendarioAcademico/insertar/' . $nombre); ?>" method="POST" enctype="multipart/form-data">
+                    <div class="modal-content text-center d-flex">
+                        <div class="modal-header">
+                            <h3 class="modal-title text-primary">Nuevo Calendario</h3>
+                            <h5 class="text-secondary"><b>Fichero: </b> <br><?php echo $periodo; ?></h5>
+                        </div>
+                        <label for="text" class="text-secondary"><b>Solo se adminten archivos <i class="fa-regular fa-file-pdf fa-xl"></i></b></label>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="archivo" class="form-label"><b>Subir archivo <i class="fa-solid fa-arrow-up-from-bracket"></i> </b></label>
+
+                                <div class="input-group mb-3">
+                                    <input type="file" name="archivo" id="inputGroupFile02" class="form-control" accept="application/pdf" required>
+                                    <label class="input-group-text" for="inputGroupFile02">.pdf</label>
+                                </div>
+
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="name" class="form-label"><b>Nombre del Calendario:</b></label>
+                                <input type="text" name="name" id="name" class="form-control text-center" placeholder="Ingrese el nombre del Archivo..." required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="periodo" id="periodo" class="form-control text-center" value="<?php echo $periodo ?>" hidden>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-success">Subir</button>
+                            <button onclick="closeModal();" class="btn btn-danger"><i class="fa-solid fa-rectangle-xmark"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </dialog>
+            <br>
+
         </div>
         <div id="vista">
             <!-- Contenedor para la vista de lista -->
