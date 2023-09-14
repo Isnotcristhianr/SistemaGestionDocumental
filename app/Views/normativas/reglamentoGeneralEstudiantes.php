@@ -66,7 +66,7 @@
         <ul id="listaArchivos" class="list-unstyled d-flex flex-wrap">
             <?php foreach ($carpetas as $carpeta) : ?>
                 <li style="margin: 5px;" class="card p-1 shadow">
-                    <a href="<?php echo base_url('/public/files/Reglamento General de Estudiantes/' . $carpeta) ?>" target="_blank" style="text-decoration: none;">
+                    <a href="<?php echo base_url('index.php/normativas/verCarpetaEspecifica/' . $carpeta) ?>" style="text-decoration: none;">
                         <div class="text-center">
                             <img src="<?php echo base_url('/public/imgs/files.png') ?>" alt="files" class="card-img-top" style="max-width: 100px; margin-left: auto; margin-right: auto;">
                         </div>
@@ -89,7 +89,7 @@
                         </a>
 
                         <!-- ver -->
-                        <a href="<?php echo base_url('index.php/normativas/reglamentoGeneralEstudiantes?directorio=' . $ruta) ?>" class="btn btn-outline-primary m-1 d-flex justify-content-end">
+                        <a href="<?php echo base_url('index.php//normativas/verCarpetaEspecifica/' . $carpeta) ?>" class="btn btn-outline-primary m-1 d-flex justify-content-end">
                             <i class="fa-solid fa-eye"></i>
                         </a>
 
@@ -125,7 +125,7 @@
                         ?>
 
                         <div class="text-center"> <!-- Utiliza la clase "text-center" para centrar horizontalmente -->
-                            <img src="<?php echo $icono ?>" alt="pdf" class="card-img-top" style="max-width: 100px; margin-left: auto; margin-right: auto;">
+                            <img src="<?php echo $icono ?>" alt="file" class="card-img-top" style="max-width: 100px; margin-left: auto; margin-right: auto;">
                         </div>
                         <div class="card-body">
                             <p class="card-title text-center text-danger"><b><?php echo $archivo ?></b></p>

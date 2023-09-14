@@ -317,3 +317,48 @@ in APPPATH\Controllers\ControladorNormativas.php on line 193.
  3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
  4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 16:36:30 --> syntax error, unexpected end of file
+in APPPATH\Views\normativas\verCarpetaReglamentoGenEst.php on line 37.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('normativas/verCarpetaReglamentoGenEst', [], true)
+ 3 APPPATH\Controllers\ControladorNormativas.php(259): view('normativas/verCarpetaReglamentoGenEst', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->verCarpetaEspecifica('Junio 2017')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 16:36:31 --> syntax error, unexpected end of file
+in APPPATH\Views\normativas\verCarpetaReglamentoGenEst.php on line 37.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('normativas/verCarpetaReglamentoGenEst', [], true)
+ 3 APPPATH\Controllers\ControladorNormativas.php(259): view('normativas/verCarpetaReglamentoGenEst', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->verCarpetaEspecifica('Junio 2017')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 16:36:32 --> syntax error, unexpected end of file
+in APPPATH\Views\normativas\verCarpetaReglamentoGenEst.php on line 37.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('normativas/verCarpetaReglamentoGenEst', [], true)
+ 3 APPPATH\Controllers\ControladorNormativas.php(259): view('normativas/verCarpetaReglamentoGenEst', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->verCarpetaEspecifica('Junio 2017')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 16:37:20 --> syntax error, unexpected end of file
+in APPPATH\Views\normativas\verCarpetaReglamentoGenEst.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('normativas/verCarpetaReglamentoGenEst', [], true)
+ 3 APPPATH\Controllers\ControladorNormativas.php(259): view('normativas/verCarpetaReglamentoGenEst', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->verCarpetaEspecifica('Junio 2017')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 16:47:14 --> syntax error, unexpected token "endforeach"
+in APPPATH\Views\normativas\verCarpetaReglamentoGenEst.php on line 62.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('normativas/verCarpetaReglamentoGenEst', [], true)
+ 3 APPPATH\Controllers\ControladorNormativas.php(259): view('normativas/verCarpetaReglamentoGenEst', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->verCarpetaEspecifica('Junio 2011')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
