@@ -114,19 +114,19 @@
                             </div>
                         </div>
 
-                        </a>
-                        <div class="card-footer text-center">
+                    </a>
+                    <div class="card-footer text-center">
 
-                            <!-- btn editar -->
-                            <button type="button" class="btn btn-outline-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editarreglamentomodal">
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </button>
+                        <!-- btn editar -->
+                        <button type="button" class="btn btn-outline-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editarreglamentomodal">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
 
-                            <!-- modal editar archivo -->
-                            <div class="modal fade" id="editarreglamentomodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <form action="" method="get">
+                        <!-- modal editar archivo -->
+                        <div class="modal fade" id="editarreglamentomodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form action="" method="get">
                                         <div class="modal-content text-center d-flex">
                                             <div class="modal-header">
                                                 <h4 class="modal-title text-primary">
@@ -135,7 +135,7 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                            <div class="form-group">
+                                                <div class="form-group">
                                                     <label for="archivo" class="form-label"><b>Cambiar archivo PDF <i class="fa-solid fa-arrow-up-from-bracket"></i> (opcional)</b></label>
                                                     <div class="input-group mb-3">
                                                         <input type="file" name="nuevo_archivo" id="inputGroupFile02" class="form-control" accept="application/pdf" value="<?= $archivo; ?>">
@@ -155,28 +155,28 @@
                                                 </button>
                                             </div>
                                         </div>
-                                        </form>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
-                        
-                            <!-- ver -->
-                            <a href="<?php echo base_url('/public/files/Reglamento General de Estudiantes/' . $carpeta . '/' . $archivo) ?>" target="_blank" class="btn btn-outline-primary btn-sm">
-                                <i class="fa-solid fa-eye"></i>
-                            </a>
-
-                            <!-- descargar -->
-                            <a href="<?php echo base_url('index.php/normativas/descargarArchivoEspecifico/' . $carpeta . '/' . $archivo) ?>" class="btn btn-outline-secondary btn-sm">
-                                <i class="fa-solid fa-download"></i>
-                            </a>
-
-                            <!-- eliminar -->
-                            <a href="<?php echo base_url('index.php/normativas/eliminarArchivoEspecifico/' . $carpeta . '/'  . $archivo) ?>" class="btn btn-outline-danger btn-sm">
-                                <i class="fa-solid fa-trash"></i>
-                            </a>
-
                         </div>
-               
+
+                        <!-- ver -->
+                        <a href="<?php echo base_url('/public/files/Reglamento General de Estudiantes/' . $carpeta . '/' . $archivo) ?>" target="_blank" class="btn btn-outline-primary btn-sm">
+                            <i class="fa-solid fa-eye"></i>
+                        </a>
+
+                        <!-- descargar -->
+                        <a href="<?php echo base_url('index.php/normativas/descargarArchivoEspecifico/' . $carpeta . '/' . $archivo) ?>" class="btn btn-outline-secondary btn-sm">
+                            <i class="fa-solid fa-download"></i>
+                        </a>
+
+                        <!-- eliminar -->
+                        <a href="<?php echo base_url('index.php/normativas/eliminarArchivoEspecifico/' . $carpeta . '/'  . $archivo) ?>" class="btn btn-outline-danger btn-sm">
+                            <i class="fa-solid fa-trash"></i>
+                        </a>
+
+                    </div>
+
                 </li>
             <?php endforeach; ?>
 
