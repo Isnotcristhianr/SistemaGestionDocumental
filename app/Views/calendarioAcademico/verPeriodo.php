@@ -98,9 +98,9 @@
                         </div>
                         <br>
                     </a>
-                    <div class="text-center d-flex container">
+                    <div class="text-center d-flex container card-footer">
                         <!-- Botón para editar -->
-                        <button type="button" class="btn btn-warning m-1 d-flex justify-content-end" data-bs-toggle="modal" data-bs-target="#editarcalendariomodal">
+                        <button type="button" class="btn btn-outline-warning m-1 d-flex justify-content-end" data-bs-toggle="modal" data-bs-target="#editarcalendariomodal">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </button>
 
@@ -140,17 +140,18 @@
                             </div>
                         </div>
 
-                        <!-- eliminar -->
-                        <a href="<?= base_url('index.php/calendarioAcademico/eliminar/' . $nombre . '/' . $periodo . '/' . $archivo); ?>" class="btn btn-danger m-1 d-flex justify-content-end">
-                            <i class="fa-solid fa-trash"></i>
-                        </a>
                         <!-- ver -->
-                        <a href="<?= base_url('index.php/calendarioAcademico/verPdf/'  . $nombre . '/' . $periodo . '/' . $archivo); ?>" class="btn btn-primary m-1 d-flex justify-content-end" target="_blank">
+                        <a href="<?= base_url('index.php/calendarioAcademico/verPdf/'  . $nombre . '/' . $periodo . '/' . $archivo); ?>" class="btn btn-outline-primary m-1 d-flex justify-content-end" target="_blank">
                             <i class="fa-solid fa-eye"></i>
                         </a>
                         <!-- Descargar -->
-                        <a href="<?= base_url('index.php/calendarioAcademico/descargar/' . $nombre . '/' . $periodo . '/' . $archivo); ?>" class="btn btn-secondary m-1 d-flex justify-content-end">
+                        <a href="<?= base_url('index.php/calendarioAcademico/descargar/' . $nombre . '/' . $periodo . '/' . $archivo); ?>" class="btn btn-outline-secondary m-1 d-flex justify-content-end">
                             <i class="fa-solid fa-download"></i>
+                        </a>
+
+                        <!-- eliminar -->
+                        <a href="<?= base_url('index.php/calendarioAcademico/eliminar/' . $nombre . '/' . $periodo . '/' . $archivo); ?>" class="btn btn-outline-danger m-1 d-flex justify-content-end">
+                            <i class="fa-solid fa-trash"></i>
                         </a>
                     </div>
                 </div>

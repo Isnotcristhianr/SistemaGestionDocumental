@@ -67,9 +67,9 @@
             <?php foreach ($carpetas as $carpeta) : ?>
                 <li style="margin: 5px;" class="card p-1 shadow">
                     <a href="<?php echo base_url('/public/files/Reglamento General de Estudiantes/' . $carpeta) ?>" target="_blank" style="text-decoration: none;">
-                    <div class="text-center">
-                        <img src="<?php echo base_url('/public/imgs/files.png') ?>" alt="files" class="card-img-top" style="max-width: 100px; margin-left: auto; margin-right: auto;">
-                    </div>    
+                        <div class="text-center">
+                            <img src="<?php echo base_url('/public/imgs/files.png') ?>" alt="files" class="card-img-top" style="max-width: 100px; margin-left: auto; margin-right: auto;">
+                        </div>
                         <div class="card-body">
                             <p class="card-title text-center"><b><?php echo $carpeta ?></b></p>
                             <!-- fecha  modificacion -->
@@ -81,6 +81,28 @@
                             </p>
                         </div>
                     </a>
+                    <div class="card-footer text-center d-flex container">
+
+                        <!-- editar -->
+                        <a href="<?php echo base_url('index.php/normativas/reglamentoGeneralEstudiantes?directorio=' . $ruta) ?>" class="btn btn-outline-warning m-1 d-flex justify-content-end">
+                            <i class="fa-solid fa-edit"></i>
+                        </a>
+
+                        <!-- ver -->
+                        <a href="<?php echo base_url('index.php/normativas/reglamentoGeneralEstudiantes?directorio=' . $ruta) ?>" class="btn btn-outline-primary m-1 d-flex justify-content-end">
+                            <i class="fa-solid fa-eye"></i>
+                        </a>
+
+                        <!-- descargar -->
+                        <a href="<?php echo base_url('index.php/normativas/reglamentoGeneralEstudiantes?directorio=' . $ruta) ?>" class="btn btn-outline-secondary m-1 d-flex justify-content-end">
+                            <i class="fa-solid fa-download"></i>
+                        </a>
+
+                        <!-- eliminar -->
+                        <a href="<?php echo base_url('index.php/normativas/eliminarArchivo?directorio=' . $ruta) ?>" class="btn btn-outline-danger m-1 d-flex justify-content-end">
+                            <i class="fa-solid fa-trash"></i>
+                        </a>
+                    </div>
                 </li>
             <?php endforeach; ?>
 
@@ -116,6 +138,27 @@
                             </p>
                         </div>
                     </a>
+                    <div class="card-footer text-center d-flex container">
+                        <!-- editar -->
+                       <!--  <a href="<?php echo base_url('index.php/normativas/reglamentoGeneralEstudiantes?directorio=' . $ruta) ?>" class="btn btn-outline-warning m-1 d-flex justify-content-end">
+                            <i class="fa-solid fa-edit"></i>
+                        </a> -->
+
+                        <!-- ver -->
+                        <a href="<?php echo base_url('/public/files/Reglamento General de Estudiantes/' . $archivo) ?>" class="btn btn-outline-primary m-1 d-flex justify-content-end" target="_blank">
+                            <i class="fa-solid fa-eye"></i>
+                        </a>
+
+                        <!-- descargar -->
+                        <a href="<?php echo base_url('/public/files/Reglamento General de Estudiantes/' . $archivo) ?>" class="btn btn-outline-secondary m-1 d-flex justify-content-end" download>
+                            <i class="fa-solid fa-download"></i>
+                        </a>
+
+                        <!-- eliminar -->
+                       <!--  <a href="<?php echo base_url('index.php/normativas/eliminarArchivo?directorio=' . $ruta) ?>" class="btn btn-outline-danger m-1 d-flex justify-content-end">
+                            <i class="fa-solid fa-trash"></i>
+                        </a> -->
+                    </div>
                 </li>
             <?php endforeach; ?>
         </ul>

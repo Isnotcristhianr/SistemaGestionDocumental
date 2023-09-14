@@ -223,6 +223,8 @@ $routes->post('/calendarioAcademico/editar/(:any)/(:any)/(:any)', 'ControladorCa
 $routes->get('/normativas/reglamentoGeneralEstudiantes', 'ControladorNormativas::reglamentoGeneralEstudiantes');
 //crear directorio
 $routes->post('/normativas/crearDirectorio', 'ControladorNormativas::crearDirectorio');
+//eliminar directorio
+$routes->get('/normativas/eliminarDirectorio/(:any)', 'ControladorNormativas::eliminarDirectorio/$1');
 
 /*
  * --------------------------------------------------------------------
