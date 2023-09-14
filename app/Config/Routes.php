@@ -231,6 +231,11 @@ $routes->get('/normativas/descargarPdf/(:any)', 'ControladorNormativas::descarga
 $routes->get('/normativas/descargarCarpetaComprimida/(:any)', 'ControladorNormativas::descargarCarpetaComprimida/$1');
 //verCarpetaEspecifica
 $routes->get('/normativas/verCarpetaEspecifica/(:any)', 'ControladorNormativas::verCarpetaEspecifica/$1');
+//ve archivo especifico
+$routes->get('/normativas/verArchivoEspecifico/(:any)/(:any)', 'ControladorNormativas::verArchivoEspecifico/$1/$2');
+//subir archivo especifico
+$routes->get('/normativas/subirArchivoEspecifico/', 'ControladorNormativas::subirArchivoEspecifico');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

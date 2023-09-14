@@ -170,7 +170,7 @@ class ControladorNormativas extends BaseController
 
             // Verificar si el directorio existe
             if (is_dir($rutaDirectorio)) {
-             
+
                 //tomar todos los archivos de la carpeta
                 $archivos = glob($rutaDirectorio . '/*');
 
@@ -260,6 +260,28 @@ class ControladorNormativas extends BaseController
                 ]
             );
             echo view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //subir archivo especifico reglamento general de estudiantes
+    public function subirArchivoEspecifico()
+    {
+        try {
+            //obtener datos
+            $nombre = $this->request->getGet('nombreDirectorio');
+            $archivo = $this->request->getGet('archivo');
+            $carpeta = $this->request->getGet('carpeta');
+
+            //ruta
+            $ruta = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\Reglamento General de Estudiantes\\' . $carpeta;
+
+            echo "nombre: " . $nombre . "<br>" .
+                "archivo: " . $archivo . "<br>" .
+                "carpeta: " . $carpeta . "<br>" .
+                "ruta: " . $ruta;
+                
         } catch (\Exception $e) {
             echo $e->getMessage();
         }

@@ -16,6 +16,61 @@
             </h4>
 
             <h5 class="text-center text-secondary">Directorio: <?php echo $carpeta ?> </h5>
+
+            <!-- Subir Archivo -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary m-3" data-bs-toggle="modal" data-bs-target="#subirArchivoModal">
+                            <i class="fa-solid fa-file-circle-plus"></i> Subir Archivo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal subir archivo -->
+            <div class="modal fade" id="subirArchivoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-primary" id="exampleModalLabel">Subir Archivo</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form action="<?php echo base_url('index.php/normativas/subirArchivoEspecifico/') ?>" method="GET" enctype="multipart/form-data">
+
+                            <div class="modal-body text-center">
+                                <label for="text" class="text-secondary "><b>Solo se admiten archivos
+                                        <i class="fa-regular fa-file-pdf fa-xl"></i>
+                                        <i class="fa-regular fa-file-word fa-xl"></i>
+
+                                    </b></label>
+                                <div class="mb-3">
+                                    <label for="archivo" class="form-label">Seleccionar Archivo</label>
+                                    <div class="input-group mb-3">
+                                        <input type="file" name="archivo" id="inputGroupFile02" class="form-control" accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+                                        <label class="input-group-text" for="inputGroupFile02">.pdf/.doc</label>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="nombreDirectorio" class="form-label">Nombre del Archivo</label>
+                                    <input class="form-control" type="text" id="nombreDirectorio">
+                                </div>
+                                <div class="mb-4">
+                                    <input class="form-control" type="text" name="carpeta" value="<?php echo $carpeta ?>" hidden>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-success">Subir Archivo</button>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </div>
     <!-- Campo de búsqueda -->
@@ -32,7 +87,7 @@
 
             <?php foreach ($archivos as $archivo) : ?>
                 <li style="margin: 5px;" class="card p-1 shadow">
-                    <a href="<?php echo base_url('/public/files/Reglamento General de Estudiantes/' . $archivo) ?>" target="_blank" style="text-decoration: none;">
+                    <a href="<?php echo base_url('/public/files/Reglamento General de Estudiantes/' . $carpeta . '/' . $archivo) ?>" target="_blank" style="text-decoration: none;">
                         <!-- asignar icono pdf y word -->
                         <?php
                         $extension = explode('.', $archivo);
@@ -61,7 +116,7 @@
 
                         <div class="card-footer">
                             <!-- ver -->
-                            <a href="<?php echo base_url('/public/files/Reglamento General de Estudiantes/' . $archivo) ?>" target="_blank" class="btn btn-outline-primary btn-sm">
+                            <a href="<?php echo base_url('/public/files/Reglamento General de Estudiantes/' . $carpeta . '/' . $archivo) ?>" target="_blank" class="btn btn-outline-primary btn-sm">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
 
