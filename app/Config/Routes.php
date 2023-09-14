@@ -237,6 +237,8 @@ $routes->get('/normativas/verArchivoEspecifico/(:any)/(:any)', 'ControladorNorma
 $routes->post('/normativas/subirArchivoEspecifico', 'ControladorNormativas::subirArchivoEspecifico');
 //descargar archivo especifico
 $routes->get('/normativas/descargarArchivoEspecifico/(:any)/(:any)', 'ControladorNormativas::descargarArchivoEspecifico/$1/$2');
+//eliminar archivo especifico
+$routes->get('/normativas/eliminarArchivoEspecifico/(:any)/(:any)', 'ControladorNormativas::eliminarArchivoEspecifico/$1/$2');
 
 /*
  * --------------------------------------------------------------------

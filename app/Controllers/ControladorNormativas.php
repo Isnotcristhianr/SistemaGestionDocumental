@@ -304,4 +304,67 @@ class ControladorNormativas extends BaseController
             echo $e->getMessage();
         }
     }
+
+    //descargar archivo especifico reglamento general de estudiantes
+    public function descargarArchivoEspecifico($carpeta, $archivo)
+    {
+        try {
+            //directorio
+            $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\Reglamento General de Estudiantes';
+
+            // Construir la ruta completa del archivo
+            $rutaArchivo = $directorio . DIRECTORY_SEPARATOR . $carpeta . DIRECTORY_SEPARATOR . $archivo;
+
+            // Verificar si el archivo existe
+            if (is_file($rutaArchivo)) {
+                // Obtener información del archivo
+                $finfo = finfo_open(FILEINFO_MIME_TYPE);
+                $tipo_mime = finfo_file($finfo, $rutaArchivo);
+                finfo_close($finfo);
+
+                // Obtener información del archivo
+                $tamanio = filesize($rutaArchivo);
+
+                // Enviar headers
+                header('Content-Type: ' . $tipo_mime);
+                header('Content-Length: ' . $tamanio);
+                header('Content-Disposition: attachment; filename="' . $archivo . '"');
+
+                // Enviar el archivo al navegador
+                readfile($rutaArchivo);
+            } else {
+                // El archivo no existe
+                echo 'El archivo no existe';
+            }
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //eliminar archivo especifico reglamento general de estudiantes
+    public function eliminarArchivoEspecifico($carpeta, $archivo)
+    {
+        try {
+            //directorio
+            $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\Reglamento General de Estudiantes';
+
+            // Construir la ruta completa del archivo
+            $rutaArchivo = $directorio . DIRECTORY_SEPARATOR . $carpeta . DIRECTORY_SEPARATOR . $archivo;
+
+            // Verificar si el archivo existe
+            if (is_file($rutaArchivo)) {
+                // Eliminar el archivo
+                unlink($rutaArchivo);
+
+                // Redireccionar al listado de archivos y carpetas
+                return redirect()->to(base_url('index.php/normativas/verCarpetaEspecifica/' . $carpeta));
+            } else {
+                // El archivo no existe
+                echo 'El archivo no existe';
+            }
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+    
 }

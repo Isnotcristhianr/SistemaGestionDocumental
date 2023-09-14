@@ -121,12 +121,12 @@
                             </a>
 
                             <!-- descargar -->
-                            <a href="<?php echo base_url('index.php/normativas/descargarPDF/' . $archivo) ?>" class="btn btn-outline-secondary btn-sm">
+                            <a href="<?php echo base_url('index.php/normativas/descargarArchivoEspecifico/' . $carpeta . '/' . $archivo) ?>" class="btn btn-outline-secondary btn-sm">
                                 <i class="fa-solid fa-download"></i>
                             </a>
 
                             <!-- eliminar -->
-                            <a href="<?php echo base_url('index.php/normativas/eliminarArchivo/' . $archivo) ?>" class="btn btn-outline-danger btn-sm">
+                            <a href="<?php echo base_url('index.php/normativas/eliminarArchivoEspecifico/' . $carpeta . '/'  . $archivo) ?>" class="btn btn-outline-danger btn-sm">
                                 <i class="fa-solid fa-trash"></i>
                             </a>
 
