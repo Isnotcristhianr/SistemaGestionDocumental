@@ -221,6 +221,8 @@ $routes->post('/calendarioAcademico/editar/(:any)/(:any)/(:any)', 'ControladorCa
 //?Normativas
 //reglamento general estudiantes
 $routes->get('/normativas/reglamentoGeneralEstudiantes', 'ControladorNormativas::reglamentoGeneralEstudiantes');
+//crear directorio
+$routes->post('/normativas/crearDirectorio', 'ControladorNormativas::crearDirectorio');
 
 /*
  * --------------------------------------------------------------------

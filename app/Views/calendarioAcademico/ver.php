@@ -19,14 +19,22 @@
                     </div>
 
                     <!-- Contenedor para la vista de cuadrícula (inicialmente oculto) -->
-                    <div id="gridArchivos" style="display: block;">
+                    <div id="gridArchivos" style="display: block;" class="p-2">
                         <?php foreach ($archivos as $archivo) : ?>
-                            <div style="display: inline-block; margin: 5px;" class="card p-1 shadow">
-                                <a href="<?= base_url('index.php/calendarioAcademico/verPeriodo/' . $nombre . '/' . $archivo); ?>" style="text-decoration: none;">
-                                    <img src="../../../public/imgs/files.png" alt="files" width="100">
-                                    <br>
-                                    <?= $archivo; ?>
+                            <div style="display: inline-block; margin: 5px;" class="card p-2 shadow">
+                                <a href="<?= base_url('index.php/calendarioAcademico/verPeriodo/' . $nombre . '/' . $archivo); ?>" class="card-img-top" style="max-width: 100px; margin-left: auto; margin-right: auto;">
+                                <div class="text-center">
+                                    <img src="../../../public/imgs/files.png" alt="files" class="card-img-top" style="max-width: 100px; margin-left: auto; margin-right: auto;">                                    
+                                </div>    
                                 </a>
+                                <p class="card-title text-center text-primary"><b><?= $archivo; ?></b></p>
+                                <!-- modificacion -->
+                                <p class="card-text text-left fs-6 fw-light text-secondary">
+                                    <?php
+                                    $ruta = $directorio . DIRECTORY_SEPARATOR . $archivo;
+                                    echo 'Modificación: ' . date("d/m/Y", filemtime($ruta));
+                                    ?>
+                                </p>
                             </div>
                         <?php endforeach; ?>
                     </div>

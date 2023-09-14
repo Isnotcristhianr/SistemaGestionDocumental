@@ -53,7 +53,12 @@ class ControladorCalendario extends BaseController
             $archivos = array_diff($archivos, array('.', '..'));
 
             echo view('header');
-            echo view('calendarioAcademico/ver', ['archivos' => $archivos, 'nombre' => $nombre]);
+            echo view('calendarioAcademico/ver',
+             [
+                'archivos' => $archivos, 
+                'nombre' => $nombre,
+                'directorio' => $directorio
+            ]);
             echo view('footer');
         } catch (\Exception $e) {
             die($e->getMessage());

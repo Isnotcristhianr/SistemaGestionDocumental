@@ -10,6 +10,7 @@ use Kint\Parser\ToStringPlugin;
 class ControladorNormativas extends BaseController
 {
 
+    //reglamento general de estudiantes
     public function reglamentoGeneralEstudiantes()
     {
 
@@ -57,5 +58,29 @@ class ControladorNormativas extends BaseController
             ]
         );
         echo view('footer');
+    }
+
+    //crear directorio/fichero reglamento general de estudiantes
+    public function crearDirectorio()
+    {
+        // Obtener el nombre del directorio ingresado por el usuario 
+        $nombreDirectorio = $this->request->getPostGet('nombreDirectorio');
+        // Obtener el directorio actual
+        $directorio = $this->request->getPostGet('directorio');
+
+        // Construir la ruta completa del directorio
+        $rutaDirectorio = $directorio . DIRECTORY_SEPARATOR . $nombreDirectorio;
+
+        // Verificar si el directorio existe
+        if (is_dir($rutaDirectorio)) {
+            // El directorio ya existe
+            echo 'El directorio ya existe';
+        } else {
+            // Crear el directorio
+            mkdir($rutaDirectorio);
+
+            // Redireccionar al listado de archivos y carpetas
+            return redirect()->to(base_url('index.php/normativas/reglamentoGeneralEstudiantes'));
+        }
     }
 }

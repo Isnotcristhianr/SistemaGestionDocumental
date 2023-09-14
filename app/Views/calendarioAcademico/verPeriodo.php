@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <div class="card m-3 p-3 shadow"  style="background-color: rgba(175, 175, 175, 0.16);">
+    <div class="card m-3 p-3 shadow" style="background-color: rgba(175, 175, 175, 0.16);">
         <div class="justify-content-center">
 
             <!-- Directorio Raiz -->
@@ -82,9 +82,13 @@
                                     $periodo
                                     . '/'
                                     . $archivo); ?>" style="text-decoration: none;">
-                        <img src="../../../../public/imgs/pdf-file.png" alt="pdf" width="80">
-                        <?= $archivo; ?>
-                        <div class="text-dark">
+                        <div class="text-center">
+
+                            <img src="../../../../public/imgs/pdf-file.png" alt="pdf" class="card-img-top" style="max-width: 100px; margin-left: auto; margin-right: auto;">
+                        </div>
+                        <p class="card-title text-danger text-center"><b><?= $archivo; ?></b></p>
+
+                        <div class="card-text text-left fs-6 fw-light text-secondary text-center">
                             <!-- fecha modificacion -->
                             <br>
                             <?php echo "Fecha de modificación: " . $fechaModificacion; ?>
@@ -92,13 +96,14 @@
                             <br>
                             <?php echo "Tamaño del archivo: " . $tamañoArchivo . " KB"; ?>
                         </div>
+                        <br>
                     </a>
-                    <div style=" align-items: center; display: flex;">
+                    <div class="text-center d-flex container">
                         <!-- Botón para editar -->
                         <button type="button" class="btn btn-warning m-1 d-flex justify-content-end" data-bs-toggle="modal" data-bs-target="#editarcalendariomodal">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </button>
-    
+
                         <!-- Modal editar calendario -->
                         <div class="modal fade" id="editarcalendariomodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
@@ -134,7 +139,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <!-- eliminar -->
                         <a href="<?= base_url('index.php/calendarioAcademico/eliminar/' . $nombre . '/' . $periodo . '/' . $archivo); ?>" class="btn btn-danger m-1 d-flex justify-content-end">
                             <i class="fa-solid fa-trash"></i>

@@ -34,19 +34,21 @@
                     <h5 class="modal-title" id="exampleModalLabel">Crear Directorio</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <!-- Formulario para ingresar el nombre del directorio -->
-                    <form id="crearDirectorioForm">
+                <form id="crearDirectorioForm" action="<?php echo base_url('index.php/normativas/crearDirectorio') ?>" method="POST" enctype="multipart/form-data">
+                    <div class="modal-body">
+                        <!-- Formulario para ingresar el nombre del directorio -->
                         <div class="mb-3">
                             <label for="nombreDirectorio" class="form-label">Nombre del Directorio:</label>
-                            <input type="text" class="form-control" id="nombreDirectorio" required>
+                            <input type="text" class="form-control" id="nombreDirectorio" name="nombreDirectorio" required>
                         </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary" onclick="crearDirectorioModal()">Crear</button>
-                </div>
+                        <!-- directorio actual hidden -->
+                        <input type="hidden" name="directorio" value="<?php echo $directorio ?>">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Crear</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="fa-solid fa-rectangle-xmark"></i></button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -59,15 +61,24 @@
         <input type="text" id="searchBox" class="form-control" placeholder="Buscar archivos..." onkeyup="filtrarArchivos()">
     </div>
 
-    <div class="container mt-4">
+    <div class="container mt-4 p-2">
         <!-- Vista tipo grid de carpetas  -->
         <ul id="listaArchivos" class="list-unstyled d-flex flex-wrap">
             <?php foreach ($carpetas as $carpeta) : ?>
                 <li style="margin: 5px;" class="card p-1 shadow">
                     <a href="<?php echo base_url('/public/files/Reglamento General de Estudiantes/' . $carpeta) ?>" target="_blank" style="text-decoration: none;">
-                        <img src="<?php echo base_url('/public/imgs/files.png') ?>" alt="files" width="100">
+                    <div class="text-center">
+                        <img src="<?php echo base_url('/public/imgs/files.png') ?>" alt="files" class="card-img-top" style="max-width: 100px; margin-left: auto; margin-right: auto;">
+                    </div>    
                         <div class="card-body">
-                            <p class="card-text text-center"><?php echo $carpeta ?></p>
+                            <p class="card-title text-center"><b><?php echo $carpeta ?></b></p>
+                            <!-- fecha  modificacion -->
+                            <p class="card-text text-left fs-6 fw-light text-secondary">
+                                <?php
+                                $ruta = $directorio . DIRECTORY_SEPARATOR . $carpeta;
+                                echo 'Modificación: ' . date("d/m/Y", filemtime($ruta));
+                                ?>
+                            </p>
                         </div>
                     </a>
                 </li>
@@ -91,10 +102,18 @@
                         }
                         ?>
 
-                        <img src="<?php echo $icono ?>" alt="pdf" width="100">
-
+                        <div class="text-center"> <!-- Utiliza la clase "text-center" para centrar horizontalmente -->
+                            <img src="<?php echo $icono ?>" alt="pdf" class="card-img-top" style="max-width: 100px; margin-left: auto; margin-right: auto;">
+                        </div>
                         <div class="card-body">
-                            <p class="card-text text-center"><?php echo $archivo ?></p>
+                            <p class="card-title text-center text-danger"><b><?php echo $archivo ?></b></p>
+                            <!-- fecha  modificacion -->
+                            <p class="card-text text-left fs-6 fw-light text-secondary">
+                                <?php
+                                $ruta = $directorio . DIRECTORY_SEPARATOR . $archivo;
+                                echo 'Modificación: ' . date("d/m/Y", filemtime($ruta));
+                                ?>
+                            </p>
                         </div>
                     </a>
                 </li>
