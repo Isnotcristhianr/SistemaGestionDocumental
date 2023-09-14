@@ -81,25 +81,25 @@
                             </p>
                         </div>
                     </a>
-                    <div class="card-footer text-center d-flex container">
+                    <div class="card-footer text-center">
 
                         <!-- editar -->
-                        <a href="<?php echo base_url('index.php/normativas/reglamentoGeneralEstudiantes?directorio=' . $ruta) ?>" class="btn btn-outline-warning m-1 d-flex justify-content-end">
+                        <a href="<?php echo base_url('index.php/normativas/reglamentoGeneralEstudiantes?directorio=' . $ruta) ?>" class="btn btn-outline-warning btn-sm">
                             <i class="fa-solid fa-edit"></i>
                         </a>
 
                         <!-- ver -->
-                        <a href="<?php echo base_url('index.php//normativas/verCarpetaEspecifica/' . $carpeta) ?>" class="btn btn-outline-primary m-1 d-flex justify-content-end">
+                        <a href="<?php echo base_url('index.php//normativas/verCarpetaEspecifica/' . $carpeta) ?>" class="btn btn-outline-primary btn-sm">
                             <i class="fa-solid fa-eye"></i>
                         </a>
 
                         <!-- descargar -->
-                        <a href="<?php echo base_url('index.php/normativas/descargarCarpetaComprimida/' . $carpeta) ?>" class="btn btn-outline-secondary m-1 d-flex justify-content-end">
+                        <a href="<?php echo base_url('index.php/normativas/descargarCarpetaComprimida/' . $carpeta) ?>" class="btn btn-outline-secondary btn-sm">
                             <i class="fa-solid fa-download"></i>
                         </a>
 
                         <!-- eliminar -->
-                        <a href="<?php echo base_url('index.php/normativas/eliminarDirectorio/' . $carpeta) ?>" class="btn btn-outline-danger m-1 d-flex justify-content-end">
+                        <a href="<?php echo base_url('index.php/normativas/eliminarDirectorio/' . $carpeta) ?>" class="btn btn-outline-danger btn-sm">
                             <i class="fa-solid fa-trash"></i>
                         </a>
                     </div>
@@ -138,19 +138,15 @@
                             </p>
                         </div>
                     </a>
-                    <div class="card-footer text-center d-flex container">
-                        <!-- editar -->
-                        <!--  <a href="<?php echo base_url('index.php/normativas/reglamentoGeneralEstudiantes?directorio=' . $ruta) ?>" class="btn btn-outline-warning m-1 d-flex justify-content-end">
-                            <i class="fa-solid fa-edit"></i>
-                        </a> -->
+                    <div class="card-footer text-center">
 
                         <!-- ver -->
-                        <a href="<?php echo base_url('/public/files/Reglamento General de Estudiantes/' . $archivo) ?>" class="btn btn-outline-primary m-1 d-flex justify-content-end" target="_blank">
+                        <a href="<?php echo base_url('/public/files/Reglamento General de Estudiantes/' . $archivo) ?>" class="btn btn-outline-primary btn-sm m-1" target="_blank">
                             <i class="fa-solid fa-eye"></i>
                         </a>
 
                         <!-- descargar -->
-                        <a href="<?php echo base_url('index.php/normativas/descargarPdf/' . $archivo) ?>" class="btn btn-outline-secondary m-1 d-flex justify-content-end" download>
+                        <a href="<?php echo base_url('index.php/normativas/descargarPdf/' . $archivo) ?>" class="btn btn-outline-secondary btn-sm m-1" download>
                             <i class="fa-solid fa-download"></i>
                         </a>
 
