@@ -224,7 +224,11 @@ $routes->get('/normativas/reglamentoGeneralEstudiantes', 'ControladorNormativas:
 //crear directorio
 $routes->post('/normativas/crearDirectorio', 'ControladorNormativas::crearDirectorio');
 //eliminar directorio
-$routes->get('/normativas/eliminarDirectorio/', 'ControladorNormativas::eliminarDirectorio');
+$routes->get('/normativas/eliminarDirectorio/(:any)', 'ControladorNormativas::eliminarDirectorio/$1');
+//descargar pdf
+$routes->get('/normativas/descargarPdf/(:any)', 'ControladorNormativas::descargarPdf/$1');
+//descargar carpeta comprimida
+$routes->get('/normativas/descargarCarpetaComprimida/(:any)', 'ControladorNormativas::descargarCarpetaComprimida/$1');
 
 /*
  * --------------------------------------------------------------------

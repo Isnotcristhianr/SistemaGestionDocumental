@@ -94,12 +94,12 @@
                         </a>
 
                         <!-- descargar -->
-                        <a href="<?php echo base_url('index.php/normativas/reglamentoGeneralEstudiantes?directorio=' . $ruta) ?>" class="btn btn-outline-secondary m-1 d-flex justify-content-end">
+                        <a href="<?php echo base_url('index.php/normativas/descargarCarpetaComprimida/' . $carpeta) ?>" class="btn btn-outline-secondary m-1 d-flex justify-content-end">
                             <i class="fa-solid fa-download"></i>
                         </a>
 
                         <!-- eliminar -->
-                        <a href="<?php echo base_url('index.php/normativas/eliminarDirectorio/') ?>" class="btn btn-outline-danger m-1 d-flex justify-content-end">
+                        <a href="<?php echo base_url('index.php/normativas/eliminarDirectorio/' . $carpeta) ?>" class="btn btn-outline-danger m-1 d-flex justify-content-end">
                             <i class="fa-solid fa-trash"></i>
                         </a>
                     </div>
@@ -150,14 +150,10 @@
                         </a>
 
                         <!-- descargar -->
-                        <a href="<?php echo base_url('/public/files/Reglamento General de Estudiantes/' . $archivo) ?>" class="btn btn-outline-secondary m-1 d-flex justify-content-end" download>
+                        <a href="<?php echo base_url('index.php/normativas/descargarPdf/' . $archivo) ?>" class="btn btn-outline-secondary m-1 d-flex justify-content-end" download>
                             <i class="fa-solid fa-download"></i>
                         </a>
 
-                        <!-- eliminar -->
-                        <!--  <a href="<?php echo base_url('index.php/normativas/eliminarArchivo?directorio=' . $ruta) ?>" class="btn btn-outline-danger m-1 d-flex justify-content-end">
-                            <i class="fa-solid fa-trash"></i>
-                        </a> -->
                     </div>
                 </li>
             <?php endforeach; ?>
