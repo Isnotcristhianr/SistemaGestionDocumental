@@ -126,7 +126,36 @@
                             <div class="modal fade" id="editarreglamentomodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
-
+                                        <form action="" method="get">
+                                        <div class="modal-content text-center d-flex">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title text-primary">
+                                                    Editar Archivo
+                                                </h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            <div class="form-group">
+                                                    <label for="archivo" class="form-label"><b>Cambiar archivo PDF <i class="fa-solid fa-arrow-up-from-bracket"></i> (opcional)</b></label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="file" name="nuevo_archivo" id="inputGroupFile02" class="form-control" accept="application/pdf" value="<?= $archivo; ?>">
+                                                        <label class="input-group-text" for="inputGroupFile02">.pdf</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="name" class="form-label"><b>Nuevo nombre del Calendario (opcional)</b></label>
+                                                    <input type="text" name="nuevo_nombre" id="name" class="form-control text-center" placeholder="Ingrese el nuevo nombre del Archivo...">
+                                                </div>
+                                                <input type="hidden" name="archivo_actual" value="<?= $archivo; ?>">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-success">Editar Archivo</button>
+                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                                                    <i class="fa-solid fa-xmark"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
