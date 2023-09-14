@@ -114,7 +114,23 @@
                             </div>
                         </div>
 
-                        <div class="card-footer">
+                        </a>
+                        <div class="card-footer text-center">
+
+                            <!-- btn editar -->
+                            <button type="button" class="btn btn-outline-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editarreglamentomodal">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+
+                            <!-- modal editar archivo -->
+                            <div class="modal fade" id="editarreglamentomodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+
+                                    </div>
+                                </div>
+                            </div>
+                        
                             <!-- ver -->
                             <a href="<?php echo base_url('/public/files/Reglamento General de Estudiantes/' . $carpeta . '/' . $archivo) ?>" target="_blank" class="btn btn-outline-primary btn-sm">
                                 <i class="fa-solid fa-eye"></i>
@@ -131,7 +147,7 @@
                             </a>
 
                         </div>
-                    </a>
+               
                 </li>
             <?php endforeach; ?>
 
