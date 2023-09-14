@@ -83,4 +83,28 @@ class ControladorNormativas extends BaseController
             return redirect()->to(base_url('index.php/normativas/reglamentoGeneralEstudiantes'));
         }
     }
+
+    //eliminar directorio/fichero reglamento general de estudiantes
+    public function eliminarDirectorio()
+    {
+        // Obtener el nombre del directorio ingresado por el usuario 
+        $nombreDirectorio = $this->request->getGet('nombreDirectorio');
+        // Obtener el directorio actual
+        $directorio = $this->request->getGet('directorio');
+
+        // Construir la ruta completa del directorio
+        $rutaDirectorio = $directorio . DIRECTORY_SEPARATOR . $nombreDirectorio;
+
+        // Verificar si el directorio existe
+        if (is_dir($rutaDirectorio)) {
+            // El directorio existe, eliminarlo
+            rmdir($rutaDirectorio);
+
+            // Redireccionar al listado de archivos y carpetas
+            return redirect()->to(base_url('index.php/normativas/reglamentoGeneralEstudiantes'));
+        } else {
+            // El directorio no existe
+            echo 'El directorio no existe';
+        }
+    }
 }

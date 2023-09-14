@@ -8,3 +8,35 @@ in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 76.
  6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
  7 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
  8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 14:55:59 --> rmdir(\): Permission denied
+in APPPATH\Controllers\ControladorNormativas.php on line 101.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'rmdir(\\): Permission denied', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Controllers\\ControladorNormativas.php', 101)
+ 2 APPPATH\Controllers\ControladorNormativas.php(101): rmdir('\\')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->eliminarDirectorio()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 14:56:14 --> rmdir(\): Permission denied
+in APPPATH\Controllers\ControladorNormativas.php on line 101.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'rmdir(\\): Permission denied', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Controllers\\ControladorNormativas.php', 101)
+ 2 APPPATH\Controllers\ControladorNormativas.php(101): rmdir('\\')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->eliminarDirectorio()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 14:56:46 --> unlink(\): Permission denied
+in APPPATH\Controllers\ControladorNormativas.php on line 101.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(\\): Permission denied', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Controllers\\ControladorNormativas.php', 101)
+ 2 APPPATH\Controllers\ControladorNormativas.php(101): unlink('\\')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->eliminarDirectorio()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 14:56:58 --> rmdir(\): Permission denied
+in APPPATH\Controllers\ControladorNormativas.php on line 101.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'rmdir(\\): Permission denied', 'C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Controllers\\ControladorNormativas.php', 101)
+ 2 APPPATH\Controllers\ControladorNormativas.php(101): rmdir('\\')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->eliminarDirectorio()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

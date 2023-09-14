@@ -224,7 +224,7 @@ $routes->get('/normativas/reglamentoGeneralEstudiantes', 'ControladorNormativas:
 //crear directorio
 $routes->post('/normativas/crearDirectorio', 'ControladorNormativas::crearDirectorio');
 //eliminar directorio
-$routes->get('/normativas/eliminarDirectorio/(:any)', 'ControladorNormativas::eliminarDirectorio/$1');
+$routes->get('/normativas/eliminarDirectorio/', 'ControladorNormativas::eliminarDirectorio');
 
 /*
  * --------------------------------------------------------------------

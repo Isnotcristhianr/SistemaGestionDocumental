@@ -99,7 +99,7 @@
                         </a>
 
                         <!-- eliminar -->
-                        <a href="<?php echo base_url('index.php/normativas/eliminarArchivo?directorio=' . $ruta) ?>" class="btn btn-outline-danger m-1 d-flex justify-content-end">
+                        <a href="<?php echo base_url('index.php/normativas/eliminarDirectorio/') ?>" class="btn btn-outline-danger m-1 d-flex justify-content-end">
                             <i class="fa-solid fa-trash"></i>
                         </a>
                     </div>
@@ -140,7 +140,7 @@
                     </a>
                     <div class="card-footer text-center d-flex container">
                         <!-- editar -->
-                       <!--  <a href="<?php echo base_url('index.php/normativas/reglamentoGeneralEstudiantes?directorio=' . $ruta) ?>" class="btn btn-outline-warning m-1 d-flex justify-content-end">
+                        <!--  <a href="<?php echo base_url('index.php/normativas/reglamentoGeneralEstudiantes?directorio=' . $ruta) ?>" class="btn btn-outline-warning m-1 d-flex justify-content-end">
                             <i class="fa-solid fa-edit"></i>
                         </a> -->
 
@@ -155,7 +155,7 @@
                         </a>
 
                         <!-- eliminar -->
-                       <!--  <a href="<?php echo base_url('index.php/normativas/eliminarArchivo?directorio=' . $ruta) ?>" class="btn btn-outline-danger m-1 d-flex justify-content-end">
+                        <!--  <a href="<?php echo base_url('index.php/normativas/eliminarArchivo?directorio=' . $ruta) ?>" class="btn btn-outline-danger m-1 d-flex justify-content-end">
                             <i class="fa-solid fa-trash"></i>
                         </a> -->
                     </div>
