@@ -269,19 +269,37 @@ class ControladorNormativas extends BaseController
     public function subirArchivoEspecifico()
     {
         try {
-            //obtener datos
-            $nombre = $this->request->getGet('nombreDirectorio');
-            $archivo = $this->request->getGet('archivo');
-            $carpeta = $this->request->getGet('carpeta');
+            // Obtener datos
+            $nombre = $this->request->getPost('nombreDirectorio');
+            $archivo = $this->request->getPost('archivo');
+            $carpeta = $this->request->getPost('carpeta');
 
-            //ruta
+            // Ruta
             $ruta = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\Reglamento General de Estudiantes\\' . $carpeta;
 
-            echo "nombre: " . $nombre . "<br>" .
-                "archivo: " . $archivo . "<br>" .
-                "carpeta: " . $carpeta . "<br>" .
-                "ruta: " . $ruta;
-                
+            /*  echo "nombre: " . $nombre . "<br>"
+                . "archivo: " . $archivo . "<br>"
+                . "carpeta: " . $carpeta . "<br>"
+                . "ruta: " . $ruta . "<br>"; */
+
+            // Verificar si el archivo existe
+            if (is_file($ruta . DIRECTORY_SEPARATOR . $archivo)) {
+                echo 'El archivo ya existe';
+            } else {
+
+                // Obtener el nombre temporal del archivo
+                $nombreTemp = $_FILES['archivo']['tmp_name'];
+
+                // Construir la ruta completa al archivo de destino
+                $rutaArchivoDestino = $ruta . DIRECTORY_SEPARATOR . $archivo;
+
+                // Mover el archivo a la carpeta de destino
+                $archivoinput = $this->request->getFile('archivo');
+                $archivoinput->move($ruta, $nombre . '.' . $archivoinput->getExtension());
+
+                // Redireccionar al listado de archivos y carpetas
+                return redirect()->to(base_url('index.php/normativas/verCarpetaEspecifica/' . $carpeta));
+            }
         } catch (\Exception $e) {
             echo $e->getMessage();
         }

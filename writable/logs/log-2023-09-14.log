@@ -362,3 +362,249 @@ in APPPATH\Views\normativas\verCarpetaReglamentoGenEst.php on line 62.
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:23:04 --> Call to a member function getClientExtension() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 290.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:24:19 --> Call to a member function getExtension() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 290.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:24:20 --> Call to a member function getExtension() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 290.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:24:20 --> Call to a member function getExtension() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 290.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:24:28 --> Call to a member function getExtension() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 290.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:24:44 --> Call to a member function getExtension() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 290.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:24:45 --> Call to a member function getExtension() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 290.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:24:45 --> Call to a member function getExtension() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 290.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:24:45 --> Call to a member function getExtension() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 290.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:25:42 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 289.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:25:43 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 289.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:25:43 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 289.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:25:44 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 289.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:25:44 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 289.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:25:57 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 289.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:33:49 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 290.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:33:50 --> Call to a member function isValid() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 290.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:34:20 --> Call to a member function move() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 289.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:34:21 --> Call to a member function move() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 289.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:34:21 --> Call to a member function move() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 289.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:34:22 --> Call to a member function move() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 289.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:34:22 --> Call to a member function move() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 289.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:36:26 --> Call to a member function move() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 289.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:36:27 --> Call to a member function move() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 289.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:36:28 --> Call to a member function move() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 289.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:36:28 --> Call to a member function move() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 289.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:36:28 --> Call to a member function move() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 289.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:36:28 --> Call to a member function move() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 289.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:38:26 --> Call to a member function getName() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 288.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:38:27 --> Call to a member function getName() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 288.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:38:27 --> Call to a member function getName() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 288.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:38:28 --> Call to a member function getName() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 288.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:38:28 --> Call to a member function getName() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 288.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:38:38 --> Call to a member function getName() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 288.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:38:46 --> Call to a member function getName() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 288.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:43:14 --> Call to a member function getName() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 288.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:43:21 --> Call to a member function getName() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 288.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:43:22 --> Call to a member function getName() on string
+in APPPATH\Controllers\ControladorNormativas.php on line 288.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:47:14 --> Call to a member function getName() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 288.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:47:14 --> Call to a member function getName() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 288.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 20:47:14 --> Call to a member function getName() on null
+in APPPATH\Controllers\ControladorNormativas.php on line 288.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorNormativas->subirArchivoEspecifico()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorNormativas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

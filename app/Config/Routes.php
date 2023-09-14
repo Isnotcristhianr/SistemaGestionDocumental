@@ -234,7 +234,9 @@ $routes->get('/normativas/verCarpetaEspecifica/(:any)', 'ControladorNormativas::
 //ve archivo especifico
 $routes->get('/normativas/verArchivoEspecifico/(:any)/(:any)', 'ControladorNormativas::verArchivoEspecifico/$1/$2');
 //subir archivo especifico
-$routes->get('/normativas/subirArchivoEspecifico/', 'ControladorNormativas::subirArchivoEspecifico');
+$routes->post('/normativas/subirArchivoEspecifico', 'ControladorNormativas::subirArchivoEspecifico');
+//descargar archivo especifico
+$routes->get('/normativas/descargarArchivoEspecifico/(:any)/(:any)', 'ControladorNormativas::descargarArchivoEspecifico/$1/$2');
 
 /*
  * --------------------------------------------------------------------

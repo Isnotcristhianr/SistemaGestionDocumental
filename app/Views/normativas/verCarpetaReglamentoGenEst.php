@@ -36,7 +36,7 @@
                             <h5 class="modal-title text-primary" id="exampleModalLabel">Subir Archivo</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <form action="<?php echo base_url('index.php/normativas/subirArchivoEspecifico/') ?>" method="GET" enctype="multipart/form-data">
+                        <form action="<?php echo base_url('index.php/normativas/subirArchivoEspecifico') ?>" method="POST" enctype="multipart/form-data">
 
                             <div class="modal-body text-center">
                                 <label for="text" class="text-secondary "><b>Solo se admiten archivos
@@ -53,7 +53,7 @@
                                 </div>
                                 <div class="mb-4">
                                     <label for="nombreDirectorio" class="form-label">Nombre del Archivo</label>
-                                    <input class="form-control" type="text" id="nombreDirectorio">
+                                    <input class="form-control" type="text" name="nombreDirectorio">
                                 </div>
                                 <div class="mb-4">
                                     <input class="form-control" type="text" name="carpeta" value="<?php echo $carpeta ?>" hidden>
