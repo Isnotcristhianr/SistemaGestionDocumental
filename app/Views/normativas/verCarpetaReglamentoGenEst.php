@@ -30,7 +30,7 @@
 
             <!-- Modal subir archivo -->
             <div class="modal fade" id="subirArchivoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
+                <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title text-primary" id="exampleModalLabel">Subir Archivo</h5>
@@ -124,7 +124,7 @@
 
                         <!-- modal editar archivo -->
                         <div class="modal fade" id="editarreglamentomodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
+                            <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <form action="<?php echo base_url('index.php/normativas/editarArchivoEspecifico/' . $carpeta . '/' . $archivo) ?>" method="post" enctype="multipart/form-data">
                                         <div class="modal-content text-center d-flex">

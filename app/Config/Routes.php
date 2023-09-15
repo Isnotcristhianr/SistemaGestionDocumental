@@ -229,6 +229,8 @@ $routes->get('/normativas/eliminarDirectorio/(:any)', 'ControladorNormativas::el
 $routes->get('/normativas/descargarPdf/(:any)', 'ControladorNormativas::descargarPdf/$1');
 //descargar carpeta comprimida
 $routes->get('/normativas/descargarCarpetaComprimida/(:any)', 'ControladorNormativas::descargarCarpetaComprimida/$1');
+//editar carpeta
+$routes->post('/normativas/editarCarpeta/(:any)', 'ControladorNormativas::editarCarpeta/$1');
 //verCarpetaEspecifica
 $routes->get('/normativas/verCarpetaEspecifica/(:any)', 'ControladorNormativas::verCarpetaEspecifica/$1');
 //ve archivo especifico

@@ -28,7 +28,7 @@
 
     <!-- Modal para crear un directorio -->
     <div class="modal fade" id="crearDirectorioModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Crear Directorio</h5>
@@ -84,10 +84,51 @@
                     <div class="card-footer text-center">
 
                         <!-- editar -->
-                        <button type="button" class="btn btn-outline-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editarCarpetamodal">
+                        <button type="button" class="btn btn-outline-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editarCarpetamodal" data-carpeta="<?php echo $carpeta ?>">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </button>
 
+                        <!-- Modal Editar -->
+                        <div class="modal fade" id="editarCarpetamodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <form action="<?php echo base_url('index.php/normativas/editarCarpeta/'.$carpeta) ?>" method="POST">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-primary" id="exampleModalLabel">Editar Directorio: <h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <label for="">Ingrese el nuevo nombre de la carpeta: </label>
+                                            <input type="text" class="form-control" id="nombreDirectorio" name="nombreDirectorio" placeholder="" required>
+                                            <!-- input hidden  -->
+                                            <input type="text" name="directorio" value="" hidden>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-success">Editar</button>
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="fa-solid fa-rectangle-xmark"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Script modal editar -->
+                        <script>
+                            // Agregar un evento clic a todos los botones "Editar"
+                            document.querySelectorAll('[data-bs-target="#editarCarpetamodal"]').forEach(function(button) {
+                                button.addEventListener('click', function() {
+                                    // Obtener la carpeta correspondiente desde el atributo data-carpeta
+                                    var carpeta = this.getAttribute('data-carpeta');
+
+                                    // Actualizar el título del modal con el nombre de la carpeta
+                                    document.querySelector('#editarCarpetamodal .modal-title').textContent = 'Editar Directorio: ' + carpeta;
+
+                                    // Actualizar el valor del campo hidden
+                                    document.querySelector('#editarCarpetamodal input[name="directorio"]').value = carpeta;
+                                });
+                            });
+                        </script>
                         <!-- ver -->
                         <a href="<?php echo base_url('index.php//normativas/verCarpetaEspecifica/' . $carpeta) ?>" class="btn btn-outline-primary btn-sm">
                             <i class="fa-solid fa-eye"></i>

@@ -93,6 +93,38 @@ class ControladorNormativas extends BaseController
         }
     }
 
+    //editar directorio reglamento general de estudiantes
+    public function editarCarpeta($carpeta)
+    {
+        try {
+            // Directorio base para el reglamento general de estudiantes
+            $directorioBase = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\Reglamento General de Estudiantes';
+
+            //directorio donde esta la carpeta actual a modificar
+            $directorio = $directorioBase . DIRECTORY_SEPARATOR . $carpeta;
+
+            //datos del formulario
+            $nombre = $this->request->getPost('nombreDirectorio');
+
+            //? Se cambio el nombre
+            if ($nombre != '') {
+
+                // Construir la ruta completa al directorio de destino
+                $rutaDirectorioDestino = $directorioBase . DIRECTORY_SEPARATOR . $nombre;
+
+                // Renombrar el directorio
+                rename($directorio, $rutaDirectorioDestino);
+
+                // Redireccionar al listado de archivos y carpetas
+                return redirect()->to(base_url('index.php/normativas/reglamentoGeneralEstudiantes'));
+            }
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
     //eliminar carpeta reglamento general de estudiantes
     public function eliminarDirectorio($carpeta)
     {
