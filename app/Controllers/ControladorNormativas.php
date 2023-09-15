@@ -366,5 +366,66 @@ class ControladorNormativas extends BaseController
             echo $e->getMessage();
         }
     }
-    
+
+    //editar archivo especifico reglamento general de estudiantes
+    public function editarArchivoEspecifico($carpeta, $archivo)
+    {
+        try {
+            // Directorio base para el reglamento general de estudiantes
+            $directorioBase = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\Reglamento General de Estudiantes';
+
+            //directorio donde esta el archivo actual a modificar
+            $directorio = $directorioBase . DIRECTORY_SEPARATOR . $carpeta;
+
+            // Construir la ruta completa del archivo
+            $rutaArchivo = $directorio . DIRECTORY_SEPARATOR . $archivo;
+
+            //datos del formulario
+            $nombre = $this->request->getPost('nuevo_nombre');
+            $archivoNuevo = $this->request->getFile('nuevo_archivo');
+
+            //? Se cambio el nombre y archivo
+            if ($nombre != '' && $archivoNuevo->getName() != '') {
+
+                // Construir la ruta completa al archivo de destino
+                $rutaArchivoDestino = $directorio . DIRECTORY_SEPARATOR . $nombre . '.' . $archivoNuevo->getExtension();
+
+                // Eliminar el archivo anterior
+                unlink($rutaArchivo);
+
+                // Mover el archivo a la carpeta de destino
+                $archivoNuevo->move($directorio, $nombre . '.' . $archivoNuevo->getExtension());
+
+
+                // Redireccionar al listado de archivos y carpetas
+                return redirect()->to(base_url('index.php/normativas/verCarpetaEspecifica/' . $carpeta));
+            }
+            //? solo se cambio el nombre, el archivo se mantiene
+            else if (!empty($nombre)) {
+
+                // Construir la ruta completa al archivo de destino
+                $rutaArchivoDestino = $directorio . DIRECTORY_SEPARATOR . $nombre . '.' . pathinfo($rutaArchivo, PATHINFO_EXTENSION);
+
+                // Renombrar el archivo
+                rename($rutaArchivo, $rutaArchivoDestino);
+
+                // Redireccionar al listado de archivos y carpetas
+                return redirect()->to(base_url('index.php/normativas/verCarpetaEspecifica/' . $carpeta));
+            }
+            //? solo se cambio el archivo
+            else if ($archivoNuevo->isValid()) {
+
+                //actualizar archivo
+                $archivoNuevo->move($directorio, $archivoNuevo->getName());
+
+                //eliminar archivo anterior
+                unlink($rutaArchivo);
+
+                // Redireccionar al listado de archivos y carpetas
+                return redirect()->to(base_url('index.php/normativas/verCarpetaEspecifica/' . $carpeta));
+            }
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
 }
