@@ -279,7 +279,6 @@ class ControladorCalendario extends BaseController
                 //eliminar zip
                 unlink($nombreZip);
             }
-
         } catch (\Exception $e) {
             die($e->getMessage());
         }
