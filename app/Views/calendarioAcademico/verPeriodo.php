@@ -28,7 +28,7 @@
 
             <!-- Modal subir calendario -->
             <div class="modal fade" id="subirCalendarioModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
+                <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <!-- Formulario para ingresar el nombre del directorio -->
                         <form action="<?= base_url('index.php/calendarioAcademico/insertar/' . $nombre); ?>" method="POST" enctype="multipart/form-data">
@@ -76,15 +76,15 @@
         <!-- Contenedor para la vista de cuadrícula (inicialmente oculto) -->
         <div id="gridArchivos" style="display: block;">
             <?php foreach ($archivos as $archivo) : ?>
-                <div style="display: inline-block; margin: 5px;" class="card p-3 shadow">
+                <div style="display: inline-block; margin: 5px; " class="card p-3 shadow">
                     <a href="<?= base_url('index.php/calendarioAcademico/descargar/' . $nombre . '/' .
                                     /* periodo */
                                     $periodo
                                     . '/'
-                                    . $archivo); ?>" style="text-decoration: none;">
+                                    . $archivo); ?>" style="text-decoration: none; ">
                         <div class="text-center">
 
-                            <img src="../../../../public/imgs/pdf-file.png" alt="pdf" class="card-img-top" style="max-width: 100px; margin-left: auto; margin-right: auto;">
+                            <img src="../../../../public/imgs/pdf-file.png" alt="pdf" class="card-img-top" style="max-width: 100px; margin-left: auto; margin-right: auto; ">
                         </div>
                         <p class="card-title text-danger text-center"><b><?= $archivo; ?></b></p>
 
@@ -106,11 +106,11 @@
 
                         <!-- Modal editar calendario -->
                         <div class="modal fade" id="editarcalendariomodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
+                            <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <!-- Formulario para editar el calendario -->
                                     <form action="<?= base_url('index.php/calendarioAcademico/editar/' . $nombre . '/' . $periodo . '/' . $archivo); ?>" method="post" enctype="multipart/form-data">
-                                        <div class="modal-content text-center d-flex">
+                                        <div class="modal-content  text-center d-flex">
                                             <div class="modal-header">
                                                 <h3 class="modal-title text-primary">Editar Calendario</h3>
                                                 <h5 class="text-secondary"><b>Fichero: <?= $archivo; ?></b></h5>

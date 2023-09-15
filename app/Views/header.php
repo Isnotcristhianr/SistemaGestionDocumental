@@ -95,7 +95,7 @@
               Normativas</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a href="" class="dropdown-item">Normativa General</a></li>
-              <li><a href="<?php echo base_url('/index.php//normativas/reglamentoGeneralEstudiantes')?>" class="dropdown-item">Reglamento General Estudiantes</a></li>
+              <li><a href="<?php echo base_url('/index.php//normativas/reglamentoGeneralEstudiantes') ?>" class="dropdown-item">Reglamento General Estudiantes</a></li>
 
             </ul>
           </li>
@@ -113,8 +113,18 @@
             <li><a class="dropdown-item" href="#">Perfil</a></li>
             <li><a class="dropdown-item bg-danger text-light" href="#">Cerrar Sesión</a></li>
           </ul>
+
         </div>
       </div>
-
+      <!-- btn modo oscuro -->
+      <div class="d-flex m-2">
+        <div class="row">
+          <div class=" text-end">
+            <button class="btn btn-outline-dark" id="btnModoOscuro">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
