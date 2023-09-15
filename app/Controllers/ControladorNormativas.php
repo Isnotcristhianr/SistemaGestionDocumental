@@ -171,6 +171,20 @@ class ControladorNormativas extends BaseController
             // Verificar si el directorio existe
             if (is_dir($rutaDirectorio)) {
 
+                //control 0 archivos en carpeta
+                $control = 0;
+                if (glob($rutaDirectorio . '/*') != false) {
+                    $control = 1;
+                }
+
+                if ($control == 0) {
+                    echo '<script> 
+                            alert("La carpeta esta vacia");
+                            window.location.href="' . base_url('index.php/normativas/reglamentoGeneralEstudiantes') . '";
+
+                    </script>';
+                }
+
                 //tomar todos los archivos de la carpeta
                 $archivos = glob($rutaDirectorio . '/*');
 

@@ -84,9 +84,9 @@
                     <div class="card-footer text-center">
 
                         <!-- editar -->
-                        <a href="<?php echo base_url('index.php/normativas/reglamentoGeneralEstudiantes?directorio=' . $ruta) ?>" class="btn btn-outline-warning btn-sm">
-                            <i class="fa-solid fa-edit"></i>
-                        </a>
+                        <button type="button" class="btn btn-outline-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editarCarpetamodal">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
 
                         <!-- ver -->
                         <a href="<?php echo base_url('index.php//normativas/verCarpetaEspecifica/' . $carpeta) ?>" class="btn btn-outline-primary btn-sm">
