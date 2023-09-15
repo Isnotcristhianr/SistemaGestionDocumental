@@ -216,7 +216,12 @@ $routes->post('/calendarioAcademico/insertar/(:any)', 'ControladorCalendario::in
 $routes->get('/calendarioAcademico/eliminar/(:any)/(:any)/(:any)', 'ControladorCalendario::eliminar/$1/$2/$3');
 //editar calendario academico
 $routes->post('/calendarioAcademico/editar/(:any)/(:any)/(:any)', 'ControladorCalendario::editar/$1/$2/$3');
-
+//crear carpeta
+$routes->post('/calendarioAcademico/crearCarpeta/(:any)', 'ControladorCalendario::crearCarpeta/$1');
+//eliminar carpeta
+$routes->get('/calendarioAcademico/eliminarCarpeta/(:any)/(:any)', 'ControladorCalendario::eliminarCarpeta/$1/$2');
+//descargar zip carpeta
+$routes->get('/calendarioAcademico/descargarZipCarpeta/(:any)/(:any)', 'ControladorCalendario::descargarZipCarpeta/$1/$2');
 
 //?Normativas
 //reglamento general estudiantes

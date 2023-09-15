@@ -53,12 +53,14 @@ class ControladorCalendario extends BaseController
             $archivos = array_diff($archivos, array('.', '..'));
 
             echo view('header');
-            echo view('calendarioAcademico/ver',
-             [
-                'archivos' => $archivos, 
-                'nombre' => $nombre,
-                'directorio' => $directorio
-            ]);
+            echo view(
+                'calendarioAcademico/ver',
+                [
+                    'archivos' => $archivos,
+                    'nombre' => $nombre,
+                    'directorio' => $directorio
+                ]
+            );
             echo view('footer');
         } catch (\Exception $e) {
             die($e->getMessage());
@@ -154,6 +156,135 @@ class ControladorCalendario extends BaseController
             die($e->getMessage());
         }
     }
+
+    //crear carpeta periodo
+    public function crearCarpeta($nombre)
+    {
+        try {
+
+            if ($nombre == 'POSGRADO') {
+                $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\POSGRADO';
+            } elseif ($nombre == 'PREGRADO') {
+                $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\PREGRADO';
+            } elseif ($nombre == 'PUCETEC') {
+                $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\PUCETEC';
+            }
+
+            // Obtener datos del formulario
+            $periodo = $this->request->getPostGet('nombreDirectorio');
+
+            // Ruta del directorio
+            $ruta = $directorio . '\\' . $periodo;
+
+            // Verificar si existe la carpeta
+            if (!file_exists($ruta)) {
+                // Crear la carpeta
+                mkdir($ruta, 0777, true);
+            } else {
+                // Alerta de que ya existe la carpeta
+                echo "<script>alert('Ya existe la carpeta');</script>";
+            }
+
+            // Redirigir después de la operación exitosa
+            return redirect()->to(base_url("index.php/calendarios/ver/{$nombre}"));
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    //eliminar carpeta periodo
+    public function eliminarCarpeta($nombre, $periodo)
+    {
+        try {
+
+            if ($nombre == 'POSGRADO') {
+                $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\POSGRADO';
+            } elseif ($nombre == 'PREGRADO') {
+                $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\PREGRADO';
+            } elseif ($nombre == 'PUCETEC') {
+                $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\PUCETEC';
+            }
+
+            //ver carpeta periodo
+            $directorioPeriodo = $directorio . '\\' . $periodo;
+
+            //eliminar carpeta
+            rmdir($directorioPeriodo);
+
+            return redirect()->to(base_url("index.php/calendarios/ver/" . $nombre));
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    //descargar zip carpeta periodo 
+    public function descargarZipCarpeta($nombre, $periodo)
+    {
+        try {
+            if ($nombre == 'POSGRADO') {
+                $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\POSGRADO';
+            } elseif ($nombre == 'PREGRADO') {
+                $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\PREGRADO';
+            } elseif ($nombre == 'PUCETEC') {
+                $directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS\PUCETEC';
+            }
+
+            // Verificar si el directorio del período existe
+            $directorioPeriodo = $directorio . DIRECTORY_SEPARATOR . $periodo;
+
+            if (!is_dir($directorioPeriodo)) {
+                // El directorio no existe
+                echo 'El directorio no existe';
+                return;
+            }
+
+            // Control de archivos en la carpeta
+            $control = 0;
+            if (glob($directorioPeriodo . '/*') !== false) {
+                $control = 1;
+            }
+
+            if ($control === 0) {
+                echo '<script> 
+                        alert("La carpeta está vacía");
+                        window.location.href = "' . base_url("index.phpcalendarios/ver//{$nombre}") . '";
+                    </script>';
+                return;
+            }
+
+            //tomar todos los archivos de la carpeta
+            $archivos = glob($directorioPeriodo . '/*');
+
+            //crear zip
+            $zip = new \ZipArchive();
+
+            //nombre del zip
+            $nombreZip = $periodo . '.zip';
+
+            //crear zip y abrir
+            if ($zip->open($nombreZip, \ZipArchive::CREATE) === TRUE) {
+                //agregar archivos al zip
+                foreach ($archivos as $archivo) {
+                    $zip->addFile($archivo, basename($archivo));
+                }
+                //cerrar zip
+                $zip->close();
+
+                //descargar zip
+                header('Content-Type: application/zip');
+                header('Content-disposition: attachment; filename=' . $nombreZip);
+                header('Content-Length: ' . filesize($nombreZip));
+                readfile($nombreZip);
+
+                //eliminar zip
+                unlink($nombreZip);
+            }
+
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
 
     //! CRUD
 
