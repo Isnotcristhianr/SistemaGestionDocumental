@@ -15,8 +15,6 @@
 
     <!-- Contenido-->
     <h3 class="text text-start text-success">Oferta Académica Vigentes</h3>
-    <a href="" class="btn btn-success ">Ver Resumen</a>
-    <br>
     <br>
     <!-- Llenar tabla con activas -->
     <table class="table table-success align-middle order-column hover row-border stripe text-start" id="tbl" style="width: 100%;">
@@ -71,9 +69,7 @@
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <h3 class="text text-start text-primary">Oferta Académica Histórico</h3>
     <!-- Sede Ibarra -->
-    <h5 class="text text-primary">Campus Ibarra</h5>
-    <a href="" class="btn btn-primary">Ver Resumen</a>
-    <br>
+    <h4 class="text text-primary">Campus Ibarra</h4>
     <br>
     <!-- Llenar tabla con no ativas -->
     <table class="table table-primary align-middle order-column hover row-border stripe" id="tbl2">
@@ -125,10 +121,7 @@
     </table>
     <br>
     <!-- Sede Tulcan -->
-    <h5 class="text text-info">Campus Tulcán</h5>
-    <a href="" class="btn btn-info">Ver Resumen</a>
-    <br>
-    <br>
+    <h4 class="text text-info">Campus Tulcán</h4>
     <!-- Llenar tabla con no ativas -->
     <table class="table table-info align-middle order-column hover row-border stripe" id="tbl3">
         <thead>
