@@ -18,7 +18,7 @@
     <!-- Contenido-->
     <h3 class="text text-start text-success">Oferta Académica Vigente</h3>
     <br>
-    <table class="table table-success align-middle order-column hover row-border stripe " id="">
+    <table class="table table-success align-middle order-column hover row-border stripe " id="tbl">
         <thead>
             <th hidden>ID</th>
             <th>Año</th>
@@ -39,16 +39,14 @@
                 ) {
 
             ?>
-                    <tr>
-                        <td hidden><?php echo $periodo['PER_ID']; ?></td>
-                    <tr>
-                        <td hidden><?php echo $periodo['PER_ID']; ?></td>
-                        <td><?php echo $periodo['PER_ANO']; ?></td>
-                        <td><?php echo $periodo['PER_PERIODO']; ?></td>
-                        <!-- Capturar id -->
-                        <td>
-                            <a href="<?php echo base_url('index.php/ReporteGradoPeriodoMatriculados/' . $periodo['PER_ID']) ?>" class="btn btn-success">Datos →</a>
-                        </td>
+
+                    <td hidden><?php echo $periodo['PER_ID']; ?></td>
+                    <td><?php echo $periodo['PER_ANO']; ?></td>
+                    <td><?php echo $periodo['PER_PERIODO']; ?></td>
+                    <!-- Capturar id -->
+                    <td>
+                        <a href="<?php echo base_url('index.php/ReporteGradoPeriodoMatriculados/' . $periodo['PER_ID']) ?>" class="btn btn-success">Datos <i class="fa-regular fa-circle-right"></i></a>
+                    </td>
                     </tr>
             <?php
                 }
@@ -84,7 +82,7 @@
                         <td><?php echo $periodo['PER_PERIODO']; ?></td>
                         <!-- Capturar id -->
                         <td>
-                            <a href="<?php echo base_url('index.php/ReporteGradoPeriodoMatriculados/' . $periodo['PER_ID']) ?>" class="btn btn-primary">Datos →</a>
+                            <a href="<?php echo base_url('index.php/ReporteGradoPeriodoMatriculados/' . $periodo['PER_ID']) ?>" class="btn btn-primary">Datos <i class="fa-regular fa-circle-right"></i></a>
                         </td>
                     </tr>
             <?php

@@ -56,7 +56,7 @@
                                 <!-- Obtener id de la carrera -->
                                 <a href="<?php
                                             echo base_url('index.php/ReporteGradoCarreraMatriculados/' . $carreras['CAR_ID'])
-                                            ?>" class="btn btn-success">Datos →</a>
+                                            ?>" class="btn btn-success">Datos  <i class="fa-regular fa-circle-right"></i></a>
                             </td>
                             </td>
                         </tr>
@@ -115,7 +115,7 @@
                                 <!-- Obtener id de la carrera -->
                                 <a href="<?php
                                             echo base_url('index.php/ReporteGradoCarreraMatriculados/' . $carreras['CAR_ID'])
-                                            ?>" class="btn btn-primary">Datos →</a>
+                                            ?>" class="btn btn-primary">Datos  <i class="fa-regular fa-circle-right"></i></a>
                             </td>
                         </tr>
             <?php
@@ -169,7 +169,7 @@
                                 <!-- Obtener id de la carrera -->
                                 <a href="<?php
                                             echo base_url('index.php/ReporteGradoCarreraMatriculados/' . $carreras['CAR_ID'])
-                                            ?>" class="btn btn-info">Datos →</a>
+                                            ?>" class="btn btn-info">Datos  <i class="fa-regular fa-circle-right"></i></a>
                             </td>
                         </tr>
             <?php

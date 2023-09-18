@@ -54,7 +54,7 @@
                             ?>
                         </td>
                         <td>
-                            <a href="<?php echo base_url('index.php/ReportePosgradoCarreraMatriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Datos →</a>
+                            <a href="<?php echo base_url('index.php/ReportePosgradoCarreraMatriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Datos  <i class="fa-regular fa-circle-right"></i></a>
                         </td>
                     </tr>
             <?php
@@ -105,7 +105,7 @@
                             ?>
                         </td>
                         <td>
-                            <a href="<?php echo base_url('index.php/ReportePosgradoCarreraMatriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Datos →</a>
+                            <a href="<?php echo base_url('index.php/ReportePosgradoCarreraMatriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Datos  <i class="fa-regular fa-circle-right"></i></a>
                         </td>
                     </tr>
             <?php

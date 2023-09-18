@@ -44,7 +44,7 @@
                         <td><?php echo $periodo['PER_PERIODO']; ?></td>
                         <!-- Capturar id -->
                         <td>
-                            <a href="<?php echo base_url('index.php/ReporteTecnologiaPeriodoMatriculados/' . $periodo['PER_ID']) ?>" class="btn btn-success">Datos →</a>
+                            <a href="<?php echo base_url('index.php/ReporteTecnologiaPeriodoMatriculados/' . $periodo['PER_ID']) ?>" class="btn btn-success">Datos <i class="fa-regular fa-circle-right"></i></a>
                         </td>
                     </tr>
             <?php
@@ -79,7 +79,7 @@
                         <td><?php echo $periodo['PER_PERIODO']; ?></td>
                         <!-- Capturar id -->
                         <td>
-                            <a href="<?php echo base_url('index.php/ReporteTecnologiaPeriodoMatriculados/' . $periodo['PER_ID']) ?>" class="btn btn-primary">Datos →</a>
+                            <a href="<?php echo base_url('index.php/ReporteTecnologiaPeriodoMatriculados/' . $periodo['PER_ID']) ?>" class="btn btn-primary">Datos <i class="fa-regular fa-circle-right"></i></a>
                         </td>
                     </tr>
             <?php

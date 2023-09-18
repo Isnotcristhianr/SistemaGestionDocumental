@@ -43,7 +43,7 @@
                             <td>
                                 <a href="<?php
                                             echo base_url('index.php/ReporteEscuelaGeneralVigente/' . $escuelas['CAR_ID'])
-                                            ?>" class="btn btn-success">Datos →</a>
+                                            ?>" class="btn btn-success">Datos  <i class="fa-regular fa-circle-right"></i></a>
                             </td>
                         </tr>
             <?php
@@ -87,7 +87,7 @@
                             <td>
                                 <a href="<?php
                                             echo base_url('index.php/ReporteEscuelaGeneralHistorico/' . $escuelas['CAR_ID'])
-                                            ?>" class="btn btn-primary">Datos →</a>
+                                            ?>" class="btn btn-primary">Datos  <i class="fa-regular fa-circle-right"></i></a>
                             </td>
                         </tr>
             <?php
@@ -126,7 +126,7 @@
                             <td>
                                 <a href="<?php
                                             echo base_url('index.php/ReporteEscuelaGeneralTulcan/' . $escuelas['CAR_ID'])
-                                            ?>" class="btn btn-info">Datos →</a>
+                                            ?>" class="btn btn-info">Datos  <i class="fa-regular fa-circle-right"></i></a>
                             </td>
                         </tr>
             <?php

@@ -53,7 +53,7 @@
                             ?>
                         </td>
                         <td>
-                            <a href="<?php echo base_url('index.php/ReporteTecnologiaCarreraMatriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Datos →</a>
+                            <a href="<?php echo base_url('index.php/ReporteTecnologiaCarreraMatriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Datos  <i class="fa-regular fa-circle-right"></i></a>
                         </td>
 
                     </tr>
@@ -109,7 +109,7 @@
                                 ?>
                             </td>
                             <td>
-                                <a href="<?php echo base_url('index.php/ReporteTecnologiaCarreraMatriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Datos →</a>
+                                <a href="<?php echo base_url('index.php/ReporteTecnologiaCarreraMatriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Datos  <i class="fa-regular fa-circle-right"></i></a>
                             </td>
                         </tr>
             <?php
@@ -160,7 +160,7 @@
                                 ?>
                             </td>
                             <td>
-                                <a href="<?php echo base_url('index.php/ReporteTecnologiaCarreraMatriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-info">Datos →</a>
+                                <a href="<?php echo base_url('index.php/ReporteTecnologiaCarreraMatriculados/' . $carreras['CAR_ID']) ?>" class="btn btn-info">Datos  <i class="fa-regular fa-circle-right"></i></a>
                             </td>
                         </tr>
             <?php
