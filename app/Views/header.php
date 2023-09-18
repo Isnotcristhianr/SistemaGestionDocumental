@@ -39,7 +39,7 @@
   <!-- Nav Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark" style="background: #164284;">
     <div class="container-fluid">
-      <a class="navbar-brand fs-4" href="http://localhost/SistemaGestionDocumental/index.php/inicio">
+      <a class="navbar-brand fs-4" href="<?php echo base_url('/index.php/inicio') ?>">
         <img src="<?php echo base_url('/public/imgs/logoPucesi.png') ?>" alt="" height="75" class="d-inline-block align-text-center">
         Gestión Documental PUCE-I
       </a>
