@@ -129,6 +129,7 @@
             }
             ?>
         </tbody>
+        
     </table>
     <br>
     <!-- Sede Tulcan -->
