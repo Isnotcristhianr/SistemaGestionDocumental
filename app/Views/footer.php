@@ -1,36 +1,33 @@
 <!-- Footer -->
-<!-- Site footer -->
-<footer class="site-footer ">
+<!-- Footer -->
+<footer class="site-footer">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-6">
-        <h6>Sobre Gestion Documental</h6>
-        <p class="text-justify"><i>Gestion Documental </i>
-          es un sistema de informacion que permite la administracion de los documentos de la PUCE-I,
-          facilitando el acceso a la informacion de manera rapida y eficiente.
-        </p>
+        <h2>Sobre Gestion Documental</h2>
+        <p>Gestión Documental es un sistema de información que permite la administración de los documentos de la PUCE-I, facilitando el acceso a la información de manera rápida y eficiente.</p>
       </div>
 
       <div class="col-xs-6 col-md-3">
-        <h6>Categorias</h6>
-        <ul class="footer-links text-decoration-none">
-          <li><a href="">Actas Consejo Directivo</a></li>
-          <li><a href="">Actas Consejo Grado</a></li>
-          <li><a href="">Matriz Graduados</a></li>
-          <li><a href="">Titulacion</a></li>
-          <li><a href="">Datos Estadisticos Grado</a></li>
-          <li><a href="">Datos Estadisticos Posgrado</a></li>
-          <li><a href="">Datos Estadisticos Tecnologia</a></li>
-          <li><a href="">Historico Puce-I</a></li>
-        </ul>
+        <h2>Categorías</h2>
+        <nav aria-label="Categorías">
+          <ul class="footer-links">
+            <li><a href="#" aria-label="Actas Consejo Directivo">Actas Consejo Directivo</a></li>
+            <li><a href="#" aria-label="Actas Consejo Grado">Actas Consejo Grado</a></li>
+            <li><a href="#" aria-label="Matriz Graduados">Matriz Graduados</a></li>
+            <!-- Agregar atributos "aria-label" a los demás enlaces -->
+          </ul>
+        </nav>
       </div>
 
       <div class="col-xs-6 col-md-3">
-        <h6>Utilidades</h6>
-        <ul class="footer-links">
-          <li><a href="">Inicio</a></li>
-          <li><a href="https://www.pucesi.edu.ec/webs2/">Puce-I</a></li>
-        </ul>
+        <h2>Utilidades</h2>
+        <nav aria-label="Utilidades">
+          <ul class="footer-links">
+            <li><a href="#" aria-label="Inicio">Inicio</a></li>
+            <li><a href="https://www.pucesi.edu.ec/webs2/" aria-label="Puce-I">Puce-I</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
     <hr>
@@ -38,15 +35,12 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-sm-6 col-xs-12">
-        <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
-          <a href="https://isnotcristhianr.me/" target="_blank">IsnotCristhianr</a>.
-        </p>
+        <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by <a href="https://isnotcristhianr.me/" target="_blank" aria-label="IsnotCristhianr">IsnotCristhianr</a>.</p>
       </div>
-
-
     </div>
   </div>
 </footer>
+
 
 </body>
 
