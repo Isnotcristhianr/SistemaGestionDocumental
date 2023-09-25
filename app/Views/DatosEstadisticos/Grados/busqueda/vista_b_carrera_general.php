@@ -59,7 +59,7 @@
                                 <!-- Obtener id de la carrera -->
                                 <a href="<?php
                                             echo base_url('index.php/ReporteGradoCarreraGeneral/' . $carreras['CAR_ID'])
-                                            ?>" class="btn btn-success">Datos  <i class="fa-regular fa-circle-right"></i></a>
+                                            ?>" class="btn btn-success">Datos <i class="fa-regular fa-circle-right"></i></a>
                             </td>
                         </tr>
             <?php
@@ -120,7 +120,7 @@
                                 <!-- Obtener id de la carrera -->
                                 <a href="<?php
                                             echo base_url('index.php/ReporteGradoCarreraGeneral/' . $carreras['CAR_ID'])
-                                            ?>" class="btn btn-primary">Datos  <i class="fa-regular fa-circle-right"></i></a>
+                                            ?>" class="btn btn-primary">Datos <i class="fa-regular fa-circle-right"></i></a>
                             </td>
                         </tr>
             <?php
@@ -129,7 +129,7 @@
             }
             ?>
         </tbody>
-        
+
     </table>
     <br>
     <!-- Sede Tulcan -->
@@ -176,7 +176,7 @@
                             <td>
                                 <a href="<?php
                                             echo base_url('index.php/ReporteGradoCarreraGeneral/' . $carreras['CAR_ID'])
-                                            ?>" class="btn btn-info">Datos  <i class="fa-regular fa-circle-right"></i></a>
+                                            ?>" class="btn btn-info">Datos <i class="fa-regular fa-circle-right"></i></a>
                             </td>
                         </tr>
             <?php
