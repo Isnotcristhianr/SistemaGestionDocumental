@@ -134,7 +134,7 @@ class ControladorFECarrera extends BaseController
                 return view('header')
                     . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_carrera_grad', $data + $padre)
                     . view('footer');
-            }else if ($tipo == "General") {
+            } else if ($tipo == "General") {
                 return view('header')
                     . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_carrera_general', $data + $padre)
                     . view('footer');
@@ -234,7 +234,7 @@ class ControladorFECarrera extends BaseController
                 return view('header')
                     . view('/DatosEstadisticos/Tecnologias/busqueda/vista_b_carrera_grad', $data + $padre)
                     . view('footer');
-            }else if ($tipo == "General") {
+            } else if ($tipo == "General") {
                 return view('header')
                     . view('/DatosEstadisticos/Tecnologias/busqueda/vista_b_carrera_general', $data + $padre)
                     . view('footer');
