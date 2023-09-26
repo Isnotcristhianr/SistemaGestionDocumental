@@ -60,7 +60,7 @@ use App\Models\ModelFEescuelas;
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/Periodo" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
-                        Periodos
+                        Periodo
                         <span class="badge bg-primary rounded-pill">
                             <!-- llenar periodos total filas -->
                             <?php

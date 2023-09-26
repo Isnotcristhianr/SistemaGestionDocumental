@@ -5,7 +5,7 @@
     <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera') ?>" class="btn btn-outline-primary">← Volver</a>
     <div class="row ">
         <div class="col-12">
-            <h2 class="text-center text-primary">Datos Estadísticos Grados
+            <h2 class="text-center text-primary">Datos Estadísticos Grado
             </h2>
             <h4 class="text-center text-dark">Búsqueda: Carreras</h4>
         </div>
@@ -41,7 +41,7 @@
                                 echo $numero++;
                                 ?></td>
                             <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
-                           
+
                             <td>
                                 <!-- Obtener id de la carrera -->
                                 <a href="<?php
@@ -64,8 +64,7 @@
     <h3 class="text text-start text-primary">Oferta Académica Histórico</h3>
     <br>
     <!-- Sede Ibarra -->
-    <h4 class="text-primary">Campus Ibarra</h4>
-    <h4 class="text text-info"></h4>
+    <h4 class="text-secondary">Campus Ibarra</h4>
     <br>
     <!-- Llenar tabla con no ativas -->
     <table class="table table-primary align-middle order-column hover row-border stripe " id="tbl2">
@@ -105,8 +104,7 @@
     </table>
     <br>
     <!-- Sede Tulcan -->
-    <h4 class="text-info">Campus Tulcán</h4>
-    <h4 class="text text-info"></h4>
+    <h4 class="text-secondary">Campus Tulcán</h4>
     <br>
     <!-- Llenar tabla con no ativas -->
     <table class="table table-info align-middle order-column hover row-border stripe " id="tbl3">

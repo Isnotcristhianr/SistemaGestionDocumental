@@ -5,7 +5,7 @@
     <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Carrera" class="btn btn-outline-primary">← Volver</a>
     <div class="row ">
         <div class="col-12">
-            <h2 class="text-center text-primary">Datos Estadísticos Posgrados
+            <h2 class="text-center text-primary">Datos Estadísticos Posgrado
             </h2>
             <h4 class="text-center text-dark">Búsqueda: Carreras</h4>
         </div>
@@ -22,7 +22,6 @@
             <th hidden>ID</th>
             <th>Numero</th>
             <th>Carrera</th>
-            <th>Escuela</th>
             <th>Acciones</th>
         </thead>
         <tbody>
@@ -39,19 +38,6 @@
                             echo $num++;
                             ?></td>
                         <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
-                        <td>
-                            <!-- Obtener largo tbl_escuela -->
-                            <?php
-                            $largo = count($tbl_escuela);
-                            /* comparar 2 tbl_carrera con tbl_escuela, tbl_escuela obtiene esc_padre y esc_nombre,
-                                     se compara esc_padre con CAR_PADREESC con esc_padre asignando el nombre correspondiente */
-                            for ($i = 0; $i < $largo; $i++) {
-                                if ($carreras['CAR_PADREESC'] == $tbl_escuela[$i]['esc_padre']) {
-                                    echo $tbl_escuela[$i]['esc_nombre'];
-                                }
-                            }
-                            ?>
-                        </td>
                         <td>
                             <a href="<?php echo base_url('index.php/ReportePosgradoCarreraGraduados/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Datos <i class="fa-regular fa-circle-right"></i></a>
                     </tr>
@@ -72,7 +58,6 @@
             <th hidden>ID</th>
             <th>Numero</th>
             <th>Carrera</th>
-            <th>Escuela</th>
             <th>Acciones</th>
         </thead>
         <tbody>
@@ -89,20 +74,7 @@
                         ?></td>
                     <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
                     <td>
-                        <!-- Obtener largo tbl_escuela -->
-                        <?php
-                        $largo = count($tbl_escuela);
-                        /* comparar 2 tbl_carrera con tbl_escuela, tbl_escuela obtiene esc_padre y esc_nombre,
-                                     se compara esc_padre con CAR_PADREESC con esc_padre asignando el nombre correspondiente */
-                        for ($i = 0; $i < $largo; $i++) {
-                            if ($carreras['CAR_PADREESC'] == $tbl_escuela[$i]['esc_padre']) {
-                                echo $tbl_escuela[$i]['esc_nombre'];
-                            }
-                        }
-                        ?>
-                    </td>
-                    <td>
-                        <a href="<?php echo base_url('index.php/ReportePosgradoCarreraGraduados/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Datos <i class="fa-regular fa-circle-right"></i></a>
+                        <a href="<?php echo base_url('index.php/ReportePosgradoCarreraGraduados/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Datos <i class="fa-regular fa-circle-right"></i></a>
                 </tr>
             <?php
 

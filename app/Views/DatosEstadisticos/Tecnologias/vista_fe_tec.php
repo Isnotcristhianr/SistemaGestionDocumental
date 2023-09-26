@@ -10,7 +10,7 @@ use App\Models\ModelFECarreras;
     <div class="row ">
         <div class="col-12">
             <h2 class="text-center text-primary">
-                Datos Estadísticos Tecnologías
+                Datos Estadísticos Técnicas y Tecnológicas
             </h2>
         </div>
         <div class="col-12">
@@ -33,7 +33,7 @@ use App\Models\ModelFECarreras;
                 </div>
             </div>
             <ul class="list-group ">
-                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnologías/CarrerasTécnicasyTecnológias" class="text-decoration-none fw-bolder">
+                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Técnicas y Tecnológicas/CarrerasTécnicasyTecnológias" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         Carreras Técnicas y Tecnológias
                         <span class="badge bg-primary rounded-pill">
@@ -44,7 +44,7 @@ use App\Models\ModelFECarreras;
                         </span>
                     </li>
                 </a>
-                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnologías/Periodo" class="text-decoration-none fw-bolder">
+                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Técnicas y Tecnológicas/Periodo" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         Periodos
                         <span class="badge bg-primary rounded-pill">
@@ -55,7 +55,7 @@ use App\Models\ModelFECarreras;
                         </span>
                     </li>
                 </a>
-                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnologías/Fecha" class="text-decoration-none fw-bolder">
+                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Técnicas y Tecnológicas/Fecha" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         Fechas
                         <span class="badge bg-primary rounded-pill">
@@ -64,7 +64,7 @@ use App\Models\ModelFECarreras;
                         </span>
                     </li>
                 </a>
-                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnologías/General" class="text-decoration-none fw-bolder">
+                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Técnicas y Tecnológicas/General" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         General
                         <span class="badge bg-primary rounded-pill">

@@ -5,7 +5,7 @@
     <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/Escuela" class="btn btn-outline-primary">← Volver</a>
     <div class="row ">
         <div class="col-12">
-            <h2 class="text-center text-primary">Datos Estadísticos Grados
+            <h2 class="text-center text-primary">Datos Estadísticos Grado
             </h2>
             <h4 class="text-center text-dark">Búsqueda: Escuela</h4>
         </div>
@@ -60,7 +60,7 @@
     <h3 class="text text-start text-primary">Oferta Académica Histórico</h3>
     <!-- Sede Ibarra -->
     <br>
-    <h4 class="text text-primary">Campus Ibarra</h4>
+    <h4 class="text text-secondary">Campus Ibarra</h4>
     <br>
     <!-- Llenar tabla con no ativas -->
     <table class="table table-primary align-middle order-column hover row-border stripe " id="tbl2">
@@ -98,7 +98,7 @@
     </table>
     <!-- Sede Tulcan -->
     <br>
-    <h4 class="text text-info">Campus Tulcán</h4>
+    <h4 class="text text-secondary">Campus Tulcán</h4>
     <br>
     <!-- Llenar tabla con no ativas -->
     <table class="table table-info align-middle order-column hover row-border stripe " id="tbl3">

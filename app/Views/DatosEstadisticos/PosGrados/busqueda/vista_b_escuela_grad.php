@@ -5,7 +5,7 @@
     <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Escuela') ?>" class="btn btn-outline-primary">← Volver</a>
     <div class="row ">
         <div class="col-12">
-            <h2 class="text-center text-primary">Datos Estadísticos Posgrados
+            <h2 class="text-center text-primary">Datos Estadísticos Posgrado
             </h2>
             <h4 class="text-center text-dark">Búsqueda: Escuela</h4>
         </div>

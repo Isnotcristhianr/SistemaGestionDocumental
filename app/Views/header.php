@@ -79,7 +79,7 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item" href="<?php echo base_url('index.php/FiltroEstadisticoGrado') ?>">Grado</a></li>
               <li><a class="dropdown-item" href="<?php echo base_url('index.php/FiltroEstadisticoPosgrado') ?>">Posgrado</a></li>
-              <li><a class="dropdown-item" href="<?php echo base_url('index.php/FiltroEstadisticoTecnologia') ?>">Tecnología</a></li>
+              <li><a class="dropdown-item" href="<?php echo base_url('index.php/FiltroEstadisticoTecnologia') ?>">Técnicas y Tecnológicas</a></li>
               <li><a class="dropdown-item" href="<?php echo base_url('index.php/deHistorico') ?>">Historico Puce-I</a></li>
 
               <li>

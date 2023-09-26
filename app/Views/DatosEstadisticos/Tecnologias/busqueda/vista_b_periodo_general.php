@@ -3,7 +3,7 @@
     <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnolog%C3%ADas/Periodo" class="btn btn-outline-primary">← Volver</a>
     <div class="row ">
         <div class="col-12">
-            <h2 class="text-center text-primary">Datos Estadísticos Tecnologías
+            <h2 class="text-center text-primary">Datos Estadísticos Técnicas y Tecnológicas
             </h2>
             <h4 class="text-center text-dark">Búsqueda: Periodo
             </h4>
@@ -57,7 +57,6 @@
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <h3 class="text text-start text-primary">Oferta Académica Histórico</h3>
-    <br>
     <!-- Llenar tabla con no ativas -->
     <table class="table table-primary align-middle order-column hover row-border stripe " id="tbl2">
         <thead>

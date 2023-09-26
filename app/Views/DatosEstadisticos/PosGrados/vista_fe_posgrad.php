@@ -10,7 +10,7 @@
     <div class="row ">
         <div class="col-12">
             <h2 class="text-center text-primary">
-                Datos Estadísticos Posgrados
+                Datos Estadísticos Posgrado
             </h2>
         </div>
         <div class="col-12">
@@ -57,7 +57,7 @@
                 </a>
                 <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Periodo" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
-                        Periodos
+                        Periodo
                         <span class="badge bg-primary rounded-pill">
                             <?php 
                              $obgPeriodo = new ModelFEPeriodo();

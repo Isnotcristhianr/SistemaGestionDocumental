@@ -5,7 +5,7 @@
     <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/Escuela" class="btn btn-outline-primary">← Volver</a>
     <div class="row ">
         <div class="col-12">
-            <h2 class="text-center text-primary">Datos Estadísticos Grados
+            <h2 class="text-center text-primary">Datos Estadísticos Grado
             </h2>
             <h4 class="text-center text-dark">Búsqueda: Escuela</h4>
         </div>
@@ -43,7 +43,7 @@
                             <td>
                                 <a href="<?php
                                             echo base_url('index.php/ReporteEscuelaGraduadosVigente/' . $escuelas['CAR_ID'])
-                                            ?>" class="btn btn-success">Datos  <i class="fa-regular fa-circle-right"></i></a>
+                                            ?>" class="btn btn-success">Datos <i class="fa-regular fa-circle-right"></i></a>
                             </td>
                         </tr>
             <?php
@@ -60,7 +60,7 @@
     <h3 class="text text-start text-primary">Oferta Académica Histórico</h3>
     <!-- Sede Ibarra -->
     <br>
-    <h4 class="text text-primary">Campus Ibarra</h4>
+    <h4 class="text text-secondary  ">Campus Ibarra</h4>
     <br>
     <!-- Llenar tabla con no ativas -->
     <table class="table table-primary align-middle order-column hover row-border stripe " id="tbl2">
@@ -73,22 +73,22 @@
         <tbody>
             <?php
             foreach ($tbl_carrera as $escuelas) {
-                    if ($escuelas['CAR_CAMPUS'] == 1) {
+                if ($escuelas['CAR_CAMPUS'] == 1) {
             ?>
-                        <tr>
-                            <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
-                            <td><?php
-                                /* autoincrementar desde 0*/
-                                static $numero2 = 1;
-                                echo $numero2++;
-                                ?></td>
-                            <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
-                            <td>
-                                <a href="<?php
-                                            echo base_url('index.php/ReporteEscuelaGraduadosHistorico/' . $escuelas['CAR_ID'])
-                                            ?>" class="btn btn-primary">Datos  <i class="fa-regular fa-circle-right"></i></a>
-                            </td>
-                        </tr>
+                    <tr>
+                        <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
+                        <td><?php
+                            /* autoincrementar desde 0*/
+                            static $numero2 = 1;
+                            echo $numero2++;
+                            ?></td>
+                        <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
+                        <td>
+                            <a href="<?php
+                                        echo base_url('index.php/ReporteEscuelaGraduadosHistorico/' . $escuelas['CAR_ID'])
+                                        ?>" class="btn btn-primary">Datos <i class="fa-regular fa-circle-right"></i></a>
+                        </td>
+                    </tr>
             <?php
                 }
             }
@@ -97,7 +97,7 @@
     </table>
     <!-- Sede Tulcan -->
     <br>
-    <h4 class="text text-info">Campus Tulcán</h4>
+    <h4 class="text text-secondary">Campus Tulcán</h4>
     <br>
     <!-- Llenar tabla con no ativas -->
     <table class="table table-info align-middle order-column hover row-border stripe " id="tbl3">
@@ -124,7 +124,7 @@
                             <td>
                                 <a href="<?php
                                             echo base_url('index.php/ReporteEscuelaGraduadosTulcan/' . $escuelas['CAR_ID'])
-                                            ?>" class="btn btn-info">Datos  <i class="fa-regular fa-circle-right"></i></a>
+                                            ?>" class="btn btn-info">Datos <i class="fa-regular fa-circle-right"></i></a>
                             </td>
                         </tr>
             <?php

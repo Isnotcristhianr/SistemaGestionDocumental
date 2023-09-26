@@ -160,7 +160,7 @@ class ControladorEstadistico extends BaseController
 
             $datos = ["tipo" => $tipo, "filtro" => $filtro];
 
-            if ($tipo == "Tecnologías") {
+            if ($tipo == "Técnicas y Tecnológicas") {
                 if ($filtro == "CarrerasTécnicasyTecnológias") {
                     $filtro = "Carreras Técnicas y Tecnológicas";
                     $datos = ["tipo" => $tipo, "filtro" => $filtro];

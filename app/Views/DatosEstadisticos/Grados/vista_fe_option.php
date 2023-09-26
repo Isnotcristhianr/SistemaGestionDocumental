@@ -10,7 +10,7 @@
                 echo $tipo;
                 ?>
             </h2>
-            <h4 class="text-center text-dark">Busqueda:
+            <h4 class="text-center text-dark">Búsqueda:
                 <?php
                 echo $filtro;
                 ?>
