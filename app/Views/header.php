@@ -49,7 +49,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown" style="font-size: 15px;">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="http://localhost/SistemaGestionDocumental/index.php/inicio">
+            <a class="nav-link active" aria-current="page" href="<?php echo base_url('index.php/inicio') ?>">
               <i class="fa-solid fa-house"></i> Inicio
             </a>
           </li>
@@ -68,7 +68,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item" href="#">Matriz Graduados</a></li>
-              <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/reporteTitulacion">Titulación</a></li>
+              <li><a class="dropdown-item" href="<?php echo base_url('index.php/reporteTitulacion') ?>">Titulación</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -77,16 +77,16 @@
             </a>
 
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGrado">Grado</a></li>
-              <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgrado">Posgrado</a></li>
-              <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologia">Tecnología</a></li>
-              <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/deHistorico">Historico Puce-I</a></li>
+              <li><a class="dropdown-item" href="<?php echo base_url('index.php/FiltroEstadisticoGrado') ?>">Grado</a></li>
+              <li><a class="dropdown-item" href="<?php echo base_url('index.php/FiltroEstadisticoPosgrado') ?>">Posgrado</a></li>
+              <li><a class="dropdown-item" href="<?php echo base_url('index.php/FiltroEstadisticoTecnologia') ?>">Tecnología</a></li>
+              <li><a class="dropdown-item" href="<?php echo base_url('index.php/deHistorico') ?>">Historico Puce-I</a></li>
 
               <li>
                 <hr class="dropdown-divider">
               </li>
 
-              <li><a class="dropdown-item" href="http://localhost/SistemaGestionDocumental/index.php/calendarioAcademico">Calendario Academico</a></li>
+              <li><a class="dropdown-item" href="<?php echo base_url('index.php/calendarioAcademico') ?>">Calendario Academico</a></li>
             </ul>
           </li>
 

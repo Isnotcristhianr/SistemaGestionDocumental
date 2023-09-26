@@ -10,11 +10,11 @@ use App\Models\ModelFEescuelas;
     <div class="row ">
         <div class="col-12">
             <h2 class="text-center text-primary">
-                Datos Estadísticos Grados
+                Datos Estadísticos Grado
             </h2>
         </div>
         <div class="col-12">
-            <h5 class="text-center text-secondary">↓ Condicion de Búsqueda ↓</h5>
+            <h5 class="text-center text-secondary">↓ Condición de Búsqueda ↓</h5>
         </div>
     </div>
 
