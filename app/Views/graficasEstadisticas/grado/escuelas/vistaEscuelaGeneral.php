@@ -206,7 +206,7 @@
             credits: {
                 enabled: true,
                 href: "https://www.pucesi.edu.ec/webs2/",
-                text: "Secretaria General PUCE-I",
+                text: "Secretaría General PUCE-I",
                 style: {
                     color: "#666666",
                     cursor: "pointer",

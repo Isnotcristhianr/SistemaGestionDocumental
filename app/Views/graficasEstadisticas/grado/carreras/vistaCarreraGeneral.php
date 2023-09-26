@@ -129,7 +129,7 @@
 
         //grafica pie chart
 
-         //tam dinamico
+        //tam dinamico
         // Calcular el alto deseado en función de la cantidad de carreras
         var altoDeseado = carreras.length * 100;
 
@@ -240,7 +240,7 @@
             credits: {
                 enabled: true,
                 href: "https://www.pucesi.edu.ec/webs2/",
-                text: "Secretaria General PUCE-I",
+                text: "Secretaría General PUCE-I",
                 style: {
                     color: "#666666",
                     cursor: "pointer",

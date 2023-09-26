@@ -147,7 +147,7 @@
                 }
             },
             title: {
-                text: 'Total Estudiantes Tulcán Grado PUCE-I'
+                text: 'Total Estudiantes Histórico Tulcán Grado PUCE-I'
             },
             subtitle: {
                 text: 'Matriculados <br> <b>Escuela: </b>' +
@@ -212,7 +212,7 @@
             credits: {
                 enabled: true,
                 href: "https://www.pucesi.edu.ec/webs2/",
-                text: "Secretaria General PUCE-I",
+                text: "Secretaría General PUCE-I",
                 style: {
                     color: "#666666",
                     cursor: "pointer",
