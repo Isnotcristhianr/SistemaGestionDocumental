@@ -23,7 +23,6 @@
             <th hidden>ID</th>
             <th>Numero</th>
             <th>Carrera</th>
-            <th>Escuela</th>
             <th>Acciones</th>
         </thead>
         <tbody>
@@ -40,21 +39,9 @@
                             echo $num++;
                             ?></td>
                         <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
+                       
                         <td>
-                            <!-- Obtener largo tbl_escuela -->
-                            <?php
-                            $largo = count($tbl_escuela);
-                            /* comparar 2 tbl_carrera con tbl_escuela, tbl_escuela obtiene esc_padre y esc_nombre,
-                                     se compara esc_padre con CAR_PADREESC con esc_padre asignando el nombre correspondiente */
-                            for ($i = 0; $i < $largo; $i++) {
-                                if ($carreras['CAR_PADREESC'] == $tbl_escuela[$i]['esc_padre']) {
-                                    echo $tbl_escuela[$i]['esc_nombre'];
-                                }
-                            }
-                            ?>
-                        </td>
-                        <td>
-                            <a href="<?php echo base_url('index.php/ReporteTecnologiaCarreraGraduados/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Datos  <i class="fa-regular fa-circle-right"></i></a>
+                            <a href="<?php echo base_url('index.php/ReporteTecnologiaCarreraGraduados/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Datos <i class="fa-regular fa-circle-right"></i></a>
                         </td>
                     </tr>
             <?php
@@ -77,7 +64,6 @@
             <th hidden>ID</th>
             <th>Numero</th>
             <th>Carrera</th>
-            <th>Escuela</th>
             <th>Acciones</th>
         </thead>
         <tbody>
@@ -95,21 +81,9 @@
                                 echo $num2++;
                                 ?></td>
                             <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
+                          
                             <td>
-                            <!-- Obtener largo tbl_escuela -->
-                            <?php
-                            $largo = count($tbl_escuela);
-                            /* comparar 2 tbl_carrera con tbl_escuela, tbl_escuela obtiene esc_padre y esc_nombre,
-                                     se compara esc_padre con CAR_PADREESC con esc_padre asignando el nombre correspondiente */
-                            for ($i = 0; $i < $largo; $i++) {
-                                if ($carreras['CAR_PADREESC'] == $tbl_escuela[$i]['esc_padre']) {
-                                    echo $tbl_escuela[$i]['esc_nombre'];
-                                }
-                            }
-                            ?>
-                        </td>
-                            <td>
-                                <a href="<?php echo base_url('index.php/ReporteTecnologiaCarreraGraduados/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Datos  <i class="fa-regular fa-circle-right"></i></a>
+                                <a href="<?php echo base_url('index.php/ReporteTecnologiaCarreraGraduados/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Datos <i class="fa-regular fa-circle-right"></i></a>
                             </td>
                         </tr>
             <?php
@@ -119,56 +93,5 @@
             ?>
         </tbody>
     </table>
-    <!-- Sede Tulcan -->
     <br>
-    <h4 class="text text-start text-info">Campus Tulcán</h4>
-    <br>
-    <!-- Llenar tabla con no ativas -->
-    <table class="table table-info align-middle order-column hover row-border stripe" id="tbl3">
-        <thead>
-            <th hidden>ID</th>
-            <th>Numero</th>
-            <th>Carrera</th>
-            <th>Escuela</th>
-            <th>Acciones</th>
-        </thead>
-        <tbody>
-            <!-- llenar toda la tabla con car no activas -->
-            <?php
-            foreach ($tbl_carrera as $carreras) {
-                if ($carreras['CAR_ACTIVA'] == 'No') {
-                    /* CAR_PADRE SOLO SI ES IGUAL A 98 */
-                    if ($carreras['CAR_PADREESC'] == '98') {
-            ?>
-                        <tr>
-                            <td hidden><?php echo $carreras['CAR_ID']; ?></td>
-                            <td><?php
-                                static $num2 = 1;
-                                echo $num2++;
-                                ?></td>
-                            <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
-                            <td>
-                            <!-- Obtener largo tbl_escuela -->
-                            <?php
-                            $largo = count($tbl_escuela);
-                            /* comparar 2 tbl_carrera con tbl_escuela, tbl_escuela obtiene esc_padre y esc_nombre,
-                                     se compara esc_padre con CAR_PADREESC con esc_padre asignando el nombre correspondiente */
-                            for ($i = 0; $i < $largo; $i++) {
-                                if ($carreras['CAR_PADREESC'] == $tbl_escuela[$i]['esc_padre']) {
-                                    echo $tbl_escuela[$i]['esc_nombre'];
-                                }
-                            }
-                            ?>
-                        </td>
-                            <td>
-                                <a href="<?php echo base_url('index.php/ReporteTecnologiaCarreraGraduados/' . $carreras['CAR_ID']) ?>" class="btn btn-info">Datos  <i class="fa-regular fa-circle-right"></i></a>
-                            </td>
-                        </tr>
-            <?php
-                    }
-                }
-            }
-            ?>
-        </tbody>
-    </table>
 </div>
