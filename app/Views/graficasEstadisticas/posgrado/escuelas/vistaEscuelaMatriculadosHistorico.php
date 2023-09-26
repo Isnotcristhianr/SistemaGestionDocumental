@@ -125,6 +125,24 @@
 
 
         // Graficar
+
+        //tam dinamico
+        // Calcular el alto deseado en función de la cantidad de carreras
+        var altoDeseado = carreras.length * 100;
+
+        //ALTO MINIMO
+        if (altoDeseado < 400) {
+            altoDeseado = 400;
+        }
+
+        //ALTO MAXIMO
+        if (altoDeseado > 500) {
+            altoDeseado = 500;
+        }
+
+        // Establecer el alto del contenedor
+        document.getElementById('container').style.height = altoDeseado + 'px';
+
         Highcharts.chart('container', {
             chart: {
                 type: 'column',

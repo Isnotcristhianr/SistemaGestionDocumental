@@ -80,7 +80,6 @@
             <!-- llenar toda la tabla con car no activas-->
             <?php
             foreach ($tbl_carrera as $carreras) {
-                if ($carreras['CAR_ACTIVA'] == 'No') {
 
             ?>
                     <tr>
@@ -108,7 +107,7 @@
                         </td>
                     </tr>
             <?php
-                }
+                
             }
             ?>
         </tbody>

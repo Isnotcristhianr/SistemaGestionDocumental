@@ -1,0 +1,9 @@
+CRITICAL - 2023-09-25 21:43:04 --> Unmatched '}'
+in APPPATH\Views\DatosEstadisticos\Grados\busqueda\vista_b_escuela_matr.php on line 100.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_matr', [], true)
+ 3 APPPATH\Controllers\ControladorFEEscuela.php(28): view('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_matr', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFEEscuela->filtroEstadisticoGradoEscuela('Matriculados')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFEEscuela))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

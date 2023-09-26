@@ -18,8 +18,11 @@ class ControladorFEEscuela extends BaseController
         try {
             //modelo
             $objEscuela = new ModelFEescuelas();
-            //escuelas
+            //carreras
             $data['tbl_carrera'] = $objEscuela->where('CTIP_ID', 2)->where('CAR_ESCUELA', 1)->findAll();
+            //escuelas
+            
+
             if ($tipo == "Matriculados") {
                 return view('header')
                     . view('/DatosEstadisticos/Grados/busqueda/vista_b_escuela_matr', $data)

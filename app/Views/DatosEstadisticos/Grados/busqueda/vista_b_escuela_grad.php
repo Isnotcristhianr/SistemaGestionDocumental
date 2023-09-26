@@ -73,7 +73,6 @@
         <tbody>
             <?php
             foreach ($tbl_carrera as $escuelas) {
-                if ($escuelas['CAR_ACTIVA'] == 'No') {
                     if ($escuelas['CAR_CAMPUS'] == 1) {
             ?>
                         <tr>
@@ -91,7 +90,6 @@
                             </td>
                         </tr>
             <?php
-                    }
                 }
             }
             ?>

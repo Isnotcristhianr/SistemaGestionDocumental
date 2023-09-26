@@ -55,7 +55,7 @@
         //CAR_ACTIVA = SÍ
         var carreras = [];
         for (var i = 0; i < carrera.length; i++) {
-            if (carrera[i].CAR_PADREESC == <?php echo $id ?> && carrera[i].CTIP_ID == 2 && carrera[i].CAR_CARRERA == 1 && carrera[i].CAR_ACTIVA == 'No') {
+            if (carrera[i].CAR_PADREESC == <?php echo $id ?> && carrera[i].CTIP_ID == 2 && carrera[i].CAR_CARRERA == 1 && (carrera[i].CAR_ACTIVA == 'SÍ' || carrera[i].CAR_ACTIVA == 'No')) {
                 carreras.push(carrera[i].CAR_ID);
             }
         }
@@ -113,6 +113,24 @@
 
 
         // Graficar
+
+        //tam dinamico
+        // Calcular el alto deseado en función de la cantidad de carreras
+        var altoDeseado = carreras.length * 100;
+
+        //ALTO MINIMO
+        if (altoDeseado < 400) {
+            altoDeseado = 400;
+        }
+
+        //ALTO MAXIMO
+        if (altoDeseado > 500) {
+            altoDeseado = 500;
+        }
+
+        // Establecer el alto del contenedor
+        document.getElementById('container').style.height = altoDeseado + 'px';
+
         Highcharts.chart('container', {
             chart: {
                 type: 'column',

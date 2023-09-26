@@ -43,7 +43,7 @@
                             <td>
                                 <a href="<?php
                                             echo base_url('index.php/ReporteEscuelaGeneralVigente/' . $escuelas['CAR_ID'])
-                                            ?>" class="btn btn-success">Datos  <i class="fa-regular fa-circle-right"></i></a>
+                                            ?>" class="btn btn-success">Datos <i class="fa-regular fa-circle-right"></i></a>
                             </td>
                         </tr>
             <?php
@@ -73,25 +73,24 @@
         <tbody>
             <?php
             foreach ($tbl_carrera as $escuelas) {
-                if ($escuelas['CAR_ACTIVA'] == 'No') {
-                    if ($escuelas['CAR_CAMPUS'] == 1) {
+                if ($escuelas['CAR_CAMPUS'] == 1) {
             ?>
-                        <tr>
-                            <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
-                            <td><?php
-                                /* autoincrementar desde 0*/
-                                static $numero2 = 1;
-                                echo $numero2++;
-                                ?></td>
-                            <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
-                            <td>
-                                <a href="<?php
-                                            echo base_url('index.php/ReporteEscuelaGeneralHistorico/' . $escuelas['CAR_ID'])
-                                            ?>" class="btn btn-primary">Datos  <i class="fa-regular fa-circle-right"></i></a>
-                            </td>
-                        </tr>
+                    <tr>
+                        <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
+                        <td><?php
+                            /* autoincrementar desde 0*/
+                            static $numero2 = 1;
+                            echo $numero2++;
+                            ?></td>
+                        <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
+                        <td>
+                            <a href="<?php
+                                        echo base_url('index.php/ReporteEscuelaGeneralHistorico/' . $escuelas['CAR_ID'])
+                                        ?>" class="btn btn-primary">Datos <i class="fa-regular fa-circle-right"></i></a>
+                        </td>
+                    </tr>
             <?php
-                    }
+
                 }
             }
             ?>
@@ -113,7 +112,7 @@
             <?php
             foreach ($tbl_carrera as $escuelas) {
                 if ($escuelas['CAR_ACTIVA'] == 'No') {
-                    if ($escuelas['CAR_CAMPUS'] == 2) {
+                    if ($escuelas['CAR_CAMPUS'] == 2 && $escuelas['CAR_ESTADO'] != 1) {
             ?>
                         <tr>
                             <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
@@ -126,7 +125,7 @@
                             <td>
                                 <a href="<?php
                                             echo base_url('index.php/ReporteEscuelaGeneralTulcan/' . $escuelas['CAR_ID'])
-                                            ?>" class="btn btn-info">Datos  <i class="fa-regular fa-circle-right"></i></a>
+                                            ?>" class="btn btn-info">Datos <i class="fa-regular fa-circle-right"></i></a>
                             </td>
                         </tr>
             <?php

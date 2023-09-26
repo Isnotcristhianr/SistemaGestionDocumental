@@ -44,7 +44,7 @@
                             <td>
                                 <a href="<?php
                                             echo base_url('index.php/ReporteEscuelaMatriculadosVigente/' . $escuelas['CAR_ID'])
-                                            ?>" class="btn btn-success">Datos  <i class="fa-regular fa-circle-right"></i></a>
+                                            ?>" class="btn btn-success">Datos <i class="fa-regular fa-circle-right"></i></a>
                             </td>
                         </tr>
             <?php
@@ -77,26 +77,25 @@
             /* Llenar tbl con car_campus =2 */
             foreach ($tbl_carrera as $escuelas) {
 
-                if ($escuelas['CAR_ACTIVA'] == 'No') {
-                    /* Car capus == 1 */
-                    if ($escuelas['CAR_CAMPUS'] == 1) {
+                /* Car capus == 1 */
+                if ($escuelas['CAR_CAMPUS'] == 1) {
             ?>
-                        <tr>
-                            <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
-                            <td><?php
-                                /* autoincrementar desde 0*/
-                                static $numero1 = 1;
-                                echo $numero1++;
-                                ?></td>
-                            <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
-                            <td>
-                                <a href="<?php
-                                            echo base_url('index.php/ReporteEscuelaMatriculadosHistorico/' . $escuelas['CAR_ID'])
-                                            ?>" class="btn btn-primary">Datos  <i class="fa-regular fa-circle-right"></i></a>
-                            </td>
-                        </tr>
+                    <tr>
+                        <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
+                        <td><?php
+                            /* autoincrementar desde 0*/
+                            static $numero1 = 1;
+                            echo $numero1++;
+                            ?></td>
+                        <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
+                        <td>
+                            <a href="<?php
+                                        echo base_url('index.php/ReporteEscuelaMatriculadosHistorico/' . $escuelas['CAR_ID'])
+                                        ?>" class="btn btn-primary">Datos <i class="fa-regular fa-circle-right"></i></a>
+                        </td>
+                    </tr>
             <?php
-                    }
+
                 }
             }
             ?>
@@ -136,7 +135,7 @@
                             <td>
                                 <a href="<?php
                                             echo base_url('index.php/ReporteEscuelaMatriculadosTulcan/' . $escuelas['CAR_ID'])
-                                            ?>" class="btn btn-info">Datos  <i class="fa-regular fa-circle-right"></i></a>
+                                            ?>" class="btn btn-info">Datos <i class="fa-regular fa-circle-right"></i></a>
                             </td>
                         </tr>
             <?php

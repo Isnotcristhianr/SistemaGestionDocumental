@@ -18,7 +18,7 @@
 
         <!-- Reporte Estadistico -->
         <figure class="highcharts-figure">
-            <div id="container"></div>
+            <div id="container" style="height: 500px; width: auto;"></div>
         </figure>
     </div>
 
