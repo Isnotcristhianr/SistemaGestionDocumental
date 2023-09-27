@@ -1,6 +1,8 @@
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <!-- Volver -->
-    <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaCarrera/Graduados" class="btn btn-outline-primary">← Volver</a>
+    <a href="<?php echo base_url('index.php/FiltroEstadisticoTecnologiaCarrera/Graduados') ?>" class="btn btn-outline-primary">
+        <i class="fa-solid fa-caret-left"></i> Volver
+    </a>
     <div class="row ">
         <div class="col-12">
             <h2 class="text-center text-primary">Datos Estadísticos Técnicas y Tecnológicas PUCE-I
@@ -129,7 +131,7 @@
 
         //grafica pie chart
 
-         //tam dinamico
+        //tam dinamico
         // Calcular el alto deseado en función de la cantidad de carreras
         var altoDeseado = carreras.length * 100;
 

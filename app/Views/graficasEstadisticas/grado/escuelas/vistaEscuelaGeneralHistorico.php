@@ -1,6 +1,8 @@
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <!-- Volver -->
-    <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoEscuela/General" class="btn btn-outline-primary">← Volver</a>
+    <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoEscuela/General') ?>" class="btn btn-outline-primary">
+        <i class="fa-solid fa-caret-left"></i> Volver
+    </a>
     <div class="row ">
         <div class="col-12">
             <h2 class="text-center text-primary">Datos Estadísticos Grado PUCE-I
@@ -42,7 +44,7 @@
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
     <!-- Grafica -->
-    <script>       
+    <script>
         //TODO: obtener datos de php del controlador
         var datos = <?php echo json_encode($tbl_estadistica_matriz) ?>;
         var carrera = <?php echo json_encode($tbl_carrera) ?>;
@@ -115,7 +117,7 @@
 
         //tam dinamico
         // Calcular el alto deseado en función de la cantidad de carreras
-        var altoDeseado = carreras.length * 100; 
+        var altoDeseado = carreras.length * 100;
 
         //ALTO MINIMO
         if (altoDeseado < 400) {
