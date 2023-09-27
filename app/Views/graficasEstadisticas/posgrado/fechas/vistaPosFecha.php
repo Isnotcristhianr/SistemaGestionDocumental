@@ -2,12 +2,14 @@
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <!-- Volver -->
-    <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Fecha" class="btn btn-outline-primary">← Volver</a>
+    <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Fecha') ?>" class="btn btn-outline-primary">
+        <i class="fa-solid fa-caret-left"></i> Volver
+    </a>
     <div class="row ">
         <div class="col-12">
             <h2 class="text-center text-primary">Datos Estadísticos PosGrado
             </h2>
-            <h4 class="text-center text-dark">Búsqueda: Fecha General
+            <h4 class="text-center text-dark">Búsqueda: Fecha
             </h4>
             <h5 class="text-center text-secondary"> Matriculados - Graduados
             </h5>

@@ -2,7 +2,9 @@
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <!-- Volver -->
-    <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Carrera" class="btn btn-outline-primary">← Volver</a>
+    <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Carrera') ?>" class="btn btn-outline-primary">
+        <i class="fa-solid fa-caret-left"></i> Volver
+    </a>
     <div class="row ">
         <div class="col-12">
             <h2 class="text-center text-primary">Datos Estadísticos Posgrado
@@ -39,7 +41,7 @@
                             ?></td>
                         <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
                         <td>
-                            <a href="<?php echo base_url('index.php/ReportePosgradoCarreraGeneral/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Datos  <i class="fa-regular fa-circle-right"></i></a>
+                            <a href="<?php echo base_url('index.php/ReportePosgradoCarreraGeneral/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Datos <i class="fa-regular fa-circle-right"></i></a>
                         </td>
                     </tr>
             <?php
@@ -67,19 +69,19 @@
             foreach ($tbl_carrera as $carreras) {
 
             ?>
-                    <tr>
-                        <td hidden><?php echo $carreras['CAR_ID']; ?></td>
-                        <td><?php
-                            static $num2 = 1;
-                            echo $num2++;
-                            ?></td>
-                        <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
-                        <td>
-                            <a href="<?php echo base_url('index.php/ReportePosgradoCarreraGeneral/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Datos  <i class="fa-regular fa-circle-right"></i></a>
-                        </td>
-                    </tr>
+                <tr>
+                    <td hidden><?php echo $carreras['CAR_ID']; ?></td>
+                    <td><?php
+                        static $num2 = 1;
+                        echo $num2++;
+                        ?></td>
+                    <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
+                    <td>
+                        <a href="<?php echo base_url('index.php/ReportePosgradoCarreraGeneral/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Datos <i class="fa-regular fa-circle-right"></i></a>
+                    </td>
+                </tr>
             <?php
-                
+
             }
             ?>
         </tbody>

@@ -2,7 +2,9 @@
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <!-- Volver -->
-    <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Escuela') ?>" class="btn btn-outline-primary">← Volver</a>
+    <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Escuela') ?>" class="btn btn-outline-primary">
+        <i class="fa-solid fa-caret-left"></i> Volver
+    </a>
     <div class="row ">
         <div class="col-12">
             <h2 class="text-center text-primary">Datos Estadísticos Posgrado
@@ -42,7 +44,7 @@
                         <td>
                             <a href="<?php
                                         echo base_url('index.php/ReportePosgradoEscuelaGeneralVigente/' . $escuelas['CAR_ID'])
-                                        ?>" class="btn btn-success">Datos  <i class="fa-regular fa-circle-right"></i></a>
+                                        ?>" class="btn btn-success">Datos <i class="fa-regular fa-circle-right"></i></a>
                         </td>
                     </tr>
             <?php
@@ -67,26 +69,25 @@
         <tbody>
             <?php
             foreach ($tbl_carrera as $escuelas) {
-                    /* Car capus == 1 */
-                    if ($escuelas['CAR_CAMPUS'] == 1) {
+                /* Car capus == 1 */
+                if ($escuelas['CAR_CAMPUS'] == 1) {
             ?>
-                        <tr>
-                            <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
-                            <td><?php
-                                /* autoincrementar desde 0*/
-                                static $numero2 = 1;
-                                echo $numero2++;
-                                ?></td>
-                            <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
-                            <td>
-                                <a href="<?php
-                                            echo base_url('index.php/ReportePosgradoEscuelaGeneralHistorico/' . $escuelas['CAR_ID'])
-                                            ?>" class="btn btn-primary">Datos  <i class="fa-regular fa-circle-right"></i></a>
-                            </td>
-                        </tr>
+                    <tr>
+                        <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
+                        <td><?php
+                            /* autoincrementar desde 0*/
+                            static $numero2 = 1;
+                            echo $numero2++;
+                            ?></td>
+                        <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
+                        <td>
+                            <a href="<?php
+                                        echo base_url('index.php/ReportePosgradoEscuelaGeneralHistorico/' . $escuelas['CAR_ID'])
+                                        ?>" class="btn btn-primary">Datos <i class="fa-regular fa-circle-right"></i></a>
+                        </td>
+                    </tr>
             <?php
-                    }
-                
+                }
             }
             ?>
         </tbody>

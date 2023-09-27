@@ -4,7 +4,9 @@
     <!-- volver -->
     <div class="row">
         <div class="col-12">
-            <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgrado') ?>" class="btn btn-outline-primary">← Volver</a>
+            <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgrado') ?>" class="btn btn-outline-primary">
+                <i class="fa-solid fa-caret-left"></i> Volver
+            </a>
         </div>
     </div>
     <div class="row ">
@@ -14,7 +16,7 @@
                 echo $tipo;
                 ?>
             </h2>
-            <h4 class="text-center text-dark">Busqueda:
+            <h4 class="text-center text-dark">Búsqueda:
                 <?php
                 echo $filtro;
                 ?>
@@ -24,7 +26,5 @@
             <h5 class="text-center text-secondary">↓ Resultados ↓</h5>
         </div>
     </div>
-
-    <!-- Contenido-->
-
 </div>
+<!-- Contenido-->
