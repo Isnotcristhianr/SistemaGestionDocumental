@@ -6,9 +6,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="author" content="PUCE-I">
+  <meta name="author" content="Cristhian Recalde - Isnotcrishtianr">
   <meta name="description" content="Sistema de Gestión Documental">
-  <meta name="keywords" content="Sistema de Gestión Documental">
+  <meta name="keywords" content="Sistema de Gestión Documental, Pucesi, Secretariado Pucesi, PuceI, Pucei">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#009688">
   <meta name="msapplication-navbutton-color" content="#009688">
