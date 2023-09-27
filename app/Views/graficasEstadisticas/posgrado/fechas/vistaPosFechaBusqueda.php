@@ -3,7 +3,7 @@
     <a href="http://localhost/SistemaGestionDocumental/index.php/ReporteFechaGeneralPosgrado" class="btn btn-outline-primary">← Volver</a>
     <div class="row ">
         <div class="col-12">
-            <h2 class="text-center text-primary">Datos Estadísticos PosGrado PUCE-I Por Fechas
+            <h2 class="text-center text-primary">Datos Estadísticos Posgrado PUCE-I Por Fechas
             </h2>
             <h4 class="text-center text-dark">Búsqueda
                 Desde: <?php echo $fechaInicio ?>
@@ -174,7 +174,7 @@
                 }
             },
             title: {
-                text: 'Total Estudiantes PosGrado PUCE-I '
+                text: 'Total Estudiantes Posgrado PUCE-I '
             },
             subtitle: {
                 text: 'Gradudados - Matriculados '+'<br>'+' <b>📅 Desde: </b> ' +
@@ -232,7 +232,7 @@
             credits: {
                 enabled: true,
                 href: "https://www.pucesi.edu.ec/webs2/",
-                text: "Secretaria General PUCE-I",
+                text: "Secretaría General PUCE-I",
                 style: {
                     color: "#666666",
                     cursor: "pointer",

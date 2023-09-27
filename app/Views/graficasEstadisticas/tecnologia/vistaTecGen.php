@@ -3,7 +3,7 @@
     <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnolog%C3%ADas/General" class="btn btn-outline-primary">← Volver</a>
     <div class="row ">
         <div class="col-12">
-            <h2 class="text-center text-primary">Datos Estadísticos Tecnologías PUCE-I
+            <h2 class="text-center text-primary">Datos Estadísticos Técnicas y Tecnológicas PUCE-I
             </h2>
             <h4 class="text-center text-dark">Búsqueda General Matriculados y Graduados
         </div>
@@ -179,7 +179,7 @@
                 }
             },
             title: {
-                text: 'Estudiantes Tecnologías PUCE-I '
+                text: 'Estudiantes Técnicas y Tecnológicas PUCE-I '
             },
             subtitle: {
                 text: 'Matriculados y Graduados'

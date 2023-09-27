@@ -3,7 +3,7 @@
     <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/General" class="btn btn-outline-primary">← Volver</a>
     <div class="row ">
         <div class="col-12">
-            <h2 class="text-center text-primary">Datos Estadísticos PosGrado PUCE-I
+            <h2 class="text-center text-primary">Datos Estadísticos Posgrado PUCE-I
             </h2>
             <h4 class="text-center text-dark">Búsqueda General Graduados
         </div>
