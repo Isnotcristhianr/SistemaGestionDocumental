@@ -2,7 +2,9 @@
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <!-- Volver -->
-    <a href="<?php echo base_url('index.php/FiltroEstadisticoTecnologiaBusqueda/Tecnologías/CarrerasTécnicasyTecnológias') ?>" class="btn btn-outline-primary">← Volver</a>
+    <a href="<?php echo base_url('index.php/FiltroEstadisticoTecnologiaBusqueda/Técnicas%20y%20Tecnológicas/CarrerasTécnicasyTecnológias') ?>" class="btn btn-outline-primary">
+        <i class="fa-solid fa-caret-left"></i> Volver
+    </a>
     <div class="row ">
         <div class="col-12">
             <h2 class="text-center text-primary">Datos Estadísticos Técnicas y Tecnológicas
@@ -39,7 +41,7 @@
                             echo $num++;
                             ?></td>
                         <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
-                       
+
                         <td>
                             <a href="<?php echo base_url('index.php/ReporteTecnologiaCarreraGraduados/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Datos <i class="fa-regular fa-circle-right"></i></a>
                         </td>
@@ -77,7 +79,7 @@
                                 echo $num2++;
                                 ?></td>
                             <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
-                          
+
                             <td>
                                 <a href="<?php echo base_url('index.php/ReporteTecnologiaCarreraGraduados/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Datos <i class="fa-regular fa-circle-right"></i></a>
                             </td>

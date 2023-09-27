@@ -32,7 +32,7 @@ use App\Models\ModelFEcarreras;
                 </div>
             </div>
             <ul class="list-group ">
-                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Escuela" class="text-decoration-none fw-bolder">
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Escuela') ?>" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         Escuela
                         <span class="badge bg-primary rounded-pill">
@@ -43,7 +43,7 @@ use App\Models\ModelFEcarreras;
                         </span>
                     </li>
                 </a>
-                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Carrera" class="text-decoration-none fw-bolder">
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Carrera') ?>" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         Carrera
                         <span class="badge bg-primary rounded-pill">
@@ -54,7 +54,7 @@ use App\Models\ModelFEcarreras;
                         </span>
                     </li>
                 </a>
-                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Periodo" class="text-decoration-none fw-bolder">
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Periodo') ?>" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         Periodo
                         <span class="badge bg-primary rounded-pill">
@@ -65,7 +65,7 @@ use App\Models\ModelFEcarreras;
                         </span>
                     </li>
                 </a>
-                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Fecha" class="text-decoration-none fw-bolder">
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Fecha') ?>" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         Fecha
                         <span class="badge bg-primary rounded-pill">
@@ -74,7 +74,7 @@ use App\Models\ModelFEcarreras;
                         </span>
                     </li>
                 </a>
-                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/General" class="text-decoration-none fw-bolder">
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/General') ?>" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         General
                         <span class="badge bg-primary rounded-pill">

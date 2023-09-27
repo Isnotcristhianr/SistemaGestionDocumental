@@ -33,7 +33,7 @@ use App\Models\ModelFECarreras;
                 </div>
             </div>
             <ul class="list-group ">
-                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Técnicas y Tecnológicas/CarrerasTécnicasyTecnológias" class="text-decoration-none fw-bolder">
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoTecnologiaBusqueda/Técnicas y Tecnológicas/CarrerasTécnicasyTecnológias') ?>" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         Carreras Técnicas y Tecnológias
                         <span class="badge bg-primary rounded-pill">
@@ -44,9 +44,9 @@ use App\Models\ModelFECarreras;
                         </span>
                     </li>
                 </a>
-                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Técnicas y Tecnológicas/Periodo" class="text-decoration-none fw-bolder">
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoTecnologiaBusqueda/Técnicas y Tecnológicas/Periodo') ?>" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
-                        Periodos
+                        Periodo
                         <span class="badge bg-primary rounded-pill">
                             <?php
                             $obgPeriodo = new ModelFEPeriodo();
@@ -55,16 +55,16 @@ use App\Models\ModelFECarreras;
                         </span>
                     </li>
                 </a>
-                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Técnicas y Tecnológicas/Fecha" class="text-decoration-none fw-bolder">
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoTecnologiaBusqueda/Técnicas y Tecnológicas/Fecha') ?>" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
-                        Fechas
+                        Fecha
                         <span class="badge bg-primary rounded-pill">
                             <!-- Icono Calendar -->
                             <i class="fa-solid fa-calendar-days"></i>
                         </span>
                     </li>
                 </a>
-                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoTecnologiaBusqueda/Técnicas y Tecnológicas/General" class="text-decoration-none fw-bolder">
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoTecnologiaBusqueda/Técnicas y Tecnológicas/General') ?>" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         General
                         <span class="badge bg-primary rounded-pill">

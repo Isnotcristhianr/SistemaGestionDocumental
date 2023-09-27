@@ -174,7 +174,7 @@
                 }
             },
             title: {
-                text: 'Total Estudiantes Técnicas y Tecnológicas PUCE-I '
+                text: 'Total Estudiantes Tecnologías PUCE-I '
             },
             subtitle: {
                 text: 'Matriculados '+'<br>'+' <b>📅 Desde: </b> ' +
@@ -232,7 +232,7 @@
             credits: {
                 enabled: true,
                 href: "https://www.pucesi.edu.ec/webs2/",
-                text: "Secretaría General PUCE-I",
+                text: "Secretaria General PUCE-I",
                 style: {
                     color: "#666666",
                     cursor: "pointer",
