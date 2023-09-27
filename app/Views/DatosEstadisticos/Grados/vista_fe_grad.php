@@ -33,9 +33,9 @@ use App\Models\ModelFEescuelas;
                 </div>
             </div>
             <ul class="list-group">
-                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/Escuela" class="text-decoration-none fw-bolder">
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Escuela') ?>" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
-                        Escuelas
+                        Escuela
                         <span class="badge bg-primary rounded-pill">
                             <!-- llenar escuelas total filas-->
                             <?php
@@ -46,9 +46,9 @@ use App\Models\ModelFEescuelas;
                         </span>
                     </li>
                 </a>
-                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera" class="text-decoration-none fw-bolder">
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera') ?>" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
-                        Carreras
+                        Carrera
                         <span class="badge bg-primary rounded-pill">
                             <!-- llenar carreras total filas -->
                             <?php
@@ -58,7 +58,7 @@ use App\Models\ModelFEescuelas;
                         </span>
                     </li>
                 </a>
-                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/Periodo" class="text-decoration-none fw-bolder">
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Periodo') ?>" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         Periodo
                         <span class="badge bg-primary rounded-pill">
@@ -70,16 +70,16 @@ use App\Models\ModelFEescuelas;
                         </span>
                     </li>
                 </a>
-                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/Fecha" class="text-decoration-none fw-bolder">
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Fecha') ?>" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
-                        Fechas
+                        Fecha
                         <span class="badge bg-primary rounded-pill">
                             <!-- Icono Calendar -->
                             <i class="fa-solid fa-calendar-days"></i>
                         </span>
                     </li>
                 </a>
-                <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/General" class="text-decoration-none fw-bolder">
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/General') ?>" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
                         General
                         <span class="badge bg-primary rounded-pill">

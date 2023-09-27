@@ -2,7 +2,9 @@
 
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
-    <a href="http://localhost/SistemaGestionDocumental/index.php/FiltroEstadisticoGradoBusqueda/Grado/Periodo" class="btn btn-outline-primary">← Volver</a>
+    <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Periodo') ?>" class="btn btn-outline-primary">
+        <i class="fa-solid fa-caret-left"></i> Volver
+    </a>
     <div class="row ">
         <div class="col-12">
             <h2 class="text-center text-primary">Datos Estadísticos Grado
@@ -45,7 +47,7 @@
                         <td><?php echo $periodo['PER_PERIODO']; ?></td>
                         <!-- Capturar id -->
                         <td>
-                            <a href="<?php echo base_url('index.php/ReporteGradoPeriodoGeneral/' . $periodo['PER_ID']) ?>" class="btn btn-success">Datos  <i class="fa-regular fa-circle-right"></i></a>
+                            <a href="<?php echo base_url('index.php/ReporteGradoPeriodoGeneral/' . $periodo['PER_ID']) ?>" class="btn btn-success">Datos <i class="fa-regular fa-circle-right"></i></a>
                         </td>
                     </tr>
             <?php
@@ -81,7 +83,7 @@
                         <td><?php echo $periodo['PER_PERIODO']; ?></td>
                         <!-- Capturar id -->
                         <td>
-                            <a href="<?php echo base_url('index.php/ReporteGradoPeriodoGeneral/' . $periodo['PER_ID']) ?>" class="btn btn-primary">Datos  <i class="fa-regular fa-circle-right"></i></a>
+                            <a href="<?php echo base_url('index.php/ReporteGradoPeriodoGeneral/' . $periodo['PER_ID']) ?>" class="btn btn-primary">Datos <i class="fa-regular fa-circle-right"></i></a>
                         </td>
                     </tr>
             <?php

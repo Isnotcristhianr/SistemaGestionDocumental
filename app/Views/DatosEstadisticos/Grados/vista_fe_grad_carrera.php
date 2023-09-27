@@ -4,15 +4,23 @@
         <div class="col-12">
             <!-- btn -->
             <div class="d-grid gap-2 col-2 mx-auto m-2">
-                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoCarrera/Matriculados') ?>" class="btn btn-dark " type="button">Matriculados</a>
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoCarrera/Matriculados') ?>" class="btn btn-dark " type="button">
+                    Matriculados
+                </a>
             </div>
 
+            <!-- btn -->
             <div class="d-grid gap-2 col-2 mx-auto m-2">
-                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoCarrera/Graduados') ?>" class="btn btn-dark" type="button">Graduados</a>
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoCarrera/Graduados') ?>" class="btn btn-dark" type="button">
+                    Graduados
+                </a>
             </div>
 
+            <!-- btn -->
             <div class="d-grid gap-2 col-2 mx-auto m-2">
-                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoCarrera/General') ?>" class="btn btn-dark" type="button">General</a>
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoCarrera/General') ?>" class="btn btn-dark" type="button">
+                    General
+                </a>
             </div>
 
         </div>

@@ -2,12 +2,14 @@
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <!-- Volver -->
-    <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera') ?>" class="btn btn-outline-primary">← Volver</a>
+    <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Carrera') ?>" class="btn btn-outline-primary">
+        <i class="fa-solid fa-caret-left"></i> Volver
+    </a>
     <div class="row ">
         <div class="col-12">
             <h2 class="text-center text-primary">Datos Estadísticos Grado
             </h2>
-            <h4 class="text-center text-dark">Búsqueda: Carreras</h4>
+            <h4 class="text-center text-dark">Búsqueda: Carrera</h4>
         </div>
         <div class="col-12">
             <h5 class="text-center text-secondary">↓ Graduados - Matriculados ↓</h5>
@@ -41,7 +43,7 @@
                                 echo $numero++;
                                 ?></td>
                             <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
-                            
+
                             <td>
                                 <!-- Obtener id de la carrera -->
                                 <a href="<?php
@@ -87,7 +89,7 @@
                             echo $numero++;
                             ?></td>
                         <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
-                       
+
                         <td>
                             <!-- Obtener id de la carrera -->
                             <a href="<?php

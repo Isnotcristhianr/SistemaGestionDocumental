@@ -9,12 +9,14 @@
                 </a>
             </div>
 
+            <!-- btn -->
             <div class="d-grid gap-2 col-2 mx-auto m-2">
                 <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoEscuela/Graduados') ?>" class="btn btn-dark" type="button">
                     Graduados
                 </a>
             </div>
-
+            
+            <!-- btn -->
             <div class="d-grid gap-2 col-2 mx-auto m-2">
                 <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoEscuela/General') ?>" class="btn btn-dark" type="button">
                     General
