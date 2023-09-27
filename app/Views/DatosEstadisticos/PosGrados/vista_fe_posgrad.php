@@ -34,7 +34,10 @@ use App\Models\ModelFEcarreras;
             <ul class="list-group ">
                 <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Escuela') ?>" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
-                        Escuela
+                        <div class="col d-flex align-items-center m-1">
+                            <i class="fa-solid fa-school-flag fa-lg p-1"></i>
+                            Escuela
+                        </div>
                         <span class="badge bg-primary rounded-pill">
                             <?php
                             $obgEscuela = new ModelFEescuelas();
@@ -45,7 +48,10 @@ use App\Models\ModelFEcarreras;
                 </a>
                 <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Carrera') ?>" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
-                        Carrera
+                        <div class="col d-flex align-items-center m-1">
+                            <i class="fa-solid fa-building-columns fa-la p-1"></i>
+                            Carrera
+                        </div>
                         <span class="badge bg-primary rounded-pill">
                             <?php
                             $obgCarrera = new ModelFEcarreras();
@@ -56,7 +62,10 @@ use App\Models\ModelFEcarreras;
                 </a>
                 <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Periodo') ?>" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
-                        Periodo
+                        <div class="col d-flex align-items-center m-1">
+                            <i class="fa-solid fa-book-atlas fa-lg p-1"></i>
+                            Periodo
+                        </div>
                         <span class="badge bg-primary rounded-pill">
                             <?php
                             $obgPeriodo = new ModelFEPeriodo();
@@ -67,7 +76,10 @@ use App\Models\ModelFEcarreras;
                 </a>
                 <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/Fecha') ?>" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
-                        Fecha
+                        <div class="col d-flex align-items-center m-1">
+                            <i class="fa-solid fa-calendar-days fa-lg p-1"></i>
+                            Fecha
+                        </div>
                         <span class="badge bg-primary rounded-pill">
                             <!-- Icono Calendar -->
                             <i class="fa-solid fa-calendar-days"></i>
@@ -76,7 +88,10 @@ use App\Models\ModelFEcarreras;
                 </a>
                 <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgradoBusqueda/Posgrado/General') ?>" class="text-decoration-none fw-bolder">
                     <li class="list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between align-items-center rounded m-1 shadow">
-                        General
+                        <div class="col d-flex align-items-center m-1">
+                            <i class="fa-solid fa-clock-rotate-left fa-lg p-1"></i>
+                            General
+                        </div>
                         <span class="badge bg-primary rounded-pill">
                             <!-- Lupa Busqueda icono-->
                             <i class="fa-solid fa-search"></i>
