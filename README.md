@@ -1,6 +1,6 @@
 # SISTEMA DE GESTION DOCUMENTAL PUCESI
 
-https://github.com/Isnotcristhianr/SistemaGestionDocumental_Pucesi/blob/main/public/imgs/readme/vista2.jpeg
+https://github.com/Isnotcristhianr/SistemaGestionDocumental_Pucesi/blob/main/public/imgs/readme/vista2.jpeg?raw=true
 
 Sistema de gestion docuemntal es, un sistema de información que permite la administración de los documentos de la PUCE-I como normativas, syllabus, otras; además, facilitando el acceso a la información de manera rápida y eficiente de reportes de estudiantes en torno a:
 * Grado, Posgrado, Tecnologias
@@ -11,7 +11,7 @@ Sistema de gestion docuemntal es, un sistema de información que permite la admi
 ** fecha
 ** general
 
-https://github.com/Isnotcristhianr/SistemaGestionDocumental_Pucesi/blob/main/public/imgs/readme/vista1.jpeg
+https://github.com/Isnotcristhianr/SistemaGestionDocumental_Pucesi/blob/main/public/imgs/readme/vista1.jpeg?raw=true
 
 ## CodeIgniter 4 Framework
 
