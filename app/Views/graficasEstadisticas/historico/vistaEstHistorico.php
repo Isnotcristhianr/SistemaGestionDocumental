@@ -198,16 +198,16 @@
                 },
             },
             series: [{
-                    name: 'Total',
+                    name: '👨🏻‍🎓👩🏻‍🎓 Total',
                     data: total
                 },
 
                 {
-                    name: '👨‍🦱 Hombres',
+                    name: '👩🏻‍🎓 Hombres',
                     data: totalH
                 },
                 {
-                    name: '👩‍🦰 Mujeres',
+                    name: '👩🏻‍🎓 Mujeres',
                     data: totalM
                 }
             ],

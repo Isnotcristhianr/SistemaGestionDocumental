@@ -68,7 +68,7 @@
         var filteredData = datos.filter(function(dato) {
             return dato.ESTM_TIPO === '2' && dato.ESTM_CONDICION === '1';
         });
-        
+
         //! Por Años General
         {
             // Objeto para asociar periodos con totales
@@ -204,16 +204,16 @@
                 },
             },
             series: [{
-                    name: 'Total',
+                    name: '👨🏻‍🎓👩🏻‍🎓 Total',
                     data: total
                 },
 
                 {
-                    name: '👨‍🦱 Hombres',
+                    name: '👨🏻‍🎓 Hombres',
                     data: totalH
                 },
                 {
-                    name: '👩‍🦰 Mujeres',
+                    name: '👩🏻‍🎓 Mujeres',
                     data: totalM
                 }
             ],

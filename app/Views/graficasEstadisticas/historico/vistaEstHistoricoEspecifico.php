@@ -201,16 +201,16 @@
                 },
             },
             series: [{
-                    name: 'Total',
+                    name: '👨🏻‍🎓👩🏻‍🎓 Total',
                     data: totalFiltrado
                 },
 
                 {
-                    name: '👨‍🦱 Hombres',
+                    name: '👨🏻‍🎓 Hombres',
                     data: totalHFiltrado
                 },
                 {
-                    name: '👩‍🦰 Mujeres',
+                    name: '👩🏻‍🎓 Mujeres',
                     data: totalMFiltrado
                 }
             ],

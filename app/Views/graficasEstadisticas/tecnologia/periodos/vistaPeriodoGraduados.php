@@ -189,15 +189,15 @@
                 }
             },
             series: [{
-                    name: 'Hommbres',
+                    name: '👨🏻‍🎓 Hombres',
                     data: totalesH
                 },
                 {
-                    name: 'Mujeres',
+                    name: '👨🏻‍🎓 Mujeres',
                     data: totalesM
                 },
                 {
-                    name: 'Total',
+                    name: '👨🏻‍🎓👩🏻‍🎓 Total',
                     data: totales
                 },
             ],
