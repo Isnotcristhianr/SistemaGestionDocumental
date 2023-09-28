@@ -130,8 +130,27 @@
             });
         }
 
-        //grafica pie chart
+        //nombre de la escuela
+        {
 
+            //de datos filtrados extraer car_padreesc
+            var car_padreesc = <?php echo json_encode($tbl_carrera) ?>;
+            var car_padreesc_id = <?php echo $car_id ?>;
+            var car_padreesc_nombre = "";
+            for (let i = 0; i < car_padreesc.length; i++) {
+                if (car_padreesc[i].CAR_ID == car_padreesc_id) {
+                    car_padreesc_nombre = car_padreesc[i].CAR_PADREESC;
+                }
+            }
+            //car_padreesc_nombre ahora es un id, buscar el nombre de la escuela en tbl carrera
+            var escuela = <?php echo json_encode($tbl_carrera) ?>;
+            var escuela_nombre = "";
+            for (let i = 0; i < escuela.length; i++) {
+                if (escuela[i].CAR_ID == car_padreesc_nombre) {
+                    escuela_nombre = escuela[i].CAR_NOMBRE;
+                }
+            }
+        }
         //tam dinamico
         // Calcular el alto deseado en función de la cantidad de carreras
         var altoDeseado = carreras.length * 100;
@@ -168,7 +187,11 @@
                 text: 'Total Estudiantes Técnicas y Tecnológicas PUCE-I'
             },
             subtitle: {
-                text: 'Matriculados - Graduados <br> <b>Carrera: </b>' +
+                text: 'Matriculados - Graduados <br> ' +
+                    '<b>Escuela: </b>' +
+                    /* nombre de la escuela */
+                    escuela_nombre + '<br>' +
+                    ' <b>Carrera: </b>' +
                     /* nombre de la carrera */
                     <?php
                     foreach ($tbl_carrera as $carrera) {
