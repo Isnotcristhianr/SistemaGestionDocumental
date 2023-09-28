@@ -18,6 +18,8 @@
     <!-- Contenido-->
     <h3 class="text text-start text-success">Oferta Académica Vigentes</h3>
     <br>
+    <div id="seleccionvigente"></div>
+    <a id="btnvigente"></a>
     <!-- Llenar tabla con activas -->
     <table class="table table-success align-middle order-column hover row-border stripe" id="tbl">
         <thead>
@@ -41,7 +43,7 @@
                                     <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php echo $escuelas['CAR_ID']; ?>">
                                 </div>
                             </td>
-                           
+
                             <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
                             <td>
                                 <a href="<?php
@@ -57,6 +59,42 @@
 
         </tbody>
     </table>
+    <script>
+        // Obtener todos los checkboxes con name="seleccionar[]"
+        const checkboxes = document.querySelectorAll('input[name="seleccionar[]"]');
+        const seleccionVigenteDiv = document.getElementById('seleccionvigente');
+
+        // Agregar un evento de cambio a cada checkbox
+        checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener('change', function() {
+                const valoresSeleccionados = Array.from(checkboxes)
+                    .filter((cb) => cb.checked)
+                    .map((cb) => cb.value);
+
+                // Mostrar la concatenación de los valores en el div de selección vigente
+                seleccionVigenteDiv.innerHTML = valoresSeleccionados.join(', ');
+            });
+
+            //crear btn si hay al menos una seleccion
+            checkbox.addEventListener('change', function() {
+                if (document.querySelectorAll('input[name="seleccionar[]"]:checked').length > 0) {
+                    document.getElementById('btnvigente').innerHTML = '<button type="submit" class="btn btn-primary">Generar Reporte <i class="fa-solid fa-file-csv"></i></button>';
+                } else {
+                    document.getElementById('btnvigente').innerHTML = '';
+                }
+            });
+        });
+
+        //al hacer click en btn capturar valores seleccionados 
+        document.getElementById('btnvigente').addEventListener('click', function() {
+            const valoresSeleccionados = Array.from(checkboxes)
+                .filter((cb) => cb.checked)
+                .map((cb) => cb.value);
+
+            alert(valoresSeleccionados);
+        });
+    </script>
+
 </div>
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
@@ -65,6 +103,7 @@
     <br>
     <h4 class="text text-secondary">Campus Ibarra</h4>
     <br>
+    <div class="seleccionhistorico"></div>
     <!-- Llenar tabla con no ativas -->
     <table class="table table-primary align-middle order-column hover row-border stripe" id="tbl2">
         <thead>
@@ -82,11 +121,11 @@
                         <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
                         <td>
                             <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php echo $escuelas['CAR_ID']; ?>">
+                                <input class="form-check-input" type="checkbox" name="seleccionarhistorico[]" value="<?php echo $escuelas['CAR_ID']; ?>">
 
                             </div>
                         </td>
-                        
+
                         <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
                         <td>
                             <a href="<?php
@@ -101,6 +140,26 @@
             ?>
         </tbody>
     </table>
+    <script>
+        // Obtener todos los checkboxes con name="seleccionarhistorico[]"
+        const checkboxesHistorico = document.querySelectorAll('input[name="seleccionarhistorico[]"]');
+        const seleccionHistoricoDiv = document.querySelector('.seleccionhistorico');
+
+        // Agregar un evento de cambio a cada checkbox
+        checkboxesHistorico.forEach((checkboxHistorico) => {
+            checkboxHistorico.addEventListener('change', function() {
+                // Obtener todos los valores de los checkboxes seleccionados
+                const valoresSeleccionadosHistorico = Array.from(checkboxesHistorico)
+                    .filter((cb) => cb.checked)
+                    .map((cb) => cb.value);
+
+                // Mostrar la concatenación de los valores en el div de selección histórico
+                seleccionHistoricoDiv.innerHTML = valoresSeleccionadosHistorico.join(', ');
+            });
+        });
+    </script>
+
+
     <!-- Sede Tulcan -->
     <br>
     <h4 class="text text-secondary">Campus Tulcán</h4>
@@ -126,7 +185,7 @@
                                     <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php echo $escuelas['CAR_ID']; ?>">
                                 </div>
                             </td>
-                            
+
                             <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
                             <td>
                                 <a href="<?php
