@@ -22,7 +22,7 @@
     <table class="table table-success align-middle order-column hover row-border stripe text-center" id="tbl" style="width: 100%;">
         <thead>
             <th hidden>ID</th>
-            <th>Numero</th>
+            <th>Seleccionar</th>
             <th>Carrera</th>
             <th>Acciones</th>
         </thead>
@@ -34,11 +34,11 @@
             ?>
                     <tr>
                         <td hidden><?php echo $carreras['CAR_ID']; ?></td>
-                        <td><?php
-                            //incrementar el numero de la tabla
-                            static $num = 1;
-                            echo $num++;
-                            ?></td>
+                        <td>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php $carreras['CAR_ID']; ?>">
+                            </div>
+                        </td>
                         <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
                         <td>
                             <a href="<?php echo base_url('index.php/ReportePosgradoCarreraGeneral/' . $carreras['CAR_ID']) ?>" class="btn btn-success">Datos <i class="fa-regular fa-circle-right"></i></a>
@@ -59,7 +59,7 @@
     <table class="table table-primary align-middle order-column hover row-border stripe" id="tbl2">
         <thead>
             <th hidden>ID</th>
-            <th>Numero</th>
+            <th>Seleccione</th>
             <th>Carrera</th>
             <th>Acciones</th>
         </thead>
@@ -71,10 +71,11 @@
             ?>
                 <tr>
                     <td hidden><?php echo $carreras['CAR_ID']; ?></td>
-                    <td><?php
-                        static $num2 = 1;
-                        echo $num2++;
-                        ?></td>
+                    <td>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php $carreras['CAR_ID']; ?>">
+                            </div>
+                        </td>
                     <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
                     <td>
                         <a href="<?php echo base_url('index.php/ReportePosgradoCarreraGeneral/' . $carreras['CAR_ID']) ?>" class="btn btn-primary">Datos <i class="fa-regular fa-circle-right"></i></a>

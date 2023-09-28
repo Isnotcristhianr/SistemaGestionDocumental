@@ -23,6 +23,7 @@
     <table class="table table-success align-middle order-column hover row-border stripe text-start" id="tbl">
         <thead>
             <th hidden>ID</th>
+            <th>Seleccionar</th>
             <th>Numero</th>
             <th>Carrera</th>
             <th>Acciones</th>
@@ -37,6 +38,11 @@
             ?>
                         <tr>
                             <td hidden><?php echo $carreras['CAR_ID']; ?></td>
+                            <td>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php echo $carreras['CAR_ID']; ?>">
+                                </div>
+                            </td>
                             <td><?php
                                 /* autoincrementar */
                                 static $numero = 1;
@@ -71,6 +77,7 @@
     <table class="table table-primary align-middle order-column hover row-border stripe " id="tbl2">
         <thead>
             <th hidden>ID</th>
+            <th>Seleccionar</th>
             <th>Numero</th>
             <th>Carrera</th>
             <th>Acciones</th>
@@ -83,6 +90,12 @@
             ?>
                     <tr>
                         <td hidden><?php echo $carreras['CAR_ID']; ?></td>
+                        <td>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php echo $carreras['CAR_ID']; ?>">
+                            </div>
+                        </td>
+
                         <td><?php
                             /* autoincrementar */
                             static $numero = 1;
@@ -113,6 +126,7 @@
     <table class="table table-info align-middle order-column hover row-border stripe " id="tbl3">
         <thead>
             <th hidden>ID</th>
+            <th>Seleccionar</th>
             <th>Numero</th>
             <th>Carrera</th>
             <th>Acciones</th>
@@ -126,6 +140,11 @@
             ?>
                         <tr>
                             <td hidden><?php echo $carreras['CAR_ID']; ?></td>
+                            <td>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php echo $carreras['CAR_ID']; ?>">
+                            </div>
+                        </td>
                             <td><?php
                                 /* autoincrementar */
                                 static $numero = 1;

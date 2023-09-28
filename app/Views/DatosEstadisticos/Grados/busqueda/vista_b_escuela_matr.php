@@ -19,10 +19,10 @@
     <!-- Sede Ibarra -->
     <br>
     <!-- Llenar tabla con activas -->
-    <table class="table table-success align-middle order-column hover row-border stripe " id="tbl">
+    <table class="table table-success align-middle order-column hover row-border stripe" id="tbl">
         <thead>
             <th hidden>ID</th>
-            <th>Numero</th>
+            <th>Seleccionar</th>
             <th>Escuela</th>
             <th>Acciones</th>
         </thead>
@@ -35,11 +35,12 @@
             ?>
                         <tr>
                             <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
-                            <td><?php
-                                /* autoincrementar */
-                                static $numero = 1;
-                                echo $numero++;
-                                ?></td>
+                            <td>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php echo $escuelas['CAR_ID']; ?>">
+                                </div>
+                            </td>
+                            
                             <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
                             <td>
                                 <a href="<?php
@@ -65,10 +66,10 @@
     <h4 class="text text-secondary">Campus Ibarra</h4>
     <br>
     <!-- Llenar tabla con no ativas -->
-    <table class="table table-primary align-middle order-column hover row-border stripe " id="tbl2">
+    <table class="table table-primary align-middle order-column hover row-border stripe" id="tbl2">
         <thead>
             <th hidden>ID</th>
-            <th>Numero</th>
+            <th>Seleccionar</th>
             <th>Escuela</th>
             <th>Acciones</th>
         </thead>
@@ -82,11 +83,12 @@
             ?>
                     <tr>
                         <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
-                        <td><?php
-                            /* autoincrementar desde 0*/
-                            static $numero1 = 1;
-                            echo $numero1++;
-                            ?></td>
+                        <td>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php echo $escuelas['CAR_ID']; ?>">
+                            </div>
+                        </td>
+                       
                         <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
                         <td>
                             <a href="<?php
@@ -106,10 +108,10 @@
     <h4 class="text text-secondary">Campus Tulcán</h4>
     <br>
     <!-- Llenar tabla con activas -->
-    <table class="table table-info align-middle order-column hover row-border stripe " id="tbl3">
+    <table class="table table-info align-middle order-column hover row-border stripe" id="tbl3">
         <thead>
             <th hidden>ID</th>
-            <th>Numero</th>
+            <th>Seleccionar</th>
             <th>Escuela</th>
             <th>Acciones</th>
         </thead>
@@ -126,11 +128,12 @@
             ?>
                         <tr>
                             <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
-                            <td><?php
-                                /* autoincrementar desde 0*/
-                                static $numero2 = 1;
-                                echo $numero2++;
-                                ?></td>
+                            <td>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php echo $escuelas['CAR_ID']; ?>">
+                                </div>
+                            </td>
+                           
                             <td><?php echo $escuelas['CAR_NOMBRE']; ?></td>
                             <td>
                                 <a href="<?php

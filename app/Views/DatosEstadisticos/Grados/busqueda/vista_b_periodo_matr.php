@@ -3,7 +3,7 @@
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoBusqueda/Grado/Periodo') ?>" class="btn btn-outline-primary">
-    <i class="fa-solid fa-caret-left"></i> Volver</a>
+        <i class="fa-solid fa-caret-left"></i> Volver</a>
     <div class="row ">
         <div class="col-12">
             <h2 class="text-center text-primary">Datos Estadísticos Grado
@@ -22,6 +22,7 @@
     <table class="table table-success align-middle order-column hover row-border stripe " id="tbl">
         <thead>
             <th hidden>ID</th>
+            <th>Seleccionar</th>
             <th>Año</th>
             <th>Periodo</th>
             <th>Acciones</th>
@@ -42,6 +43,11 @@
             ?>
 
                     <td hidden><?php echo $periodo['PER_ID']; ?></td>
+                    <td>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php $periodo['PER_ID']; ?>">
+                        </div>
+                    </td>
                     <td><?php echo $periodo['PER_ANO']; ?></td>
                     <td><?php echo $periodo['PER_PERIODO']; ?></td>
                     <!-- Capturar id -->
@@ -66,6 +72,7 @@
     <table class="table table-primary align-middle order-column hover row-border stripe " id="tbl2">
         <thead>
             <th hidden>ID</th>
+            <th>Seleccionar</th>
             <th>Año</th>
             <th>Periodo</th>
             <th>Acciones</th>
@@ -79,6 +86,11 @@
             ?>
                     <tr>
                         <td hidden><?php echo $periodo['PER_ID']; ?></td>
+                        <td>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php $periodo['PER_ID']; ?>">
+                            </div>
+                        </td>
                         <td><?php echo $periodo['PER_ANO']; ?></td>
                         <td><?php echo $periodo['PER_PERIODO']; ?></td>
                         <!-- Capturar id -->

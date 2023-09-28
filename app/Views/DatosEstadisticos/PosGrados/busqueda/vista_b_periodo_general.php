@@ -23,6 +23,7 @@
     <table class="table table-success align-middle order-column hover row-border stripe " id="">
         <thead>
             <th hidden>ID</th>
+            <th>Seleccione</th>
             <th>Año</th>
             <th>Periodo</th>
             <th>Acciones</th>
@@ -43,6 +44,11 @@
             ?>
                     <tr>
                         <td hidden><?php echo $periodo['PER_ID']; ?></td>
+                        <td>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php $periodo['PER_ID']; ?>">
+                            </div>
+                        </td>
                         <td><?php echo $periodo['PER_ANO']; ?></td>
                         <td><?php echo $periodo['PER_PERIODO']; ?></td>
                         <!-- Capturar id -->
@@ -65,6 +71,7 @@
     <table class="table table-primary align-middle order-column hover row-border stripe " id="tbl2">
         <thead>
             <th hidden>ID</th>
+            <th>Seleccione</th>
             <th>Año</th>
             <th>Periodo</th>
             <th>Acciones</th>
@@ -78,6 +85,11 @@
             ?>
                     <tr>
                         <td hidden><?php echo $periodo['PER_ID']; ?></td>
+                        <td>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php $periodo['PER_ID']; ?>">
+                            </div>
+                        </td>
                         <td><?php echo $periodo['PER_ANO']; ?></td>
                         <td><?php echo $periodo['PER_PERIODO']; ?></td>
                         <!-- Capturar id -->
