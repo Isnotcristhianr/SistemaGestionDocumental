@@ -18,7 +18,7 @@
     <!-- Contenido-->
     <h3 class="text text-start text-success">Oferta Académica Vigentes</h3>
     <br>
-    <div id="seleccionvigente"></div>
+    <div id="seleccionvigente" hidden></div>
     <a id="btnvigente"></a>
     <!-- Llenar tabla con activas -->
     <table class="table table-success align-middle order-column hover row-border stripe" id="tbl">
@@ -78,7 +78,7 @@
             //crear btn si hay al menos una seleccion
             checkbox.addEventListener('change', function() {
                 if (document.querySelectorAll('input[name="seleccionar[]"]:checked').length > 0) {
-                    document.getElementById('btnvigente').innerHTML = '<button type="submit" class="btn btn-primary">Generar Reporte <i class="fa-solid fa-file-csv"></i></button>';
+                    document.getElementById('btnvigente').innerHTML = '<button type="submit" class="btn btn-success">Datos Seleccion<i class="fa-solid fa-circle-info p-1"></i></button>';
                 } else {
                     document.getElementById('btnvigente').innerHTML = '';
                 }
