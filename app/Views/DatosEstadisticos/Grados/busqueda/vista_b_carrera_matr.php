@@ -17,6 +17,8 @@
     <!-- Contenido-->
     <h3 class="text text-start text-success">Oferta Académica Vigentes</h3>
     <br>
+    <div id="seleccionvigente" hidden></div>
+    <a id="btnvigente"></a>
     <!-- Llenar tabla con activas -->
     <table class="table table-success align-middle order-column hover row-border stripe text-start" id="tbl">
         <thead>
@@ -63,6 +65,8 @@
     <!-- Sede Ibarra -->
     <h4 class="text-secondary">Campus Ibarra</h4>
     <br>
+    <div id="seleccionHistorico" hidden></div>
+    <a id="btnHistorico"></a>
     <!-- Llenar tabla con no ativas -->
     <table class="table table-primary align-middle order-column hover row-border stripe " id="tbl2">
         <thead>
@@ -102,6 +106,8 @@
     <!-- Sede Tulcan -->
     <h4 class="text-secondary">Campus Tulcán</h4>
     <br>
+    <div id="seleccionTulcan" hidden></div>
+    <a id="btnTulcan"></a>
     <!-- Llenar tabla con no ativas -->
     <table class="table table-info align-middle order-column hover row-border stripe " id="tbl3">
         <thead>
@@ -120,10 +126,10 @@
                         <tr>
                             <td hidden><?php echo $carreras['CAR_ID']; ?></td>
                             <td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php echo $carreras['CAR_ID']; ?>">
-                            </div>
-                        </td>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php echo $carreras['CAR_ID']; ?>">
+                                </div>
+                            </td>
                             <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
                             <td>
                                 <!-- Obtener id de la carrera -->

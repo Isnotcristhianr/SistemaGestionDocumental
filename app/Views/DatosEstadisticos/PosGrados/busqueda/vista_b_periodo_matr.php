@@ -18,6 +18,8 @@
     <!-- Contenido-->
     <h3 class="text text-start text-success">Oferta Académica Vigente</h3>
     <br>
+    <div id="seleccionvigente" hidden></div>
+    <a id="btnvigente"></a>
     <table class="table table-success align-middle order-column hover row-border stripe " id="tbl">
         <thead>
             <th hidden>ID</th>
@@ -66,6 +68,8 @@
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <h3 class="text text-start text-primary">Oferta Académica Histórico</h3>
     <br>
+    <div id="seleccionHistorico" hidden></div>
+    <a id="btnHistorico"></a>
     <!-- Llenar tabla con no ativas -->
     <table class="table table-primary align-middle order-column hover row-border stripe " id="tbl2">
         <thead>

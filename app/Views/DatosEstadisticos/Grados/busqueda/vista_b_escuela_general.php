@@ -103,7 +103,8 @@
     <br>
     <h4 class="text text-secondary">Campus Ibarra</h4>
     <br>
-    <div class="seleccionhistorico"></div>
+    <div class="seleccionhistorico" hidden></div>
+    <a id="btnHistorico"></a>
     <!-- Llenar tabla con no ativas -->
     <table class="table table-primary align-middle order-column hover row-border stripe" id="tbl2">
         <thead>
@@ -156,6 +157,24 @@
                 // Mostrar la concatenación de los valores en el div de selección histórico
                 seleccionHistoricoDiv.innerHTML = valoresSeleccionadosHistorico.join(', ');
             });
+
+            //crear btn si hay al menos una seleccion
+            checkboxHistorico.addEventListener('change', function() {
+                if (document.querySelectorAll('input[name="seleccionarhistorico[]"]:checked').length > 0) {
+                    document.getElementById('btnHistorico').innerHTML = '<button type="submit" class="btn btn-primary">Datos Seleccion<i class="fa-solid fa-circle-info p-1"></i></button>';
+                } else {
+                    document.getElementById('btnHistorico').innerHTML = '';
+                }
+            });
+        });
+
+        //al hacer click en btn capturar valores seleccionados
+        document.getElementById('btnHistorico').addEventListener('click', function() {
+            const valoresSeleccionadosHistorico = Array.from(checkboxesHistorico)
+                .filter((cb) => cb.checked)
+                .map((cb) => cb.value);
+
+            alert(valoresSeleccionadosHistorico);
         });
     </script>
 
@@ -164,6 +183,8 @@
     <br>
     <h4 class="text text-secondary">Campus Tulcán</h4>
     <br>
+    <div class="selecciontulcan" hidden></div>
+    <a id="btntulcan"></a>
     <!-- Llenar tabla con no ativas -->
     <table class="table table-info align-middle order-column hover row-border stripe " id="tbl3">
         <thead>
@@ -200,4 +221,40 @@
             ?>
         </tbody>
     </table>
+    <script>
+        // Obtener todos los checkboxes con name="seleccionar[]"
+        const checkboxesTulcan = document.querySelectorAll('input[name="seleccionar[]"]');
+        const seleccionTulcanDiv = document.querySelector('.selecciontulcan');
+
+        // Agregar un evento de cambio a cada checkbox
+        checkboxesTulcan.forEach((checkboxTulcan) => {
+            checkboxTulcan.addEventListener('change', function() {
+                // Obtener todos los valores de los checkboxes seleccionados
+                const valoresSeleccionadosTulcan = Array.from(checkboxesTulcan)
+                    .filter((cb) => cb.checked)
+                    .map((cb) => cb.value);
+
+                // Mostrar la concatenación de los valores en el div de selección histórico
+                seleccionTulcanDiv.innerHTML = valoresSeleccionadosTulcan.join(', ');
+            });
+
+            //crear btn si hay al menos una seleccion
+            checkboxTulcan.addEventListener('change', function() {
+                if (document.querySelectorAll('input[name="seleccionar[]"]:checked').length > 0) {
+                    document.getElementById('btntulcan').innerHTML = '<button type="submit" class="btn btn-info">Datos Seleccion<i class="fa-solid fa-circle-info p-1"></i></button>';
+                } else {
+                    document.getElementById('btntulcan').innerHTML = '';
+                }
+            });
+        });
+
+        //al hacer click en btn capturar valores seleccionados
+        document.getElementById('btntulcan').addEventListener('click', function() {
+            const valoresSeleccionadosTulcan = Array.from(checkboxesTulcan)
+                .filter((cb) => cb.checked)
+                .map((cb) => cb.value);
+
+            alert(valoresSeleccionadosTulcan);
+        });
+    </script>
 </div>
