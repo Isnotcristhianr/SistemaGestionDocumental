@@ -1,47 +1,118 @@
 <!-- Footer -->
 <!-- Footer -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-md-6">
-        <h2>Sobre Gestion Documental</h2>
-        <p>Gestión Documental es un sistema de información que permite la administración de los documentos de la PUCE-I, facilitando el acceso a la información de manera rápida y eficiente.</p>
-      </div>
+<footer id="footer" class="bg-dark text-light pt-5">
+  <div class="main-footer widgets-dark typo-light">
+    <div class="container">
+      <div class="row">
 
-      <div class="col-xs-6 col-md-3">
-        <h2>Categorías</h2>
-        <nav aria-label="Categorías">
-          <ul class="footer-links">
-            <li><a href="#" aria-label="Actas Consejo Directivo">Actas Consejo Directivo</a></li>
-            <li><a href="#" aria-label="Actas Consejo Grado">Actas Consejo Grado</a></li>
-            <li><a href="#" aria-label="Matriz Graduados">Matriz Graduados</a></li>
-            <!-- Agregar atributos "aria-label" a los demás enlaces -->
-          </ul>
-        </nav>
-      </div>
+        <div class="col-xs-12 col-sm-7 col-md-4">
+          <div class="container">
+            <h4 class="text-primary"><a href="<?php echo base_url('index.php/inicio') ?>" style="text-decoration: none;">Sistema de Gestión Documental</a></h4>
+            <hr class="border border-primary border-1 opacity-50">
+            <p class="fs-6" style="text-align: justify; text-justify: inter-word;">
+              Sistema de gestion documental es,
+              un sistema de información que permite la administración de los documentos de la
+              <a href="https://www.pucesi.edu.ec/webs2/" style="text-decoration: none;">PUCE-I</a>
+              como normativas, syllabus, otras; además,
+              facilitando el acceso a la información de manera rápida y eficiente de reportes estadísticos
+            </p>
+          </div>
+        </div>
 
-      <div class="col-xs-6 col-md-3">
-        <h2>Utilidades</h2>
-        <nav aria-label="Utilidades">
-          <ul class="footer-links">
-            <li><a href="#" aria-label="Inicio">Inicio</a></li>
-            <li><a href="https://www.pucesi.edu.ec/webs2/" aria-label="Puce-I">Puce-I</a></li>
-          </ul>
-        </nav>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="mt-4">
+            <h5 class="text-primary">Datos</h5>
+            <hr class="border border-primary border-1 opacity-50">
+
+            <ul class="list" style="list-style: none; margin-left: -25px;">
+              <li>
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoGrado') ?>" class="text-light" style="text-decoration: none;">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-primary p-1 "></i>Grado</a>
+              </li>
+              <li>
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgrado') ?>" class="text-light" style="text-decoration: none;">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-primary p-1"></i>Posgrado</a>
+              </li>
+              <li>
+                <a href="<?php echo base_url('index.php/FiltroEstadisticoTecnologia') ?>" class="text-light" style="text-decoration: none;">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-primary p-1"></i>Técnicas y Tecnológicas</a>
+              </li>
+              <li>
+                <a href="<?php echo base_url('index.php/deHistorico') ?>" class="text-light" style="text-decoration: none;">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-primary p-1"></i>Histórico PUCE-I</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="mt-4">
+            <h5 class="text-primary">Repositorios</h5>
+            <hr class="border border-primary border-1 opacity-50">
+
+            <ul class="list" style="list-style: none; margin-left: -25px;">
+              <li>
+                <a href="<?php echo base_url('index.php/calendarioAcademico') ?>" class="text-light" style="text-decoration: none;">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-primary p-1"></i>Calendario Académico</a>
+              </li>
+              <li>
+                <a href="#." class="text-light" style="text-decoration: none;">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-primary p-1"></i>Normativa General</a>
+              </li>
+              <li>
+                <a href="<?php echo base_url('index.php/normativas/reglamentoGeneralEstudiantes') ?>" class="text-light" style="text-decoration: none;">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-primary p-1"></i>Reglamento General Estudiantes</a>
+              </li>
+              <li>
+                <a href="#." class="text-light" style="text-decoration: none;">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-primary p-1"></i>Syllabus</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-xs-10 col-sm-5 col-md-2">
+
+          <div class="widget no-box">
+            <img src="<?php echo base_url('/public/imgs/logofooter.png') ?>" alt="pucesi" width="200">
+            <ul class="d-flex" style="list-style-type: none;">
+              <li class=""><a title="youtube" target="_blank" href="https://www.youtube.com/pucesi">
+                  <i class="fa-brands fa-youtube fa-xl p-1"></i>
+                </a></li>
+              <li class=""><a href="http://facebook.com/puce.sede.ibarra" target="_blank" title="Facebook">
+                  <i class="fa-brands fa-facebook fa-xl p-1"></i>
+                </a></li>
+              <li class=""><a href="https://twitter.com/pucesedeibarra" target="_blank" title="Twitter">
+                  <i class="fa-brands fa-x-twitter fa-xl p-1"></i> </a></ol>
+              <li class=""><a title="instagram" target="_blank" href="https://www.instagram.com/pucesedeibarra/">
+                  <i class="fa-brands fa-instagram fa-xl p-1"></i>
+                </a></li>
+              <li class=""><a title="mail" target="_blank" href="https://apps.pucesi.edu.ec/mail">
+                  <i class="fa-regular fa-envelope fa-xl p-1"></i>
+                </a></li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
-    <hr>
   </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-sm-6 col-xs-12">
-        <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by <a href="https://isnotcristhianr.me/" target="_blank" aria-label="IsnotCristhianr">IsnotCristhianr</a>.</p>
+  <hr class="border border-primary border-1 opacity-50">
+
+  <div class="footer-copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center p-1">
+          <h5 class="text-primary">Pontifica Universidad Católica del Ecuador - Secretaría General</h5>
+          <div class="text-secondary">
+          <a href="https://isnotcristhianr.me/" class="text-secondary" style="text-decoration: none;">Isnotcristhianr</a> 
+          © 2023. All rights reserved.
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </footer>
-
-
 </body>
 
 
