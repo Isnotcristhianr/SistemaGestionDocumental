@@ -129,7 +129,7 @@
                 text: 'Total Estudiantes Grado PUCE-I'
             },
             subtitle: {
-                text: 'Matriculados - Graduados' + '<br>' +
+                text: 'Graduados' + '<br>' +
                     "<b>Escuela(s): </b>" + nombresEscuelas
             },
             xAxis: {

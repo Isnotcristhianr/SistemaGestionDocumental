@@ -7,12 +7,12 @@
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <!-- Volver -->
-    <a href="<?php echo base_url('index.php/FiltroEstadisticoGradoEscuela/Matriculados') ?>" class="btn btn-outline-primary">
+    <a href="<?php echo base_url('index.php/FiltroEstadisticoPosgradoEscuela/Matriculados') ?>" class="btn btn-outline-primary">
         <i class="fa-solid fa-caret-left"></i> Volver
     </a>
     <div class="row ">
         <div class="col-12">
-            <h2 class="text-center text-primary">Datos Estadísticos Grado PUCE-I
+            <h2 class="text-center text-primary">Datos Estadísticos Posgrado PUCE-I
             </h2>
             <h5 class="text-center text-dark">Búsqueda:
                 <?php
@@ -98,7 +98,7 @@
         for (var i = 0; i < idsCarreras.length; i++) {
             // Filtrar datos por la escuela actual
             var filteredData = datos.filter(function(dato) {
-                return dato.ESTM_CARRERA == idsCarreras[i] && dato.ESTM_TIPO === '2' && (dato.ESTM_CONDICION === '1');
+                return dato.ESTM_CARRERA == idsCarreras[i] && dato.ESTM_TIPO === '1' && (dato.ESTM_CONDICION === '1') ;
             });
 
             // Calcular totales para la escuela actual
@@ -126,7 +126,7 @@
                 }
             },
             title: {
-                text: 'Total Estudiantes Grado PUCE-I'
+                text: 'Total Estudiantes Posgrado PUCE-I'
             },
             subtitle: {
                 text: 'Matriculados' + '<br>' +

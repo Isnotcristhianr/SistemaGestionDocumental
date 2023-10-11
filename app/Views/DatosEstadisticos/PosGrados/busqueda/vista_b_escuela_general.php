@@ -113,7 +113,7 @@
 
             // Crear la ruta con los valores seleccionados
             const ruta = valoresSeleccionados.length > 0 ?
-                '<?php echo base_url('index.php/SelectorReporteEscuelaGrad/'); ?>' + valoresSeleccionados.join(',') :
+                '<?php echo base_url('index.php/SelectorReporteEscuelaPosgrado/'); ?>' + valoresSeleccionados.join(',') :
                 'javascript:void(0)';
             btnBox.href = ruta;
 
