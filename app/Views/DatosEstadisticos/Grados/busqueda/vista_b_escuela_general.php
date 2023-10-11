@@ -11,15 +11,16 @@
             </h2>
             <h4 class="text-center text-dark">Búsqueda: Escuela</h4>
         </div>
-        <div class="col-12">
-            <h5 class="text-center text-secondary">↓ Graduados - Matriculados ↓</h5>
+        <div class="col-12 m-2">
+            <h5 class="text-center text-secondary">↓ Graduados - Matriculados ↓
+                <br>
+                <a id="btnBox"></a>
+            </h5>
         </div>
     </div>
     <!-- Contenido-->
     <h3 class="text text-start text-success">Oferta Académica Vigentes</h3>
     <br>
-    <div id="seleccionvigente" hidden></div>
-    <a id="btnvigente"></a>
     <!-- Llenar tabla con activas -->
     <table class="table table-success align-middle order-column hover row-border stripe" id="tbl">
         <thead>
@@ -59,41 +60,6 @@
 
         </tbody>
     </table>
-    <script>
-        // Obtener todos los checkboxes con name="seleccionar[]"
-        const checkboxes = document.querySelectorAll('input[name="seleccionar[]"]');
-        const seleccionVigenteDiv = document.getElementById('seleccionvigente');
-
-        // Agregar un evento de cambio a cada checkbox
-        checkboxes.forEach((checkbox) => {
-            checkbox.addEventListener('change', function() {
-                const valoresSeleccionados = Array.from(checkboxes)
-                    .filter((cb) => cb.checked)
-                    .map((cb) => cb.value);
-
-                // Mostrar la concatenación de los valores en el div de selección vigente
-                seleccionVigenteDiv.innerHTML = valoresSeleccionados.join(', ');
-            });
-
-            //crear btn si hay al menos una seleccion
-            checkbox.addEventListener('change', function() {
-                if (document.querySelectorAll('input[name="seleccionar[]"]:checked').length > 0) {
-                    document.getElementById('btnvigente').innerHTML = '<button type="submit" class="btn btn-success">Datos Seleccion<i class="fa-solid fa-circle-info p-1"></i></button>';
-                } else {
-                    document.getElementById('btnvigente').innerHTML = '';
-                }
-            });
-        });
-
-        //al hacer click en btn capturar valores seleccionados 
-        document.getElementById('btnvigente').addEventListener('click', function() {
-            const valoresSeleccionados = Array.from(checkboxes)
-                .filter((cb) => cb.checked)
-                .map((cb) => cb.value);
-
-            alert(valoresSeleccionados);
-        });
-    </script>
 
 </div>
 
@@ -122,7 +88,7 @@
                         <td hidden><?php echo $escuelas['CAR_ID']; ?></td>
                         <td>
                             <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" name="seleccionarhistorico[]" value="<?php echo $escuelas['CAR_ID']; ?>">
+                                <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php echo $escuelas['CAR_ID']; ?>">
 
                             </div>
                         </td>
@@ -141,49 +107,12 @@
             ?>
         </tbody>
     </table>
-    <script>
-        // Obtener todos los checkboxes con name="seleccionarhistorico[]"
-        const checkboxesHistorico = document.querySelectorAll('input[name="seleccionarhistorico[]"]');
-        const seleccionHistoricoDiv = document.querySelector('.seleccionhistorico');
-
-        // Agregar un evento de cambio a cada checkbox
-        checkboxesHistorico.forEach((checkboxHistorico) => {
-            checkboxHistorico.addEventListener('change', function() {
-                // Obtener todos los valores de los checkboxes seleccionados
-                const valoresSeleccionadosHistorico = Array.from(checkboxesHistorico)
-                    .filter((cb) => cb.checked)
-                    .map((cb) => cb.value);
-
-                // Mostrar la concatenación de los valores en el div de selección histórico
-                seleccionHistoricoDiv.innerHTML = valoresSeleccionadosHistorico.join(', ');
-            });
-
-            //crear btn si hay al menos una seleccion
-            checkboxHistorico.addEventListener('change', function() {
-                if (document.querySelectorAll('input[name="seleccionarhistorico[]"]:checked').length > 0) {
-                    document.getElementById('btnHistorico').innerHTML = '<button type="submit" class="btn btn-primary">Datos Seleccion<i class="fa-solid fa-circle-info p-1"></i></button>';
-                } else {
-                    document.getElementById('btnHistorico').innerHTML = '';
-                }
-            });
-        });
-
-        //al hacer click en btn capturar valores seleccionados
-        document.getElementById('btnHistorico').addEventListener('click', function() {
-            const valoresSeleccionadosHistorico = Array.from(checkboxesHistorico)
-                .filter((cb) => cb.checked)
-                .map((cb) => cb.value);
-
-            alert(valoresSeleccionadosHistorico);
-        });
-    </script>
 
 
     <!-- Sede Tulcan -->
     <br>
     <h4 class="text text-secondary">Campus Tulcán</h4>
     <br>
-    <div class="selecciontulcan" hidden></div>
     <a id="btntulcan"></a>
     <!-- Llenar tabla con no ativas -->
     <table class="table table-info align-middle order-column hover row-border stripe " id="tbl3">
@@ -221,40 +150,38 @@
             ?>
         </tbody>
     </table>
-    <script>
-        // Obtener todos los checkboxes con name="seleccionar[]"
-        const checkboxesTulcan = document.querySelectorAll('input[name="seleccionar[]"]');
-        const seleccionTulcanDiv = document.querySelector('.selecciontulcan');
+</div>
 
-        // Agregar un evento de cambio a cada checkbox
-        checkboxesTulcan.forEach((checkboxTulcan) => {
-            checkboxTulcan.addEventListener('change', function() {
-                // Obtener todos los valores de los checkboxes seleccionados
-                const valoresSeleccionadosTulcan = Array.from(checkboxesTulcan)
-                    .filter((cb) => cb.checked)
-                    .map((cb) => cb.value);
 
-                // Mostrar la concatenación de los valores en el div de selección histórico
-                seleccionTulcanDiv.innerHTML = valoresSeleccionadosTulcan.join(', ');
-            });
+<script>
+    // Obtener todos los checkboxes con name="seleccionar[]"
+    const checkboxes = document.querySelectorAll('input[name="seleccionar[]"]');
+    const seleccionVigenteDiv = document.getElementById('seleccionvigente');
 
-            //crear btn si hay al menos una seleccion
-            checkboxTulcan.addEventListener('change', function() {
-                if (document.querySelectorAll('input[name="seleccionar[]"]:checked').length > 0) {
-                    document.getElementById('btntulcan').innerHTML = '<button type="submit" class="btn btn-info">Datos Seleccion<i class="fa-solid fa-circle-info p-1"></i></button>';
-                } else {
-                    document.getElementById('btntulcan').innerHTML = '';
-                }
-            });
-        });
-
-        //al hacer click en btn capturar valores seleccionados
-        document.getElementById('btntulcan').addEventListener('click', function() {
-            const valoresSeleccionadosTulcan = Array.from(checkboxesTulcan)
+    // Agregar un evento de cambio a cada checkbox
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', function() {
+            const valoresSeleccionados = Array.from(checkboxes)
                 .filter((cb) => cb.checked)
                 .map((cb) => cb.value);
-
-            alert(valoresSeleccionadosTulcan);
         });
-    </script>
-</div>
+
+        //crear btn si hay al menos una seleccion
+        checkbox.addEventListener('change', function() {
+            if (document.querySelectorAll('input[name="seleccionar[]"]:checked').length > 0) {
+                document.getElementById('btnBox').innerHTML = '<br><a href="#" class="btn btn-primary"><i class="fa-solid fa-circle-info p-1"></i>Generar Reporte Selección<i class="fa-solid fa-circle-info p-1"></i></a><br>';
+            } else {
+                document.getElementById('btnBox').innerHTML = '';
+            }
+        });
+    });
+
+    //al hacer click en btn capturar valores seleccionados 
+    document.getElementById('btnBox').addEventListener('click', function() {
+        const valoresSeleccionados = Array.from(checkboxes)
+            .filter((cb) => cb.checked)
+            .map((cb) => cb.value);
+
+        alert(valoresSeleccionados);
+    });
+</script>

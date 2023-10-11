@@ -9,8 +9,11 @@
             </h2>
             <h4 class="text-center text-dark">Búsqueda: Escuela</h4>
         </div>
-        <div class="col-12">
-            <h5 class="text-center text-secondary">↓ Matriculados ↓</h5>
+        <div class="col-12 m-2">
+            <h5 class="text-center text-secondary">↓ Matriculados ↓
+                <br>
+                <a id="btnBox"></a>
+            </h5>
         </div>
     </div>
 
@@ -18,8 +21,6 @@
     <h3 class="text text-start text-success">Oferta Académica Vigentes</h3>
     <!-- Sede Ibarra -->
     <br>
-    <div id="seleccionvigente" hidden></div>
-    <a id="btnvigente"></a>
     <!-- Llenar tabla con activas -->
     <table class="table table-success align-middle order-column hover row-border stripe" id="tbl">
         <thead>
@@ -59,53 +60,6 @@
             ?>
         </tbody>
     </table>
-    <script>
-        // Función para actualizar la lista de valores seleccionados y mostrar u ocultar el botón
-        function actualizarSeleccionVigente() {
-            const checkboxesVigente = document.querySelectorAll('input[name="seleccionar[]"]');
-            const seleccionVigenteDiv = document.getElementById('seleccionvigente');
-            const btnVigente = document.getElementById('btnvigente');
-
-            // Obtener todos los valores de los checkboxes seleccionados
-            const valoresSeleccionadosVigente = Array.from(checkboxesVigente)
-                .filter((cb) => cb.checked)
-                .map((cb) => cb.value);
-
-            // Actualizar el contenido del div con los valores seleccionados
-            seleccionVigenteDiv.innerHTML = valoresSeleccionadosVigente.join(', ');
-
-            // Mostrar u ocultar el botón según si hay selecciones
-            if (valoresSeleccionadosVigente.length > 0) {
-                btnVigente.innerHTML = '<button type="button" class="btn btn-success">Datos Seleccion <i class="fa-solid fa-circle-info p-1"></i></button>';
-            } else {
-                btnVigente.innerHTML = '';
-            }
-        }
-
-        // Obtener todos los checkboxes con name="seleccionar[]"
-        const checkboxesVigente = document.querySelectorAll('input[name="seleccionar[]"]');
-
-        // Agregar un evento de cambio a cada checkbox para actualizar la selección
-        checkboxesVigente.forEach((checkboxVigente) => {
-            checkboxVigente.addEventListener('change', actualizarSeleccionVigente);
-        });
-
-        // Al hacer clic en el botón, capturar y mostrar los valores seleccionados
-        document.getElementById('btnvigente').addEventListener('click', function() {
-            const valoresSeleccionadosVigente = Array.from(checkboxesVigente)
-                .filter((cb) => cb.checked)
-                .map((cb) => cb.value);
-
-            if (valoresSeleccionadosVigente.length > 0) {
-                alert(valoresSeleccionadosVigente.join(', '));
-            } else {
-                alert('No se ha seleccionado ningún valor.');
-            }
-        });
-
-        // Inicialmente, al cargar la página, actualiza la selección
-        actualizarSeleccionVigente();
-    </script>
 
 </div>
 
@@ -115,8 +69,6 @@
     <br>
     <h4 class="text text-secondary">Campus Ibarra</h4>
     <br>
-    <div class="seleccionhistorico" hidden></div>
-    <a id="btnHistorico"></a>
     <!-- Llenar tabla con no ativas -->
     <table class="table table-primary align-middle order-column hover row-border stripe" id="tbl2">
         <thead>
@@ -155,60 +107,11 @@
             ?>
         </tbody>
     </table>
-    <script>
-        // Función para actualizar la lista de valores seleccionados y mostrar u ocultar el botón
-        function actualizarSeleccionHistorico() {
-            const checkboxesHistorico = document.querySelectorAll('input[name="seleccionar[]"]');
-            const seleccionHistoricoDiv = document.querySelector('.seleccionhistorico');
-            const btnHistorico = document.getElementById('btnHistorico');
-
-            // Obtener todos los valores de los checkboxes seleccionados
-            const valoresSeleccionadosHistorico = Array.from(checkboxesHistorico)
-                .filter((cb) => cb.checked)
-                .map((cb) => cb.value);
-
-            // Actualizar el contenido del div con los valores seleccionados
-            seleccionHistoricoDiv.innerHTML = valoresSeleccionadosHistorico.join(', ');
-
-            // Mostrar u ocultar el botón según si hay selecciones
-            if (valoresSeleccionadosHistorico.length > 0) {
-                btnHistorico.innerHTML = '<button type="button" class="btn btn-primary">Datos Seleccion <i class="fa-solid fa-circle-info p-1"></i></button>';
-            } else {
-                btnHistorico.innerHTML = '';
-            }
-        }
-
-        // Obtener todos los checkboxes con name="seleccionar[]"
-        const checkboxesHistorico = document.querySelectorAll('input[name="seleccionar[]"]');
-
-        // Agregar un evento de cambio a cada checkbox para actualizar la selección
-        checkboxesHistorico.forEach((checkboxHistorico) => {
-            checkboxHistorico.addEventListener('change', actualizarSeleccionHistorico);
-        });
-
-        // Al hacer clic en el botón, capturar y mostrar los valores seleccionados
-        document.getElementById('btnHistorico').addEventListener('click', function() {
-            const valoresSeleccionadosHistorico = Array.from(checkboxesHistorico)
-                .filter((cb) => cb.checked)
-                .map((cb) => cb.value);
-
-            if (valoresSeleccionadosHistorico.length > 0) {
-                alert(valoresSeleccionadosHistorico.join(', '));
-            } else {
-                alert('No se ha seleccionado ningún valor.');
-            }
-        });
-
-        // Inicialmente, al cargar la página, actualiza la selección
-        actualizarSeleccionHistorico();
-    </script>
 
     <!-- Sede tulcan -->
     <br>
     <h4 class="text text-secondary">Campus Tulcán</h4>
     <br>
-    <div class="selecciontulcan" hidden></div>
-    <a id="btntulcan"></a>
     <!-- Llenar tabla con activas -->
     <table class="table table-info align-middle order-column hover row-border stripe" id="tbl3">
         <thead>
@@ -250,52 +153,38 @@
             ?>
         </tbody>
     </table>
-    <script>
-        // Función para actualizar la lista de valores seleccionados y mostrar u ocultar el botón
-        function actualizarSeleccionTulcan() {
-            const checkboxesTulcan = document.querySelectorAll('input[name="seleccionar[]"]');
-            const seleccionTulcanDiv = document.querySelector('.selecciontulcan');
-            const btnTulcan = document.getElementById('btntulcan');
-
-            // Obtener todos los valores de los checkboxes seleccionados
-            const valoresSeleccionadosTulcan = Array.from(checkboxesTulcan)
-                .filter((cb) => cb.checked)
-                .map((cb) => cb.value);
-
-            // Actualizar el contenido del div con los valores seleccionados
-            seleccionTulcanDiv.innerHTML = valoresSeleccionadosTulcan.join(', ');
-
-            // Mostrar u ocultar el botón según si hay selecciones
-            if (valoresSeleccionadosTulcan.length > 0) {
-                btnTulcan.innerHTML = '<button type="button" class="btn btn-info">Datos Seleccion <i class="fa-solid fa-circle-info p-1"></i></button>';
-            } else {
-                btnTulcan.innerHTML = '';
-            }
-        }
-
-        // Obtener todos los checkboxes con name="seleccionar[]"
-        const checkboxesTulcan = document.querySelectorAll('input[name="seleccionar[]"]');
-
-        // Agregar un evento de cambio a cada checkbox para actualizar la selección
-        checkboxesTulcan.forEach((checkboxTulcan) => {
-            checkboxTulcan.addEventListener('change', actualizarSeleccionTulcan);
-        });
-
-        // Al hacer clic en el botón, capturar y mostrar los valores seleccionados
-        document.getElementById('btntulcan').addEventListener('click', function() {
-            const valoresSeleccionadosTulcan = Array.from(checkboxesTulcan)
-                .filter((cb) => cb.checked)
-                .map((cb) => cb.value);
-
-            if (valoresSeleccionadosTulcan.length > 0) {
-                alert(valoresSeleccionadosTulcan.join(', '));
-            } else {
-                alert('No se ha seleccionado ningún valor.');
-            }
-        });
-
-        // Inicialmente, al cargar la página, actualiza la selección
-        actualizarSeleccionTulcan();
-    </script>
 
 </div>
+
+<script>
+    // Obtener todos los checkboxes con name="seleccionar[]"
+    const checkboxes = document.querySelectorAll('input[name="seleccionar[]"]');
+    const seleccionVigenteDiv = document.getElementById('seleccionvigente');
+
+    // Agregar un evento de cambio a cada checkbox
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', function() {
+            const valoresSeleccionados = Array.from(checkboxes)
+                .filter((cb) => cb.checked)
+                .map((cb) => cb.value);
+        });
+
+        //crear btn si hay al menos una seleccion
+        checkbox.addEventListener('change', function() {
+            if (document.querySelectorAll('input[name="seleccionar[]"]:checked').length > 0) {
+                document.getElementById('btnBox').innerHTML = '<br><a href="#" class="btn btn-primary"><i class="fa-solid fa-circle-info p-1"></i>Generar Reporte Selección<i class="fa-solid fa-circle-info p-1"></i></a><br>';
+            } else {
+                document.getElementById('btnBox').innerHTML = '';
+            }
+        });
+    });
+
+    //al hacer click en btn capturar valores seleccionados 
+    document.getElementById('btnBox').addEventListener('click', function() {
+        const valoresSeleccionados = Array.from(checkboxes)
+            .filter((cb) => cb.checked)
+            .map((cb) => cb.value);
+
+        alert(valoresSeleccionados);
+    });
+</script>
