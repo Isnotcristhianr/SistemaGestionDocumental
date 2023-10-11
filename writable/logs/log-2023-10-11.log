@@ -1,0 +1,125 @@
+CRITICAL - 2023-10-11 14:54:39 --> Unmatched '}'
+in APPPATH\Views\graficasEstadisticas\grado\escuelas\vistaSelectorEscuela.php on line 10.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/grado/escuelas/vistaSelectorEscuela', [], true)
+ 3 APPPATH\Controllers\ControladorFEEscuela.php(318): view('/graficasEstadisticas/grado/escuelas/vistaSelectorEscuela', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFEEscuela->selectorReporteEscuelaGrad('12,9,210', '')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFEEscuela))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 15:00:36 --> htmlspecialchars(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Views\graficasEstadisticas\grado\escuelas\vistaSelectorEscuela.php on line 2.
+ 1 APPPATH\Views\graficasEstadisticas\grado\escuelas\vistaSelectorEscuela.php(2): htmlspecialchars([...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Views\\graficasEstadisticas\\grado\\escuelas\\vistaSelectorEscuela.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/graficasEstadisticas/grado/escuelas/vistaSelectorEscuela', [], true)
+ 5 APPPATH\Controllers\ControladorFEEscuela.php(322): view('/graficasEstadisticas/grado/escuelas/vistaSelectorEscuela', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFEEscuela->selectorReporteEscuelaGrad('7,8,3,132', '')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFEEscuela))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-11 20:49:40 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorFEEscuela.php(317): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorFEEscuela->selectorReporteEscuelaGrad('7,3', '')
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFEEscuela))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-11 20:49:40 --> Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_carrera`
+WHERE `CAR_PADREESC` = (\'7\',\'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_carrera`
+WHERE `CAR_PADREESC` = (\'7\',\'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_carrera`
+WHERE `CAR_PADREESC` = (\'7\',\'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_carrera`
+WHERE `CAR_PADREESC` = :CAR_PADREESC:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ControladorFEEscuela.php(317): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFEEscuela->selectorReporteEscuelaGrad('7,3', '')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFEEscuela))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-11 20:49:41 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorFEEscuela.php(317): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorFEEscuela->selectorReporteEscuelaGrad('7,3', '')
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFEEscuela))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-11 20:49:41 --> Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_carrera`
+WHERE `CAR_PADREESC` = (\'7\',\'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_carrera`
+WHERE `CAR_PADREESC` = (\'7\',\'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_carrera`
+WHERE `CAR_PADREESC` = (\'7\',\'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_carrera`
+WHERE `CAR_PADREESC` = :CAR_PADREESC:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ControladorFEEscuela.php(317): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFEEscuela->selectorReporteEscuelaGrad('7,3', '')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFEEscuela))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-11 20:49:51 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\XAMPP\htdocs\SistemaGestionDocumental\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\XAMPP\htdocs\SistemaGestionDocumental\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\XAMPP\htdocs\SistemaGestionDocumental\app\Controllers\ControladorFEEscuela.php(317): CodeIgniter\BaseModel->findAll()
+#7 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(934): App\Controllers\ControladorFEEscuela->selectorReporteEscuelaGrad('7,3', '')
+#8 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFEEscuela))
+#9 C:\XAMPP\htdocs\SistemaGestionDocumental\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\XAMPP\htdocs\SistemaGestionDocumental\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-11 20:49:51 --> Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tbl_carrera`
+WHERE `CAR_PADREESC` = (\'7\',\'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_carrera`
+WHERE `CAR_PADREESC` = (\'7\',\'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_carrera`
+WHERE `CAR_PADREESC` = (\'7\',\'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_carrera`
+WHERE `CAR_PADREESC` = :CAR_PADREESC:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ControladorFEEscuela.php(317): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFEEscuela->selectorReporteEscuelaGrad('7,3', '')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFEEscuela))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

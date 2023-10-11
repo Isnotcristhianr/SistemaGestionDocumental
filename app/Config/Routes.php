@@ -15,6 +15,7 @@ $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
+
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
@@ -97,6 +98,8 @@ $routes->get('/ReporteEscuelaGraduadosVigente/(:any)', 'ControladorFEEscuela::re
 $routes->get('/ReporteEscuelaGraduadosHistorico/(:any)', 'ControladorFEEscuela::reporteEscuelaGraduadosHistorico/$1/');
 //Todo Reporte Escuela Graduados Tulcan
 $routes->get('/ReporteEscuelaGraduadosTulcan/(:any)', 'ControladorFEEscuela::reporteEscuelaGraduadosTulcan/$1/');
+//*Selector Reporte Escuela Grado
+$routes->get('/SelectorReporteEscuelaGrad/(:any)', 'ControladorFEEscuela::selectorReporteEscuelaGrad/$1/');
 
 //? Datos Estadisticos Posgrado
 $routes->get('/FiltroEstadisticoPosgrado', 'ControladorEstadistico::filtroEstadisticoPosgrado');

@@ -21,7 +21,7 @@ class ControladorFEEscuela extends BaseController
             //carreras
             $data['tbl_carrera'] = $objEscuela->where('CTIP_ID', 2)->where('CAR_ESCUELA', 1)->findAll();
             //escuelas
-            
+
 
             if ($tipo == "Matriculados") {
                 return view('header')
@@ -49,7 +49,7 @@ class ControladorFEEscuela extends BaseController
             $objEstadMatr = new ModelMatrizGraduados();
             //escuela
             $objEsc = new ModelFEescuelas();
-            
+
             //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
             $idEscuela = $id;
             //obtener datos de la escuela y las carreras que contiene
@@ -63,9 +63,8 @@ class ControladorFEEscuela extends BaseController
 
             //vistas
             return view('header')
-            . view('/graficasEstadisticas/grado/escuelas/vistaEscuelaGeneral', $data + $escuela)
-            . view('footer');
-
+                . view('/graficasEstadisticas/grado/escuelas/vistaEscuelaGeneral', $data + $escuela)
+                . view('footer');
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
@@ -79,7 +78,7 @@ class ControladorFEEscuela extends BaseController
             $objEstadMatr = new ModelMatrizGraduados();
             //escuela
             $objEsc = new ModelFEescuelas();
-            
+
             //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
             $idEscuela = $id;
             //obtener datos de la escuela y las carreras que contiene
@@ -93,9 +92,8 @@ class ControladorFEEscuela extends BaseController
 
             //vistas
             return view('header')
-            . view('/graficasEstadisticas/grado/escuelas/vistaEscuelaGeneralHistorico', $data + $escuela)
-            . view('footer');
-
+                . view('/graficasEstadisticas/grado/escuelas/vistaEscuelaGeneralHistorico', $data + $escuela)
+                . view('footer');
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
@@ -109,7 +107,7 @@ class ControladorFEEscuela extends BaseController
             $objEstadMatr = new ModelMatrizGraduados();
             //escuela
             $objEsc = new ModelFEescuelas();
-            
+
             //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
             $idEscuela = $id;
             //obtener datos de la escuela y las carreras que contiene
@@ -123,9 +121,8 @@ class ControladorFEEscuela extends BaseController
 
             //vistas
             return view('header')
-            . view('/graficasEstadisticas/grado/escuelas/vistaEscuelaGeneralTulcan', $data + $escuela)
-            . view('footer');
-
+                . view('/graficasEstadisticas/grado/escuelas/vistaEscuelaGeneralTulcan', $data + $escuela)
+                . view('footer');
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
@@ -139,7 +136,7 @@ class ControladorFEEscuela extends BaseController
             $objEstadMatr = new ModelMatrizGraduados();
             //escuela
             $objEsc = new ModelFEescuelas();
-            
+
             //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
             $idEscuela = $id;
             //obtener datos de la escuela y las carreras que contiene
@@ -153,9 +150,8 @@ class ControladorFEEscuela extends BaseController
 
             //vistas
             return view('header')
-            . view('/graficasEstadisticas/grado/escuelas/vistaEscuelaMatriculadosVigente', $data + $escuela)
-            . view('footer');
-
+                . view('/graficasEstadisticas/grado/escuelas/vistaEscuelaMatriculadosVigente', $data + $escuela)
+                . view('footer');
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
@@ -169,7 +165,7 @@ class ControladorFEEscuela extends BaseController
             $objEstadMatr = new ModelMatrizGraduados();
             //escuela
             $objEsc = new ModelFEescuelas();
-            
+
             //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
             $idEscuela = $id;
             //obtener datos de la escuela y las carreras que contiene
@@ -183,9 +179,8 @@ class ControladorFEEscuela extends BaseController
 
             //vistas
             return view('header')
-            . view('/graficasEstadisticas/grado/escuelas/vistaEscuelaMatriculadosHistorico', $data + $escuela)
-            . view('footer');
-
+                . view('/graficasEstadisticas/grado/escuelas/vistaEscuelaMatriculadosHistorico', $data + $escuela)
+                . view('footer');
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
@@ -199,7 +194,7 @@ class ControladorFEEscuela extends BaseController
             $objEstadMatr = new ModelMatrizGraduados();
             //escuela
             $objEsc = new ModelFEescuelas();
-            
+
             //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
             $idEscuela = $id;
             //obtener datos de la escuela y las carreras que contiene
@@ -213,9 +208,8 @@ class ControladorFEEscuela extends BaseController
 
             //vistas
             return view('header')
-            . view('/graficasEstadisticas/grado/escuelas/vistaEscuelaMatriculadosTulcan', $data + $escuela)
-            . view('footer');
-
+                . view('/graficasEstadisticas/grado/escuelas/vistaEscuelaMatriculadosTulcan', $data + $escuela)
+                . view('footer');
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
@@ -229,7 +223,7 @@ class ControladorFEEscuela extends BaseController
             $objEstadMatr = new ModelMatrizGraduados();
             //escuela
             $objEsc = new ModelFEescuelas();
-            
+
             //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
             $idEscuela = $id;
             //obtener datos de la escuela y las carreras que contiene
@@ -243,9 +237,8 @@ class ControladorFEEscuela extends BaseController
 
             //vistas
             return view('header')
-            . view('/graficasEstadisticas/grado/escuelas/vistaEscuelaGraduadosVigente', $data + $escuela)
-            . view('footer');
-
+                . view('/graficasEstadisticas/grado/escuelas/vistaEscuelaGraduadosVigente', $data + $escuela)
+                . view('footer');
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
@@ -259,7 +252,7 @@ class ControladorFEEscuela extends BaseController
             $objEstadMatr = new ModelMatrizGraduados();
             //escuela
             $objEsc = new ModelFEescuelas();
-            
+
             //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
             $idEscuela = $id;
             //obtener datos de la escuela y las carreras que contiene
@@ -273,9 +266,8 @@ class ControladorFEEscuela extends BaseController
 
             //vistas
             return view('header')
-            . view('/graficasEstadisticas/grado/escuelas/vistaEscuelaGraduadosHistorico', $data + $escuela)
-            . view('footer');
-
+                . view('/graficasEstadisticas/grado/escuelas/vistaEscuelaGraduadosHistorico', $data + $escuela)
+                . view('footer');
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
@@ -289,7 +281,7 @@ class ControladorFEEscuela extends BaseController
             $objEstadMatr = new ModelMatrizGraduados();
             //escuela
             $objEsc = new ModelFEescuelas();
-            
+
             //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
             $idEscuela = $id;
             //obtener datos de la escuela y las carreras que contiene
@@ -297,20 +289,46 @@ class ControladorFEEscuela extends BaseController
 
             //datos estadisticos
             $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
-            
+
             //obtener id
             $data['id'] = $id;
 
             //vistas
             return view('header')
-            . view('/graficasEstadisticas/grado/escuelas/vistaEscuelaGraduadosTulcan', $data + $escuela)
-            . view('footer');
-
+                . view('/graficasEstadisticas/grado/escuelas/vistaEscuelaGraduadosTulcan', $data + $escuela)
+                . view('footer');
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
     }
 
+    //* Selector de Escuelas
+    public function selectorReporteEscuelaGrad($ids)
+    {
+        try {
+            // Convertir la cadena de IDs en un array
+            $id_array = explode(',', $ids);
+
+            // Modelo
+            $objEscuela = new ModelFEescuelas();
+            $objEstadMatr = new ModelMatrizGraduados();
+
+            // Obtener carreras basadas en los IDs seleccionados
+            $data['tbl_carrera'] = $objEscuela->whereIn('CAR_PADREESC', $id_array)->findAll();
+
+            //datos estad
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+
+            // Almacenar IDs para usarlos en la vista si es necesario
+            $data['ids'] = $id_array;
+
+            return view('header')
+                . view('/graficasEstadisticas/grado/escuelas/vistaSelectorEscuela', $data)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
 
     //?Datos Estadisticos PosGrado
     public function filtroEstadisticoPosgradoEscuela($tipo)
@@ -328,7 +346,7 @@ class ControladorFEEscuela extends BaseController
                 return view('header')
                     . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_escuela_grad', $data)
                     . view('footer');
-            }else if ($tipo == "General") {
+            } else if ($tipo == "General") {
                 return view('header')
                     . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_escuela_general', $data)
                     . view('footer');
@@ -339,174 +357,174 @@ class ControladorFEEscuela extends BaseController
     }
 
     //Reporte Escuela Posgrado General Vigente
-    public function reportePosgradoEscuelaGeneralVigente($id){
+    public function reportePosgradoEscuelaGeneralVigente($id)
+    {
         try {
-           //modelo
-           $objEstadMatr = new ModelMatrizGraduados();
-           //escuela
-           $objEsc = new ModelFEescuelas();
-           
-           //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
-           $idEscuela = $id;
-           //obtener datos de la escuela y las carreras que contiene
-           $escuela['tbl_carrera'] = $objEsc->where('CAR_PADREESC', $idEscuela)->findAll();
+            //modelo
+            $objEstadMatr = new ModelMatrizGraduados();
+            //escuela
+            $objEsc = new ModelFEescuelas();
 
-           //datos estadisticos
-           $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+            //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
+            $idEscuela = $id;
+            //obtener datos de la escuela y las carreras que contiene
+            $escuela['tbl_carrera'] = $objEsc->where('CAR_PADREESC', $idEscuela)->findAll();
 
-           //obtener id
-           $data['id'] = $id;
+            //datos estadisticos
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+
+            //obtener id
+            $data['id'] = $id;
 
             //vistas
             return view('header')
-            . view('graficasEstadisticas/posgrado/escuelas/vistaEscuelaGeneralVigente', $data + $escuela)
-            . view('footer');
-
+                . view('graficasEstadisticas/posgrado/escuelas/vistaEscuelaGeneralVigente', $data + $escuela)
+                . view('footer');
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
     }
 
     //Reporte Escuela Posgrado General Historico
-    public function reportePosgradoEscuelaGeneralHistorico($id){
+    public function reportePosgradoEscuelaGeneralHistorico($id)
+    {
         try {
-           //modelo
-           $objEstadMatr = new ModelMatrizGraduados();
-           //escuela
-           $objEsc = new ModelFEescuelas();
-           
-           //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
-           $idEscuela = $id;
-           //obtener datos de la escuela y las carreras que contiene
-           $escuela['tbl_carrera'] = $objEsc->where('CAR_PADREESC', $idEscuela)->findAll();
+            //modelo
+            $objEstadMatr = new ModelMatrizGraduados();
+            //escuela
+            $objEsc = new ModelFEescuelas();
 
-           //datos estadisticos
-           $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+            //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
+            $idEscuela = $id;
+            //obtener datos de la escuela y las carreras que contiene
+            $escuela['tbl_carrera'] = $objEsc->where('CAR_PADREESC', $idEscuela)->findAll();
 
-           //obtener id
-           $data['id'] = $id;
+            //datos estadisticos
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+
+            //obtener id
+            $data['id'] = $id;
 
             //vistas
             return view('header')
-            . view('graficasEstadisticas/posgrado/escuelas/vistaEscuelaGeneralHistorico', $data + $escuela)
-            . view('footer');
-
+                . view('graficasEstadisticas/posgrado/escuelas/vistaEscuelaGeneralHistorico', $data + $escuela)
+                . view('footer');
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
     }
 
     //Reporte Escuela Posgrado Matriculados Vigente
-    public function reportePosgradoEscuelaMatriculadosVigente($id){
+    public function reportePosgradoEscuelaMatriculadosVigente($id)
+    {
         try {
-           //modelo
-           $objEstadMatr = new ModelMatrizGraduados();
-           //escuela
-           $objEsc = new ModelFEescuelas();
-           
-           //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
-           $idEscuela = $id;
-           //obtener datos de la escuela y las carreras que contiene
-           $escuela['tbl_carrera'] = $objEsc->where('CAR_PADREESC', $idEscuela)->findAll();
+            //modelo
+            $objEstadMatr = new ModelMatrizGraduados();
+            //escuela
+            $objEsc = new ModelFEescuelas();
 
-           //datos estadisticos
-           $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+            //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
+            $idEscuela = $id;
+            //obtener datos de la escuela y las carreras que contiene
+            $escuela['tbl_carrera'] = $objEsc->where('CAR_PADREESC', $idEscuela)->findAll();
 
-           //obtener id
-           $data['id'] = $id;
+            //datos estadisticos
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+
+            //obtener id
+            $data['id'] = $id;
 
             //vistas
             return view('header')
-            . view('graficasEstadisticas/posgrado/escuelas/vistaEscuelaMatriculadosVigente', $data + $escuela)
-            . view('footer');
-
+                . view('graficasEstadisticas/posgrado/escuelas/vistaEscuelaMatriculadosVigente', $data + $escuela)
+                . view('footer');
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
     }
 
     //Reporte Escuela Posgrado Matriculados Historico
-    public function reportePosgradoEscuelaMatriculadosHistorico($id){
+    public function reportePosgradoEscuelaMatriculadosHistorico($id)
+    {
         try {
-           //modelo
-           $objEstadMatr = new ModelMatrizGraduados();
-           //escuela
-           $objEsc = new ModelFEescuelas();
-           
-           //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
-           $idEscuela = $id;
-           //obtener datos de la escuela y las carreras que contiene
-           $escuela['tbl_carrera'] = $objEsc->where('CAR_PADREESC', $idEscuela)->findAll();
+            //modelo
+            $objEstadMatr = new ModelMatrizGraduados();
+            //escuela
+            $objEsc = new ModelFEescuelas();
 
-           //datos estadisticos
-           $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+            //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
+            $idEscuela = $id;
+            //obtener datos de la escuela y las carreras que contiene
+            $escuela['tbl_carrera'] = $objEsc->where('CAR_PADREESC', $idEscuela)->findAll();
 
-           //obtener id
-           $data['id'] = $id;
+            //datos estadisticos
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+
+            //obtener id
+            $data['id'] = $id;
 
             //vistas
             return view('header')
-            . view('graficasEstadisticas/posgrado/escuelas/vistaEscuelaMatriculadosHistorico', $data + $escuela)
-            . view('footer');
-
+                . view('graficasEstadisticas/posgrado/escuelas/vistaEscuelaMatriculadosHistorico', $data + $escuela)
+                . view('footer');
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
     }
 
     //Reporte Escuela Posgrado Graduados Vigente
-    public function reportePosgradoEscuelaGraduadosVigente($id){
+    public function reportePosgradoEscuelaGraduadosVigente($id)
+    {
         try {
-           //modelo
-           $objEstadMatr = new ModelMatrizGraduados();
-           //escuela
-           $objEsc = new ModelFEescuelas();
-           
-           //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
-           $idEscuela = $id;
-           //obtener datos de la escuela y las carreras que contiene
-           $escuela['tbl_carrera'] = $objEsc->where('CAR_PADREESC', $idEscuela)->findAll();
+            //modelo
+            $objEstadMatr = new ModelMatrizGraduados();
+            //escuela
+            $objEsc = new ModelFEescuelas();
 
-           //datos estadisticos
-           $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+            //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
+            $idEscuela = $id;
+            //obtener datos de la escuela y las carreras que contiene
+            $escuela['tbl_carrera'] = $objEsc->where('CAR_PADREESC', $idEscuela)->findAll();
 
-           //obtener id
-           $data['id'] = $id;
+            //datos estadisticos
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+
+            //obtener id
+            $data['id'] = $id;
 
             //vistas
             return view('header')
-            . view('graficasEstadisticas/posgrado/escuelas/vistaEscuelaGraduadosVigente', $data + $escuela)
-            . view('footer');
-
+                . view('graficasEstadisticas/posgrado/escuelas/vistaEscuelaGraduadosVigente', $data + $escuela)
+                . view('footer');
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
     }
 
     //Reporte Escuela Posgrado Graduados Historico
-    public function reportePosgradoEscuelaGraduadosHistorico($id){
+    public function reportePosgradoEscuelaGraduadosHistorico($id)
+    {
         try {
-           //modelo
-           $objEstadMatr = new ModelMatrizGraduados();
-           //escuela
-           $objEsc = new ModelFEescuelas();
-           
-           //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
-           $idEscuela = $id;
-           //obtener datos de la escuela y las carreras que contiene
-           $escuela['tbl_carrera'] = $objEsc->where('CAR_PADREESC', $idEscuela)->findAll();
+            //modelo
+            $objEstadMatr = new ModelMatrizGraduados();
+            //escuela
+            $objEsc = new ModelFEescuelas();
 
-           //datos estadisticos
-           $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+            //$id de la escuela es CAR_PADRE, almacenar en una variable para buscar en CAR_PADREESC
+            $idEscuela = $id;
+            //obtener datos de la escuela y las carreras que contiene
+            $escuela['tbl_carrera'] = $objEsc->where('CAR_PADREESC', $idEscuela)->findAll();
 
-           //obtener id
-           $data['id'] = $id;
+            //datos estadisticos
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+
+            //obtener id
+            $data['id'] = $id;
 
             //vistas
             return view('header')
-            . view('graficasEstadisticas/posgrado/escuelas/vistaEscuelaGraduadosHistorico', $data + $escuela)
-            . view('footer');
-
+                . view('graficasEstadisticas/posgrado/escuelas/vistaEscuelaGraduadosHistorico', $data + $escuela)
+                . view('footer');
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
