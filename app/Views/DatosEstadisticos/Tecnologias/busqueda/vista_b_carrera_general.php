@@ -102,6 +102,7 @@
 <script>
     // Obtener todos los checkboxes con name="seleccionar[]"
     const checkboxes = document.querySelectorAll('input[name="seleccionar[]"]');
+    const btnBox = document.getElementById('btnBox');
 
     // Agregar un evento de cambio a cada checkbox
     checkboxes.forEach((checkbox) => {
@@ -109,24 +110,46 @@
             const valoresSeleccionados = Array.from(checkboxes)
                 .filter((cb) => cb.checked)
                 .map((cb) => cb.value);
-        });
 
-        //crear btn si hay al menos una seleccion
-        checkbox.addEventListener('change', function() {
-            if (document.querySelectorAll('input[name="seleccionar[]"]:checked').length > 0) {
-                document.getElementById('btnBox').innerHTML = '<br><a href="#" class="btn btn-primary"><i class="fa-solid fa-circle-info p-1"></i>Generar Reporte Selección<i class="fa-solid fa-circle-info p-1"></i></a><br>';
-            } else {
-                document.getElementById('btnBox').innerHTML = '';
-            }
+            // Crear la ruta con los valores seleccionados
+            const ruta = valoresSeleccionados.length > 0 ?
+                '<?php echo base_url('index.php/SelectorReporteEscuelaGrad/'); ?>' + valoresSeleccionados.join(',') :
+                'javascript:void(0)';
+            btnBox.href = ruta;
+
+            // Establecer el atributo href del enlace
+            btnBox.href = ruta;
+
+            // Establecer el texto del enlace según si hay selecciones o no
+            btnBox.innerHTML = valoresSeleccionados.length > 0 ?
+                '<i class="fa-solid fa-circle-info p-1"></i> Generar Reporte Selección <i class="fa-solid fa-circle-info p-1"></i>' :
+                '';
+
+            // Establecer estilos para el botón
+            btnBox.style.display = valoresSeleccionados.length > 0 ? 'block' : 'none';
+            btnBox.style.marginTop = '10px';
+            btnBox.style.backgroundColor = '#007bff';
+            btnBox.style.color = '#fff';
+            btnBox.style.border = 'none';
+            btnBox.style.borderRadius = '5px';
+            btnBox.style.padding = '10px 20px';
+            btnBox.style.textDecoration = 'none';
+            btnBox.style.cursor = 'pointer';
+            btnBox.style.fontSize = '15px';
+
         });
     });
 
-    //al hacer click en btn capturar valores seleccionados 
-    document.getElementById('btnBox').addEventListener('click', function() {
-        const valoresSeleccionados = Array.from(checkboxes)
-            .filter((cb) => cb.checked)
-            .map((cb) => cb.value);
+    // Al hacer clic en el enlace, capturar valores seleccionados 
+    btnBox.addEventListener('click', function(event) {
+        if (btnBox.href === 'javascript:void(0)') {
+            event.preventDefault(); // Evitar la redirección si no hay selecciones
+        } else {
+            const valoresSeleccionados = Array.from(checkboxes)
+                .filter((cb) => cb.checked)
+                .map((cb) => cb.value);
 
-        alert(valoresSeleccionados);
+            alert(valoresSeleccionados);
+        }
     });
 </script>
