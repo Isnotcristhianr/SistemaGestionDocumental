@@ -101,7 +101,6 @@
 <script>
     // Obtener todos los checkboxes con name="seleccionar[]"
     const checkboxes = document.querySelectorAll('input[name="seleccionar[]"]');
-    const seleccionVigenteDiv = document.getElementById('seleccionvigente');
 
     // Agregar un evento de cambio a cada checkbox
     checkboxes.forEach((checkbox) => {
