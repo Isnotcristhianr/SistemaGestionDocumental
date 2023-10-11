@@ -10,15 +10,16 @@
             </h2>
             <h4 class="text-center text-dark">Búsqueda: Carrera</h4>
         </div>
-        <div class="col-12">
-            <h5 class="text-center text-secondary">↓ Matriculados ↓</h5>
+        <div class="col-12 m-2">
+            <h5 class="text-center text-secondary">↓ Matriculados ↓
+                <br>
+                <a id="btnBox"></a>
+            </h5>
         </div>
     </div>
     <!-- Contenido-->
     <h3 class="text text-start text-success">Oferta Académica Vigentes</h3>
     <br>
-    <div id="seleccionvigente" hidden></div>
-    <a id="btnvigente"></a>
     <!-- Llenar tabla con activas -->
     <table class="table table-success align-middle order-column hover row-border stripe text-start" id="tbl">
         <thead>
@@ -65,8 +66,6 @@
     <!-- Sede Ibarra -->
     <h4 class="text-secondary">Campus Ibarra</h4>
     <br>
-    <div id="seleccionHistorico" hidden></div>
-    <a id="btnHistorico"></a>
     <!-- Llenar tabla con no ativas -->
     <table class="table table-primary align-middle order-column hover row-border stripe " id="tbl2">
         <thead>
@@ -106,8 +105,6 @@
     <!-- Sede Tulcan -->
     <h4 class="text-secondary">Campus Tulcán</h4>
     <br>
-    <div id="seleccionTulcan" hidden></div>
-    <a id="btnTulcan"></a>
     <!-- Llenar tabla con no ativas -->
     <table class="table table-info align-middle order-column hover row-border stripe " id="tbl3">
         <thead>
@@ -146,3 +143,36 @@
         </tbody>
     </table>
 </div>
+
+<script>
+    // Obtener todos los checkboxes con name="seleccionar[]"
+    const checkboxes = document.querySelectorAll('input[name="seleccionar[]"]');
+    const seleccionVigenteDiv = document.getElementById('seleccionvigente');
+
+    // Agregar un evento de cambio a cada checkbox
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', function() {
+            const valoresSeleccionados = Array.from(checkboxes)
+                .filter((cb) => cb.checked)
+                .map((cb) => cb.value);
+        });
+
+        //crear btn si hay al menos una seleccion
+        checkbox.addEventListener('change', function() {
+            if (document.querySelectorAll('input[name="seleccionar[]"]:checked').length > 0) {
+                document.getElementById('btnBox').innerHTML = '<br><a href="#" class="btn btn-primary"><i class="fa-solid fa-circle-info p-1"></i>Generar Reporte Selección<i class="fa-solid fa-circle-info p-1"></i></a><br>';
+            } else {
+                document.getElementById('btnBox').innerHTML = '';
+            }
+        });
+    });
+
+    //al hacer click en btn capturar valores seleccionados 
+    document.getElementById('btnBox').addEventListener('click', function() {
+        const valoresSeleccionados = Array.from(checkboxes)
+            .filter((cb) => cb.checked)
+            .map((cb) => cb.value);
+
+        alert(valoresSeleccionados);
+    });
+</script>
