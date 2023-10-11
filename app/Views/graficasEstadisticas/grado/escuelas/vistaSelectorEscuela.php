@@ -98,7 +98,7 @@
         for (var i = 0; i < idsCarreras.length; i++) {
             // Filtrar datos por la escuela actual
             var filteredData = datos.filter(function(dato) {
-                return dato.ESTM_CARRERA == idsCarreras[i];
+                return dato.ESTM_CARRERA == idsCarreras[i] && dato.ESTM_TIPO === '2' && (dato.ESTM_CONDICION === '1' || dato.ESTM_CONDICION === '3') ;
             });
 
             // Calcular totales para la escuela actual
