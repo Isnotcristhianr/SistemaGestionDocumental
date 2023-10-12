@@ -11,6 +11,13 @@ class ModelFEcarreras extends Model
 
     protected $allowedFields = ['CTIP_ID', 'CAR_NOMBRE', 'CAR_CARRERA', 'CAR_ESCUELA', 'CAR_PADREESC', 'CAR_ACTIVA', 'CAR_ESTADO'];
 
+
+    //ver todos los datos
+    public function verModelo()
+    {
+        $carreras = $this->findAll();
+        return $carreras;
+    }
     /* //////////////////////GRADOS///////////////////////////// */
     /* Contar total carreras modalidad grado*/
     public function contarCarrerasGrado()
