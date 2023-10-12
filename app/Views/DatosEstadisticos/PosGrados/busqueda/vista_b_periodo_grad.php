@@ -157,7 +157,6 @@
                 .filter((cb) => cb.checked)
                 .map((cb) => cb.value);
 
-            alert(valoresSeleccionados);
         }
     });
 </script>
