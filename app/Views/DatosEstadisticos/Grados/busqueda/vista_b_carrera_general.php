@@ -27,7 +27,6 @@
         <thead>
             <th hidden>ID</th>
             <th>Seleccionar</th>
-            <th>Numero</th>
             <th>Carrera</th>
             <th>Acciones</th>
         </thead>
@@ -46,11 +45,7 @@
                                     <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php echo $carreras['CAR_ID']; ?>">
                                 </div>
                             </td>
-                            <td><?php
-                                /* autoincrementar */
-                                static $numero = 1;
-                                echo $numero++;
-                                ?></td>
+                           
                             <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
 
                             <td>
@@ -81,7 +76,6 @@
         <thead>
             <th hidden>ID</th>
             <th>Seleccionar</th>
-            <th>Numero</th>
             <th>Carrera</th>
             <th>Acciones</th>
         </thead>
@@ -98,12 +92,6 @@
                                 <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php echo $carreras['CAR_ID']; ?>">
                             </div>
                         </td>
-
-                        <td><?php
-                            /* autoincrementar */
-                            static $numero = 1;
-                            echo $numero++;
-                            ?></td>
                         <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
 
                         <td>
@@ -130,7 +118,6 @@
         <thead>
             <th hidden>ID</th>
             <th>Seleccionar</th>
-            <th>Numero</th>
             <th>Carrera</th>
             <th>Acciones</th>
         </thead>
@@ -148,11 +135,6 @@
                                     <input class="form-check-input" type="checkbox" name="seleccionar[]" value="<?php echo $carreras['CAR_ID']; ?>">
                                 </div>
                             </td>
-                            <td><?php
-                                /* autoincrementar */
-                                static $numero = 1;
-                                echo $numero++;
-                                ?></td>
                             <td><?php echo $carreras['CAR_NOMBRE']; ?></td>
 
                             <td>
@@ -184,7 +166,7 @@
 
             // Crear la ruta con los valores seleccionados
             const ruta = valoresSeleccionados.length > 0 ?
-                '<?php echo base_url('index.php/SelectorReporteEscuelaGrad/'); ?>' + valoresSeleccionados.join(',') :
+                '<?php echo base_url('index.php/SelectorReporteCarreraGrad/'); ?>' + valoresSeleccionados.join(',') :
                 'javascript:void(0)';
             btnBox.href = ruta;
 
