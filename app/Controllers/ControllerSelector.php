@@ -174,6 +174,78 @@ class ControllerSelector extends BaseController
         }
     }
 
+    //* Selector de Periodos General
+    public function selectorReportePeriodoGeneral($ids)
+    {
+        try {
+            // Convertir la cadena de IDs en un array
+            $id_array = explode(',', $ids);
+            // Modelo
+            $modeloPeriodo = new ModelFEPeriodo();
+            $objEstadMatr = new ModelMatrizGraduados();
+            // Obtener carreras basadas en los IDs seleccionados
+            $data['tbl_periodo'] = $modeloPeriodo->verModelo();
+            //datos estad
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+            // Almacenar IDs para usarlos en la vista si es necesario
+            $data['ids'] = $id_array;
+
+            return view('header')
+                . view('/graficasEstadisticas/grado/selector/vistaSelectorPeriodo', $data)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //* Selector de Periodos Matriculados
+    public function selectorReportePeriodoMatriculados($ids)
+    {
+        try {
+            // Convertir la cadena de IDs en un array
+            $id_array = explode(',', $ids);
+            // Modelo
+            $modeloPeriodo = new ModelFEPeriodo();
+            $objEstadMatr = new ModelMatrizGraduados();
+            // Obtener carreras basadas en los IDs seleccionados
+            $data['tbl_periodo'] = $modeloPeriodo->verModelo();
+            //datos estad
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+            // Almacenar IDs para usarlos en la vista si es necesario
+            $data['ids'] = $id_array;
+
+            return view('header')
+                . view('/graficasEstadisticas/grado/selector/vistaSelectorPeriodoMatriculados', $data)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //* Selector de Periodos Graduados
+    public function selectorReportePeriodoGraduados($ids)
+    {
+        try {
+            // Convertir la cadena de IDs en un array
+            $id_array = explode(',', $ids);
+            // Modelo
+            $modeloPeriodo = new ModelFEPeriodo();
+            $objEstadMatr = new ModelMatrizGraduados();
+            // Obtener carreras basadas en los IDs seleccionados
+            $data['tbl_periodo'] = $modeloPeriodo->verModelo();
+            //datos estad
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+            // Almacenar IDs para usarlos en la vista si es necesario
+            $data['ids'] = $id_array;
+
+            return view('header')
+                . view('/graficasEstadisticas/grado/selector/vistaSelectorPeriodoGraduados', $data)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
     //?Posgrado
     //* Selector de Escuelas General
     public function selectorReporteEscuelaPosgrado($ids)
@@ -232,7 +304,8 @@ class ControllerSelector extends BaseController
     }
 
     //* Selector de Escuelas Graduados
-    public function selectorReporteEscuelaPosgradoGraduados($ids){
+    public function selectorReporteEscuelaPosgradoGraduados($ids)
+    {
         try {
             // Convertir la cadena de IDs en un array
             $id_array = explode(',', $ids);
@@ -259,7 +332,8 @@ class ControllerSelector extends BaseController
     }
 
     //*Selector de Carreras General
-    public function selectorReporteCarreraPosgrado($ids){
+    public function selectorReporteCarreraPosgrado($ids)
+    {
         try {
             // Convertir la cadena de IDs en un array
             $id_array = explode(',', $ids);
@@ -273,10 +347,10 @@ class ControllerSelector extends BaseController
 
             //datos estad
             $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
-            
+
             // Almacenar IDs para usarlos en la vista si es necesario
             $data['ids'] = $id_array;
-            
+
             return view('header')
                 . view('/graficasEstadisticas/posgrado/selector/vistaSelectorCarrera', $data)
                 . view('footer');
@@ -286,24 +360,25 @@ class ControllerSelector extends BaseController
     }
 
     //*Selector de Carreras Matriculados
-    public function selectorReporteCarreraPosgradoMatriculados($ids){
+    public function selectorReporteCarreraPosgradoMatriculados($ids)
+    {
         try {
             // Convertir la cadena de IDs en un array
             $id_array = explode(',', $ids);
-            
+
             // Modelo
             $objCarrera = new ModelFEcarreras();
             $objEstadMatr = new ModelMatrizGraduados();
-            
+
             // Obtener carreras basadas en los IDs seleccionados
             $data['tbl_carrera'] = $objCarrera->whereIn('CAR_ID', $id_array)->findAll();
-            
+
             //datos estad
             $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
-            
+
             // Almacenar IDs para usarlos en la vista si es necesario
             $data['ids'] = $id_array;
-            
+
             return view('header')
                 . view('/graficasEstadisticas/posgrado/selector/vistaSelectorCarreraMatriculados', $data)
                 . view('footer');
@@ -313,24 +388,25 @@ class ControllerSelector extends BaseController
     }
 
     //*Selector de Carreras Graduados
-    public function selectorReporteCarreraPosgradoGraduados($ids){
+    public function selectorReporteCarreraPosgradoGraduados($ids)
+    {
         try {
             // Convertir la cadena de IDs en un array
             $id_array = explode(',', $ids);
-            
+
             // Modelo
             $objCarrera = new ModelFEcarreras();
             $objEstadMatr = new ModelMatrizGraduados();
-            
+
             // Obtener carreras basadas en los IDs seleccionados
             $data['tbl_carrera'] = $objCarrera->whereIn('CAR_ID', $id_array)->findAll();
-            
+
             //datos estad
             $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
-            
+
             // Almacenar IDs para usarlos en la vista si es necesario
             $data['ids'] = $id_array;
-            
+
             return view('header')
                 . view('/graficasEstadisticas/posgrado/selector/vistaSelectorCarreraGraduados', $data)
                 . view('footer');
@@ -339,26 +415,111 @@ class ControllerSelector extends BaseController
         }
     }
 
-    //?Tecnologia
-    //* Selector de Carreras General
-    public function selectorReporteCarreraTecnologia($ids){
+    //* Selector de Periodos General
+    public function selectorReportePeriodoPosgradoGeneral($ids)
+    {
         try {
             // Convertir la cadena de IDs en un array
             $id_array = explode(',', $ids);
-            
+
+            // Modelo
+            $modeloPeriodo = new ModelFEPeriodo();
+            $objEstadMatr = new ModelMatrizGraduados();
+
+            // Obtener carreras basadas en los IDs seleccionados
+            $data['tbl_periodo'] = $modeloPeriodo->verModelo();
+
+            //datos estad
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+
+            // Almacenar IDs para usarlos en la vista si es necesario
+            $data['ids'] = $id_array;
+
+            return view('header')
+                . view('/graficasEstadisticas/posgrado/selector/vistaSelectorPeriodo', $data)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //* Selector de Periodos Matriculados
+    public function selectorReportePeriodoPosgradoMatriculados($ids)
+    {
+        try {
+            // Convertir la cadena de IDs en un array
+            $id_array = explode(',', $ids);
+
+            // Modelo
+            $modeloPeriodo = new ModelFEPeriodo();
+            $objEstadMatr = new ModelMatrizGraduados();
+
+            // Obtener carreras basadas en los IDs seleccionados
+            $data['tbl_periodo'] = $modeloPeriodo->verModelo();
+
+            //datos estad
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+
+            // Almacenar IDs para usarlos en la vista si es necesario
+            $data['ids'] = $id_array;
+
+            return view('header')
+                . view('/graficasEstadisticas/posgrado/selector/vistaSelectorPeriodoMatriculados', $data)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //* Selector de Periodos Graduados
+    public function selectorReportePeriodoPosgradoGraduados($ids)
+    {
+        try {
+            // Convertir la cadena de IDs en un array
+            $id_array = explode(',', $ids);
+
+            // Modelo
+            $modeloPeriodo = new ModelFEPeriodo();
+            $objEstadMatr = new ModelMatrizGraduados();
+
+            // Obtener carreras basadas en los IDs seleccionados
+            $data['tbl_periodo'] = $modeloPeriodo->verModelo();
+
+            //datos estad
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+
+            // Almacenar IDs para usarlos en la vista si es necesario
+            $data['ids'] = $id_array;
+
+            return view('header')
+                . view('/graficasEstadisticas/posgrado/selector/vistaSelectorPeriodoGraduados', $data)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //?Tecnologia
+    //* Selector de Carreras General
+    public function selectorReporteCarreraTecnologia($ids)
+    {
+        try {
+            // Convertir la cadena de IDs en un array
+            $id_array = explode(',', $ids);
+
             // Modelo
             $objCarrera = new ModelFEcarreras();
             $objEstadMatr = new ModelMatrizGraduados();
-            
+
             // Obtener carreras basadas en los IDs seleccionados
             $data['tbl_carrera'] = $objCarrera->whereIn('CAR_ID', $id_array)->findAll();
-            
+
             //datos estad
             $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
-            
+
             // Almacenar IDs para usarlos en la vista si es necesario
             $data['ids'] = $id_array;
-            
+
             return view('header')
                 . view('/graficasEstadisticas/tecnologia/selector/vistaSelectorCarrera', $data)
                 . view('footer');
@@ -368,24 +529,25 @@ class ControllerSelector extends BaseController
     }
 
     //* Selector de Carreras Matriculados
-    public function selectorReporteCarreraTecnologiaMatriculados($ids){
+    public function selectorReporteCarreraTecnologiaMatriculados($ids)
+    {
         try {
             // Convertir la cadena de IDs en un array
             $id_array = explode(',', $ids);
-            
+
             // Modelo
             $objCarrera = new ModelFEcarreras();
             $objEstadMatr = new ModelMatrizGraduados();
-            
+
             // Obtener carreras basadas en los IDs seleccionados
             $data['tbl_carrera'] = $objCarrera->whereIn('CAR_ID', $id_array)->findAll();
-            
+
             //datos estad
             $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
-            
+
             // Almacenar IDs para usarlos en la vista si es necesario
             $data['ids'] = $id_array;
-            
+
             return view('header')
                 . view('/graficasEstadisticas/tecnologia/selector/vistaSelectorCarreraMatriculados', $data)
                 . view('footer');
@@ -395,24 +557,25 @@ class ControllerSelector extends BaseController
     }
 
     //* Selector de Carreras Graduados
-    public function selectorReporteCarreraTecnologiaGraduados($ids){
+    public function selectorReporteCarreraTecnologiaGraduados($ids)
+    {
         try {
             // Convertir la cadena de IDs en un array
             $id_array = explode(',', $ids);
-            
+
             // Modelo
             $objCarrera = new ModelFEcarreras();
             $objEstadMatr = new ModelMatrizGraduados();
-            
+
             // Obtener carreras basadas en los IDs seleccionados
             $data['tbl_carrera'] = $objCarrera->whereIn('CAR_ID', $id_array)->findAll();
-            
+
             //datos estad
             $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
-            
+
             // Almacenar IDs para usarlos en la vista si es necesario
             $data['ids'] = $id_array;
-            
+
             return view('header')
                 . view('/graficasEstadisticas/tecnologia/selector/vistaSelectorCarreraGraduados', $data)
                 . view('footer');
@@ -421,4 +584,77 @@ class ControllerSelector extends BaseController
         }
     }
 
+    //* Selector de Periodos General
+    public function selectorReportePeriodoTecnologiaGeneral($ids)
+    {
+        try {
+            // Convertir la cadena de IDs en un array
+            $id_array = explode(',', $ids);
+
+            // Modelo
+            $modeloPeriodo = new ModelFEPeriodo();
+            $objEstadMatr = new ModelMatrizGraduados();
+
+            // Obtener carreras basadas en los IDs seleccionados
+            $data['tbl_periodo'] = $modeloPeriodo->verModelo();
+
+            //datos estad
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+
+            // Almacenar IDs para usarlos en la vista si es necesario
+            $data['ids'] = $id_array;
+
+            return view('header')
+                . view('/graficasEstadisticas/tecnologia/selector/vistaSelectorPeriodo', $data)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //* Selector de Periodos Matriculados
+    public function selectorReportePeriodoTecnologiaMatriculados($ids)
+    {
+        try {
+            // Convertir la cadena de IDs en un array
+            $id_array = explode(',', $ids);
+            // Modelo
+            $modeloPeriodo = new ModelFEPeriodo();
+            $objEstadMatr = new ModelMatrizGraduados();
+            // Obtener carreras basadas en los IDs seleccionados
+            $data['tbl_periodo'] = $modeloPeriodo->verModelo();
+            //datos estad
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+            // Almacenar IDs para usarlos en la vista si es necesario
+            $data['ids'] = $id_array;
+            return view('header')
+                . view('/graficasEstadisticas/tecnologia/selector/vistaSelectorPeriodoMatriculados', $data)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //* Selector de Periodos Graduados
+    public function selectorReportePeriodoTecnologiaGraduados($ids)
+    {
+        try {
+            // Convertir la cadena de IDs en un array
+            $id_array = explode(',', $ids);
+            // Modelo
+            $modeloPeriodo = new ModelFEPeriodo();
+            $objEstadMatr = new ModelMatrizGraduados();
+            // Obtener carreras basadas en los IDs seleccionados
+            $data['tbl_periodo'] = $modeloPeriodo->verModelo();
+            //datos estad
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->findAll();
+            // Almacenar IDs para usarlos en la vista si es necesario
+            $data['ids'] = $id_array;
+            return view('header')
+                . view('/graficasEstadisticas/tecnologia/selector/vistaSelectorPeriodoGraduados', $data)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
 }

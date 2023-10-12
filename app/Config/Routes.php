@@ -110,6 +110,12 @@ $routes->get('/SelectorReporteCarreraGrad/(:any)', 'ControllerSelector::selector
 $routes->get('/SelectorReporteCarreraGradMatriculados/(:any)', 'ControllerSelector::selectorReporteCarreraGradMatriculados/$1/');
 //*Selector Reporte Carrera Grado Graduados
 $routes->get('/SelectorReporteCarreraGradGraduados/(:any)', 'ControllerSelector::selectorReporteCarreraGradGraduados/$1/');
+//*Selector Reporte Periodo General
+$routes->get('/SelectorReportePeriodoGeneral/(:any)', 'ControllerSelector::selectorReportePeriodoGeneral/$1/');
+//*Selector Reporte Periodo Matriculados
+$routes->get('/SelectorReportePeriodoMatriculados/(:any)', 'ControllerSelector::selectorReportePeriodoMatriculados/$1/');
+//*Selector Reporte Periodo Graduados
+$routes->get('/SelectorReportePeriodoGraduados/(:any)', 'ControllerSelector::selectorReportePeriodoGraduados/$1/');
 
 //? Datos Estadisticos Posgrado
 $routes->get('/FiltroEstadisticoPosgrado', 'ControladorEstadistico::filtroEstadisticoPosgrado');
@@ -174,6 +180,12 @@ $routes->get('/SelectorReporteCarreraPosgrado/(:any)', 'ControllerSelector::sele
 $routes->get('/SelectorReporteCarreraPosgradoMatriculados/(:any)', 'ControllerSelector::selectorReporteCarreraPosgradoMatriculados/$1/');
 //*Selector Reporte Carrera Posgrado Graduados
 $routes->get('/SelectorReporteCarreraPosgradoGraduados/(:any)', 'ControllerSelector::selectorReporteCarreraPosgradoGraduados/$1/');
+//*Selector Reporte Periodo Posgrado General
+$routes->get('/SelectorReportePeriodoPosgradoGeneral/(:any)', 'ControllerSelector::selectorReportePeriodoPosgradoGeneral/$1/');
+//*Selector Reporte Periodo Posgrado Matriculados
+$routes->get('/SelectorReportePeriodoPosgradoMatriculados/(:any)', 'ControllerSelector::selectorReportePeriodoPosgradoMatriculados/$1/');
+//*Selector Reporte Periodo Posgrado Graduados
+$routes->get('/SelectorReportePeriodoPosgradoGraduados/(:any)', 'ControllerSelector::selectorReportePeriodoPosgradoGraduados/$1/');
 
 //? Datos Estadisticos Tecnologias
 $routes->get('/FiltroEstadisticoTecnologia', 'ControladorEstadistico::filtroEstadisticoTecnologia');
@@ -218,6 +230,12 @@ $routes->get('/SelectorReporteCarreraTecnologia/(:any)', 'ControllerSelector::se
 $routes->get('/SelectorReporteCarreraTecnologiaMatriculados/(:any)', 'ControllerSelector::selectorReporteCarreraTecnologiaMatriculados/$1/');
 //*Selector Reporte Carrera Tecnologia Graduados
 $routes->get('/SelectorReporteCarreraTecnologiaGraduados/(:any)', 'ControllerSelector::selectorReporteCarreraTecnologiaGraduados/$1/');
+//*Selector Reporte Periodo Tecnologia General
+$routes->get('/SelectorReportePeriodoTecnologiaGeneral/(:any)', 'ControllerSelector::selectorReportePeriodoTecnologiaGeneral/$1/');
+//*Selector Reporte Periodo Tecnologia Matriculados
+$routes->get('/SelectorReportePeriodoTecnologiaMatriculados/(:any)', 'ControllerSelector::selectorReportePeriodoTecnologiaMatriculados/$1/');
+//*Selector Reporte Periodo Tecnologia Graduados
+$routes->get('/SelectorReportePeriodoTecnologiaGraduados/(:any)', 'ControllerSelector::selectorReportePeriodoTecnologiaGraduados/$1/');
 
 //? Datos Estadisticos Historico Puce-I
 $routes->get('/deHistorico', 'ControladorHistorico::dehistorico');
