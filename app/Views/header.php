@@ -81,12 +81,16 @@
               <li><a class="dropdown-item" href="<?php echo base_url('index.php/FiltroEstadisticoPosgrado') ?>">Posgrado</a></li>
               <li><a class="dropdown-item" href="<?php echo base_url('index.php/FiltroEstadisticoTecnologia') ?>">Técnicas y Tecnológicas</a></li>
               <li><a class="dropdown-item" href="<?php echo base_url('index.php/deHistorico') ?>">Historico Puce-I</a></li>
-
               <li>
                 <hr class="dropdown-divider">
               </li>
 
               <li><a class="dropdown-item" href="<?php echo base_url('index.php/calendarioAcademico') ?>">Calendario Academico</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="<?php echo base_url('index.php/subidaDatos') ?>">Subir Datos</a></li>
+
             </ul>
           </li>
 

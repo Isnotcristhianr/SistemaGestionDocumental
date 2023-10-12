@@ -297,6 +297,10 @@ $routes->get('/normativas/eliminarArchivoEspecifico/(:any)/(:any)', 'Controlador
 //editar archivo especifico
 $routes->post('/normativas/editarArchivoEspecifico/(:any)/(:any)', 'ControladorNormativas::editarArchivoEspecifico/$1/$2');
 
+
+//? Subida de Datos
+$routes->get('/subidaDatos', 'ControladorSubidaDatos::subidaDatos');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
