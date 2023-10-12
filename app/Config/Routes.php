@@ -299,7 +299,10 @@ $routes->post('/normativas/editarArchivoEspecifico/(:any)/(:any)', 'ControladorN
 
 
 //? Subida de Datos
+//menu
 $routes->get('/subidaDatos', 'ControladorSubidaDatos::subidaDatos');
+//subir manual
+$routes->get('/subidaDatos/manualmente', 'ControladorSubidaDatos::subirManualmente');
 
 /*
  * --------------------------------------------------------------------

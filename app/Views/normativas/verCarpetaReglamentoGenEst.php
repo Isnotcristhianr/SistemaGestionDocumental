@@ -2,7 +2,9 @@
     <div class="row">
         <!-- volver -->
         <div class="col-12">
-            <a href="<?php echo base_url('index.php/normativas/reglamentoGeneralEstudiantes') ?>" class="btn btn-outline-primary">← Volver</a>
+            <a href="<?php echo base_url('index.php/normativas/reglamentoGeneralEstudiantes') ?>" class="btn btn-outline-primary">
+                <i class="fa-solid fa-caret-left"></i> Volver
+            </a>
         </div>
         <div class="col-12">
             <h2 class="text-center text-primary">Reglamento General Estudiantes

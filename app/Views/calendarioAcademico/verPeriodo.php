@@ -4,7 +4,9 @@
         <div class="col-12">
             <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded text-center">
                 <div class="col-12 d-flex">
-                    <a href="<?= base_url('/index.php/calendarios/ver/' . $nombre); ?>" class="btn btn-outline-primary m-4">← Volver</a>
+                    <a href="<?= base_url('/index.php/calendarios/ver/' . $nombre); ?>" class="btn btn-outline-primary m-4">
+                        <i class="fa-solid fa-caret-left"></i> Volver
+                    </a>
                 </div>
                 <h3 class="text-primary">Calendarios Academicos: <?= $nombre; ?></h3>
                 <br>
