@@ -23,4 +23,18 @@ class ModelCondicion extends Model
         return $condicion;
     }
 
+    //obtener id acorde al nombre
+    public function obtenerId($nombre)
+    {
+        $condicion = $this->where('EST_NOMBRE', $nombre)->first();
+        return $condicion;
+    }
+
+    //obtener nombre acorde al id
+    public function obtenerNombre($id)
+    {
+        $condicion = $this->where('EST_ID', $id)->first();
+        return $condicion;
+    }
+
 }

@@ -303,6 +303,8 @@ $routes->post('/normativas/editarArchivoEspecifico/(:any)/(:any)', 'ControladorN
 $routes->get('/subidaDatos', 'ControladorSubidaDatos::subidaDatos');
 //subir manual
 $routes->get('/subidaDatos/manualmente', 'ControladorSubidaDatos::subirManualmente');
+//  
+$routes->post('/subidaDatos/enviarManualmente', 'ControladorSubidaDatos::enviarManualmente');
 
 /*
  * --------------------------------------------------------------------

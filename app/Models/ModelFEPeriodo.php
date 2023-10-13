@@ -27,11 +27,16 @@ class ModelFEPeriodo extends Model{
         return count($periodos);
     }
 
-
     /* Contar total periodos filas Tecnologias*/
     public function contarPeriodosTecnologias(){
         //contar desde 2021
         $periodos = $this->where('PER_ANO >=', 2021)->findAll();
         return count($periodos);
+    }
+
+    //obtener id acorde al nombre
+    public function obtenerId($nombre){
+        $periodo = $this->where('PER_PERIODO', $nombre)->first();
+        return $periodo;
     }
 }

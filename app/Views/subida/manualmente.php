@@ -22,14 +22,14 @@
                 </div>
                 <div class="body">
                     <div class="form text-center ">
-                        <form action="" method="" enctype="multipart/form-data">
+                        <form action="<?php echo base_url('index.php/subidaDatos/enviarManualmente') ?>" method="POST" enctype="multipart/form-data">
 
                             <!-- Generales -->
                             <div class="container col-md-6">
                                 <!-- Tipo -->
                                 <div class="mb-3 d-flex text-center justify-content-center align-items-center">
                                     <label class="form-label fw-bold fs-6">Tipo: </label>
-                                    <input type="list" list="tipo" class="form-control m-2 p-1" required>
+                                    <input type="text" list="tipo" class="form-control m-2 p-1" name="id_carrera_tipo" required>
                                     <datalist id="tipo">
                                         <!-- Obtener valores de la tabla-->
                                         <?php foreach ($tbl_carrera_tipo as $tipo) : ?>
@@ -41,7 +41,7 @@
                                 <!-- Condicion -->
                                 <div class="mb-3 d-flex text-center justify-content-center align-items-center">
                                     <label class="form-label fw-bold fs-6">Condición: </label>
-                                    <input type="list" list="condicion" class="form-control m-2 p-1" required>
+                                    <input type="list" list="condicion" class="form-control m-2 p-1" name="id_condicion" required>
                                     <datalist id="condicion">
                                         <option value="" selected disabled>Seleccione</option>
                                         <!-- Obtener valores de la tbl -->
@@ -54,7 +54,7 @@
                                 <!-- Tipo Grado -->
                                 <div class="mb-3 d-flex text-center justify-content-center align-items-center">
                                     <label class="form-label fw-bold fs-6">Modalidad Titulación: </label>
-                                    <input type="list" list="tipograd" class="form-control m-2 p-1" required>
+                                    <input type="list" list="tipograd" class="form-control m-2 p-1" name="id_tipo_grado" required>
                                     <datalist id="tipograd">
                                         <option value="" selected disabled>Seleccione</option>
                                         <!-- Obtener valores de la tbl -->
@@ -67,7 +67,7 @@
                                 <!-- Periodo -->
                                 <div class="mb-3 d-flex text-center justify-content-center align-items-center">
                                     <label class="form-label fw-bold fs-6">Periodo: </label>
-                                    <input list="periodos" class="form-control m-2 p-1" id="periodoInput" required>
+                                    <input list="periodos" class="form-control m-2 p-1" id="periodoInput" name="id_periodo" required>
                                     <datalist id="periodos">
                                         <!-- Obtener valores de la tbl y generar opciones -->
                                         <?php foreach ($tbl_periodo as $periodo) : ?>
@@ -79,7 +79,7 @@
                                 <!-- Carreras -->
                                 <div class="mb-3 d-flex text-center justify-content-center align-items-center">
                                     <label class="form-label fw-bold fs-6">Carreras: </label>
-                                    <input list="carreras" class="form-control m-2 p-1" id="carreraInput" required>
+                                    <input list="carreras" class="form-control m-2 p-1" id="carreraInput" name="id_carrera" required>
                                     <datalist id="carreras">
                                         <!-- Obtener valores de la tbl y generar opciones -->
                                         <?php foreach ($tbl_carrera as $carrera) : ?>
@@ -96,9 +96,9 @@
                                 <div class="d-flex text-center justify-content-center align-items-center">
                                     <br>
                                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-mars"></i> Masculino</span>
-                                    <input type="number" class="form-control" placeholder="# Cantidad" aria-label="Username" aria-describedby="basic-addon1" min="0" required id="cantmasgen">
+                                    <input type="number" class="form-control" placeholder="# Cantidad" aria-label="Username" aria-describedby="basic-addon1" min="0" required id="cantmasgen" name="cantmasgen">
                                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-venus"></i> Femenino</span>
-                                    <input type="number" class="form-control" placeholder="# Cantidad" aria-label="Username" aria-describedby="basic-addon1" min="0" required id="cantfemgen">
+                                    <input type="number" class="form-control" placeholder="# Cantidad" aria-label="Username" aria-describedby="basic-addon1" min="0" required id="cantfemgen" name="cantfemgen">
                                 </div>
 
                                 <br>
@@ -115,12 +115,11 @@
                                 <div id="discapacidad"></div>
 
                                 <!-- total -->
-                                <input type="number" id="total">
+                                <input type="number" id="total" name="totalgen" hidden>
                             </div>
 
                             <button type="submit" class="btn btn-success m-3">Ingresar Datos</button>
                         </form>
-
                     </div>
                 </div>
             </div>

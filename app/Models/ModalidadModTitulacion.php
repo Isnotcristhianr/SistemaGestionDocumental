@@ -23,4 +23,13 @@ class ModalidadModTitulacion extends Model
         return $modalidad;
     }
 
+    //ver id acorde a nombre
+    public function obtenerId($nombre)
+    {
+        $modalidad = $this->where('MODT_NOMBRE', $nombre)->first();
+        return $modalidad;
+    }
+
+    
+
 }

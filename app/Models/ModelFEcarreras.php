@@ -84,4 +84,11 @@ class ModelFEcarreras extends Model
         $carreras = $this->where('CTIP_ID', 3)->where('CAR_CARRERA', 1)->where('CAR_ACTIVA', 'No')->findAll();
         return count($carreras);
     }
+
+    //obtener id acorde al nombre
+    public function obtenerId($nombre)
+    {
+        $carrera = $this->where('CAR_NOMBRE', $nombre)->first();
+        return $carrera;
+    }
 }

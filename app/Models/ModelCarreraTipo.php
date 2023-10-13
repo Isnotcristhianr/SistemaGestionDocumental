@@ -22,4 +22,11 @@ class ModelCarreraTipo extends Model
         $carreraTipo = $this->findAll();
         return $carreraTipo;
     }
+
+    //obtener id acorde al nombre
+    public function obtenerId($nombre)
+    {
+        $carreraTipo = $this->where('CTIP_NOMBRE', $nombre)->first();
+        return $carreraTipo;
+    }
 }
