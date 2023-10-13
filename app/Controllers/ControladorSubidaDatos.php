@@ -102,10 +102,22 @@ class ControladorSubidaDatos extends BaseController
             //*etnia
             $indexetnia = $this->request->getPost('indexetnia');
             for ($i = 0; $i < $indexetnia; $i++) {
-                $etnia[$i] = $this->request->getPost('etniacantmasgenetnia_' . $i);
+                $etnia[$i] = $this->request->getPost('etnia_' . $i);
                 $cantmasetnia[$i] = $this->request->getPost('cantmasgenetnia_' . $i);
                 $cantfemetnia[$i] = $this->request->getPost('cantfemgenetnia_' . $i);
             }
+
+            //*nacionalidad
+            $indexnacionalidad = $this->request->getPost('indexnacionalidad');
+            for ($i = 0; $i < $indexnacionalidad; $i++) {
+                $nacionalidad[$i] = $this->request->getPost('nacionalidad_' . $i);
+                $cantmasnacionalidad[$i] = $this->request->getPost('cantmasgennacionalidad_' . $i);
+                $cantfemnacionalidad[$i] = $this->request->getPost('cantfemgennacionalidad_' . $i);
+            }
+
+            //*genero
+            $discgenmas = $this->request->getPost('discgenmas');
+            $discgenfem = $this->request->getPost('discgenfem');
 
             //CLASIFICAR obtener los ids
             $id_carrera_tipop = $objCarreraTipo->obtenerId($id_carrera_tipo);
@@ -113,7 +125,6 @@ class ControladorSubidaDatos extends BaseController
             $id_tipo_gradop = $objModalidad->obtenerId($id_tipo_grado);
             $id_periodop = $objPeriodo->obtenerId($id_periodo);
             $id_carrerap = $objCarrera->obtenerId($id_carrera);
-
 
             //muestra
             echo "carrera tipo: " . $id_carrera_tipo;
@@ -145,7 +156,7 @@ class ControladorSubidaDatos extends BaseController
             echo "<br>";
             echo "indexetnia: " . $indexetnia;
             echo "<br>";
-            //recorrer los indices
+            //etnias
             for ($i = 0; $i < $indexetnia; $i++) {
                 //obtener los datos y almacenar en un array
                 echo "etnia: " . $etnia[$i];
@@ -155,6 +166,23 @@ class ControladorSubidaDatos extends BaseController
                 echo "cantfemetnia: " . $cantfemetnia[$i];
                 echo "<br>";
             }
+            echo "<br>";
+            echo "indexnacionalidad: " . $indexnacionalidad;
+            echo "<br>";
+            //nacionalidades
+            for ($i = 0; $i < $indexnacionalidad; $i++) {
+                //obtener los datos y almacenar en un array
+                echo "nacionalidad: " . $nacionalidad[$i];
+                echo "<br>";
+                echo "cantmasnacionalidad: " . $cantmasnacionalidad[$i];
+                echo "<br>";
+                echo "cantfemnacionalidad: " . $cantfemnacionalidad[$i];
+                echo "<br>";
+            }
+            echo "<br>";
+            echo "discgenmas: " . $discgenmas;
+            echo "<br>";
+            echo "discgenfem: " . $discgenfem;
         } catch (\Exception $e) {
             die($e->getMessage());
         }

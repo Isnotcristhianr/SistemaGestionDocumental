@@ -104,11 +104,13 @@
                                 <br>
                                 <!-- Generador de etnia -->
                                 <button type="button" class="btn btn-primary m-1" id="btnEtnia"><i class="fa-solid fa-square-plus"></i> Ingresar Género por Etnia</button>
-                                <input type="number" id="indexetnia" name="indexetnia" val=0>
+                                <input type="number" id="indexetnia" name="indexetnia" val=0 hidden>
                                 <div id="etnias"></div>
 
                                 <!-- Gnerador de nacionalidad -->
                                 <button type="button" class="btn btn-primary m-1" id="btnNacionalidad"><i class="fa-solid fa-square-plus"></i> Ingresar Género por Nacionalidad</button>
+                                <input type="number" id="indexnacionalidad" name="indexnacionalidad" val=0 hidden>
+
                                 <div id="nacionalidades"></div>
 
                                 <!-- genero discapacitados -->
@@ -146,7 +148,7 @@
                     <div class="card p-3 m-2">
                         <div class="mb-3 d-flex text-center justify-content-center align-items-center">
                             <label class="form-label fw-bold fs-6">Etnia: </label>
-                            <select class="form-select m-2 p-1" aria-label="select" name="etniacantmasgenetnia_${index}" required>
+                            <select class="form-select m-2 p-1" aria-label="select" name="etnia_${index}" required>
                                 <option value="" selected disabled>Seleccione</option>
                                 <option value="Mestizo">Mestizo</option>
                                 <option value="Indígena">Indígena</option>
@@ -187,6 +189,7 @@
         });
 
         //?nacionalidad
+        var indexnacionalidad = 0;
         // Al hacer clic en el botón "Ingresar Género por Nacionalidad"
         $("#btnNacionalidad").click(function() {
             //crear form nacionalidad
@@ -194,25 +197,25 @@
                     <div class="card p-3 m-2">
                         <div class="mb-3 d-flex text-center justify-content-center align-items-center">
                             <label class="form-label fw-bold fs-6">Etnia: </label>
-                            <select class="form-select m-2 p-1" aria-label="select" required>
-                            <option value="" selected disabled>Seleccione</option>
-                            <option value="Ecuatoriana">Ecuatoriana</option>
-                            <option value="Colombiana">Colombiana</option>
-                            <option value="Española">Española</option>
-                            <option value="Francesa">Francesa</option>
-                            <option value="Estadounidense">Estadounidense</option>
-                            <option value="Peruana">Peruana</option>
-                            <option value="Rumana">Rumana</option>
-                            <option value="Cubana">Cubana</option>
-                            <option value="Ucraniana">Ucraniana</option>
-                            <option value="Venezolana">Venezolana</option>
-                        </select>
+                            <select class="form-select m-2 p-1" aria-label="select" name="nacionalidad_${indexnacionalidad}" required>
+                                <option value="" selected disabled>Seleccione</option>
+                                <option value="Ecuatoriana">Ecuatoriana</option>
+                                <option value="Colombiana">Colombiana</option>
+                                <option value="Española">Española</option>
+                                <option value="Francesa">Francesa</option>
+                                <option value="Estadounidense">Estadounidense</option>
+                                <option value="Peruana">Peruana</option>
+                                <option value="Rumana">Rumana</option>
+                                <option value="Cubana">Cubana</option>
+                                <option value="Ucraniana">Ucraniana</option>
+                                <option value="Venezolana">Venezolana</option>
+                             </select>
                         </div>
                         <div class="d-flex text-center justify-content-center align-items-center">
                             <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-mars"></i> Masculino</span>
-                            <input type="number" class="form-control cantidadMasculino" placeholder="# Cantidad" aria-label="Username" aria-describedby="basic-addon1" min="0" required>
+                            <input type="number" class="form-control cantidadMasculino" placeholder="# Cantidad" aria-label="Username" aria-describedby="basic-addon1" min="0" required id="cantmasgennacionalidad" name="cantmasgennacionalidad_${indexnacionalidad}">
                             <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-venus"></i> Femenino</span>
-                            <input type="number" class="form-control cantidadFemenino" placeholder="# Cantidad" aria-label="Username" aria-describedby="basic-addon1" min="0" required>
+                            <input type="number" class="form-control cantidadFemenino" placeholder="# Cantidad" aria-label="Username" aria-describedby="basic-addon1" min="0" required id="cantmasgennacionalidad" name="cantmasgennacionalidad_${indexnacionalidad}">
                         </div>
                         <div class="card-footer d-flex justify-content-end">
                             <button type="button" class="btn btn-danger m-1 delete"><i class="fa-solid fa-trash"></i></button>
@@ -222,12 +225,18 @@
 
             // Agrega el nuevo formulario al div con ID "nacionalidades"
             $("#nacionalidades").append(newForm);
+
+            indexnacionalidad++;
+            //agregar index valor
+            $("#indexnacionalidad").val(indexnacionalidad);
         });
 
         //delete nacionalidad
         $("#nacionalidades").on("click", ".delete", function() {
             // Elimina el formulario al que pertenece el botón de eliminar
             $(this).closest(".card").remove();
+            //restar -1 al index
+            $("#indexnacionalidad").val($("#indexnacionalidad").val() - 1);
         });
 
         //?discapacidad
@@ -241,9 +250,9 @@
                         </div>
                         <div class="d-flex text-center justify-content-center align-items-center">
                             <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-mars"></i> Masculino</span>
-                            <input type="number" class="form-control cantidadMasculino" placeholder="# Cantidad" aria-label="Username" aria-describedby="basic-addon1" min="0" required>
+                            <input type="number" class="form-control cantidadMasculino" placeholder="# Cantidad" aria-label="Username" aria-describedby="basic-addon1" min="0" required name="discgenmas">
                             <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-venus"></i> Femenino</span>
-                            <input type="number" class="form-control cantidadFemenino" placeholder="# Cantidad" aria-label="Username" aria-describedby="basic-addon1" min="0" required>
+                            <input type="number" class="form-control cantidadFemenino" placeholder="# Cantidad" aria-label="Username" aria-describedby="basic-addon1" min="0" required name="discgenfem">
                         </div>
                         <div class="card-footer d-flex justify-content-end">
                             <button type="button" class="btn btn-danger m-1 delete"><i class="fa-solid fa-trash"></i></button>
