@@ -104,6 +104,7 @@
                                 <br>
                                 <!-- Generador de etnia -->
                                 <button type="button" class="btn btn-primary m-1" id="btnEtnia"><i class="fa-solid fa-square-plus"></i> Ingresar Género por Etnia</button>
+                                <input type="number" id="indexetnia" name="indexetnia" val=0>
                                 <div id="etnias"></div>
 
                                 <!-- Gnerador de nacionalidad -->
@@ -135,30 +136,32 @@
 
         //?buscador select
 
-        //?etnia
+        //?etnia    
+        var index = 0;
         // Al hacer clic en el botón "Ingresar Género por Etnia"
         $("#btnEtnia").click(function() {
+
             // Crea un nuevo formulario
             var newForm = `
                     <div class="card p-3 m-2">
                         <div class="mb-3 d-flex text-center justify-content-center align-items-center">
                             <label class="form-label fw-bold fs-6">Etnia: </label>
-                            <select class="form-select m-2 p-1" aria-label="select" required>
-                            <option value="" selected disabled>Seleccione</option>
-                            <option value="Mestizo">Mestizo</option>
-                            <option value="Indígena">Indígena</option>
-                            <option value="Afroecuatoriano">Afroecuatoriano</option>
-                            <option value="Montubio">Montubio</option>
-                            <option value="Mulato">Mulato</option>
-                            <option value="Negro">Negro</option>
-                            <option value="Blanco">Blanco</option>
-                        </select>
+                            <select class="form-select m-2 p-1" aria-label="select" name="etniacantmasgenetnia_${index}" required>
+                                <option value="" selected disabled>Seleccione</option>
+                                <option value="Mestizo">Mestizo</option>
+                                <option value="Indígena">Indígena</option>
+                                <option value="Afroecuatoriano">Afroecuatoriano</option>
+                                <option value="Montubio">Montubio</option>
+                                <option value="Mulato">Mulato</option>
+                                <option value="Negro">Negro</option>
+                                <option value="Blanco">Blanco</option>
+                             </select>
                         </div>
                         <div class="d-flex text-center justify-content-center align-items-center">
                             <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-mars"></i> Masculino</span>
-                            <input type="number" class="form-control cantidadMasculino" placeholder="# Cantidad" aria-label="Username" aria-describedby="basic-addon1" min="0" required>
+                            <input type="number" class="form-control cantidadMasculino" placeholder="# Cantidad" aria-label="masculino" aria-describedby="basic-addon1" min="0" required id="cantmasgenetnia" name="cantmasgenetnia_${index}">
                             <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-venus"></i> Femenino</span>
-                            <input type="number" class="form-control cantidadFemenino" placeholder="# Cantidad" aria-label="Username" aria-describedby="basic-addon1" min="0" required>
+                            <input type="number" class="form-control cantidadFemenino" placeholder="# Cantidad" aria-label="femenino" aria-describedby="basic-addon1" min="0" required  id="cantfemgenetnia" name="cantfemgenetnia_${index}">
                         </div>
                         <div class="card-footer d-flex justify-content-end">
                             <button type="button" class="btn btn-danger m-1 delete"><i class="fa-solid fa-trash"></i></button>
@@ -168,12 +171,19 @@
 
             // Agrega el nuevo formulario al div con ID "etnias"
             $("#etnias").append(newForm);
+
+            index++;
+            //agregar index valor
+            $("#indexetnia").val(index);
+
         });
 
         // Al hacer clic en el botón "Delete" dentro del formulario
         $("#etnias").on("click", ".delete", function() {
             // Elimina el formulario al que pertenece el botón de eliminar
             $(this).closest(".card").remove();
+            //restar -1 al index
+            $("#indexetnia").val($("#indexetnia").val() - 1);
         });
 
         //?nacionalidad

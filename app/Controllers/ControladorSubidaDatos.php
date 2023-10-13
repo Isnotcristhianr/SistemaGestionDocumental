@@ -98,6 +98,15 @@ class ControladorSubidaDatos extends BaseController
             $cantfemgen = $this->request->getPost('cantfemgen');
             $totalgen = $this->request->getPost('totalgen');
 
+            //procesar datos dinamicamente
+            //*etnia
+            $indexetnia = $this->request->getPost('indexetnia');
+            for ($i = 0; $i < $indexetnia; $i++) {
+                $etnia[$i] = $this->request->getPost('etniacantmasgenetnia_' . $i);
+                $cantmasetnia[$i] = $this->request->getPost('cantmasgenetnia_' . $i);
+                $cantfemetnia[$i] = $this->request->getPost('cantfemgenetnia_' . $i);
+            }
+
             //CLASIFICAR obtener los ids
             $id_carrera_tipop = $objCarreraTipo->obtenerId($id_carrera_tipo);
             $id_condicionp = $objCondicion->obtenerId($id_condicion);
@@ -132,6 +141,20 @@ class ControladorSubidaDatos extends BaseController
             echo "cantfemgen: " . $cantfemgen;
             echo "<br>";
             echo "totalgen: " . $totalgen;
+            echo "<br>";
+            echo "<br>";
+            echo "indexetnia: " . $indexetnia;
+            echo "<br>";
+            //recorrer los indices
+            for ($i = 0; $i < $indexetnia; $i++) {
+                //obtener los datos y almacenar en un array
+                echo "etnia: " . $etnia[$i];
+                echo "<br>";
+                echo "cantmasetnia: " . $cantmasetnia[$i];
+                echo "<br>";
+                echo "cantfemetnia: " . $cantfemetnia[$i];
+                echo "<br>";
+            }
         } catch (\Exception $e) {
             die($e->getMessage());
         }
