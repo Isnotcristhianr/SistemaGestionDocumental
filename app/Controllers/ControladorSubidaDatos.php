@@ -93,10 +93,12 @@ class ControladorSubidaDatos extends BaseController
             $id_tipo_grado = $this->request->getPost('id_tipo_grado');
             $id_periodo = $this->request->getPost('id_periodo');
             $id_carrera = $this->request->getPost('id_carrera');
+            $sede = $this->request->getPost('sede');
 
             $cantmasgen = $this->request->getPost('cantmasgen');
             $cantfemgen = $this->request->getPost('cantfemgen');
             $totalgen = $this->request->getPost('totalgen');
+
 
             //procesar datos dinamicamente
             //*etnia
@@ -127,62 +129,148 @@ class ControladorSubidaDatos extends BaseController
             $id_carrerap = $objCarrera->obtenerId($id_carrera);
 
             //muestra
-            echo "carrera tipo: " . $id_carrera_tipo;
-            echo "<br>";
-            echo "carrera tipo id: " . $id_carrera_tipop['CTIP_ID'];
-            echo "<br>";
-            echo "condicion: " . $id_condicion;
-            echo "<br>";
-            echo "condicion id: " . $id_condicionp['EST_ID'];
-            echo "<br>";
-            echo "tipo grado: " . $id_tipo_grado;
-            echo "<br>";
-            echo "tipo grado id: " . $id_tipo_gradop['MODT_ID'];
-            echo "<br>";
-            echo "periodo: " . $id_periodo;
-            echo "<br>";
-            echo "periodo id: " . $id_periodop['PER_ID'];
-            echo "<br>";
-            echo "carrera: " . $id_carrera;
-            echo "<br>";
-            echo "carrera id: " . $id_carrerap['CAR_ID'];
-            echo "<br>";
-            echo "cantmasgen: " . $cantmasgen;
-            echo "<br>";
-            echo "cantfemgen: " . $cantfemgen;
-            echo "<br>";
-            echo "totalgen: " . $totalgen;
-            echo "<br>";
-            echo "<br>";
-            echo "indexetnia: " . $indexetnia;
-            echo "<br>";
-            //etnias
-            for ($i = 0; $i < $indexetnia; $i++) {
-                //obtener los datos y almacenar en un array
-                echo "etnia: " . $etnia[$i];
+            {
+                echo "carrera tipo: " . $id_carrera_tipo;
                 echo "<br>";
-                echo "cantmasetnia: " . $cantmasetnia[$i];
+                echo "carrera tipo id: " . $id_carrera_tipop['CTIP_ID'];
                 echo "<br>";
-                echo "cantfemetnia: " . $cantfemetnia[$i];
+                echo "condicion: " . $id_condicion;
+                echo "<br>";
+                echo "condicion id: " . $id_condicionp['EST_ID'];
+                echo "<br>";
+                echo "tipo grado: " . $id_tipo_grado;
+                echo "<br>";
+                echo "tipo grado id: " . $id_tipo_gradop['MODT_ID'];
+                echo "<br>";
+                echo "periodo: " . $id_periodo;
+                echo "<br>";
+                echo "periodo id: " . $id_periodop['PER_ID'];
+                echo "<br>";
+                echo "carrera: " . $id_carrera;
+                echo "<br>";
+                echo "carrera id: " . $id_carrerap['CAR_ID'];
+                echo "<br>";
+                echo "sede:" . $sede;
+                echo "<br>";
+                echo "cantmasgen: " . $cantmasgen;
+                echo "<br>";
+                echo "cantfemgen: " . $cantfemgen;
+                echo "<br>";
+                echo "totalgen: " . $totalgen;
+                echo "<br>";
+                echo "<br>";
+                echo "indexetnia: " . $indexetnia;
+                echo "<br>";
+                //etnias
+                for ($i = 0; $i < $indexetnia; $i++) {
+                    //obtener los datos y almacenar en un array
+                    echo "etnia: " . $etnia[$i];
+                    echo "<br>";
+                    echo "cantmasetnia: " . $cantmasetnia[$i];
+                    echo "<br>";
+                    echo "cantfemetnia: " . $cantfemetnia[$i];
+                    echo "<br>";
+                }
+                echo "<br>";
+                echo "indexnacionalidad: " . $indexnacionalidad;
+                echo "<br>";
+                //nacionalidades
+                for ($i = 0; $i < $indexnacionalidad; $i++) {
+                    //obtener los datos y almacenar en un array
+                    echo "nacionalidad: " . $nacionalidad[$i];
+                    echo "<br>";
+                    echo "cantmasnacionalidad: " . $cantmasnacionalidad[$i];
+                    echo "<br>";
+                    echo "cantfemnacionalidad: " . $cantfemnacionalidad[$i];
+                    echo "<br>";
+                }
+                echo "<br>";
+                echo "discgenmas: " . $discgenmas;
+                echo "<br>";
+                echo "discgenfem: " . $discgenfem;
                 echo "<br>";
             }
-            echo "<br>";
-            echo "indexnacionalidad: " . $indexnacionalidad;
-            echo "<br>";
-            //nacionalidades
-            for ($i = 0; $i < $indexnacionalidad; $i++) {
-                //obtener los datos y almacenar en un array
-                echo "nacionalidad: " . $nacionalidad[$i];
-                echo "<br>";
-                echo "cantmasnacionalidad: " . $cantmasnacionalidad[$i];
-                echo "<br>";
-                echo "cantfemnacionalidad: " . $cantfemnacionalidad[$i];
-                echo "<br>";
+
+            //preprocesamiento de datos para enviar a la base de datos
+            $ESTM_TIPO = $id_carrera_tipop['CTIP_ID'];
+            $ESTM_CONDICION = $id_condicionp['EST_ID'];
+            $ESTM_TIPO_GRADO = $id_tipo_gradop['MODT_ID'];
+            $ESTM_PERIODO = $id_periodop['PER_ID'];
+            $ESTM_CARRERA = $id_carrerap['CAR_ID'];
+            $ESTM_GENERO_H = $cantmasgen;
+            $ESTM_GENERO_M = $cantfemgen;
+
+            if ($indexetnia != 0) {
+                for ($i = 0; $i < $indexetnia; $i++) {
+                    if ($etnia[$i] == "MESTIZO") {
+                        $ESTM_ETNIA_MESTIZO_H = $cantmasetnia[$i];
+                        $ESTM_ETNIA_MESTIZO_M = $cantfemetnia[$i];
+                    } else if ($etnia[$i] == "INDIGENA") {
+                        $ESTM_ETNIA_INDIGENA_H = $cantmasetnia[$i];
+                        $ESTM_ETNIA_INDIGENA_M = $cantfemetnia[$i];
+                    } else if ($etnia[$i] == "Afroecuatoriano") {
+                        $ESTM_ETNIA_AFRO_H = $cantmasetnia[$i];
+                        $ESTM_ETNIA_AFRO_M = $cantfemetnia[$i];
+                    } else if ($etnia[$i] == "Montubio") {
+                        $ESTM_ETNIA_MONTUBIO_H = $cantmasetnia[$i];
+                        $ESTM_ETNIA_MONTUBIO_M = $cantfemetnia[$i];
+                    } else if ($etnia[$i] == "Mulato") {
+                        $ESTM_ETNIA_MULATO_H = $cantmasetnia[$i];
+                        $ESTM_ETNIA_MULATO_M = $cantfemetnia[$i];
+                    } else if ($etnia[$i] == "Negro") {
+                        $ESTM_ETNIA_NEGRO_H = $cantmasetnia[$i];
+                        $ESTM_ETNIA_NEGRO_M = $cantfemetnia[$i];
+                    } else if ($etnia[$i] == "Blanco") {
+                        $ESTM_ETNIA_BLANCO_H = $cantmasetnia[$i];
+                        $ESTM_ETNIA_BLANCO_M = $cantfemetnia[$i];
+                    }
+                }
             }
-            echo "<br>";
-            echo "discgenmas: " . $discgenmas;
-            echo "<br>";
-            echo "discgenfem: " . $discgenfem;
+
+            if ($indexnacionalidad != 0) {
+                for ($i = 0; $i < $indexnacionalidad; $i++) {
+                    if ($nacionalidad[$i] == "Ecuatoriana") {
+                        $ESTM_NACIONALIDAD_EC_H = $cantmasnacionalidad[$i];
+                        $ESTM_NACIONALIDAD_EC_M = $cantfemnacionalidad[$i];
+                    } else if ($nacionalidad[$i] == "Colombiana") {
+                        $ESTM_NACIONALIDAD_COL_H = $cantmasnacionalidad[$i];
+                        $ESTM_NACIONALIDAD_COL_M = $cantfemnacionalidad[$i];
+                    } else if ($nacionalidad[$i] == "Española") {
+                        $ESTM_NACIONALIDAD_ESP_H = $cantmasnacionalidad[$i];
+                        $ESTM_NACIONALIDAD_ESP_M = $cantfemnacionalidad[$i];
+                    } else if ($nacionalidad[$i] == "Francesa") {
+                        $ESTM_NACIONALIDAD_FRA_H = $cantmasnacionalidad[$i];
+                        $ESTM_NACIONALIDAD_FRA_M = $cantfemnacionalidad[$i];
+                    } else if ($nacionalidad[$i] == "Estadounidense") {
+                        $ESTM_NACIONALIDAD_USA_H = $cantmasnacionalidad[$i];
+                        $ESTM_NACIONALIDAD_USA_M = $cantfemnacionalidad[$i];
+                    } else if ($nacionalidad[$i] == "Peruana") {
+                        $ESTM_NACIONALIDAD_PER_H = $cantmasnacionalidad[$i];
+                        $ESTM_NACIONALIDAD_PER_M = $cantfemnacionalidad[$i];
+                    } else if ($nacionalidad[$i] == "Rumana") {
+                        $ESTM_NACIONALIDAD_RUM_H = $cantmasnacionalidad[$i];
+                        $ESTM_NACIONALIDAD_RUM_M = $cantfemnacionalidad[$i];
+                    } else if ($nacionalidad[$i] == "Cubana") {
+                        $ESTM_NACIONALIDAD_CUB_H = $cantmasnacionalidad[$i];
+                        $ESTM_NACIONALIDAD_CUB_M = $cantfemnacionalidad[$i];
+                    } else if ($nacionalidad[$i] == "Ucraniana") {
+                        $ESTM_NACIONALIDAD_URC_H = $cantmasnacionalidad[$i];
+                        $ESTM_NACIONALIDAD_URC_M = $cantfemnacionalidad[$i];
+                    } else if ($nacionalidad[$i] == "Venezolana") {
+                        $ESTM_NACIONALIDAD_VEN_H = $cantmasnacionalidad[$i];
+                        $ESTM_NACIONALIDAD_VEN_M = $cantfemnacionalidad[$i];
+                    }
+                }
+            }
+
+            $ESTM_DISCAPACIDAD_H = $discgenmas;
+            $ESTM_DISCAPACIDAD_M = $discgenfem;
+
+            $ESTM_TOTAL = $totalgen;
+            $ESTM_SEDE = $sede;
+            $ESTM_ESTADO  = 0;
+
+            //ENVIO A LA BD
         } catch (\Exception $e) {
             die($e->getMessage());
         }

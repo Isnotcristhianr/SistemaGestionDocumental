@@ -50,7 +50,7 @@ class ModelMatrizGraduados extends Model
             'fechaInicio' => $fechaIncio,
             'fechaFin' => $fechaFin,
         ];
-        
+
         //TODO periodo tiene PER_ID, PER_ANO, se compara con la fecha de inicio y fin y se extrae el PER_ID
         //TODO matrizEstadist busca donde coincide ese PER_ID con ESTM_PERIODO y se busca
 

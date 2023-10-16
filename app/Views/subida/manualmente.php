@@ -87,6 +87,17 @@
                                             <?php endforeach; ?>
                                     </datalist>
                                 </div>
+
+                                <!-- Sede -->
+                                <div class="mb-3 d-flex text-center justify-content-center align-items-center">
+                                    <label class="form-label fw-bold fs-6">Sede: </label>
+                                    <input list="sede" class="form-control m-2 p-1" id="sedeInput" name="sede" required>
+                                    <datalist id="sede">
+                                        <option value="Ibarra"></option>
+                                        <option value="Tulcán"></option>
+                                    </datalist>
+                                </div>
+
                             </div>
 
                             <!-- Específicos -->
