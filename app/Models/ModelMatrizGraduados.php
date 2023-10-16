@@ -65,4 +65,15 @@ class ModelMatrizGraduados extends Model
 
         return $matrizEstadist;
     }
+
+    //insertar
+    public function insertar($data)
+    {
+        try {
+            $matrizEstadist = $this->insert($data);
+            return $matrizEstadist;
+        } catch (\Exception $e) {
+            echo 'Error en el modelo, no se puede subir datos a la bd contacte al administrador';
+        }
+    }
 }

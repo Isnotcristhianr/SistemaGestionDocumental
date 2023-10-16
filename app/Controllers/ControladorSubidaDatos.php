@@ -200,6 +200,45 @@ class ControladorSubidaDatos extends BaseController
             $ESTM_GENERO_H = $cantmasgen;
             $ESTM_GENERO_M = $cantfemgen;
 
+            //encerado de variables
+            $ESTM_ETNIA_MESTIZO_H = 0;
+            $ESTM_ETNIA_MESTIZO_M = 0;
+            $ESTM_ETNIA_INDIGENA_H = 0;
+            $ESTM_ETNIA_INDIGENA_M = 0;
+            $ESTM_ETNIA_AFRO_H = 0;
+            $ESTM_ETNIA_AFRO_M = 0;
+            $ESTM_ETNIA_MONTUBIO_H = 0;
+            $ESTM_ETNIA_MONTUBIO_M = 0;
+            $ESTM_ETNIA_MULATO_H = 0;
+            $ESTM_ETNIA_MULATO_M = 0;
+            $ESTM_ETNIA_NEGRO_H = 0;
+            $ESTM_ETNIA_NEGRO_M = 0;
+            $ESTM_ETNIA_BLANCO_H = 0;
+            $ESTM_ETNIA_BLANCO_M = 0;
+            $ESTM_NACIONALIDAD_EC_H = 0;
+            $ESTM_NACIONALIDAD_EC_M = 0;
+            $ESTM_NACIONALIDAD_COL_H = 0;
+            $ESTM_NACIONALIDAD_COL_M = 0;
+            $ESTM_NACIONALIDAD_ESP_H = 0;
+            $ESTM_NACIONALIDAD_ESP_M = 0;
+            $ESTM_NACIONALIDAD_FRA_H = 0;
+            $ESTM_NACIONALIDAD_FRA_H = 0;
+            $ESTM_NACIONALIDAD_FRA_M = 0;
+            $ESTM_NACIONALIDAD_USA_H = 0;
+            $ESTM_NACIONALIDAD_USA_M = 0;
+            $ESTM_NACIONALIDAD_PER_H = 0;
+            $ESTM_NACIONALIDAD_PER_M = 0;
+            $ESTM_NACIONALIDAD_RUM_H = 0;
+            $ESTM_NACIONALIDAD_RUM_M = 0;
+            $ESTM_NACIONALIDAD_CUB_H = 0;
+            $ESTM_NACIONALIDAD_CUB_M = 0;
+            $ESTM_NACIONALIDAD_URC_H = 0;
+            $ESTM_NACIONALIDAD_URC_M = 0;
+            $ESTM_NACIONALIDAD_VEN_H = 0;
+            $ESTM_NACIONALIDAD_VEN_M = 0;
+            $ESTM_DISCAPACIDAD_H = 0;
+            $ESTM_DISCAPACIDAD_M = 0;
+
             if ($indexetnia != 0) {
                 for ($i = 0; $i < $indexetnia; $i++) {
                     if ($etnia[$i] == "MESTIZO") {
@@ -271,6 +310,63 @@ class ControladorSubidaDatos extends BaseController
             $ESTM_ESTADO  = 0;
 
             //ENVIO A LA BD
+            $datosInsertar = [
+                'ESTM_ID' => null,
+                'ESTM_TIPO' => $ESTM_TIPO,
+                'ESTM_CONDICION' => $ESTM_CONDICION,
+                'ESTM_TIPO_GRADO' => $ESTM_TIPO_GRADO,
+                'ESTM_PERIODO' => $ESTM_PERIODO,
+                'ESTM_CARRERA' => $ESTM_CARRERA,
+                'ESTM_GENERO_H' => $ESTM_GENERO_H,
+                'ESTM_GENERO_M' => $ESTM_GENERO_M,
+                'ESTM_ETNIA_MESTIZO_H' => $ESTM_ETNIA_MESTIZO_H,
+                'ESTM_ETNIA_MESTIZO_M' => $ESTM_ETNIA_MESTIZO_M,
+                'ESTM_ETNIA_INDIGENA_H' => $ESTM_ETNIA_INDIGENA_H,
+                'ESTM_ETNIA_INDIGENA_M' => $ESTM_ETNIA_INDIGENA_M,
+                'ESTM_ETNIA_AFRO_H' => $ESTM_ETNIA_AFRO_H,
+                'ESTM_ETNIA_AFRO_M' => $ESTM_ETNIA_AFRO_M,
+                'ESTM_ETNIA_MONTUBIO_H' => $ESTM_ETNIA_MONTUBIO_H,
+                'ESTM_ETNIA_MONTUBIO_M' => $ESTM_ETNIA_MONTUBIO_M,
+                'ESTM_ETNIA_MULATO_H' => $ESTM_ETNIA_MULATO_H,
+                'ESTM_ETNIA_MULATO_M' => $ESTM_ETNIA_MULATO_M,
+                'ESTM_ETNIA_NEGRO_H' => $ESTM_ETNIA_NEGRO_H,
+                'ESTM_ETNIA_NEGRO_M' => $ESTM_ETNIA_NEGRO_M,
+                'ESTM_ETNIA_BLANCO_H' => $ESTM_ETNIA_BLANCO_H,
+                'ESTM_ETNIA_BLANCO_M' => $ESTM_ETNIA_BLANCO_M,
+                'ESTM_NACIONALIDAD_EC_H' => $ESTM_NACIONALIDAD_EC_H,
+                'ESTM_NACIONALIDAD_EC_M' => $ESTM_NACIONALIDAD_EC_M,
+                'ESTM_NACIONALIDAD_COL_H' => $ESTM_NACIONALIDAD_COL_H,
+                'ESTM_NACIONALIDAD_COL_M' => $ESTM_NACIONALIDAD_COL_M,
+                'ESTM_NACIONALIDAD_ESP_H' => $ESTM_NACIONALIDAD_ESP_H,
+                'ESTM_NACIONALIDAD_ESP_M' => $ESTM_NACIONALIDAD_ESP_M,
+                'ESTM_NACIONALIDAD_FRA_H' => $ESTM_NACIONALIDAD_FRA_H,
+                'ESTM_NACIONALIDAD_FRA_M' => $ESTM_NACIONALIDAD_FRA_M,
+                'ESTM_NACIONALIDAD_USA_H' => $ESTM_NACIONALIDAD_USA_H,
+                'ESTM_NACIONALIDAD_USA_M' => $ESTM_NACIONALIDAD_USA_M,
+                'ESTM_NACIONALIDAD_PER_H' => $ESTM_NACIONALIDAD_PER_H,
+                'ESTM_NACIONALIDAD_PER_M' => $ESTM_NACIONALIDAD_PER_M,
+                'ESTM_NACIONALIDAD_PER_M' => $ESTM_NACIONALIDAD_PER_M,
+                'ESTM_NACIONALIDAD_RUM_H' => $ESTM_NACIONALIDAD_RUM_H,
+                'ESTM_NACIONALIDAD_RUM_M' => $ESTM_NACIONALIDAD_RUM_M,
+                'ESTM_NACIONALIDAD_CUB_H' => $ESTM_NACIONALIDAD_CUB_H,
+                'ESTM_NACIONALIDAD_CUB_M' => $ESTM_NACIONALIDAD_CUB_M,
+                'ESTM_NACIONALIDAD_URC_H' => $ESTM_NACIONALIDAD_URC_H,
+                'ESTM_NACIONALIDAD_URC_M' => $ESTM_NACIONALIDAD_URC_M,
+                'ESTM_NACIONALIDAD_VEN_H' => $ESTM_NACIONALIDAD_VEN_H,
+                'ESTM_NACIONALIDAD_VEN_M' => $ESTM_NACIONALIDAD_VEN_M,
+                'ESTM_DISCAPACIDAD_H' => $ESTM_DISCAPACIDAD_H,
+                'ESTM_DISCAPACIDAD_M' => $ESTM_DISCAPACIDAD_M,
+                'ESTM_TOTAL' => $ESTM_TOTAL,
+                'ESTM_SEDE' => $ESTM_SEDE,
+                'ESTM_ESTADO' => $ESTM_ESTADO
+            ];
+
+            $objEstadMatr->insertar($datosInsertar);
+
+            echo "datos insertados correctamente";
+
+            //redireccionar
+            return redirect()->to(base_url() . 'index.php/subidaDatos/manualmente');
         } catch (\Exception $e) {
             die($e->getMessage());
         }
