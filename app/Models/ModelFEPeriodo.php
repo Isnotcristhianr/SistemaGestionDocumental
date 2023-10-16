@@ -7,7 +7,13 @@ class ModelFEPeriodo extends Model{
     protected $table =  'tbl_periodo';
     protected $primaryKey = 'PER_ID';
 
-    protected $allowedFields = ['PER_ANO','PER_PERIODO'];
+    protected $allowedFields = ['PER_ANO','PER_PERIODO', 'PER_ULTIMO', 'PER_ESTADO'];
+
+    //* insertar periodo
+    public function insertar($datos){
+        $periodo = $this->insert($datos);
+        return $periodo;
+    }
 
     /* Ver datos todos*/
     public function verModelo(){

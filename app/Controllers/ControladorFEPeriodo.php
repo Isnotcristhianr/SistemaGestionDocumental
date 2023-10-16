@@ -9,6 +9,105 @@ use App\Models\ModelMatrizGraduados;
 class ControladorFEPeriodo extends BaseController
 {
 
+    //*crear periodo
+    public function crearPeriodo()
+    {
+        try {
+            //modelo 
+            $obgPeriodo = new ModelFEPeriodo();
+
+            //capturar datos post
+            $PER_ID = null;
+            $PER_ANO = $this->request->getPost('anoperiodo');
+            $PER_PERIODO = $this->request->getPost('nombreperiodo');
+            $PER_ULTIMO = $this->request->getPost('activoper');
+            $PER_ESTADO = 0;
+
+            /* Comprobacion */
+            echo $PER_ANO;
+            echo "<br>";
+            echo $PER_PERIODO;
+            echo "<br>";
+            echo $PER_ULTIMO;
+            echo "<br>";
+            echo $PER_ESTADO;
+
+            //?control estado ultimo periodo
+            //ultimo activo
+            $ultimoact = $this->obtenerUltimoActivo();
+            if ($PER_ULTIMO == 1) {
+                //cambiar estado ultimo activo
+                $this->cambiarEstadoUltimoActivo($ultimoact);
+            } else if ($PER_ULTIMO == 0) {
+                //nada
+            }
+
+             //enviar datos al modelo
+             $datosSubir = [
+                'PER_ID' => $PER_ID,
+                'PER_ANO' => $PER_ANO,
+                'PER_PERIODO' => $PER_PERIODO,
+                'PER_ULTIMO' => $PER_ULTIMO,
+                'PER_ESTADO' => $PER_ESTADO
+            ];
+
+            //comprobaciones
+            echo "<br>";
+            echo "datos subidos";
+            echo "<br>";
+            echo "ultimo activo";
+            echo "<br>";
+            echo $ultimoact;
+
+            //insertar datos
+            $periodo = $obgPeriodo->insertar($datosSubir);
+
+            //redireccionar a vista
+            return redirect()->to(base_url() . 'index.php/subidaDatos/manualmente');
+
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //*obtener ultimo activo
+    public function obtenerUltimoActivo()
+    {
+        try {
+            //modelo 
+            $obgPeriodo = new ModelFEPeriodo();
+            //obtener ultimo activo
+            $periodo = $obgPeriodo->where('PER_ULTIMO', 1)->first();
+            //ver data
+            $datos['tbl_periodo'] = $periodo;
+
+            //enviar periodo ultimo id
+            $perid = $periodo['PER_ID'];
+            //capturar id $perid
+            $datos['perid'] = $perid; // Pasar el ID como parte del array $datos
+
+            //retornar id periodo
+            return $perid;
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //*cambiar estado ultimo activo
+    public function cambiarEstadoUltimoActivo($perid)
+    {
+        try {
+            //modelo 
+            $obgPeriodo = new ModelFEPeriodo();
+            
+            //cambiar estado ultimo activo
+            $periodo = $obgPeriodo->where('PER_ID', $perid)->set(['PER_ULTIMO' => 0])->update();
+
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
     //? Datos Estadisticos Grado
     public function filtroEstadisticoGradoPeriodo($tipo)
     {
@@ -52,7 +151,7 @@ class ControladorFEPeriodo extends BaseController
             $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
             //capturar id $perid
             $datos['perid'] = $perid; // Pasar el ID como parte del array $datos
-            
+
 
             return view('header')
                 . view('/graficasEstadisticas/grado/periodos/vistaPeriodoGeneral', $datos + $datos2)
@@ -124,7 +223,7 @@ class ControladorFEPeriodo extends BaseController
                 return view('header')
                     . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_periodo_grad', $data)
                     . view('footer');
-            }else if ($tipo == "General") {
+            } else if ($tipo == "General") {
                 return view('header')
                     . view('/DatosEstadisticos/PosGrados/busqueda/vista_b_periodo_general', $data)
                     . view('footer');
@@ -222,7 +321,7 @@ class ControladorFEPeriodo extends BaseController
                 return view('header')
                     . view('/DatosEstadisticos/Tecnologias/busqueda/vista_b_periodo_grad', $data)
                     . view('footer');
-            }else if ($tipo == "General") {
+            } else if ($tipo == "General") {
                 return view('header')
                     . view('/DatosEstadisticos/Tecnologias/busqueda/vista_b_periodo_general', $data)
                     . view('footer');

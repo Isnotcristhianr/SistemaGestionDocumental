@@ -68,6 +68,12 @@
                                 <div class="mb-3 d-flex text-center justify-content-center align-items-center">
                                     <label class="form-label fw-bold fs-6">Periodo: </label>
                                     <input list="periodos" class="form-control m-2 p-1" id="periodoInput" name="id_periodo" required>
+                                    <!-- crear periodo  modal-->
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary badge rounded-pill" data-bs-toggle="modal" data-bs-target="#modalPeriodo">
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                    </button>
+
                                     <datalist id="periodos">
                                         <!-- Obtener valores de la tbl y generar opciones -->
                                         <?php foreach ($tbl_periodo as $periodo) : ?>
@@ -137,6 +143,52 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Periodo -->
+<div class="modal fade " id="modalPeriodo" tabindex="-1" aria-labelledby="modalper" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalper">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Crear Periodo
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="<?php echo base_url('index.php/subidaDatos/crearPeriodo') ?>" method="POST" enctype="multipart/form-data">
+                    <label for="añotextPeriodo"><b>Año: </b></label>
+                    <input type="text" class="form-control" id="añotextPeriodo" name="anoperiodo" required>
+                    <label for="periodoNombre"><b>Periodo Nombre: </b></label>
+                    <input type="text" class="form-control" id="periodoNombre" name="nombreperiodo" required>
+                    <label for=""><b>Periodo Actual: </b></label>
+                    <div class="d-flex">
+                        <div class="form-check m-2">
+                            <input class="form-check-input" type="radio" name="activoper" id="siper" required value="1">
+                            <label class="form-check-label" for="siper">
+                                Sí
+                            </label>
+                        </div>
+                        <div class="form-check m-2">
+                            <input class="form-check-input" type="radio" name="activoper" id="noper" checked required value="0">
+                            <label class="form-check-label" for="noper">
+                                No
+                            </label>
+                        </div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <button type="submit" class="btn btn-success">
+                    Crear Periodo
+                </button>
+            </div>
+            </form>
         </div>
     </div>
 </div>

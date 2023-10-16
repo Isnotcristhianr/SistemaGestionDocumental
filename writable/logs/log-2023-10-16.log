@@ -1,0 +1,63 @@
+CRITICAL - 2023-10-16 15:21:36 --> syntax error, unexpected token "echo", expecting "," or ";"
+in APPPATH\Controllers\ControladorFEPeriodo.php on line 30.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Controllers\\ControladorFEPeriodo.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\ControladorFEPeriodo')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\ControladorFEPeriodo')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\ControladorFEPeriodo', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-16 15:21:38 --> syntax error, unexpected token "echo", expecting "," or ";"
+in APPPATH\Controllers\ControladorFEPeriodo.php on line 30.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Controllers\\ControladorFEPeriodo.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\ControladorFEPeriodo')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\ControladorFEPeriodo')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\ControladorFEPeriodo', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-16 15:21:42 --> syntax error, unexpected token "echo", expecting "," or ";"
+in APPPATH\Controllers\ControladorFEPeriodo.php on line 30.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\XAMPP\\htdocs\\SistemaGestionDocumental\\app\\Controllers\\ControladorFEPeriodo.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\ControladorFEPeriodo')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\ControladorFEPeriodo')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\ControladorFEPeriodo', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-16 15:48:14 --> Unmatched '}'
+in APPPATH\Views\DatosEstadisticos\PosGrados\busqueda\vista_b_periodo_general.php on line 61.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/PosGrados/busqueda/vista_b_periodo_general', [], true)
+ 3 APPPATH\Controllers\ControladorFEPeriodo.php(228): view('/DatosEstadisticos/PosGrados/busqueda/vista_b_periodo_general', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFEPeriodo->filtroEstadisticoPosGradoPeriodo('General')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFEPeriodo))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-16 15:48:15 --> Unmatched '}'
+in APPPATH\Views\DatosEstadisticos\PosGrados\busqueda\vista_b_periodo_general.php on line 61.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/PosGrados/busqueda/vista_b_periodo_general', [], true)
+ 3 APPPATH\Controllers\ControladorFEPeriodo.php(228): view('/DatosEstadisticos/PosGrados/busqueda/vista_b_periodo_general', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFEPeriodo->filtroEstadisticoPosGradoPeriodo('General')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFEPeriodo))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-16 15:48:18 --> Unmatched '}'
+in APPPATH\Views\DatosEstadisticos\PosGrados\busqueda\vista_b_periodo_general.php on line 61.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/PosGrados/busqueda/vista_b_periodo_general', [], true)
+ 3 APPPATH\Controllers\ControladorFEPeriodo.php(228): view('/DatosEstadisticos/PosGrados/busqueda/vista_b_periodo_general', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFEPeriodo->filtroEstadisticoPosGradoPeriodo('General')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFEPeriodo))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-16 15:49:15 --> Unmatched '}'
+in APPPATH\Views\DatosEstadisticos\PosGrados\busqueda\vista_b_periodo_general.php on line 57.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/DatosEstadisticos/PosGrados/busqueda/vista_b_periodo_general', [], true)
+ 3 APPPATH\Controllers\ControladorFEPeriodo.php(228): view('/DatosEstadisticos/PosGrados/busqueda/vista_b_periodo_general', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFEPeriodo->filtroEstadisticoPosGradoPeriodo('General')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFEPeriodo))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

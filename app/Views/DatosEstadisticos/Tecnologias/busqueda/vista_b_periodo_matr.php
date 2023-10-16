@@ -35,11 +35,9 @@
             foreach ($tbl_periodo as $periodo) {
                 if (
                     /* Logica obtener ultimo periodo
-                    1. ultimo id
-                    2. debe pertenecer al año actual
-                    3. debe estar activo
+                    1. Obtener el periodo con PER_ULTIMO = 1
                     */
-                    $periodo['PER_ID'] == $tbl_periodo[0]['PER_ID'] && $periodo['PER_ANO'] == date('Y') && $periodo['PER_ULTIMO'] == 1
+                    $periodo['PER_ULTIMO'] == 1
                 ) {
 
             ?>
