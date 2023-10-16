@@ -69,10 +69,8 @@
                                     <label class="form-label fw-bold fs-6">Periodo: </label>
                                     <input list="periodos" class="form-control m-2 p-1" id="periodoInput" name="id_periodo" required>
                                     <!-- crear periodo  modal-->
-                                    <!-- Button trigger modal -->
                                     <button type="button" class="btn btn-primary badge rounded-pill" data-bs-toggle="modal" data-bs-target="#modalPeriodo">
-                                        <i class="fa-solid fa-circle-plus"></i>
-                                    </button>
+                                        <i class="fa-solid fa-plus fa-lg"></i> </button>
 
                                     <datalist id="periodos">
                                         <!-- Obtener valores de la tbl y generar opciones -->
@@ -86,6 +84,9 @@
                                 <div class="mb-3 d-flex text-center justify-content-center align-items-center">
                                     <label class="form-label fw-bold fs-6">Carreras: </label>
                                     <input list="carreras" class="form-control m-2 p-1" id="carreraInput" name="id_carrera" required>
+                                    <!-- Carrera modal crear -->
+                                    <button type="button" class="btn btn-primary badge rounded-pill" data-bs-toggle="modal" data-bs-target="#modalCarrera">
+                                        <i class="fa-solid fa-plus fa-lg"></i> </button>
                                     <datalist id="carreras">
                                         <!-- Obtener valores de la tbl y generar opciones -->
                                         <?php foreach ($tbl_carrera as $carrera) : ?>
