@@ -69,8 +69,9 @@
                                     <label class="form-label fw-bold fs-6">Periodo: </label>
                                     <input list="periodos" class="form-control m-2 p-1" id="periodoInput" name="id_periodo" required>
                                     <!-- crear periodo  modal-->
-                                    <button type="button" class="btn btn-primary badge rounded-pill" data-bs-toggle="modal" data-bs-target="#modalPeriodo">
-                                        <i class="fa-solid fa-plus fa-lg"></i> </button>
+                                    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalPeriodo">
+                                        <i class="fa-solid fa-plus fa-lg"></i>
+                                    </button>
 
                                     <datalist id="periodos">
                                         <!-- Obtener valores de la tbl y generar opciones -->
@@ -85,8 +86,9 @@
                                     <label class="form-label fw-bold fs-6">Carreras: </label>
                                     <input list="carreras" class="form-control m-2 p-1" id="carreraInput" name="id_carrera" required>
                                     <!-- Carrera modal crear -->
-                                    <button type="button" class="btn btn-primary badge rounded-pill" data-bs-toggle="modal" data-bs-target="#modalCarrera">
-                                        <i class="fa-solid fa-plus fa-lg"></i> </button>
+                                    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalcarrera">
+                                        <i class="fa-solid fa-plus fa-lg"></i>
+                                    </button>
                                     <datalist id="carreras">
                                         <!-- Obtener valores de la tbl y generar opciones -->
                                         <?php foreach ($tbl_carrera as $carrera) : ?>
@@ -190,6 +192,45 @@
                 </button>
             </div>
             </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Carreras -->
+<div class="modal fade" id="modalcarrera" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Crear Carrera
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <label class="form-label"><b>Carrera Tipo: </b></label>
+                    <input type="text" list="carreratipo" class="form-control" name="cartipo" id="form-label" required>
+                    <datalist id="carreratipo">
+                        <!-- Obtener valores de la tabla-->
+                        <option value="Grado"></option>
+                        <option value="Posgrado"></option>
+                        <option value="Tecnología"></option>
+                    </datalist>
+                    <label for="form-nombre"><b>Nombre: </b></label>
+                    <input type="text" class="form-control" id="form-nombre" name="carnombre" required>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <button type="submit" class="btn btn-success">
+                    Crear Carrera
+                </button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
