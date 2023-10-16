@@ -1,3 +1,7 @@
+<?php
+    ini_set('memory_limit', '1024M'); // Establece el límite de memoria a 1 GB
+?>
+
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <div class="row  align-items-center">
         <div class="col-12">
@@ -217,8 +221,30 @@
                         <option value="Posgrado"></option>
                         <option value="Tecnología"></option>
                     </datalist>
+
                     <label for="form-nombre"><b>Nombre: </b></label>
                     <input type="text" class="form-control" id="form-nombre" name="carnombre" required>
+
+                    <label for="form-escuela"><b>Escuela: </b></label>
+                    <!-- datalist de escuelas -->
+                    <input type="text" list="escuelas" class="form-control" name="escuela" id="form-escuela" required>
+                    <datalist id="escuelas">
+                        <!-- Obtener valores de la tabla-->
+                        <?php foreach ($tbl_carrera as $carreraesc) : ?>
+                            <option value="<?php
+                                            /* 
+                            1.CAR_CARRERA=0
+                            2.CAR_ESCUELA=1
+                            3.OBTENER CAR_NOMBRE
+                            */
+
+                                            while ($carreraesc['CAR_CARRERA'] == 0 && $carreraesc['CAR_ESCUELA'] == 1) {
+                                                echo $carreraesc['CAR_NOMBRE'];
+                                            }
+
+                                            ?>"></option>
+                        <?php endforeach; ?>
+                    </datalist>
 
 
             </div>
