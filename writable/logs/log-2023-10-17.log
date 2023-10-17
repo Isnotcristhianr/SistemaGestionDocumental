@@ -28,3 +28,45 @@ in APPPATH\Views\subida\manualmente.php on line 242.
 CRITICAL - 2023-10-17 13:19:23 --> Allowed memory size of 1073741824 bytes exhausted (tried to allocate 524304384 bytes)
 in APPPATH\Views\subida\manualmente.php on line 243.
  1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-17 16:24:21 --> Unsupported operand types: array + int
+in APPPATH\Controllers\ControladorFECarrera.php on line 215.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->crearEscuelaDesdeMenu()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-17 16:24:22 --> Unsupported operand types: array + int
+in APPPATH\Controllers\ControladorFECarrera.php on line 215.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->crearEscuelaDesdeMenu()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-17 16:24:38 --> Call to undefined function App\Controllers\get()
+in APPPATH\Controllers\ControladorFECarrera.php on line 215.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->crearEscuelaDesdeMenu()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-17 16:24:39 --> Call to undefined function App\Controllers\get()
+in APPPATH\Controllers\ControladorFECarrera.php on line 215.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->crearEscuelaDesdeMenu()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-17 16:25:24 --> Unsupported operand types: array + int
+in APPPATH\Controllers\ControladorFECarrera.php on line 215.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->crearEscuelaDesdeMenu()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-17 16:25:24 --> Unsupported operand types: array + int
+in APPPATH\Controllers\ControladorFECarrera.php on line 215.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->crearEscuelaDesdeMenu()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-17 16:25:25 --> Unsupported operand types: array + int
+in APPPATH\Controllers\ControladorFECarrera.php on line 215.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorFECarrera->crearEscuelaDesdeMenu()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorFECarrera))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

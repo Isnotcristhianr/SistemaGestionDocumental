@@ -7,6 +7,7 @@ use App\Models\ModelFEpadre;
 use App\Models\modelRepTitulacion;
 use App\Models\ModelMatrizGraduados;
 use App\Models\ModelFEPeriodo;
+use Exception;
 
 class ControladorFECarrera extends BaseController
 {
@@ -94,6 +95,8 @@ class ControladorFECarrera extends BaseController
         }
     }
 
+
+
     //*ir crear carrera
     public function irCrearCarrera()
     {
@@ -170,6 +173,80 @@ class ControladorFECarrera extends BaseController
 
             //redireccionar
             return redirect()->to(base_url() . 'index.php/subidaDatos/irCrearCarrera');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //* ir crear escuelas desde menu
+    public function irCrearEscuela()
+    {
+        try {
+            //modelo
+            $objCarrera = new ModelFEcarreras();
+
+            //padre
+            $data['tbl_carrera'] = $objCarrera->findAll();
+            //vistas
+            return view('header')
+                . view('/subida/vistaCrearEscuela', $data)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //* crear escuela desde menu
+    public function crearEscuelaDesdeMenu()
+    {
+        try {
+
+            //modelo
+            $objCarrera = new ModelFEcarreras();
+
+            //obtener datos
+            $CAR_ID = null;
+            $CTIP_ID = 2;
+            $CAR_NOMBRE = $this->request->getPost('carnombre');
+            $CAR_CARRERA = 0;
+            $CAR_ESCUELA = 1;
+            /*obtener ultimo id*/
+            $ultimoId = $objCarrera->ultimoId();
+            //arra to int
+            $ultimoId = $ultimoId['CAR_ID'];
+            $CAR_PADREESC = $ultimoId + 1;
+            $CAR_ACTIVA = $this->request->getPost('activecar');
+            $CAR_CAMPUS = $this->request->getPost('sede');
+            $CAR_ESTADO = 0;
+
+            //mostrar
+            echo "tipo: " . $CTIP_ID;
+            echo "<br> nombre: " . $CAR_NOMBRE;
+            echo "<br> carrera: " . $CAR_CARRERA;
+            echo "<br> escuela: " . $CAR_ESCUELA;
+            echo "<br> padreesc: " . $CAR_PADREESC;
+            echo "<br> activa: " . $CAR_ACTIVA;
+            echo "<br> campus: " . $CAR_CAMPUS;
+            echo "<br> estado: " . $CAR_ESTADO;
+
+            //datos
+            $datos = [
+                'CTIP_ID' => $CTIP_ID,
+                'CAR_NOMBRE' => $CAR_NOMBRE,
+                'CAR_CARRERA' => $CAR_CARRERA,
+                'CAR_ESCUELA' => $CAR_ESCUELA,
+                'CAR_PADREESC' => $CAR_PADREESC,
+                'CAR_ACTIVA' => $CAR_ACTIVA,
+                'CAR_CAMPUS' => $CAR_CAMPUS,
+                'CAR_ESTADO' => $CAR_ESTADO
+            ];
+
+            //insertar
+            $objCarrera->insert($datos);
+
+            //redireccionar
+            return redirect()->to(base_url() . 'index.php/subidaDatos/irCrearEscuela');
+            
         } catch (\Exception $e) {
             echo $e->getMessage();
         }

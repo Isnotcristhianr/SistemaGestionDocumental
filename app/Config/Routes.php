@@ -317,6 +317,10 @@ $routes->post('/subidaDatos/crearPeriodoDesdeMenu', 'ControladorFEPeriodo::crear
 $routes->get('/subidaDatos/irCrearCarrera', 'ControladorFECarrera::irCrearCarrera');
 //crear carrera desde menu
 $routes->post('/subidaDatos/crearCarreraDesdeMenu', 'ControladorFECarrera::crearCarreraDesdeMenu');
+//ir crear escuela menu
+$routes->get('/subidaDatos/irCrearEscuela', 'ControladorFECarrera::irCrearEscuela');
+//crear escuela desde menu
+$routes->post('/subidaDatos/crearEscuelaDesdeMenu', 'ControladorFECarrera::crearEscuelaDesdeMenu');
 
 /*
  * --------------------------------------------------------------------

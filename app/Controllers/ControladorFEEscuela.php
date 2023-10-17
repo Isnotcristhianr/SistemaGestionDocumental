@@ -12,6 +12,26 @@ use App\Models\ModelFEPeriodo;
 class ControladorFEEscuela extends BaseController
 {
 
+    //?Escuelas
+    //*crear escuelas desde menu
+    public function irCrearEscuela(){
+        try {
+            //modelo
+            $objEscuela = new ModelFEescuelas();
+            //periodo
+            $objPeriodo = new ModelFEPeriodo();
+            //obtener datos de la tabla periodo
+            $data['tbl_periodo'] = $objPeriodo->findAll();
+            //vistas
+            return view('header')
+                . view('/subida/vistaCrearEscuela', $data)
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+
+    }
+
     //?Datos Estadisticos Grado
     public function filtroEstadisticoGradoEscuela($tipo)
     {

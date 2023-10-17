@@ -19,6 +19,12 @@ class ModelFEcarreras extends Model
         return $carrera;
     }
 
+    //ultimo id
+    public function ultimoId()
+    {
+        $carrera = $this->select('CAR_ID')->orderBy('CAR_ID', 'DESC')->first();
+        return $carrera;
+    }
     //ver todos los datos
     public function verModelo()
     {
