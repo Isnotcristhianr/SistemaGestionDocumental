@@ -229,24 +229,25 @@ ini_set('memory_limit', '1024M'); // Establece el límite de memoria a 1 GB
                     <!-- datalist de escuelas -->
                     <input type="text" list="escuelas" class="form-control" name="escuela" id="form-escuela" required>
                     <datalist id="escuelas">
-                        <!-- Obtener valores de la tabla-->
-                        <?php foreach ($tbl_carrera as $carreraesc) : ?>
-                            <option value="<?php
-                                            /* 
+                        <?php
+                        $opciones = []; // Crear un array para almacenar los valores únicos de CAR_NOMBRE
+
+                        foreach ($tbl_carrera as $carreraesc) {
+                            /* 
                             1.CAR_CARRERA=0
                             2.CAR_ESCUELA=1
-                            3.OBTENER CAR_NOMBRE
                             */
 
-                            $contador = 0;
-                            while ($carreraesc['CAR_ESCUELA'] == 1 && $contador < 350) { 
-                                echo $carreraesc['CAR_NOMBRE'];
-                                $contador++;
+                            if ($carreraesc['CAR_CARRERA'] == 0 && $carreraesc['CAR_ESCUELA'] == 1 && count($opciones) < 325) {
+                                $opciones[] = $carreraesc['CAR_NOMBRE'];
                             }
-                            
+                        }
 
-                                            ?>"></option>
-                        <?php endforeach; ?>
+                        // Imprimir las opciones como elementos de lista
+                        foreach ($opciones as $opcion) {
+                            echo '<option value="' . htmlspecialchars($opcion) . '"></option>';
+                        }
+                        ?>
                     </datalist>
 
 
