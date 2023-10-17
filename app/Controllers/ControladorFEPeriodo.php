@@ -120,6 +120,66 @@ class ControladorFEPeriodo extends BaseController
         }
     }
 
+    //*crear periodo desde menu
+    public function crearPeriodoDesdeMenu()
+    {
+        try {
+            //modelo 
+            $obgPeriodo = new ModelFEPeriodo();
+
+            //capturar datos post
+            $PER_ID = null;
+            $PER_ANO = $this->request->getPost('anoperiodo');
+            $PER_PERIODO = $this->request->getPost('nombreperiodo');
+            $PER_ULTIMO = $this->request->getPost('activoper');
+            $PER_ESTADO = 0;
+
+            /* Comprobacion */
+            echo $PER_ANO;
+            echo "<br>";
+            echo $PER_PERIODO;
+            echo "<br>";
+            echo $PER_ULTIMO;
+            echo "<br>";
+            echo $PER_ESTADO;
+
+            //?control estado ultimo periodo
+            //ultimo activo
+            $ultimoact = $this->obtenerUltimoActivo();
+            if ($PER_ULTIMO == 1) {
+                //cambiar estado ultimo activo
+                $this->cambiarEstadoUltimoActivo($ultimoact);
+            } else if ($PER_ULTIMO == 0) {
+                //nada
+            }
+
+             //enviar datos al modelo
+             $datosSubir = [
+                'PER_ID' => $PER_ID,
+                'PER_ANO' => $PER_ANO,
+                'PER_PERIODO' => $PER_PERIODO,
+                'PER_ULTIMO' => $PER_ULTIMO,
+                'PER_ESTADO' => $PER_ESTADO
+            ];
+
+            //comprobaciones
+            echo "<br>";
+            echo "datos subidos";
+            echo "<br>";
+            echo "ultimo activo";
+            echo "<br>";
+            echo $ultimoact;
+
+            //insertar datos
+            $obgPeriodo->insertar($datosSubir);
+
+            //redireccionar a vista
+            return redirect()->to(base_url() . 'index.php/subidaDatos/irCrearPeriodo');
+
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
     //? Datos Estadisticos Grado
     public function filtroEstadisticoGradoPeriodo($tipo)
     {

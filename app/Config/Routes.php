@@ -311,6 +311,8 @@ $routes->post('/subidaDatos/crearPeriodo', 'ControladorFEPeriodo::crearPeriodo')
 $routes->post('/subidaDatos/crearCarrera', 'ControladorFECarrera::crearCarrera');
 //ir crear perdiodo menu
 $routes->get('/subidaDatos/irCrearPeriodo', 'ControladorFEPeriodo::irCrearPeriodo');
+//crear periodo desde menu
+$routes->post('/subidaDatos/crearPeriodoDesdeMenu', 'ControladorFEPeriodo::crearPeriodoDesdeMenu');
 
 
 /*

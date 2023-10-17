@@ -13,7 +13,7 @@
                         <i class="fa-solid fa-calendar-check"></i> Crear Periodo
                     </h1>
                 </div>
-                <form action="<?= base_url('index.php/subidaDatos/crearPeriodo') ?>" method="POST" enctype="multipart/form-data">
+                <form action="<?= base_url('index.php/subidaDatos/crearPeriodoDesdeMenu') ?>" method="POST" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="añotextPeriodo" class="form-label"><b>Año:</b></label>
                         <input type="text" class="form-control" id="añotextPeriodo" name="anoperiodo" required>
