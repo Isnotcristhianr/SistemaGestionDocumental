@@ -321,6 +321,8 @@ $routes->post('/subidaDatos/crearCarreraDesdeMenu', 'ControladorFECarrera::crear
 $routes->get('/subidaDatos/irCrearEscuela', 'ControladorFECarrera::irCrearEscuela');
 //crear escuela desde menu
 $routes->post('/subidaDatos/crearEscuelaDesdeMenu', 'ControladorFECarrera::crearEscuelaDesdeMenu');
+//subir conjunto datos csv vista
+$routes->get('/subidaDatos/subirConjuntoDatos', 'ControladorSubidaDatos::subirConjuntoDatos');
 
 /*
  * --------------------------------------------------------------------

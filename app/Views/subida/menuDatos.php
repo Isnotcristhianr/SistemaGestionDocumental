@@ -31,7 +31,7 @@
                         <i class="fa-solid fa-upload fa-2xl" style="color: #ffffff;"></i>
                     </div>
                     <div class="card-title d-flex justify-content-center align-items-center m-2">
-                        <a href="<?php echo base_url('index.php/subidaDatos/') ?>" class="btn btn-light border-secondary-subtle text-secondary"><b>Conjunto</b></a>
+                        <a href="<?php echo base_url('index.php/subidaDatos/subirConjuntoDatos') ?>" class="btn btn-light border-secondary-subtle text-secondary"><b>Conjunto</b></a>
                     </div>
                 </div>
             </div>

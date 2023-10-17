@@ -372,5 +372,18 @@ class ControladorSubidaDatos extends BaseController
         }
     }
 
+    //*vista datos conjunto
+    public function subirConjuntoDatos()
+    {
+        try {
+
+            echo view('header');
+            echo view('subida/vistaDatosConjunto');
+            echo view('footer');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     
 }
