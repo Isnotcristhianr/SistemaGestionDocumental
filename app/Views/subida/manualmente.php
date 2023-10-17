@@ -1,9 +1,9 @@
 <?php
-ini_set('memory_limit', '1024M'); // Establece el límite de memoria a 1 GB
+ini_set('memory_limit', '2048M'); // Establece el límite de memoria a 1 GB
 ?>
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
-    <div class="row  align-items-center">
+    <div class="row align-items-center">
         <div class="col-12">
             <a href="<?= base_url('/index.php/subidaDatos'); ?>" class="btn btn-outline-primary">
                 <i class="fa-solid fa-caret-left"></i> Volver

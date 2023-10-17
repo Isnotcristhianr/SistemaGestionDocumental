@@ -108,6 +108,18 @@ class ControladorFEPeriodo extends BaseController
         }
     }
 
+    //*ir a crear periodo
+    public function irCrearPeriodo()
+    {
+        try {
+            return view('header')
+                . view('/subida/vistaCrearPeriodo')
+                . view('footer');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
     //? Datos Estadisticos Grado
     public function filtroEstadisticoGradoPeriodo($tipo)
     {
