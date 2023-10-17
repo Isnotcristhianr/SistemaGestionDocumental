@@ -68,7 +68,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <a href="#" class="btn btn-light text-secondary">
+                        <a href="<?php echo base_url('index.php/subidaDatos/irCrearCarrera') ?>" class="btn btn-light text-secondary">
                             <b>
                                 <i class="fa-solid fa-circle-plus"></i> Carrera
                             </b>
