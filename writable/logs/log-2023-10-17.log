@@ -1,0 +1,30 @@
+CRITICAL - 2023-10-17 13:01:48 --> Allowed memory size of 1073741824 bytes exhausted (tried to allocate 524304384 bytes)
+in APPPATH\Views\subida\manualmente.php on line 242.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-17 13:07:10 --> Allowed memory size of 1073741824 bytes exhausted (tried to allocate 524304384 bytes)
+in APPPATH\Views\subida\manualmente.php on line 242.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-17 13:08:10 --> Allowed memory size of 1073741824 bytes exhausted (tried to allocate 524304384 bytes)
+in APPPATH\Views\subida\manualmente.php on line 242.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-17 13:09:38 --> Allowed memory size of 1073741824 bytes exhausted (tried to allocate 524304384 bytes)
+in APPPATH\Views\subida\manualmente.php on line 242.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-17 13:10:50 --> Allowed memory size of 1073741824 bytes exhausted (tried to allocate 524304384 bytes)
+in APPPATH\Views\subida\manualmente.php on line 242.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-17 13:11:00 --> Allowed memory size of 1073741824 bytes exhausted (tried to allocate 524304384 bytes)
+in APPPATH\Views\subida\manualmente.php on line 242.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-17 13:12:23 --> Allowed memory size of 1073741824 bytes exhausted (tried to allocate 524304384 bytes)
+in APPPATH\Views\subida\manualmente.php on line 242.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-17 13:12:37 --> Allowed memory size of 1073741824 bytes exhausted (tried to allocate 524304384 bytes)
+in APPPATH\Views\subida\manualmente.php on line 242.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-17 13:14:06 --> Allowed memory size of 1073741824 bytes exhausted (tried to allocate 524304384 bytes)
+in APPPATH\Views\subida\manualmente.php on line 242.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-17 13:19:23 --> Allowed memory size of 1073741824 bytes exhausted (tried to allocate 524304384 bytes)
+in APPPATH\Views\subida\manualmente.php on line 243.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

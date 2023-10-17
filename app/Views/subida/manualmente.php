@@ -1,5 +1,5 @@
 <?php
-    ini_set('memory_limit', '1024M'); // Establece el límite de memoria a 1 GB
+ini_set('memory_limit', '1024M'); // Establece el límite de memoria a 1 GB
 ?>
 
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
@@ -238,9 +238,12 @@
                             3.OBTENER CAR_NOMBRE
                             */
 
-                                            while ($carreraesc['CAR_CARRERA'] == 0 && $carreraesc['CAR_ESCUELA'] == 1) {
-                                                echo $carreraesc['CAR_NOMBRE'];
-                                            }
+                            $contador = 0;
+                            while ($carreraesc['CAR_ESCUELA'] == 1 && $contador < 350) { 
+                                echo $carreraesc['CAR_NOMBRE'];
+                                $contador++;
+                            }
+                            
 
                                             ?>"></option>
                         <?php endforeach; ?>
