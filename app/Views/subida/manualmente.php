@@ -230,7 +230,7 @@ ini_set('memory_limit', '1024M'); // Establece el límite de memoria a 1 GB
                     <input type="text" list="escuelas" class="form-control" name="escuela" id="form-escuela" required>
                     <datalist id="escuelas">
                         <?php
-                        $opciones = []; // Crear un array para almacenar los valores únicos de CAR_NOMBRE
+                        $opciones = [];
 
                         foreach ($tbl_carrera as $carreraesc) {
                             /* 
@@ -243,6 +243,7 @@ ini_set('memory_limit', '1024M'); // Establece el límite de memoria a 1 GB
                             }
                         }
 
+                        echo "<script>console.log('Mnesaje Desarrolador: la consulta esta optimizada a 325 registros de tbl_carreras, si no registra o no muestra contactarlo para modificar el codigo')</script>";
                         // Imprimir las opciones como elementos de lista
                         foreach ($opciones as $opcion) {
                             echo '<option value="' . htmlspecialchars($opcion) . '"></option>';
@@ -250,6 +251,37 @@ ini_set('memory_limit', '1024M'); // Establece el límite de memoria a 1 GB
                         ?>
                     </datalist>
 
+                    <label for="form-active"><b>Activa: </b></label>
+                    <div class="d-flex">
+                        <div class="form-check m-2">
+                            <input class="form-check-input" type="radio" name="activecar" id="sicar" required value="SÍ">
+                            <label class="form-check-label" for="sicar">
+                                Sí
+                            </label>
+                        </div>
+                        <div class="form-check m-2">
+                            <input class="form-check-input" type="radio" name="activecar" id="nocar" checked required value="NO">
+                            <label class="form-check-label" for="nocar">
+                                No
+                            </label>
+                        </div>
+                    </div>
+
+                    <label for="form-sede"><b>Sede: </b></label>
+                    <div class="d-flex">
+                        <div class="form-check m-2">
+                            <input class="form-check-input" type="radio" name="sede" id="sedeib" checked required value="1">
+                            <label class="form-check-label" for="sedeib">
+                                Ibarra
+                            </label>
+                        </div>
+                        <div class="form-check m-2">
+                            <input class="form-check-input" type="radio" name="sede" id="sedetul" required value="2">
+                            <label class="form-check-label" for="sedetul">
+                                Tulcan
+                            </label>
+                        </div>
+                    </div>
 
             </div>
             <div class="modal-footer">
