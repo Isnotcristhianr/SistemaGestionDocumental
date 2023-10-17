@@ -60,7 +60,7 @@ class ControladorFEPeriodo extends BaseController
             echo $ultimoact;
 
             //insertar datos
-            $periodo = $obgPeriodo->insertar($datosSubir);
+            $obgPeriodo->insertar($datosSubir);
 
             //redireccionar a vista
             return redirect()->to(base_url() . 'index.php/subidaDatos/manualmente');

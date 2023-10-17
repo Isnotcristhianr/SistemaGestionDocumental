@@ -11,6 +11,89 @@ use App\Models\ModelFEPeriodo;
 class ControladorFECarrera extends BaseController
 {
 
+    //*crear carrera
+    public function crearCarrera()
+    {
+        try {
+            //modelo
+            $objCarrera = new ModelFEcarreras();
+
+            //padre
+            $data['tbl_escuela'] = $objCarrera->findAll();
+
+            //capturar datos
+            $CAR_ID = null;
+            $cartipo = $this->request->getPost('cartipo');
+            //$CTIP_ID = 0;
+            if ($cartipo ==  "Grado") {
+                $CTIP_ID = 2;
+            } else if ($cartipo == "Posgrado") {
+                $CTIP_ID = 1;
+            } else if ($cartipo == "Tecnología") {
+                $CTIP_ID = 3;
+            }
+            $CAR_NOMBRE = $this->request->getPost('carnombre');
+            $CAR_CARRERA = 1;
+            $CAR_ESCUELA = 0;
+            $escuela = $this->request->getPost('escuela');
+            $CAR_PADREESC = $this->obtenerPadreEscuela($escuela);
+            $CAR_ACTIVA = $this->request->getPost('activecar');
+            $CAR_CAMPUS = $this->request->getPost('sede');
+            $CAR_ESTADO = 0;
+
+
+            //mostrar
+            echo "tipo: " . $CTIP_ID;
+            echo "<br> nombre: " . $CAR_NOMBRE;
+            echo "<br> carrera: " . $CAR_CARRERA;
+            echo "<br> escuela: " . $CAR_ESCUELA;
+            echo "<br> padreesc: " . $CAR_PADREESC;
+            echo "<br> activa: " . $CAR_ACTIVA;
+            echo "<br> campus: " . $CAR_CAMPUS;
+            echo "<br> estado: " . $CAR_ESTADO;
+
+            //datos
+            $datos = [
+                'CTIP_ID' => $CTIP_ID,
+                'CAR_NOMBRE' => $CAR_NOMBRE,
+                'CAR_CARRERA' => $CAR_CARRERA,
+                'CAR_ESCUELA' => $CAR_ESCUELA,
+                'CAR_PADREESC' => $CAR_PADREESC,
+                'CAR_ACTIVA' => $CAR_ACTIVA,
+                'CAR_CAMPUS' => $CAR_CAMPUS,
+                'CAR_ESTADO' => $CAR_ESTADO
+            ];
+
+            //insertar
+            $objCarrera->insert($datos);
+
+            //redireccionar
+            return redirect()->to(base_url() . 'index.php/subidaDatos/manualmente');
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    //* obtener car_padre esc acorde al nombre
+    //obtener CAR_PADREESC acorde CAR_NOMBRE
+    public function obtenerPadreEscuela($nombre)
+    {
+        try {
+            //modelo
+            $objCarrera = new ModelFEcarreras();
+
+            //obtener CAR_PADREESC acorde CAR_NOMBRE
+            $data['tbl_carrera'] = $objCarrera
+                ->where('CAR_NOMBRE', $nombre)
+                ->findAll();
+
+            //enviar CAR_PADREESC
+            return $data['tbl_carrera'][0]['CAR_PADREESC'];
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
     //Datos Estadisticos Grado
     public function filtroEstadisticoGradoCarrera($tipo)
     {
@@ -110,6 +193,7 @@ class ControladorFECarrera extends BaseController
             echo $e->getMessage();
         }
     }
+
     //? Datos Estadisticos Posgrado
     public function filtroEstadisticoPosgradoCarrera($tipo)
     {

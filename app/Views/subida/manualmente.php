@@ -163,7 +163,6 @@ ini_set('memory_limit', '1024M'); // Establece el límite de memoria a 1 GB
                     <i class="fa-solid fa-calendar-check"></i>
                     Crear Periodo
                 </h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form action="<?php echo base_url('index.php/subidaDatos/crearPeriodo') ?>" method="POST" enctype="multipart/form-data">
@@ -188,9 +187,9 @@ ini_set('memory_limit', '1024M'); // Establece el límite de memoria a 1 GB
                     </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                <a href="<?php echo base_url('index.php/subidaDatos/manualmente') ?>" type="button" class="btn btn-danger">
                     <i class="fa-solid fa-xmark"></i>
-                </button>
+                </a>
                 <button type="submit" class="btn btn-success">
                     Crear Periodo
                 </button>
@@ -209,10 +208,9 @@ ini_set('memory_limit', '1024M'); // Establece el límite de memoria a 1 GB
                     <i class="fa-solid fa-graduation-cap"></i>
                     Crear Carrera
                 </h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="">
+                <form action="<?php echo base_url('index.php//subidaDatos/crearCarrera') ?>" method="POST" enctype="multipart/form-data">
                     <label class="form-label"><b>Carrera Tipo: </b></label>
                     <input type="text" list="carreratipo" class="form-control" name="cartipo" id="form-label" required>
                     <datalist id="carreratipo">
@@ -260,7 +258,7 @@ ini_set('memory_limit', '1024M'); // Establece el límite de memoria a 1 GB
                             </label>
                         </div>
                         <div class="form-check m-2">
-                            <input class="form-check-input" type="radio" name="activecar" id="nocar" checked required value="NO">
+                            <input class="form-check-input" type="radio" name="activecar" id="nocar" checked required value="No">
                             <label class="form-check-label" for="nocar">
                                 No
                             </label>
@@ -285,9 +283,9 @@ ini_set('memory_limit', '1024M'); // Establece el límite de memoria a 1 GB
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                <a href="<?php echo base_url('index.php/subidaDatos/manualmente') ?>" type="button" class="btn btn-danger">
                     <i class="fa-solid fa-xmark"></i>
-                </button>
+                </a>
                 <button type="submit" class="btn btn-success">
                     Crear Carrera
                 </button>

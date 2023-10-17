@@ -307,6 +307,8 @@ $routes->get('/subidaDatos/manualmente', 'ControladorSubidaDatos::subirManualmen
 $routes->post('/subidaDatos/enviarManualmente', 'ControladorSubidaDatos::enviarManualmente');
 //crear periodo
 $routes->post('/subidaDatos/crearPeriodo', 'ControladorFEPeriodo::crearPeriodo');
+//crear carrera
+$routes->post('/subidaDatos/crearCarrera', 'ControladorFECarrera::crearCarrera');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
