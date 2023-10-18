@@ -512,15 +512,28 @@ class ControladorSubidaDatos extends BaseController
                 //las demas columnas se mandan sin procesar
 
                 //procesamiento por filas
+
                 
                 //mostrar
                 for ($i = 0; $i < $filas; $i++) {
                     for ($j = 0; $j < $columnas; $j++) {
+                        //1. Columa 0 tipo: Posgrado = 1, Grado = 2, Tecnología = 3
+                        if ($j == 0) {
+                            if ($datos[$i][$j] == "Posgrado") {
+                                $datos[$i][$j] == 1;
+                                $ESTM_TIPO = 1;
+                            } else if ($datos[$i][$j] == "Grado") {
+                                $datos[$i][$j] == 2;
+                                $ESTM_TIPO = 2;
+                            } else if ($datos[$i][$j] == "Tecnología") {
+                                $datos[$i][$j] == 3;
+                                $ESTM_TIPO = 3;
+                            }
+                        }
                       echo $datos[$i][$j] . " ";
                     }
                     echo "<br>";
                 }
-
 
             } else {
                 echo "No se pudo abrir el archivo CSV.";
