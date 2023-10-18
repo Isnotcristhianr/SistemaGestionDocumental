@@ -440,7 +440,7 @@ class ControladorSubidaDatos extends BaseController
                 $filas = count($csvData);
                 $columnas = count($csvData[0]);
 
-                echo "Filas: " . $filas . " Columnas: " . $columnas;
+                echo "Filas: " . $filas . " Columnas: " . $columnas . "<br>";
 
                 $datos = [];
                 for ($i = 0; $i < $filas; $i++) {
@@ -449,13 +449,78 @@ class ControladorSubidaDatos extends BaseController
                     }
                 }
 
+                
+
+                //encerado de variables
+                {
+                    $ESTM_ID = null;
+                    $ESTM_TIPO = 0;
+                    $ESTM_CONDICION = 0;
+                    $ESTM_TIPO_GRADO = 0;
+                    $ESTM_PERIODO = 0;
+                    $ESTM_CARRERA = 0;
+                    $ESTM_GENERO_H = 0;
+                    $ESTM_GENERO_M = 0;
+                    $ESTM_ETNIA_MESTIZO_H = 0;
+                    $ESTM_ETNIA_MESTIZO_M = 0;
+                    $ESTM_ETNIA_INDIGENA_H = 0;
+                    $ESTM_ETNIA_INDIGENA_M = 0;
+                    $ESTM_ETNIA_AFRO_H = 0;
+                    $ESTM_ETNIA_AFRO_M = 0;
+                    $ESTM_ETNIA_MONTUBIO_H = 0;
+                    $ESTM_ETNIA_MONTUBIO_M = 0;
+                    $ESTM_ETNIA_MULATO_H = 0;
+                    $ESTM_ETNIA_MULATO_M = 0;
+                    $ESTM_ETNIA_NEGRO_H = 0;
+                    $ESTM_ETNIA_NEGRO_M = 0;
+                    $ESTM_ETNIA_BLANCO_H = 0;
+                    $ESTM_ETNIA_BLANCO_M = 0;
+                    $ESTM_NACIONALIDAD_EC_H = 0;
+                    $ESTM_NACIONALIDAD_EC_M = 0;
+                    $ESTM_NACIONALIDAD_COL_H = 0;
+                    $ESTM_NACIONALIDAD_COL_M = 0;
+                    $ESTM_NACIONALIDAD_ESP_H = 0;
+                    $ESTM_NACIONALIDAD_ESP_M = 0;
+                    $ESTM_NACIONALIDAD_FRA_H = 0;
+                    $ESTM_NACIONALIDAD_FRA_H = 0;
+                    $ESTM_NACIONALIDAD_FRA_M = 0;
+                    $ESTM_NACIONALIDAD_USA_H = 0;
+                    $ESTM_NACIONALIDAD_USA_M = 0;
+                    $ESTM_NACIONALIDAD_PER_H = 0;
+                    $ESTM_NACIONALIDAD_PER_M = 0;
+                    $ESTM_NACIONALIDAD_RUM_H = 0;
+                    $ESTM_NACIONALIDAD_RUM_M = 0;
+                    $ESTM_NACIONALIDAD_CUB_H = 0;
+                    $ESTM_NACIONALIDAD_CUB_M = 0;
+                    $ESTM_NACIONALIDAD_URC_H = 0;
+                    $ESTM_NACIONALIDAD_URC_M = 0;
+                    $ESTM_NACIONALIDAD_VEN_H = 0;
+                    $ESTM_NACIONALIDAD_VEN_M = 0;
+                    $ESTM_DISCAPACIDAD_H = 0;
+                    $ESTM_DISCAPACIDAD_M = 0;
+                    $ESTM_TOTAL = 0;
+                    $ESTM_SEDE = 0;
+                    $ESTM_ESTADO  = 0;
+                }
+
+                //procesamiento de datos para enviar a la base de datos
+                //1. Columa 0 tipo: Posgrado = 1, Grado = 2, Tecnología = 3
+                //2. Columa 1 condicion: Matriculado = 1, Egresado = 2, Graduado = 3
+                //3. Columa 2 tipo grado: Trabajo de titulación = 1, Examen complexivo = 2, Trabajo de la unidad de integración curricular = 3; si hay N/E vale 1
+                //4. Columa 3 periodo: asignar acorde a tbl_periodo (PER_ID)
+                //5. Columa 4 carrera: asignar acorde a tbl_carrera (CAR_ID)
+                //las demas columnas se mandan sin procesar
+
+                //procesamiento por filas
+                
                 //mostrar
                 for ($i = 0; $i < $filas; $i++) {
                     for ($j = 0; $j < $columnas; $j++) {
-                        echo $datos[$i][$j] . " ";
+                      echo $datos[$i][$j] . " ";
                     }
                     echo "<br>";
                 }
+
 
             } else {
                 echo "No se pudo abrir el archivo CSV.";
