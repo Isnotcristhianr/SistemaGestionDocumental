@@ -97,11 +97,16 @@
                                     <form action="">
                                         <label for="archivo" class="form-label"><b>Subir archivo <i class="fa-solid fa-arrow-up-from-bracket"></i> </b></label>
                                         <div class="input-group mb-3">
-                                            <input type="file" name="archivo" id="inputGroupFile02" class="form-control" accept="application/pdf" required>
-                                            <label class="input-group-text" for="inputGroupFile02">.pdf</label>
+                                            <input type="file" name="archivo" id="inputGroupFile02" class="form-control" accept="application/csv" required>
+                                            <label class="input-group-text" for="inputGroupFile02">.csv</label>
                                         </div>
+                                        <button type="submit" class="btn btn-light text-secondary">
+                                            <b>
+                                                <i class="fa-solid fa-file-arrow-up"></i>
+                                                Enviar
+                                            </b></button>
+
                                     </form>
-                                    <!--  <i class="fa-solid fa-file-arrow-up"></i>Cargar CSV Sistema -->
                                 </div>
                             </div>
                         </div>
