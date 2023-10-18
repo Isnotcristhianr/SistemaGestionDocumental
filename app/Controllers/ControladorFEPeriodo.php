@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\ModelFEPeriodo;
 use App\Models\modelRepTitulacion;
 use App\Models\ModelMatrizGraduados;
+use App\Models\ModelFEcarreras;
 
 class ControladorFEPeriodo extends BaseController
 {
@@ -268,6 +269,7 @@ class ControladorFEPeriodo extends BaseController
             //ver data
             $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
             $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+            
             //capturar id $perid
             $datos['perid'] = $perid; // Pasar el ID como parte del array $datos
 
