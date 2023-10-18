@@ -94,7 +94,7 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <form action="">
+                                    <form action="<?php echo base_url('/index.php/subidaDatos/subirConjuntoDatosCsv') ?>" method="POST" enctype="multipart/form-data">
                                         <label for="archivo" class="form-label"><b>Subir archivo <i class="fa-solid fa-arrow-up-from-bracket"></i> </b></label>
                                         <div class="input-group mb-3">
                                             <input type="file" name="archivo" id="inputGroupFile02" class="form-control" accept="application/csv" required>

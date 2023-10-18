@@ -387,7 +387,57 @@ class ControladorSubidaDatos extends BaseController
 
 
     //!Subida por csv, leer archivo csv
-    
+    public function subirConjuntoDatosCsv()
+    {
+        try {
+            //matriz
+            $objEstadMatr = new ModelMatrizGraduados();
+            //carrera tipo
+            $objCarreraTipo = new ModelCarreraTipo();
+            //condicion
+            $objCondicion = new ModelCondicion();
+            //modalidad
+            $objModalidad = new ModalidadModTitulacion();
+            //periodo
+            $objPeriodo = new ModelFEPeriodo();
+            //carrera
+            $objCarrera = new ModelFEcarreras();
 
-    
+            $data['tbl_estadistica_matriz'] = $objEstadMatr->verModelo();
+            $data['tbl_carrera_tipo'] = $objCarreraTipo->verModelo();
+            $data['tbl_estudiante'] = $objCondicion->verModelo();
+            $data['tbl_modalida_titulacion'] = $objModalidad->verModelo();
+            $data['tbl_periodo'] = $objPeriodo->verModelo();
+            $data['tbl_carrera'] = $objCarrera->verModelo();
+
+            //obtener archivo
+            $archivo = $this->request->getFile('archivo');
+
+            echo "nombre archivo: " . $archivo->getName();
+
+            //obtener datos del csv
+            $csv = array_map('str_getcsv', file($archivo));
+
+            // Obtener filas y columnas
+            $filas = count($csv);
+            $columnas = count($csv[0]);
+
+            // Recorrer filas y extraer datos ordenados
+            for ($i = 0; $i < $filas; $i++) {
+                // Reemplazar los valores entre ;; con 0
+                $csv[$i][0] = str_replace(';;', ';0', $csv[$i][0]);
+
+                    // Celdas vacías colocar 0
+                    if ($csv[$i]== "") {
+                        $csv[$i] = 0;
+                    }
+
+                    // Mostrar datos
+                    echo "<br>fila: " . $i .  " dato: <br>" . $csv[$i][0] . "<br>";
+                
+            }
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }
