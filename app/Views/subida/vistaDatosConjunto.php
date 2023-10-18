@@ -32,7 +32,7 @@
                                     <ol class="list-group list-group-numbered">
                                         <li class="list-group-item list-group-item-secondary">Descargar la plantilla de datos en formato CSV desde el sistema.</li>
                                         <li class="list-group-item list-group-item-secondary">Abrir el archivo CSV descargado utilizando Microsoft Excel u otro software de hojas de cálculo.</li>
-                                        <li class="list-group-item list-group-item-secondary">Actualizar los datos en la plantilla según las instrucciones proporcionadas.</li>
+                                        <li class="list-group-item list-group-item-secondary">Actualizar los datos en la plantilla según las instrucciones proporcionadas. </li>
                                         <li class="list-group-item list-group-item-secondary">Guardar el archivo CSV después de realizar las actualizaciones.</li>
                                         <li class="list-group-item list-group-item-secondary">Ir a la sección de 'Subir Datos' en el sistema.</li>
                                         <li class="list-group-item list-group-item-secondary">Seleccionar el archivo CSV actualizado haciendo clic en el botón 'Examinar' o 'Seleccionar Archivo'.</li>
@@ -49,7 +49,66 @@
                         </div>
                     </div>
                 </div>
+                <div class="container bg-success-subtle shadow rounded m-2">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+                            <div class="card bg-success text-light text-center m-3">
+                                <div class="card-header">
+                                    <div class="m-2">
+                                        <i class="fa-regular fa-file-excel fa-2xl"></i>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <a href="<?php echo base_url('/public/files/csv/plantilla.xlsx') ?>" download class="btn btn-light text-secondary">
+                                        <b>
+                                            <i class="fa-solid fa-file-arrow-down"></i> Plantilla Excel
+                                        </b>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+                            <div class="card bg-success text-light text-center m-3">
+                                <div class="card-header">
+                                    <div class="m-2">
+                                        <i class="fa-solid fa-file-csv fa-2xl"></i>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <a href="<?php echo base_url('/public/files/csv/plantillacsv.csv') ?>" download class="btn btn-light text-secondary">
+                                        <b>
+                                            <i class="fa-solid fa-file-arrow-down"></i> Modelo CSV
+                                        </b>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 col-md-6 col-sm-9 col-12 mb-3">
+                            <div class="card bg-success text-light text-center m-3">
+                                <div class="card-header">
+                                    <div class="m-2">
+                                        <i class="fa-solid fa-server fa-2xl"></i>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <form action="">
+                                        <label for="archivo" class="form-label"><b>Subir archivo <i class="fa-solid fa-arrow-up-from-bracket"></i> </b></label>
+                                        <div class="input-group mb-3">
+                                            <input type="file" name="archivo" id="inputGroupFile02" class="form-control" accept="application/pdf" required>
+                                            <label class="input-group-text" for="inputGroupFile02">.pdf</label>
+                                        </div>
+                                    </form>
+                                    <!--  <i class="fa-solid fa-file-arrow-up"></i>Cargar CSV Sistema -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+</div>
 </div>

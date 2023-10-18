@@ -16,8 +16,8 @@ ini_set('memory_limit', '2048M'); // Establece el límite de memoria a 1 GB
                 <i class="fa-solid fa-chart-simple fa-sm"></i>
             </h3>
         </div>
-        <div class="col">
-            <div class="card m-2 p-2">
+        <div class="container justify-content-center col-12 col-lg-6 ">
+            <div class="card m-2 p-2 bg-primary-subtle shadow">
                 <div class="header text-center">
                     <img src="<?php echo base_url('/public/imgs/secretary2.png') ?>" alt="secretaryManual" class="img img-fluid m-1 p-1">
                 </div>
@@ -29,7 +29,7 @@ ini_set('memory_limit', '2048M'); // Establece el límite de memoria a 1 GB
                         <form action="<?php echo base_url('index.php/subidaDatos/enviarManualmente') ?>" method="POST" enctype="multipart/form-data">
 
                             <!-- Generales -->
-                            <div class="container col-md-6">
+                            <div class="container col-md-10">
                                 <!-- Tipo -->
                                 <div class="mb-3 d-flex text-center justify-content-center align-items-center">
                                     <label class="form-label fw-bold fs-6">Tipo: </label>
@@ -324,7 +324,7 @@ ini_set('memory_limit', '2048M'); // Establece el límite de memoria a 1 GB
                                 <option value="Blanco">Blanco</option>
                              </select>
                         </div>
-                        <div class="d-flex text-center justify-content-center align-items-center">
+                        <div class=" text-center justify-content-center align-items-center">
                             <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-mars"></i> Masculino</span>
                             <input type="number" class="form-control cantidadMasculino" placeholder="# Cantidad" aria-label="masculino" aria-describedby="basic-addon1" min="0" required id="cantmasgenetnia" name="cantmasgenetnia_${index}">
                             <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-venus"></i> Femenino</span>
@@ -376,7 +376,7 @@ ini_set('memory_limit', '2048M'); // Establece el límite de memoria a 1 GB
                                 <option value="Venezolana">Venezolana</option>
                              </select>
                         </div>
-                        <div class="d-flex text-center justify-content-center align-items-center">
+                        <div class="text-center justify-content-center align-items-center">
                             <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-mars"></i> Masculino</span>
                             <input type="number" class="form-control cantidadMasculino" placeholder="# Cantidad" aria-label="Username" aria-describedby="basic-addon1" min="0" required id="cantmasgennacionalidad" name="cantmasgennacionalidad_${indexnacionalidad}">
                             <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-venus"></i> Femenino</span>
@@ -413,7 +413,7 @@ ini_set('memory_limit', '2048M'); // Establece el límite de memoria a 1 GB
                         <div class="mb-3 d-flex text-center justify-content-center align-items-center">
                             <label class="form-label fw-bold fs-6">Dispacadidad: </label>
                         </div>
-                        <div class="d-flex text-center justify-content-center align-items-center">
+                        <div class="text-center justify-content-center align-items-center">
                             <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-mars"></i> Masculino</span>
                             <input type="number" class="form-control cantidadMasculino" placeholder="# Cantidad" aria-label="Username" aria-describedby="basic-addon1" min="0" required name="discgenmas">
                             <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-venus"></i> Femenino</span>
