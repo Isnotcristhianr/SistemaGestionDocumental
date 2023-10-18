@@ -410,42 +410,55 @@ class ControladorSubidaDatos extends BaseController
             $data['tbl_periodo'] = $objPeriodo->verModelo();
             $data['tbl_carrera'] = $objCarrera->verModelo();
 
-            //obtener archivo
+            //procesammiento del csv
             $archivo = $this->request->getFile('archivo');
+            $file = fopen($archivo, 'r');
+            if ($file) {
+                // Inicializar el array para almacenar los datos
+                $csvData = [];
 
-            echo "nombre archivo: " . $archivo->getName();
+                // Leer el archivo línea por línea y procesar los datos
+                while (($line = fgetcsv($file, 0, ';')) !== false) {
+                    // Reemplazar los valores entre ;; con 0 en la primera columna
+                    $line[0] = str_replace(';;', ';0;', $line[0]);
 
-            //obtener datos del csv
-            $csv = array_map('str_getcsv', file($archivo));
+                    // Celdas vacías colocar 0 en todas las columnas
+                    foreach ($line as &$value) {
+                        if ($value === "") {
+                            $value = 0;
+                        }
+                    }
 
-            // Obtener filas y columnas
-            $filas = count($csv);
-            $columnas = count($csv[0]);
-
-            // Recorrer filas y extraer datos ordenados
-            for ($i = 0; $i < $filas; $i++) {
-                // Reemplazar los valores entre ;; con 0
-                $csv[$i][0] = str_replace(';;', ';0', $csv[$i][0]);
-
-                // Celdas vacías colocar 0
-                if ($csv[$i] == "") {
-                    $csv[$i] = 0;
+                    // Agregar la fila procesada al array de datos
+                    $csvData[] = $line;
                 }
 
-                // Mostrar datos
-                //echo "<br>fila: " . $i .  " dato: <br>" . $csv[$i][0] . "<br>";
-            }
+                // Cerrar el archivo
+                fclose($file);
 
-            //separar datos por ; por filas y columnas
-            for ($i = 0; $i < $filas; $i++) {
-                $datos[$i] = explode(";", $csv[$i][0]);
-            }
-            echo "<br>";
-            //mostrar datos
-            for ($i = 0; $i < $filas; $i++) {
-                for ($j = 0; $j < $columnas; $j++) {
-                    echo "fila: " . $i . " columna: " . $j . " dato: " . $datos[$i][28] . "<br>";
+                // Obtener filas y columnas después de procesar el archivo
+                $filas = count($csvData);
+                $columnas = count($csvData[0]);
+
+                echo "Filas: " . $filas . " Columnas: " . $columnas;
+
+                $datos = [];
+                for ($i = 0; $i < $filas; $i++) {
+                    for ($j = 0; $j < $columnas; $j++) {
+                        $datos[$i][$j] = $csvData[$i][$j];
+                    }
                 }
+
+                //mostrar
+                for ($i = 0; $i < $filas; $i++) {
+                    for ($j = 0; $j < $columnas; $j++) {
+                        echo $datos[$i][$j] . " ";
+                    }
+                    echo "<br>";
+                }
+
+            } else {
+                echo "No se pudo abrir el archivo CSV.";
             }
         } catch (\Exception $e) {
             die($e->getMessage());
