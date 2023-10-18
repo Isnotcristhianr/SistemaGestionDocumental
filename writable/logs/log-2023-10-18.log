@@ -92,3 +92,6 @@ in APPPATH\Controllers\ControladorSubidaDatos.php on line 434.
  5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 16:05:06 --> Cannot use [] for reading
+in APPPATH\Controllers\ControladorSubidaDatos.php on line 447.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

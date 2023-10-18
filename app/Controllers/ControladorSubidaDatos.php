@@ -427,14 +427,25 @@ class ControladorSubidaDatos extends BaseController
                 // Reemplazar los valores entre ;; con 0
                 $csv[$i][0] = str_replace(';;', ';0', $csv[$i][0]);
 
-                    // Celdas vacías colocar 0
-                    if ($csv[$i]== "") {
-                        $csv[$i] = 0;
-                    }
+                // Celdas vacías colocar 0
+                if ($csv[$i] == "") {
+                    $csv[$i] = 0;
+                }
 
-                    // Mostrar datos
-                    echo "<br>fila: " . $i .  " dato: <br>" . $csv[$i][0] . "<br>";
-                
+                // Mostrar datos
+                //echo "<br>fila: " . $i .  " dato: <br>" . $csv[$i][0] . "<br>";
+            }
+
+            //separar datos por ; por filas y columnas
+            for ($i = 0; $i < $filas; $i++) {
+                $datos[$i] = explode(";", $csv[$i][0]);
+            }
+            echo "<br>";
+            //mostrar datos
+            for ($i = 0; $i < $filas; $i++) {
+                for ($j = 0; $j < $columnas; $j++) {
+                    echo "fila: " . $i . " columna: " . $j . " dato: " . $datos[$i][28] . "<br>";
+                }
             }
         } catch (\Exception $e) {
             die($e->getMessage());
