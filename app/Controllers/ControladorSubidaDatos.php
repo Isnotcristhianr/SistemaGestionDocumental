@@ -446,10 +446,12 @@ class ControladorSubidaDatos extends BaseController
                 for ($i = 0; $i < $filas; $i++) {
                     for ($j = 0; $j < $columnas; $j++) {
                         $datos[$i][$j] = $csvData[$i][$j];
+                        // echo $datos[$i][$j] . " ";
                     }
+                    // echo "<br>";
                 }
 
-                
+
 
                 //encerado de variables
                 {
@@ -503,38 +505,97 @@ class ControladorSubidaDatos extends BaseController
                     $ESTM_ESTADO  = 0;
                 }
 
-                //procesamiento de datos para enviar a la base de datos
-                //1. Columa 0 tipo: Posgrado = 1, Grado = 2, Tecnología = 3
-                //2. Columa 1 condicion: Matriculado = 1, Egresado = 2, Graduado = 3
-                //3. Columa 2 tipo grado: Trabajo de titulación = 1, Examen complexivo = 2, Trabajo de la unidad de integración curricular = 3; si hay N/E vale 1
-                //4. Columa 3 periodo: asignar acorde a tbl_periodo (PER_ID)
-                //5. Columa 4 carrera: asignar acorde a tbl_carrera (CAR_ID)
-                //las demas columnas se mandan sin procesar
-
-                //procesamiento por filas
-
-                
-                //mostrar
+                //procesamiendo de datos por filas
+                $datosprocesados = [];
                 for ($i = 0; $i < $filas; $i++) {
-                    for ($j = 0; $j < $columnas; $j++) {
-                        //1. Columa 0 tipo: Posgrado = 1, Grado = 2, Tecnología = 3
-                        if ($j == 0) {
-                            if ($datos[$i][$j] == "Posgrado") {
-                                $datos[$i][$j] == 1;
-                                $ESTM_TIPO = 1;
-                            } else if ($datos[$i][$j] == "Grado") {
-                                $datos[$i][$j] == 2;
-                                $ESTM_TIPO = 2;
-                            } else if ($datos[$i][$j] == "Tecnología") {
-                                $datos[$i][$j] == 3;
-                                $ESTM_TIPO = 3;
-                            }
-                        }
-                      echo $datos[$i][$j] . " ";
+                    //col 0 tipo
+                    $tipoEstudio = $csvData[$i][0];
+                    switch ($tipoEstudio) {
+                        case 'Posgrado':
+                            $ESTM_TIPO = 1;
+                            break;
+                        case 'Grado':
+                            $ESTM_TIPO = 2;
+                            break;
+                        case 'Tecnolog�a':
+                            $ESTM_TIPO = 3;
+                            break;
+                        default:
+                            $ESTM_TIPO = 2; // Valor predeterminado si no coincide con ninguna condición
+                            break;
                     }
-                    echo "<br>";
-                }
 
+                    //col 1 condicion
+                    $condicion = $csvData[$i][1];
+                    switch ($condicion) {
+                        case 'Matriculado':
+                            $ESTM_CONDICION = 1;
+                            break;
+                        case 'Egresado':
+                            $ESTM_CONDICION = 2;
+                            break;
+                        case 'Graduado':
+                            $ESTM_CONDICION = 3;
+                            break;
+                        default:
+                            $ESTM_CONDICION = 1;
+                            break;
+                    }
+
+                    //col 2 tipo de grado
+                    $tipoGrado = $csvData[$i][2];
+                    switch ($tipoGrado) {
+                        case 'Trabajo de titulación':
+                            $ESTM_TIPO_GRADO = 1;
+                            break;
+                        case 'Examen complexivo':
+                            $ESTM_TIPO_GRADO = 2;
+                            break;
+                        case 'Trabajo de la unidad de integración curricular':
+                            $ESTM_TIPO_GRADO = 3;
+                            break;
+                        case 'N/E':
+                            $ESTM_TIPO_GRADO = 1;
+                            break;
+                        default:
+                            $ESTM_TIPO_GRADO = 1;
+                            break;
+                    }
+
+                    //COL 3 periodo
+                    $periodo = $csvData[$i][3];
+                    //buscar el id del periodo de cada fila en tbl
+                    $id_periodop = $objPeriodo->obtenerId($periodo);
+                    $ESTM_PERIODO = $id_periodop['PER_ID'];
+
+                    //col 4 carrera
+                    $carrera = $csvData[$i][4];
+                    //buscar el id de la carrera de cada fila en tbl
+                    $id_carrerap = $objCarrera->obtenerId($carrera);
+                    $ESTM_CARRERA = $id_carrerap['CAR_ID'];
+                    
+
+
+
+
+                    // Añadir los datos procesados al array $datosprocesados
+                    $datosprocesados[$i] = [
+                        'ESTM_ID' => $ESTM_ID,
+                        'ESTM_TIPO' => $ESTM_TIPO,
+                        'ESTM_CONDICION' => $ESTM_CONDICION,
+                        'ESTM_TIPO_GRADO' => $ESTM_TIPO_GRADO,
+                        'ESTM_PERIODO' => $ESTM_PERIODO,
+                        'ESTM_CARRERA' => $ESTM_CARRERA,
+
+                    ];
+                    echo $datosprocesados[$i]['ESTM_ID']
+                        . $datosprocesados[$i]['ESTM_TIPO']
+                        . $datosprocesados[$i]['ESTM_CONDICION']
+                        . $datosprocesados[$i]['ESTM_TIPO_GRADO']
+                        . $datosprocesados[$i]['ESTM_PERIODO']
+                        . $datosprocesados[$i]['ESTM_CARRERA']
+                        . "<br>";
+                }
             } else {
                 echo "No se pudo abrir el archivo CSV.";
             }
