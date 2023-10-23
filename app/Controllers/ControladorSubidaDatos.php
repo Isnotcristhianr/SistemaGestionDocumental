@@ -683,7 +683,6 @@ class ControladorSubidaDatos extends BaseController
 
                 //redireccionar
                 return redirect()->to(base_url() . 'index.php/subidaDatos/subirConjuntoDatos');
-                
             } else {
                 echo "No se pudo abrir el archivo CSV.";
             }

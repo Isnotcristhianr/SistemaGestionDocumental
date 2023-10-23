@@ -33,7 +33,7 @@
                                         <li class="list-group-item list-group-item-secondary">Descargar la plantilla de datos en formato CSV desde el sistema.</li>
                                         <li class="list-group-item list-group-item-secondary">Abrir el archivo CSV descargado utilizando Microsoft Excel u otro software de hojas de cálculo.</li>
                                         <li class="list-group-item list-group-item-secondary">Actualizar los datos en la plantilla según las instrucciones proporcionadas. </li>
-                                        <li class="list-group-item list-group-item-secondary">Guardar el archivo CSV después de realizar las actualizaciones.</li>
+                                        <li class="list-group-item list-group-item-secondary">Guardar en el archivo CSV después de realizar las actualizaciones.</li>
                                         <li class="list-group-item list-group-item-secondary">Ir a la sección de 'Subir Datos' en el sistema.</li>
                                         <li class="list-group-item list-group-item-secondary">Seleccionar el archivo CSV actualizado haciendo clic en el botón 'Examinar' o 'Seleccionar Archivo'.</li>
                                         <li class="list-group-item list-group-item-secondary">Hacer clic en el botón 'Subir' para cargar el archivo CSV al sistema.</li>
