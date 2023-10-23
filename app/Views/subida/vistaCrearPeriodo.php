@@ -2,13 +2,13 @@
     <div class="row justify-content-center">
 
         <div class="col-12 col-md-8">
-            <div class="container border border-primary-subtle p-3 shadow rounded bg-light text-primary">
+            <div class="container border border-primary-subtle p-3 shadow rounded bg-light ">
                 <div class="mb-3 text-left">
                     <a href="<?= base_url('/index.php/subidaDatos'); ?>" class="btn btn-outline-primary">
                         <i class="fa-solid fa-caret-left"></i> Volver
                     </a>
                 </div>
-                <div class="text-center ">
+                <div class="text-center text-primary">
                     <h1 class="fs-5">
                         <i class="fa-solid fa-calendar-check"></i> Crear Periodo
                     </h1>

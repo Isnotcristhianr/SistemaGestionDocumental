@@ -22,7 +22,7 @@ ini_set('memory_limit', '2048M'); // Establece el límite de memoria a 1 GB
                     <img src="<?php echo base_url('/public/imgs/secretary2.png') ?>" alt="secretaryManual" class="img img-fluid m-1 p-1">
                 </div>
                 <div class="tittle text-center">
-                    <h4 class="text text-secondary">Subida de datos Matriz Estudiantes</h4>
+                    <h4 class="text text-primary">Subida de datos Matriz Estudiantes</h4>
                 </div>
                 <div class="body">
                     <div class="form text-center ">
@@ -114,11 +114,10 @@ ini_set('memory_limit', '2048M'); // Establece el límite de memoria a 1 GB
                             </div>
 
                             <!-- Específicos -->
-                            <div class="container col-md-6">
+                            <div class="container col-md-8">
                                 <!-- Genero -->
                                 <label class="form-label fw-bold fs-6">Género: </label>
-                                <div class="d-flex text-center justify-content-center align-items-center">
-                                    <br>
+                                <div class="text-center justify-content-center align-items-center d-flex">
                                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-mars"></i> Masculino</span>
                                     <input type="number" class="form-control" placeholder="# Cantidad" aria-label="Username" aria-describedby="basic-addon1" min="0" required id="cantmasgen" name="cantmasgen">
                                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-venus"></i> Femenino</span>

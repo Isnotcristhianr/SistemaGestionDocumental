@@ -7,7 +7,7 @@
 
         <div class="col-xs-12 col-sm-7 col-md-4">
           <div class="container">
-            <h4 class="text-primary"><a href="<?php echo base_url('index.php/inicio') ?>" style="text-decoration: none;">Sistema de Gestión Documental</a></h4>
+            <h4 class="text-primary-emphasis"><a href="<?php echo base_url('index.php/inicio') ?>" style="text-decoration: none;">Sistema de Gestión Documental</a></h4>
             <hr class="border border-primary border-1 opacity-50">
             <p class="fs-6" style="text-align: justify; text-justify: inter-word;">
               Sistema de gestion documental es,
@@ -105,8 +105,8 @@
         <div class="col-md-12 text-center p-1">
           <h5 class="text-primary">Pontifica Universidad Católica del Ecuador - Secretaría General</h5>
           <div class="text-secondary">
-          <a href="https://isnotcristhianr.me/" class="text-secondary" style="text-decoration: none;">Isnotcristhianr</a> 
-          © 2023. All rights reserved.
+            <a href="https://isnotcristhianr.me/" class="text-secondary" style="text-decoration: none;">Isnotcristhianr</a>
+            © 2023. All rights reserved.
           </div>
         </div>
       </div>
@@ -124,8 +124,7 @@
 <!-- Boostrap Js Local-->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script><!-- Boostrap Js -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
- --><!-- Exportar a Imgs -->
+<!-- Exportar a Imgs -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js" async></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" async></script>
 <!-- Font Awesome -->
