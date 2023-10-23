@@ -17,7 +17,7 @@ use App\Models\ModalidadModTitulacion;
 use App\Models\ModelFEPeriodo;
 //carrera
 use App\Models\ModelFEcarreras;
-
+use App\Models\ModelFEescuelas;
 
 class ControladorSubidaDatos extends BaseController
 {
@@ -686,6 +686,51 @@ class ControladorSubidaDatos extends BaseController
             } else {
                 echo "No se pudo abrir el archivo CSV.";
             }
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    //ver periodos
+    public function verPeriodos()
+    {
+        try {
+            $objPeriodo = new ModelFEPeriodo();
+            $data['tbl_periodo'] = $objPeriodo->verModelo();
+
+            echo view('header');
+            echo view('subida/verPeriodos', $data);
+            echo view('footer');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    //ver carreras
+    public function verCarreras()
+    {
+        try {
+            $objCarrera = new ModelFEcarreras();
+            $data['tbl_carrera'] = $objCarrera->verCarreras();
+
+            echo view('header');
+            echo view('subida/verCarreras', $data);
+            echo view('footer');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    //ver escuelas
+    public function verEscuelas()
+    {
+        try {
+            $objEscuela = new ModelFEcarreras();
+            $data['tbl_carrera'] = $objEscuela->verEscuelas();
+
+            echo view('header');
+            echo view('subida/verEscuelas', $data);
+            echo view('footer');
         } catch (\Exception $e) {
             die($e->getMessage());
         }

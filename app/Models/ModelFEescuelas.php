@@ -55,4 +55,11 @@ class ModelFEescuelas extends Model
          $escuelas = $this->where('CTIP_ID', 2)->where('CAR_ESCUELA', 1)->where('CAR_ACTIVA', 'No')->findAll();
         return count($escuelas);
     }
+
+    //ver modelo
+    public function verModelo()
+    {
+        $escuelas = $this->findAll();
+        return $escuelas;
+    }
 }

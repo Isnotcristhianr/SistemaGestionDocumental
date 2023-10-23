@@ -325,6 +325,13 @@ $routes->post('/subidaDatos/crearEscuelaDesdeMenu', 'ControladorFECarrera::crear
 $routes->get('/subidaDatos/subirConjuntoDatos', 'ControladorSubidaDatos::subirConjuntoDatos');
 //subir conjunto datos csv
 $routes->post('/subidaDatos/subirConjuntoDatosCsv', 'ControladorSubidaDatos::subirConjuntoDatosCsv');
+//ver periodos
+$routes->get('/verPeriodos', 'ControladorSubidaDatos::verPeriodos');
+//ver carreras
+$routes->get('/verCarreras', 'ControladorSubidaDatos::verCarreras');
+//ver escuelas
+$routes->get('/verEscuelas', 'ControladorSubidaDatos::verEscuelas');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

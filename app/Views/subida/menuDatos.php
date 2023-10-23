@@ -40,8 +40,8 @@
                 </div>
             </div>
         </div>
-    
-    
+
+
         <!-- Menu de creacion -->
         <div class="container">
             <div class="row justify-content-center">
@@ -53,10 +53,13 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <a href="<?php echo base_url('index.php//subidaDatos/irCrearPeriodo') ?>" class="btn btn-light text-secondary">
+                            <a href="<?php echo base_url('index.php/subidaDatos/irCrearPeriodo') ?>" class="btn btn-light text-secondary">
                                 <b>
                                     <i class="fa-solid fa-circle-plus"></i> Periodo
                                 </b>
+                            </a>
+                            <a href="<?php echo base_url('index.php/verPeriodos') ?>" class="btn btn-light text-secondary">
+                                <i class="fa-solid fa-eye"></i>
                             </a>
                         </div>
                     </div>
@@ -74,6 +77,9 @@
                                     <i class="fa-solid fa-circle-plus"></i> Carrera
                                 </b>
                             </a>
+                            <a href="<?php echo base_url('index.php/verCarreras') ?>" class="btn btn-light text-secondary">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -89,6 +95,9 @@
                                 <b>
                                     <i class="fa-solid fa-circle-plus"></i> Escuela
                                 </b>
+                            </a>
+                            <a href="<?php echo base_url('index.php/verEscuelas') ?>" class="btn btn-light text-secondary">
+                                <i class="fa-solid fa-eye"></i>
                             </a>
                         </div>
                     </div>

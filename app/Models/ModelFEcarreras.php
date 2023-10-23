@@ -31,6 +31,20 @@ class ModelFEcarreras extends Model
         $carreras = $this->findAll();
         return $carreras;
     }
+
+    //ver carreras
+    public function verCarreras()
+    {
+        $carreras = $this->where('CAR_CARRERA', 1)->findAll();
+        return $carreras;
+    }
+
+    //ver escuelas
+    public function verEscuelas()
+    {
+        $escuelas = $this->where('CAR_CARRERA', 0)->findAll();
+        return $escuelas;
+    }
     /* //////////////////////GRADOS///////////////////////////// */
     /* Contar total carreras modalidad grado*/
     public function contarCarrerasGrado()
