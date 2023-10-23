@@ -575,9 +575,6 @@ class ControladorSubidaDatos extends BaseController
                     $ESTM_CARRERA = $id_carrerap['CAR_ID'];
                     
 
-
-
-
                     // Añadir los datos procesados al array $datosprocesados
                     $datosprocesados[$i] = [
                         'ESTM_ID' => $ESTM_ID,
@@ -588,12 +585,12 @@ class ControladorSubidaDatos extends BaseController
                         'ESTM_CARRERA' => $ESTM_CARRERA,
 
                     ];
-                    echo $datosprocesados[$i]['ESTM_ID']
-                        . $datosprocesados[$i]['ESTM_TIPO']
-                        . $datosprocesados[$i]['ESTM_CONDICION']
-                        . $datosprocesados[$i]['ESTM_TIPO_GRADO']
-                        . $datosprocesados[$i]['ESTM_PERIODO']
-                        . $datosprocesados[$i]['ESTM_CARRERA']
+                    echo $datosprocesados[$i]['ESTM_ID'] ."/ "
+                        . $datosprocesados[$i]['ESTM_TIPO']  ."/ "
+                        . $datosprocesados[$i]['ESTM_CONDICION'] ."/ "
+                        . $datosprocesados[$i]['ESTM_TIPO_GRADO'] ."/ "
+                        . $datosprocesados[$i]['ESTM_PERIODO'] ."/ "
+                        . $datosprocesados[$i]['ESTM_CARRERA'] ."/ "
                         . "<br>";
                 }
             } else {
