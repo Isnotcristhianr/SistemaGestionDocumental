@@ -1,0 +1,6 @@
+CRITICAL - 2023-10-26 16:47:19 --> Cannot access offset of type string on string
+in APPPATH\Controllers\ControladorSubidaDatos.php on line 505.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ControladorSubidaDatos->subirConjuntoDatosCsv()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControladorSubidaDatos))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

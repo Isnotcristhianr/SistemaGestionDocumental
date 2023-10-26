@@ -563,8 +563,10 @@ class ControladorSubidaDatos extends BaseController
                         'ESTM_ESTADO' => $ESTM_ESTADO
                     ];
 
+
+
                     //subir a la bd
-                    $objEstadMatr->insertar($datosprocesados[$i]);
+                    //  $objEstadMatr->insertar($datosprocesados[$i]);
                 }
 
                 //redireccionar
@@ -573,7 +575,9 @@ class ControladorSubidaDatos extends BaseController
                 echo "No se pudo abrir el archivo CSV.";
             }
         } catch (\Exception $e) {
+            //mostrar error en que linea del csv esta el error
             die($e->getMessage());
+            
         }
     }
 
