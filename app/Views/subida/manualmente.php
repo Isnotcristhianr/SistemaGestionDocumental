@@ -142,7 +142,7 @@ ini_set('memory_limit', '2048M'); // Establece el límite de memoria a 1 GB
 
                                 <!-- total -->
                                 <input type="number" id="total" name="totalgen" hidden>
-                            </div>
+                            </div>  
 
                             <button type="submit" class="btn btn-success m-3">Ingresar Datos</button>
                         </form>

@@ -128,69 +128,6 @@ class ControladorSubidaDatos extends BaseController
             $id_periodop = $objPeriodo->obtenerId($id_periodo);
             $id_carrerap = $objCarrera->obtenerId($id_carrera);
 
-            //muestra
-            {
-                echo "carrera tipo: " . $id_carrera_tipo;
-                echo "<br>";
-                echo "carrera tipo id: " . $id_carrera_tipop['CTIP_ID'];
-                echo "<br>";
-                echo "condicion: " . $id_condicion;
-                echo "<br>";
-                echo "condicion id: " . $id_condicionp['EST_ID'];
-                echo "<br>";
-                echo "tipo grado: " . $id_tipo_grado;
-                echo "<br>";
-                echo "tipo grado id: " . $id_tipo_gradop['MODT_ID'];
-                echo "<br>";
-                echo "periodo: " . $id_periodo;
-                echo "<br>";
-                echo "periodo id: " . $id_periodop['PER_ID'];
-                echo "<br>";
-                echo "carrera: " . $id_carrera;
-                echo "<br>";
-                echo "carrera id: " . $id_carrerap['CAR_ID'];
-                echo "<br>";
-                echo "sede:" . $sede;
-                echo "<br>";
-                echo "cantmasgen: " . $cantmasgen;
-                echo "<br>";
-                echo "cantfemgen: " . $cantfemgen;
-                echo "<br>";
-                echo "totalgen: " . $totalgen;
-                echo "<br>";
-                echo "<br>";
-                echo "indexetnia: " . $indexetnia;
-                echo "<br>";
-                //etnias
-                for ($i = 0; $i < $indexetnia; $i++) {
-                    //obtener los datos y almacenar en un array
-                    echo "etnia: " . $etnia[$i];
-                    echo "<br>";
-                    echo "cantmasetnia: " . $cantmasetnia[$i];
-                    echo "<br>";
-                    echo "cantfemetnia: " . $cantfemetnia[$i];
-                    echo "<br>";
-                }
-                echo "<br>";
-                echo "indexnacionalidad: " . $indexnacionalidad;
-                echo "<br>";
-                //nacionalidades
-                for ($i = 0; $i < $indexnacionalidad; $i++) {
-                    //obtener los datos y almacenar en un array
-                    echo "nacionalidad: " . $nacionalidad[$i];
-                    echo "<br>";
-                    echo "cantmasnacionalidad: " . $cantmasnacionalidad[$i];
-                    echo "<br>";
-                    echo "cantfemnacionalidad: " . $cantfemnacionalidad[$i];
-                    echo "<br>";
-                }
-                echo "<br>";
-                echo "discgenmas: " . $discgenmas;
-                echo "<br>";
-                echo "discgenfem: " . $discgenfem;
-                echo "<br>";
-            }
-
             //preprocesamiento de datos para enviar a la base de datos
             $ESTM_TIPO = $id_carrera_tipop['CTIP_ID'];
             $ESTM_CONDICION = $id_condicionp['EST_ID'];
@@ -625,57 +562,6 @@ class ControladorSubidaDatos extends BaseController
                         'ESTM_SEDE' => $csvData[$i][43],
                         'ESTM_ESTADO' => $ESTM_ESTADO
                     ];
-
-                    //MOSTRAR
-                    {
-                        echo $datosprocesados[$i]['ESTM_ID'] . "/ "
-                            . $datosprocesados[$i]['ESTM_TIPO']  . "/ "
-                            . $datosprocesados[$i]['ESTM_CONDICION'] . "/ "
-                            . $datosprocesados[$i]['ESTM_TIPO_GRADO'] . "/ "
-                            . $datosprocesados[$i]['ESTM_PERIODO'] . "/ "
-                            . $datosprocesados[$i]['ESTM_CARRERA'] . "/ "
-                            . $datosprocesados[$i]['ESTM_GENERO_H'] . "/ "
-                            . $datosprocesados[$i]['ESTM_GENERO_M'] . "/ "
-                            . $datosprocesados[$i]['ESTM_ETNIA_MESTIZO_H'] . "/ "
-                            . $datosprocesados[$i]['ESTM_ETNIA_MESTIZO_M'] . "/ "
-                            . $datosprocesados[$i]['ESTM_ETNIA_INDIGENA_H'] . "/ "
-                            . $datosprocesados[$i]['ESTM_ETNIA_INDIGENA_M'] . "/ "
-                            . $datosprocesados[$i]['ESTM_ETNIA_AFRO_H'] . "/ "
-                            . $datosprocesados[$i]['ESTM_ETNIA_AFRO_M'] . "/ "
-                            . $datosprocesados[$i]['ESTM_ETNIA_MONTUBIO_H'] . "/ "
-                            . $datosprocesados[$i]['ESTM_ETNIA_MONTUBIO_M'] . "/ "
-                            . $datosprocesados[$i]['ESTM_ETNIA_MULATO_H'] . "/ "
-                            . $datosprocesados[$i]['ESTM_ETNIA_MULATO_M'] . "/ "
-                            . $datosprocesados[$i]['ESTM_ETNIA_NEGRO_H'] . "/ "
-                            . $datosprocesados[$i]['ESTM_ETNIA_NEGRO_M'] . "/ "
-                            . $datosprocesados[$i]['ESTM_ETNIA_BLANCO_H'] . "/ "
-                            . $datosprocesados[$i]['ESTM_ETNIA_BLANCO_M'] . "/ "
-                            . $datosprocesados[$i]['ESTM_NACIONALIDAD_EC_H'] . "/ "
-                            . $datosprocesados[$i]['ESTM_NACIONALIDAD_EC_M'] . "/ "
-                            . $datosprocesados[$i]['ESTM_NACIONALIDAD_COL_H'] . "/ "
-                            . $datosprocesados[$i]['ESTM_NACIONALIDAD_COL_M'] . "/ "
-                            . $datosprocesados[$i]['ESTM_NACIONALIDAD_ESP_H'] . "/ "
-                            . $datosprocesados[$i]['ESTM_NACIONALIDAD_ESP_M'] . "/ "
-                            . $datosprocesados[$i]['ESTM_NACIONALIDAD_FRA_H'] . "/ "
-                            . $datosprocesados[$i]['ESTM_NACIONALIDAD_FRA_M'] . "/ "
-                            . $datosprocesados[$i]['ESTM_NACIONALIDAD_USA_H'] . "/ "
-                            . $datosprocesados[$i]['ESTM_NACIONALIDAD_USA_M'] . "/ "
-                            . $datosprocesados[$i]['ESTM_NACIONALIDAD_PER_H'] . "/ "
-                            . $datosprocesados[$i]['ESTM_NACIONALIDAD_PER_M'] . "/ "
-                            . $datosprocesados[$i]['ESTM_NACIONALIDAD_RUM_H'] . "/ "
-                            . $datosprocesados[$i]['ESTM_NACIONALIDAD_RUM_M'] . "/ "
-                            . $datosprocesados[$i]['ESTM_NACIONALIDAD_CUB_H'] . "/ "
-                            . $datosprocesados[$i]['ESTM_NACIONALIDAD_CUB_M'] . "/ "
-                            . $datosprocesados[$i]['ESTM_NACIONALIDAD_URC_H'] . "/ "
-                            . $datosprocesados[$i]['ESTM_NACIONALIDAD_URC_M'] . "/ "
-                            . $datosprocesados[$i]['ESTM_NACIONALIDAD_VEN_H'] . "/ "
-                            . $datosprocesados[$i]['ESTM_NACIONALIDAD_VEN_M'] . "/ "
-                            . $datosprocesados[$i]['ESTM_DISCAPACIDAD_H'] . "/ "
-                            . $datosprocesados[$i]['ESTM_DISCAPACIDAD_M'] . "/ "
-                            . $datosprocesados[$i]['ESTM_TOTAL'] . "/ "
-                            . $datosprocesados[$i]['ESTM_SEDE'] . "/ "
-                            . $datosprocesados[$i]['ESTM_ESTADO'] . "<br>";
-                    }
 
                     //subir a la bd
                     $objEstadMatr->insertar($datosprocesados[$i]);
