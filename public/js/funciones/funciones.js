@@ -56,25 +56,28 @@ opcionesBusqueda.forEach((opcion) => {
                                   </div>`;
     } else if (opcion.value == "fechah") {
       respBusqueda.innerHTML =
-        ` <div class="row p-2" >
-                                    <form action="/SistemaGestionDocumental/index.php/busquedaHistoricoEspecifico" method="GET">
-                                      <div class="col">
-                                          <label for="fechaDesde" class="fw-bold">Desde</label>
-                                          <input type="date" class="form-control" name="fechaDesde" id="fechaDesde" min="1976-01-01" max="` +
-        fechaActual +
-        `" required>
-                                      </div>
-                                      <div class="col">
-                                          <label for="fechaHasta" class="fw-bold">Hasta</label>
-                                          <input type="date" class="form-control" name="fechaHasta" id="fechaHasta" min="1976-01-01" max="` +
-        fechaActual +
-        `" required>
-                                      </div>
-                                      <div class="col text-center m-3 p-1">
-                                          <button type="submit" class="btn btn-primary m-1" name="consultar">Consultar</button>
-                                      </div>
-                                    </form> 
-                                  </div>`;
+        `<div class="d-flex flex-column align-items-center justify-content-center"">
+        <div class="row">
+            <form action="/SistemaGestionDocumental/index.php/busquedaHistoricoEspecifico" method="GET">
+                <div class="col">
+                    <label for="fechaDesde" class="fw-bold">Desde: </label>
+                    <input type="date" class="form-control" name="fechaDesde" id="fechaDesde" min="1976-01-01" max="` +
+                    fechaActual +
+                    `" required>
+                </div>
+                <div class="col">
+                    <label for="fechaHasta" class="fw-bold">Hasta: </label>
+                    <input type="date" class="form-control" name="fechaHasta" id="fechaHasta" min="1976-01-01" max="` +
+                    fechaActual +
+                    `" required>
+                </div>
+                <div class="col text-center m-3 p-1">
+                    <button type="submit" class="btn btn-primary m-1" name="consultar">Consultar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    `;
     } else if (opcion.value == "nofechah") {
       respBusqueda.innerHTML = ` <div class="row p-2" >
                                     <form action="/SistemaGestionDocumental/index.php/busquedaHistorico" method="GET">

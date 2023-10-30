@@ -13,9 +13,11 @@
     <!-- Filtrado Busqueda -->
     <div class="col-12 text-center m-3 p-4">
         <!-- Check box -->
-        <div id="fitradoBusqueda">
-            <input class="form-check-input m-1" type="radio" name="busqueda" value="fechah"> <label for="text-dark"><b>Fecha </b></label>
-            <input class="form-check-input m-1" type="radio" name="busqueda" value="nofechah"> <label for="text-dark"><b>General</b></label>
+        <div id="fitradoBusqueda" class="rounded">
+            <label for="" class="text text-secondary">Seleccione: </label>
+            <br>
+            <input class="form-check-input m-1 bg-secondary" type="radio" name="busqueda" value="fechah"> <label for="text-dark"><b>Fecha </b></label>
+            <input class="form-check-input m-1 bg-secondary" type="radio" name="busqueda" value="nofechah"> <label for="text-dark"><b>General</b></label>
         </div>
     </div>
     <div id="resBusqueda"></div>
