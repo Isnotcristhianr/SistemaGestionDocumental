@@ -389,9 +389,9 @@ class ControladorSubidaDatos extends BaseController
                 for ($i = 0; $i < $filas; $i++) {
                     for ($j = 0; $j < $columnas; $j++) {
                         $datos[$i][$j] = $csvData[$i][$j];
-                        echo $datos[$i][$j] . " ";
+                        //    echo $datos[$i][$j] . " ";
                     }
-                    echo "<br>";
+                    //  echo "<br>";
                 }
 
                 //encerado de variables
@@ -448,11 +448,10 @@ class ControladorSubidaDatos extends BaseController
 
                 //procesamiendo de datos por filas
                 $datosprocesados = [];
-                echo "<br>";
 
                 for ($i = 0; $i < $filas; $i++) {
 
-                   // $datosprocesados[$i] = [];
+                    $datosprocesados[$i] = [];
 
                     //col 0 tipo
                     $tipoEstudio = $csvData[$i][0];
@@ -520,8 +519,6 @@ class ControladorSubidaDatos extends BaseController
                     $id_carrerap = $objCarrera->obtenerId($carrera);
                     $ESTM_CARRERA = $id_carrerap['CAR_ID'];
 
-
-                    // Añadir los datos procesados al array $datosprocesados
                     $datosprocesados[$i] = [
                         'ESTM_ID' => $ESTM_ID,
                         'ESTM_TIPO' => $ESTM_TIPO,
@@ -529,50 +526,50 @@ class ControladorSubidaDatos extends BaseController
                         'ESTM_TIPO_GRADO' => $ESTM_TIPO_GRADO,
                         'ESTM_PERIODO' => $ESTM_PERIODO,
                         'ESTM_CARRERA' => $ESTM_CARRERA,
-                        'ESTM_GENERO_H' => $csvData[$i][3],
-                        'ESTM_GENERO_M' => $csvData[$i][4],
-                        'ESTM_ETNIA_MESTIZO_H' => $csvData[$i][5],
-                        'ESTM_ETNIA_MESTIZO_M' => $csvData[$i][6],
-                        'ESTM_ETNIA_INDIGENA_H' => $csvData[$i][7],
-                        'ESTM_ETNIA_INDIGENA_M' => $csvData[$i][8],
-                        'ESTM_ETNIA_AFRO_H' => $csvData[$i][9],
-                        'ESTM_ETNIA_AFRO_M' => $csvData[$i][10],
-                        'ESTM_ETNIA_MONTUBIO_H' => $csvData[$i][11],
-                        'ESTM_ETNIA_MONTUBIO_M' => $csvData[$i][12],
-                        'ESTM_ETNIA_MULATO_H' => $csvData[$i][13],
-                        'ESTM_ETNIA_MULATO_M' => $csvData[$i][14],
-                        'ESTM_ETNIA_NEGRO_H' => $csvData[$i][15],
-                        'ESTM_ETNIA_NEGRO_M' => $csvData[$i][16],
-                        'ESTM_ETNIA_BLANCO_H' => $csvData[$i][17],
-                        'ESTM_ETNIA_BLANCO_M' => $csvData[$i][18],
-                        'ESTM_NACIONALIDAD_EC_H' => $csvData[$i][19],
-                        'ESTM_NACIONALIDAD_EC_M' => $csvData[$i][20],
-                        'ESTM_NACIONALIDAD_COL_H' => $csvData[$i][21],
-                        'ESTM_NACIONALIDAD_COL_M' => $csvData[$i][22],
-                        'ESTM_NACIONALIDAD_ESP_H' => $csvData[$i][23],
-                        'ESTM_NACIONALIDAD_ESP_M' => $csvData[$i][24],
-                        'ESTM_NACIONALIDAD_FRA_H' => $csvData[$i][25],
-                        'ESTM_NACIONALIDAD_FRA_M' => $csvData[$i][26],
-                        'ESTM_NACIONALIDAD_USA_H' => $csvData[$i][27],
-                        'ESTM_NACIONALIDAD_USA_M' => $csvData[$i][28],
-                        'ESTM_NACIONALIDAD_PER_H' => $csvData[$i][29],
-                        'ESTM_NACIONALIDAD_PER_M' => $csvData[$i][30],
-                        'ESTM_NACIONALIDAD_RUM_H' => $csvData[$i][31],
-                        'ESTM_NACIONALIDAD_RUM_M' => $csvData[$i][32],
-                        'ESTM_NACIONALIDAD_CUB_H' => $csvData[$i][33],
-                        'ESTM_NACIONALIDAD_CUB_M' => $csvData[$i][34],
-                        'ESTM_NACIONALIDAD_URC_H' => $csvData[$i][35],
-                        'ESTM_NACIONALIDAD_URC_M' => $csvData[$i][36],
-                        'ESTM_NACIONALIDAD_VEN_H' => $csvData[$i][37],
-                        'ESTM_NACIONALIDAD_VEN_M' => $csvData[$i][38],
-                        'ESTM_NACIONALIDAD_VEN_M' => $csvData[$i][39],
-                        'ESTM_DISCAPACIDAD_H' => $csvData[$i][40],
-                        'ESTM_DISCAPACIDAD_M' => $csvData[$i][41],
-                        'ESTM_TOTAL' => $csvData[$i][42],
-                        'ESTM_SEDE' => $csvData[$i][43],
+                        'ESTM_GENERO_H' => $csvData[$i][5],
+                        'ESTM_GENERO_M' => $csvData[$i][6],
+                        'ESTM_ETNIA_MESTIZO_H' => $csvData[$i][7],
+                        'ESTM_ETNIA_MESTIZO_M' => $csvData[$i][8],
+                        'ESTM_ETNIA_INDIGENA_H' => $csvData[$i][9],
+                        'ESTM_ETNIA_INDIGENA_M' => $csvData[$i][10],
+                        'ESTM_ETNIA_AFRO_H' => $csvData[$i][11],
+                        'ESTM_ETNIA_AFRO_M' => $csvData[$i][12],
+                        'ESTM_ETNIA_MONTUBIO_H' => $csvData[$i][13],
+                        'ESTM_ETNIA_MONTUBIO_M' => $csvData[$i][14],
+                        'ESTM_ETNIA_MULATO_H' => $csvData[$i][15],
+                        'ESTM_ETNIA_MULATO_M' => $csvData[$i][16],
+                        'ESTM_ETNIA_NEGRO_H' => $csvData[$i][17],
+                        'ESTM_ETNIA_NEGRO_M' => $csvData[$i][18],
+                        'ESTM_ETNIA_BLANCO_H' => $csvData[$i][19],
+                        'ESTM_ETNIA_BLANCO_M' => $csvData[$i][20],
+                        'ESTM_NACIONALIDAD_EC_H' => $csvData[$i][21],
+                        'ESTM_NACIONALIDAD_EC_M' => $csvData[$i][22],
+                        'ESTM_NACIONALIDAD_COL_H' => $csvData[$i][23],
+                        'ESTM_NACIONALIDAD_COL_M' => $csvData[$i][24],
+                        'ESTM_NACIONALIDAD_ESP_H' => $csvData[$i][25],
+                        'ESTM_NACIONALIDAD_ESP_M' => $csvData[$i][26],
+                        'ESTM_NACIONALIDAD_FRA_H' => $csvData[$i][27],
+                        'ESTM_NACIONALIDAD_FRA_M' => $csvData[$i][28],
+                        'ESTM_NACIONALIDAD_USA_H' => $csvData[$i][29],
+                        'ESTM_NACIONALIDAD_USA_M' => $csvData[$i][30],
+                        'ESTM_NACIONALIDAD_PER_H' => $csvData[$i][31],
+                        'ESTM_NACIONALIDAD_PER_M' => $csvData[$i][32],
+                        'ESTM_NACIONALIDAD_RUM_H' => $csvData[$i][33],
+                        'ESTM_NACIONALIDAD_RUM_M' => $csvData[$i][34],
+                        'ESTM_NACIONALIDAD_CUB_H' => $csvData[$i][35],
+                        'ESTM_NACIONALIDAD_CUB_M' => $csvData[$i][36],
+                        'ESTM_NACIONALIDAD_URC_H' => $csvData[$i][37],
+                        'ESTM_NACIONALIDAD_URC_M' => $csvData[$i][38],
+                        'ESTM_NACIONALIDAD_VEN_H' => $csvData[$i][39],
+                        'ESTM_NACIONALIDAD_VEN_M' => $csvData[$i][40],
+                        'ESTM_DISCAPACIDAD_H' => $csvData[$i][41],
+                        'ESTM_DISCAPACIDAD_M' => $csvData[$i][42],
+                        'ESTM_TOTAL' => $csvData[$i][43],
+                        'ESTM_SEDE' => $csvData[$i][44],
                         'ESTM_ESTADO' => $ESTM_ESTADO
                     ];
 
+                    echo "<br>";
                     //subir a la bd
                     $objEstadMatr->insertar($datosprocesados[$i]);
                 }
