@@ -349,13 +349,19 @@ class ControladorSubidaDatos extends BaseController
 
             //procesammiento del csv
             $archivo = $this->request->getFile('archivo');
-            $file = fopen($archivo, 'r');
+
+            $file = fopen($archivo, 'r', 'UTF-8');
             if ($file) {
                 // Inicializar el array para almacenar los datos
                 $csvData = [];
 
                 // Leer el archivo línea por línea y procesar los datos
                 while (($line = fgetcsv($file, 0, ';')) !== false) {
+
+                    //forzar codificacion utf8
+                    $line = array_map('utf8_encode', $line);
+
+
                     // Reemplazar los valores entre ;; con 0 en la primera columna
                     $line[0] = str_replace(';;', ';0;', $line[0]);
 
@@ -383,9 +389,9 @@ class ControladorSubidaDatos extends BaseController
                 for ($i = 0; $i < $filas; $i++) {
                     for ($j = 0; $j < $columnas; $j++) {
                         $datos[$i][$j] = $csvData[$i][$j];
-                        // echo $datos[$i][$j] . " ";
+                        echo $datos[$i][$j] . " ";
                     }
-                    // echo "<br>";
+                    echo "<br>";
                 }
 
                 //encerado de variables
@@ -443,7 +449,11 @@ class ControladorSubidaDatos extends BaseController
                 //procesamiendo de datos por filas
                 $datosprocesados = [];
                 echo "<br>";
+
                 for ($i = 0; $i < $filas; $i++) {
+
+                    $datosprocesados[$i] = [];
+
                     //col 0 tipo
                     $tipoEstudio = $csvData[$i][0];
                     switch ($tipoEstudio) {
@@ -453,7 +463,7 @@ class ControladorSubidaDatos extends BaseController
                         case 'Grado':
                             $ESTM_TIPO = 2;
                             break;
-                        case 'Tecnolog�a':
+                        case 'Tecnología':
                             $ESTM_TIPO = 3;
                             break;
                         default:
@@ -563,10 +573,8 @@ class ControladorSubidaDatos extends BaseController
                         'ESTM_ESTADO' => $ESTM_ESTADO
                     ];
 
-
-
                     //subir a la bd
-                    //  $objEstadMatr->insertar($datosprocesados[$i]);
+                    $objEstadMatr->insertar($datosprocesados[$i]);
                 }
 
                 //redireccionar
@@ -577,7 +585,6 @@ class ControladorSubidaDatos extends BaseController
         } catch (\Exception $e) {
             //mostrar error en que linea del csv esta el error
             die($e->getMessage());
-            
         }
     }
 
