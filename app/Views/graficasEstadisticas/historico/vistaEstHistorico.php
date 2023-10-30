@@ -5,7 +5,7 @@
     </a>
     <div class="row ">
         <div class="col-12">
-            <h2 class="text-center text-primary">Datos Estadísticos Historico PUCE-I
+            <h2 class="text-center text-primary">Datos Estadísticos Histórico PUCE-I
             </h2>
             <h4 class="text-center text-dark">Búsqueda: General </h4>
         </div>

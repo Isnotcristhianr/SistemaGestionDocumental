@@ -3,7 +3,7 @@
 <div class="container-center m-5 p-3 bg-light rounded col-xs-6 shadow-lg p-3 mb-5 bg-body rounded">
     <div class="row ">
         <div class="col-12">
-            <h2 class="text-center text-primary">Datos Estadísticos Historico PUCE-I</h2>
+            <h2 class="text-center text-primary">Datos Estadísticos Histórico PUCE-I</h2>
         </div>
         <div class="col-12">
             <h5 class="text-center text-secondary">↓ Filtrar ↓</h5>
