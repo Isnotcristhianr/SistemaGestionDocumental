@@ -22,6 +22,8 @@ PERIODO -> tbl_periodo [usar la tbl, PER_PERIODO] <br>
 CARRERA -> tbl_carrera [usar la tbl, CAR_NOMBRE] <br>
 CAMPUS -> [Ibarra(1), Tulcán(2)] <br>
 
+bdd: gestion_documental
+
 Soporte Técnico: https://isnotcristhianr.me/
 
 
