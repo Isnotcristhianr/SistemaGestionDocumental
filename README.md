@@ -13,14 +13,14 @@ Sistema de gestion docuemntal es, un sistema de información que permite la admi
 
 <img src="https://github.com/Isnotcristhianr/SistemaGestionDocumental_Pucesi/blob/main/public/imgs/readme/vista1.jpeg?raw=true">
 
-**Logica Estadistica Matriz
+# Logica Estadistica Matriz
 
-TIPO -> tbl_carrera_tipo [posgrado(1), grado(2), tecnología(3)]
-CONDICION -> tbl_estudiante [matriculados (1), egresado(2), graduado(3)]
-TIPO_GRADO -> tbl_modalidad_titulacion
-PERIODO -> tbl_periodo [usar la tbl, PER_PERIODO]
-CARRERA -> tbl_carrera [usar la tbl, CAR_NOMBRE]
-CAMPUS -> [Ibarra(1), Tulcán(2)]
+TIPO -> tbl_carrera_tipo [posgrado(1), grado(2), tecnología(3)] <br>
+CONDICION -> tbl_estudiante [matriculados (1), egresado(2), graduado(3)] <br>
+TIPO_GRADO -> tbl_modalidad_titulacion <br>
+PERIODO -> tbl_periodo [usar la tbl, PER_PERIODO] <br>
+CARRERA -> tbl_carrera [usar la tbl, CAR_NOMBRE] <br>
+CAMPUS -> [Ibarra(1), Tulcán(2)] <br>
 
 Soporte Técnico: https://isnotcristhianr.me/
 
