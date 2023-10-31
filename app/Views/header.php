@@ -117,15 +117,6 @@
 
         </div>
       </div>
-      <!-- btn modo oscuro -->
-      <div class="d-flex m-2">
-        <div class="row">
-          <div class=" text-end">
-            <button class="btn btn-outline-dark" id="btnModoOscuro">
-              <i class="fa-solid fa-moon"></i>
-            </button>
-          </div>
-        </div>
-      </div>
+  
     </div>
   </nav>
