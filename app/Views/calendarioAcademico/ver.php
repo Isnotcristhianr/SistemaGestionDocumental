@@ -94,7 +94,7 @@
                                     </a>
 
                                     <!-- Eliminar -->
-                                    <a href="<?php echo base_url('index.php/calendarioAcademico/eliminarCarpeta/' . $nombre . '/' . $archivo) ?>" class="btn btn-outline-danger btn-sm">
+                                    <a href="<?php echo base_url('index.php/calendarioAcademico/eliminarCarpeta/' . $nombre . '/' . $archivo) ?>" class="btn btn-outline-danger btn-sm" hidden>
                                         <i class="fa-solid fa-trash"></i>
                                     </a>
                                 </div>

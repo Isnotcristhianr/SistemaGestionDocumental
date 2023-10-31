@@ -102,7 +102,7 @@
                     </a>
                     <div class="text-center d-flex container card-footer">
                         <!-- Botón para editar -->
-                        <button type="button" class="btn btn-outline-warning m-1 d-flex justify-content-end" data-bs-toggle="modal" data-bs-target="#editarcalendariomodal">
+                        <button class="btn btn-outline-warning m-1 d-flex justify-content-end" data-bs-toggle="modal" data-bs-target="#editarcalendariomodal">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </button>
 
@@ -152,9 +152,9 @@
                         </a>
 
                         <!-- eliminar -->
-                        <a href="<?= base_url('index.php/calendarioAcademico/eliminar/' . $nombre . '/' . $periodo . '/' . $archivo); ?>" class="btn btn-outline-danger m-1 d-flex justify-content-end">
+                       <!--  <a href="<?= base_url('index.php/calendarioAcademico/eliminar/' . $nombre . '/' . $periodo . '/' . $archivo); ?>" class="btn btn-outline-danger m-1 d-flex justify-content-end" hidden>
                             <i class="fa-solid fa-trash"></i>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
             <?php endforeach; ?>
