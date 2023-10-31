@@ -23,7 +23,7 @@ class ControladorCalendario extends BaseController
 
             // Filtrar los archivos y directorios "." y ".."
             $archivos = array_diff($archivos, array('.', '..'));
-
+            
             echo view('header');
             echo view('calendarioAcademico/calendarioAcademico', ['archivos' => $archivos]);
             echo view('footer');
