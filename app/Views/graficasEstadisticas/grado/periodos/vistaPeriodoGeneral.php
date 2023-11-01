@@ -36,7 +36,7 @@
         </figure>
 
         <!-- btn mostrar carreras -->
-       <!--  <div class="row">
+        <!--  <div class="row">
             <div class="col-12 text-center">
                 <button type="button" class="btn btn-outline-primary" onclick="mostrarCarreras()">
                 <i class="fa-solid fa-eye"></i>
@@ -180,7 +180,7 @@
                             echo "'" . $periodo['PER_PERIODO'] . "'";
                         }
                     }
-                    ?>/* +  '<br><div id="car"> <b>Carreras: </b>' + carrerasNombres.join(', ') + ' </div>' */
+                    ?> /* +  '<br><div id="car"> <b>Carreras: </b>' + carrerasNombres.join(', ') + ' </div>' */
             },
             xAxis: {
                 crosshair: true,
