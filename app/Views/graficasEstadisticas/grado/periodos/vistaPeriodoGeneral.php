@@ -36,7 +36,7 @@
         </figure>
 
         <!-- btn mostrar carreras -->
-        <div class="row">
+       <!--  <div class="row">
             <div class="col-12 text-center">
                 <button type="button" class="btn btn-outline-primary" onclick="mostrarCarreras()">
                 <i class="fa-solid fa-eye"></i>
@@ -44,7 +44,7 @@
                 <i class="fa-solid fa-eye-slash"></i>
             </button>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <!-- Hichart -->
@@ -180,7 +180,7 @@
                             echo "'" . $periodo['PER_PERIODO'] . "'";
                         }
                     }
-                    ?> + '<br><div id="car"> <b>Carreras: </b>' + carrerasNombres.join(', ') + ' </div>'
+                    ?>/* +  '<br><div id="car"> <b>Carreras: </b>' + carrerasNombres.join(', ') + ' </div>' */
             },
             xAxis: {
                 crosshair: true,
@@ -257,7 +257,7 @@
         });
 
         //mostrar o ocultar carreras
-        var carreras = document.getElementById("car");
+        /* var carreras = document.getElementById("car");
         carreras.style.display = "none";
 
         function mostrarCarreras() {
@@ -267,7 +267,7 @@
             } else {
                 carreras.style.display = "none";
             }
-        }
+        } */
     </script>
     <br>
 </div>
