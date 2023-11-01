@@ -179,7 +179,7 @@
                             echo "'" . $periodo['PER_PERIODO'] . "'";
                         }
                     }
-                    ?> + '<br><div id="car"> <b>Carreras: </b>' + carrerasNombres.join(', ') + ' </div>'
+                    ?> /* + '<br><div id="car"> <b>Carreras: </b>' + carrerasNombres.join(', ') + ' </div>' */
             },
             xAxis: {
                 crosshair: true,
