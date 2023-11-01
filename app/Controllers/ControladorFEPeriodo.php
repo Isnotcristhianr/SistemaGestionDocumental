@@ -218,16 +218,19 @@ class ControladorFEPeriodo extends BaseController
             $modelo = new ModelMatrizGraduados();
             //modelo periodos
             $modeloPeriodo = new ModelFEPeriodo();
+            //modelo carreras
+            $modeloCarrera = new ModelFEcarreras();
 
             //ver data
             $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
             $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+            $datos3['tbl_carrera'] = $modeloCarrera->verModelo();
             //capturar id $perid
             $datos['perid'] = $perid; // Pasar el ID como parte del array $datos
 
 
             return view('header')
-                . view('/graficasEstadisticas/grado/periodos/vistaPeriodoGeneral', $datos + $datos2)
+                . view('/graficasEstadisticas/grado/periodos/vistaPeriodoGeneral', $datos + $datos2 + $datos3)
                 . view('footer');
         } catch (\Exception $e) {
             echo $e->getMessage();
@@ -315,15 +318,18 @@ class ControladorFEPeriodo extends BaseController
             $modelo = new ModelMatrizGraduados();
             //modelo periodos
             $modeloPeriodo = new ModelFEPeriodo();
+            //modelo carreras
+            $modeloCarrera = new ModelFEcarreras();
 
             //ver data
             $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
             $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+            $datos3['tbl_carrera'] = $modeloCarrera->verModelo();
             //capturar id $perid
             $datos['perid'] = $perid; // Pasar el ID como parte del array $datos
 
             return view('header')
-                . view('/graficasEstadisticas/posgrado/periodos/vistaPeriodoGeneral', $datos + $datos2)
+                . view('/graficasEstadisticas/posgrado/periodos/vistaPeriodoGeneral', $datos + $datos2 + $datos3)
                 . view('footer');
         } catch (\Exception $e) {
             echo $e->getMessage();
