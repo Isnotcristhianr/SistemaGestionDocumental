@@ -136,7 +136,7 @@
             });
         }
 
-        //obtener las carreras del periodo
+        //obtener las carreras del periodo ajustadas a la condiciones
         var carreras = [];
         for (let i = 0; i < filteredData.length; i++) {
             carreras.push(filteredData[i].ESTM_CARRERA);
@@ -146,10 +146,7 @@
         for (let i = 0; i < carreras.length; i++) {
             for (let j = 0; j < tbl_carrera.length; j++) {
                 if (carreras[i] == tbl_carrera[j].CAR_ID) {
-                    //filtrar a corde condicion y tipo
-                    if (tbl_carrera[j].CTIP_ID == '3') {
-                        carrerasNombres.push(tbl_carrera[j].CAR_NOMBRE);
-                    }
+                    carrerasNombres.push(tbl_carrera[j].CAR_NOMBRE);
                 }
             }
         }
@@ -182,7 +179,7 @@
                             echo "'" . $periodo['PER_PERIODO'] . "'";
                         }
                     }
-                    ?> +  '<br><div id="car"> <b>Carreras: </b>' + carrerasNombres.join(', ') + ' </div>'
+                    ?> + '<br><div id="car"> <b>Carreras: </b>' + carrerasNombres.join(', ') + ' </div>'
             },
             xAxis: {
                 crosshair: true,
@@ -269,7 +266,7 @@
             } else {
                 carreras.style.display = "none";
             }
-        } 
+        }
     </script>
     <br>
 </div>

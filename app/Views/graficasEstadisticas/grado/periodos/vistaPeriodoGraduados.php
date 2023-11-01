@@ -138,8 +138,8 @@
             });
         }
 
-         //obtener las carreras del periodo
-         var carreras = [];
+        //obtener las carreras del periodo ajustadas a la condiciones
+        var carreras = [];
         for (let i = 0; i < filteredData.length; i++) {
             carreras.push(filteredData[i].ESTM_CARRERA);
         }
@@ -148,10 +148,7 @@
         for (let i = 0; i < carreras.length; i++) {
             for (let j = 0; j < tbl_carrera.length; j++) {
                 if (carreras[i] == tbl_carrera[j].CAR_ID) {
-                    //filtrar a corde condicion y tipo
-                    if (tbl_carrera[j].CTIP_ID == '2') {
-                        carrerasNombres.push(tbl_carrera[j].CAR_NOMBRE);
-                    }
+                    carrerasNombres.push(tbl_carrera[j].CAR_NOMBRE);
                 }
             }
         }
