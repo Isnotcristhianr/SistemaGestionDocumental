@@ -34,6 +34,17 @@
         <figure class="highcharts-figure">
             <div id="container"></div>
         </figure>
+
+        <!-- btn mostrar carreras -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <button type="button" class="btn btn-outline-primary" onclick="mostrarCarreras()">
+                    <i class="fa-solid fa-eye"></i>
+                    Mostrar/Ocultar Carreras
+                    <i class="fa-solid fa-eye-slash"></i>
+                </button>
+            </div>
+        </div>
     </div>
 
     <!-- Hichart -->
@@ -47,6 +58,7 @@
         //TODO: obtener datos de php del controlador
         var datos = <?php echo json_encode($tbl_estadistica_matriz) ?>;
         var peri = <?php echo json_encode($tbl_periodo) ?>;
+        var tbl_carrera = <?php echo json_encode($tbl_carrera) ?>;
 
         //graficar datos acorde al periodo
         var perid = <?php echo json_encode($perid) ?>;
@@ -125,6 +137,21 @@
             });
         }
 
+        //obtener las carreras del periodo
+        var carreras = [];
+        for (let i = 0; i < filteredData.length; i++) {
+            carreras.push(filteredData[i].ESTM_CARRERA);
+        }
+        //obtener nombres de las carreras
+        var carrerasNombres = [];
+        for (let i = 0; i < carreras.length; i++) {
+            for (let j = 0; j < tbl_carrera.length; j++) {
+                if (carreras[i] == tbl_carrera[j].CAR_ID) {
+                    carrerasNombres.push(tbl_carrera[j].CAR_NOMBRE);
+                }
+            }
+        }
+
         //grafica pie chart
         Highcharts.chart('container', {
             chart: {
@@ -153,7 +180,7 @@
                             echo "'" . $periodo['PER_PERIODO'] . "'";
                         }
                     }
-                    ?>
+                    ?> + '<br><div id="car"> <b>Carreras: </b>' + carrerasNombres.join(', ') + ' </div>'
             },
             xAxis: {
                 crosshair: true,
@@ -228,6 +255,19 @@
                 },
             }
         });
+
+        //mostrar o ocultar carreras
+        var carreras = document.getElementById("car");
+        carreras.style.display = "none";
+
+        function mostrarCarreras() {
+            //doble click para ocultar
+            if (carreras.style.display === "none") {
+                carreras.style.display = "block";
+            } else {
+                carreras.style.display = "none";
+            }
+        }
     </script>
     <br>
 </div>
