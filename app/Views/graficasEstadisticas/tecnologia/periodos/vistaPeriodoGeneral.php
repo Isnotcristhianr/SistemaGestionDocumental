@@ -147,7 +147,10 @@
         for (let i = 0; i < carreras.length; i++) {
             for (let j = 0; j < tbl_carrera.length; j++) {
                 if (carreras[i] == tbl_carrera[j].CAR_ID) {
-                    carrerasNombres.push(tbl_carrera[j].CAR_NOMBRE);
+                    //filtrar a corde condicion y tipo
+                    if (tbl_carrera[j].CTIP_ID == '3') {
+                        carrerasNombres.push(tbl_carrera[j].CAR_NOMBRE);
+                    }
                 }
             }
         }
