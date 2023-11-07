@@ -241,7 +241,14 @@ $routes->get('/SelectorReportePeriodoTecnologiaGraduados/(:any)', 'ControllerSel
 $routes->get('/deHistorico', 'ControladorHistorico::dehistorico');
 $routes->get('/busquedaHistorico', 'ControladorHistorico::busquedaHistorico');
 $routes->get('/busquedaHistoricoEspecifico', 'ControladorHistorico::busquedaHistoricoEspecifico');
-
+//ver menu general
+$routes->get('/verMenuGeneral', 'ControladorHistorico::verMenuGeneral');
+//verGeneral
+$routes->get('/verMenuGeneral/verGeneral', 'ControladorHistorico::busquedaHistorico');
+//verMatriculados
+$routes->get('/verMenuGeneral/verMatriculados', 'ControladorHistorico::verMatriculados');
+//verGraduados
+$routes->get('/verMenuGeneral/verGraduados', 'ControladorHistorico::verGraduados');
 
 //? Reportes
 $routes->get('/reporteTitulacion', 'ControladorReportes::reportes');

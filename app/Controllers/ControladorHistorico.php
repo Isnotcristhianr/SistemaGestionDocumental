@@ -65,4 +65,57 @@ class ControladorHistorico extends BaseController
             die($e->getMessage());
         }
     }
+
+    //verMenuGeneral
+    public function verMenuGeneral()
+    {
+        try {
+
+            return view('header') . view('/vistaDEHistorico/vista_menuGeneral') . view('footer');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    //verMatriculados
+    public function verMatriculados()
+    {
+        try {
+
+            //modelo matriz
+            $modelo = new ModelMatrizGraduados();
+            //modelo periodos
+            $modeloPeriodo = new ModelFEPeriodo();
+            //ver data
+            $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+            $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+
+            return view('header') .
+                view('/graficasEstadisticas/historico/vista_matriculados', $datos + $datos2) .
+                view('footer');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    //verGraduados
+    public function verGraduados()
+    {
+        try {
+
+            //modelo matriz
+            $modelo = new ModelMatrizGraduados();
+            //modelo periodos
+            $modeloPeriodo = new ModelFEPeriodo();
+            //ver data
+            $datos['tbl_estadistica_matriz'] = $modelo->verModelo();
+            $datos2['tbl_periodo'] = $modeloPeriodo->verModelo();
+
+            return view('header') .
+                view('/graficasEstadisticas/historico/vista_graduados', $datos + $datos2) .
+                view('footer');
+        } catch (\Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }

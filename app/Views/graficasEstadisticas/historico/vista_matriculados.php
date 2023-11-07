@@ -7,7 +7,7 @@
         <div class="col-12">
             <h2 class="text-center text-primary">Datos Estadísticos Histórico PUCE-I
             </h2>
-            <h4 class="text-center text-dark">Búsqueda: General Matriculados - Graduados </h4>
+            <h4 class="text-center text-dark">Búsqueda: Matriculados </h4>
         </div>
         <div class="col-12">
             <h5 class="text-center text-secondary">↓ Reporte ↓</h5>
@@ -74,7 +74,7 @@
             // Recorrer los datos y el período
             for (let i = 0; i < datos.length; i++) {
                 for (let j = 0; j < peri.length; j++) {
-                    if (datos[i].ESTM_PERIODO == peri[j].PER_ID) {
+                    if (datos[i].ESTM_PERIODO == peri[j].PER_ID && datos[i].ESTM_CONDICION == 1) {
                         // Agregar PER_ANO a periodo si no está en el objeto
                         if (!periodoTotalMap.hasOwnProperty(peri[j].PER_ANO)) {
                             periodoTotalMap[peri[j].PER_ANO] = 0; // Inicializar el total para este año en 0
@@ -105,7 +105,7 @@
             // Recorrer los datos y el período
             for (let i = 0; i < datos.length; i++) {
                 for (let j = 0; j < peri.length; j++) {
-                    if (datos[i].ESTM_PERIODO == peri[j].PER_ID) {
+                    if (datos[i].ESTM_PERIODO == peri[j].PER_ID && datos[i].ESTM_CONDICION == 1) {
                         // Agregar PER_ANO a periodoH si no está en el objeto
                         if (!periodoHTotalMap.hasOwnProperty(peri[j].PER_ANO)) {
                             periodoHTotalMap[peri[j].PER_ANO] = 0; // Inicializar el total para este año en 0
@@ -136,7 +136,7 @@
             // Recorrer los datos y el período
             for (let i = 0; i < datos.length; i++) {
                 for (let j = 0; j < peri.length; j++) {
-                    if (datos[i].ESTM_PERIODO == peri[j].PER_ID) {
+                    if (datos[i].ESTM_PERIODO == peri[j].PER_ID && datos[i].ESTM_CONDICION == 1) {
                         // Agregar PER_ANO a periodoM si no está en el objeto
                         if (!periodoMTotalMap.hasOwnProperty(peri[j].PER_ANO)) {
                             periodoMTotalMap[peri[j].PER_ANO] = 0; // Inicializar el total para este año en 0
@@ -179,8 +179,8 @@
                 text: 'Total de Estudiantes Histórico PUCE-I '
             },
             subtitle: {
-                text: 'Desde 1976 Hasta 2023' +
-                '<br> <b>Graduados y Matriculados</b>'+
+                text: 'Desde 1976 Hasta 2023'+
+                '<br> <b>Mtariculados </b>'+
                 '<br> Nota: Los años asumen el periodo a los periodos que lo contienen' 
             },
             xAxis: {
