@@ -16,7 +16,7 @@ class ControladorNormativas extends BaseController
 
         try {
             //directorio donde se encuentran los archivos
-            $directorio = FCPATH . '/public/files/Reglamento General de Estudiantes';
+            $directorio = base_url() . '/public/files/Reglamento General de Estudiantes';
 
             // Obtener lista de archivos y carpetas del directorio
             $archivos_y_carpetas = scandir($directorio, 1);
@@ -98,7 +98,7 @@ class ControladorNormativas extends BaseController
     {
         try {
             // Directorio base para el reglamento general de estudiantes
-            $directorioBase = FCPATH . '/public/files/Reglamento General de Estudiantes';
+            $directorioBase = base_url() . '/public/files/Reglamento General de Estudiantes';
 
             //directorio donde esta la carpeta actual a modificar
             $directorio = $directorioBase . DIRECTORY_SEPARATOR . $carpeta;
@@ -131,7 +131,7 @@ class ControladorNormativas extends BaseController
 
         try {
             //directorio
-            $directorio = FCPATH . '/public/files/Reglamento General de Estudiantes';
+            $directorio = base_url() . '/public/files/Reglamento General de Estudiantes';
 
             // Construir la ruta completa del directorio
             $rutaDirectorio = $directorio . DIRECTORY_SEPARATOR . $carpeta;
@@ -159,7 +159,7 @@ class ControladorNormativas extends BaseController
         try {
 
             //directorio
-            $directorio = FCPATH . '/public/files/Reglamento General de Estudiantes';
+            $directorio = base_url() . '/public/files/Reglamento General de Estudiantes';
 
             // Construir la ruta completa del archivo
             $rutaArchivo = $directorio . DIRECTORY_SEPARATOR . $archivo;
@@ -195,7 +195,7 @@ class ControladorNormativas extends BaseController
     {
         try {
             // Directorio
-            $directorio = FCPATH . '/public/files/Reglamento General de Estudiantes';
+            $directorio = base_url() . '/public/files/Reglamento General de Estudiantes';
 
             // Construir la ruta completa del directorio
             $rutaDirectorio = $directorio . DIRECTORY_SEPARATOR . $carpeta;
@@ -262,7 +262,7 @@ class ControladorNormativas extends BaseController
     {
         try {
             //directorio
-            $directorio = FCPATH . '/public/files/Reglamento General de Estudiantes';
+            $directorio = base_url() . '/public/files/Reglamento General de Estudiantes';
 
             // Obtener lista de archivos y carpetas del directorio
             $archivos_y_carpetas = scandir($directorio . DIRECTORY_SEPARATOR . $carpeta, 1);
@@ -321,7 +321,7 @@ class ControladorNormativas extends BaseController
             $carpeta = $this->request->getPost('carpeta');
 
             // Ruta
-            $ruta = FCPATH . '/public/files/Reglamento General de Estudiantes' . DIRECTORY_SEPARATOR . $carpeta;
+            $ruta = base_url() . '/public/files/Reglamento General de Estudiantes' . DIRECTORY_SEPARATOR . $carpeta;
 
             /*  echo "nombre: " . $nombre . "<br>"
                 . "archivo: " . $archivo . "<br>"
@@ -356,7 +356,7 @@ class ControladorNormativas extends BaseController
     {
         try {
             //directorio
-            $directorio = FCPATH . '/public/files/Reglamento General de Estudiantes';
+            $directorio = base_url() . '/public/files/Reglamento General de Estudiantes';
 
             // Construir la ruta completa del archivo
             $rutaArchivo = $directorio . DIRECTORY_SEPARATOR . $carpeta . DIRECTORY_SEPARATOR . $archivo;
@@ -392,7 +392,7 @@ class ControladorNormativas extends BaseController
     {
         try {
             //directorio
-            $directorio = FCPATH . '/public/files/Reglamento General de Estudiantes';
+            $directorio = base_url() . '/public/files/Reglamento General de Estudiantes';
 
             // Construir la ruta completa del archivo
             $rutaArchivo = $directorio . DIRECTORY_SEPARATOR . $carpeta . DIRECTORY_SEPARATOR . $archivo;
@@ -418,7 +418,7 @@ class ControladorNormativas extends BaseController
     {
         try {
             // Directorio base para el reglamento general de estudiantes
-            $directorioBase = FCPATH . '/public/files/Reglamento General de Estudiantes';
+            $directorioBase = base_url() . '/public/files/Reglamento General de Estudiantes';
 
             //directorio donde esta el archivo actual a modificar
             $directorio = $directorioBase . DIRECTORY_SEPARATOR . $carpeta;

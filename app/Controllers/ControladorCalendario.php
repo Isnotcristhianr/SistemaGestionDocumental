@@ -18,7 +18,7 @@ class ControladorCalendario extends BaseController
             // Directorio donde se encuentran los calendarios académicos
             //$directorio = 'C:\XAMPP\htdocs\SistemaGestionDocumental\public\files\CALENDARIOS ACADÉMICOS';
 
-            $directorio = FCPATH  . '/public/files/CALENDARIOS ACADÉMICOS';
+            $directorio = base_url()  . 'public/files/CALENDARIOS ACADÉMICOS';
             // Obtener la lista de archivos en el directorio
             $archivos = scandir($directorio);
 
@@ -40,11 +40,11 @@ class ControladorCalendario extends BaseController
             $directorio = '';
 
             if ($nombre == 'POSGRADO') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/POSGRADO';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/POSGRADO';
             } elseif ($nombre == 'PREGRADO') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/PREGRADO';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/PREGRADO';
             } elseif ($nombre == 'PUCETEC') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/PUCETEC';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/PUCETEC';
             }
 
             // Obtener la lista de archivos y directorios en el directorio
@@ -74,11 +74,11 @@ class ControladorCalendario extends BaseController
         try {
 
             if ($nombre == 'POSGRADO') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/POSGRADO';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/POSGRADO';
             } elseif ($nombre == 'PREGRADO') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/PREGRADO';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/PREGRADO';
             } elseif ($nombre == 'PUCETEC') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/PUCETEC';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/PUCETEC';
             }
 
             //ver carpeta periodo
@@ -127,11 +127,11 @@ class ControladorCalendario extends BaseController
         try {
 
             if ($nombre == 'POSGRADO') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/POSGRADO';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/POSGRADO';
             } elseif ($nombre == 'PREGRADO') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/PREGRADO';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/PREGRADO';
             } elseif ($nombre == 'PUCETEC') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/PUCETEC';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/PUCETEC';
             }
 
             //ver carpeta periodo
@@ -164,11 +164,11 @@ class ControladorCalendario extends BaseController
         try {
 
             if ($nombre == 'POSGRADO') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/POSGRADO';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/POSGRADO';
             } elseif ($nombre == 'PREGRADO') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/PREGRADO';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/PREGRADO';
             } elseif ($nombre == 'PUCETEC') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/PUCETEC';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/PUCETEC';
             }
 
             // Obtener datos del formulario
@@ -199,11 +199,11 @@ class ControladorCalendario extends BaseController
         try {
 
             if ($nombre == 'POSGRADO') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/POSGRADO';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/POSGRADO';
             } elseif ($nombre == 'PREGRADO') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/PREGRADO';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/PREGRADO';
             } elseif ($nombre == 'PUCETEC') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/PUCETEC';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/PUCETEC';
             }
 
             //ver carpeta periodo
@@ -223,11 +223,11 @@ class ControladorCalendario extends BaseController
     {
         try {
             if ($nombre == 'POSGRADO') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/POSGRADO';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/POSGRADO';
             } elseif ($nombre == 'PREGRADO') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/PREGRADO';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/PREGRADO';
             } elseif ($nombre == 'PUCETEC') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/PUCETEC';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/PUCETEC';
             }
 
             // Verificar si el directorio del período existe
@@ -298,11 +298,11 @@ class ControladorCalendario extends BaseController
 
             // Ruta
             if ($tipo == 'POSGRADO') {
-                $ruta = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/POSGRADO' . '/' . $periodo;
+                $ruta = '/public/files/CALENDARIOS ACADÉMICOS/POSGRADO' . '/' . $periodo;
             } elseif ($tipo == 'PREGRADO') {
-                $ruta = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/PREGRADO' . '/' . $periodo;
+                $ruta = '/public/files/CALENDARIOS ACADÉMICOS/PREGRADO' . '/' . $periodo;
             } elseif ($tipo == 'PUCETEC') {
-                $ruta = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/PUCETEC' . '/' . $periodo;
+                $ruta = '/public/files/CALENDARIOS ACADÉMICOS/PUCETEC' . '/' . $periodo;
             }
 
             // Verificar si existe la carpeta
@@ -342,11 +342,11 @@ class ControladorCalendario extends BaseController
         try {
 
             if ($nombre == 'POSGRADO') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/POSGRADO';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/POSGRADO';
             } elseif ($nombre == 'PREGRADO') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/PREGRADO';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/PREGRADO';
             } elseif ($nombre == 'PUCETEC') {
-                $directorio = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/PUCETEC';
+                $directorio = '/public/files/CALENDARIOS ACADÉMICOS/PUCETEC';
             }
 
             //ver carpeta periodo
@@ -368,11 +368,11 @@ class ControladorCalendario extends BaseController
             // Directorio base según el nombre
             $directorioBase = '';
             if ($nombre == 'POSGRADO') {
-                $directorioBase = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/POSGRADO';
+                $directorioBase = '/public/files/CALENDARIOS ACADÉMICOS/POSGRADO';
             } elseif ($nombre == 'PREGRADO') {
-                $directorioBase = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/PREGRADO';
+                $directorioBase = '/public/files/CALENDARIOS ACADÉMICOS/PREGRADO';
             } elseif ($nombre == 'PUCETEC') {
-                $directorioBase = FCPATH . '/public/files/CALENDARIOS ACADÉMICOS/PUCETEC';
+                $directorioBase = '/public/files/CALENDARIOS ACADÉMICOS/PUCETEC';
             }
 
             // Rutas del archivo actual y del nuevo archivo (si se cambió)
