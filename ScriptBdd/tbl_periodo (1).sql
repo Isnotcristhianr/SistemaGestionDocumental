@@ -1,0 +1,179 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 13-11-2023 a las 14:21:31
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.0.28
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `gestion_documental`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tbl_periodo`
+--
+
+CREATE TABLE `tbl_periodo` (
+  `PER_ID` int(11) NOT NULL,
+  `PER_ANO` varchar(20) NOT NULL,
+  `PER_PERIODO` varchar(50) NOT NULL,
+  `PER_ULTIMO` int(11) NOT NULL DEFAULT 0,
+  `PER_ESTADO` int(11) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Volcado de datos para la tabla `tbl_periodo`
+--
+
+INSERT INTO `tbl_periodo` (`PER_ID`, `PER_ANO`, `PER_PERIODO`, `PER_ULTIMO`, `PER_ESTADO`) VALUES
+(1, '2022', 'ABRIL 2022 - AGOSTO 2022', 0, 1),
+(2, '2015', 'OCTUBRE 2015 - FEBRERO 2016', 0, 1),
+(3, '2021', 'ABRIL 2021 - AGOSTO 2021', 0, 1),
+(4, '2017', 'ABRIL 2017 - AGOSTO 2017', 0, 1),
+(5, '2018', 'ABRIL 2018 - ABRIL 2018', 0, 1),
+(6, '2019', 'ABRIL 2019 - AGOSTO 2019', 0, 1),
+(7, '2022', 'MAYO 2022 - AGOSTO 2020', 0, 1),
+(8, '2020', 'MAYO 2020 - SEPTIEMBRE 2020', 0, 1),
+(9, '2021', 'OCTUBRE 2021 - ENERO 2022', 0, 1),
+(10, '2022', 'OCTUBRE 2022 - FEBRERO 2023', 0, 1),
+(11, '2014', 'OCTUBRE 2014 - FEBRERO 2015', 0, 1),
+(12, '2019', 'OCTUBRE 2019 - FEBRERO 2020', 0, 1),
+(13, '2020', 'OCTUBRE 2020 - FEBRERO 2021', 0, 1),
+(14, '2013', 'MARZO 2013 - JULIO 2013', 0, 1),
+(15, '2016', 'OCTUBRE 2016 - FEBRERO 2017', 0, 1),
+(16, '2013', 'SEPTIEMBRE 2013 - ENERO 2014', 0, 1),
+(17, '2015', 'ABRIL 2015 - AGOSTO 2015', 0, 1),
+(18, '2014', 'ABRIL 2014 - AGOSTO 2014', 0, 1),
+(19, '2016', 'ABRIL 2016 - AGOSTO 2016', 0, 1),
+(20, '2018', 'SEPTIEMBRE 2018 - ENERO 2019', 0, 1),
+(21, '2019', 'SEPTIEMBRE 2019 - ENERO 2020', 0, 1),
+(22, '2017', 'SEPTIEMBRE 2017 - ENERO 2018', 0, 1),
+(23, '2020', 'SEPTIEMBRE 2020 - ENERO 2021', 0, 1),
+(24, '2021', 'SEPTIEMBRE 2021 - ENERO 2022', 0, 1),
+(25, '2020', 'MAYO 2020 - AGOSTO 2020', 0, 1),
+(26, '1976', 'I 1976-1977', 0, 1),
+(27, '1976', 'II 1976-1977', 0, 1),
+(28, '1977', 'I  1977-1978', 0, 1),
+(29, '1977', 'II  1977-1978', 0, 1),
+(30, '1978', 'I  1978-1979', 0, 1),
+(31, '1978', 'II  1978-1979', 0, 1),
+(32, '1979', 'II 1979-1980', 0, 1),
+(33, '1979', 'I 1979-1980', 0, 1),
+(34, '1980', 'I 1980-1981', 0, 1),
+(35, '1980', 'II 1980-1981', 0, 1),
+(36, '1981', 'I 1981-1982', 0, 1),
+(37, '1981', 'II 1981-1982', 0, 1),
+(38, '1982', 'I 1982-1983', 0, 1),
+(39, '1982', 'II 1982-1983', 0, 1),
+(40, '1983', 'II 1983-1984', 0, 1),
+(41, '1983', 'I 1983-1984', 0, 1),
+(42, '1984', 'I 1984-1985', 0, 1),
+(43, '1984', 'II 1984-1985', 0, 1),
+(44, '1985', 'I 1985-1986', 0, 1),
+(45, '1985', 'II 1985-1986', 0, 1),
+(46, '1986', 'I 1986-1987', 0, 1),
+(47, '1986', 'II 1986-1987', 0, 1),
+(48, '1987', 'II 1987-1988', 0, 1),
+(49, '1987', 'I 1987-1988', 0, 1),
+(50, '1988', 'I 1988-1989', 0, 1),
+(51, '1988', 'II 1988-1989', 0, 1),
+(52, '1989', 'I 1989-1990', 0, 1),
+(53, '1989', 'II 1989-1990', 0, 1),
+(54, '1990', 'I 1990-1991', 0, 1),
+(55, '1990', 'II 1990-1991', 0, 1),
+(56, '1991', 'II 1991-1992', 0, 1),
+(57, '1991', 'I 1991-1992', 0, 1),
+(58, '1992', 'I 1992-1993', 0, 1),
+(59, '1992', 'II 1992-1993', 0, 1),
+(60, '1993', 'II 1993-1994', 0, 1),
+(61, '1993', 'I 1993-1994', 0, 1),
+(62, '1994', 'I 1994-1995', 0, 1),
+(63, '1994', 'II 1994-1995', 0, 1),
+(64, '1995', 'II 1995-1996', 0, 1),
+(65, '1995', 'I 1995-1996', 0, 1),
+(66, '1996', 'II 1996-1997', 0, 1),
+(67, '1996', 'I 1996-1997', 0, 1),
+(68, '1997', 'II 1997-1998', 0, 1),
+(69, '1997', 'I 1997-1998', 0, 1),
+(70, '1998', 'II 1998-1999', 0, 1),
+(71, '1998', 'I 1998-1999', 0, 1),
+(72, '1999', 'I 1999-2000', 0, 1),
+(73, '1999', 'II 1999-2000', 0, 1),
+(74, '2000', 'I 2000-2001', 0, 1),
+(75, '2000', 'II 2000-2001', 0, 1),
+(76, '2001', 'II 2001-2002', 0, 1),
+(77, '2001', 'I 2001-2002', 0, 1),
+(78, '2002', 'I 2002-2003', 0, 1),
+(79, '2002', 'II 2002-2003', 0, 1),
+(80, '2003', 'I 2003-2004', 0, 1),
+(81, '2003', 'II 2003-2004', 0, 1),
+(82, '2004', 'II 2004-2005', 0, 1),
+(83, '2004', 'I 2004-2005', 0, 1),
+(84, '2005', 'I 2005-2006', 0, 1),
+(85, '2005', 'II 2005-2006', 0, 1),
+(86, '2006', 'II 2006-2007', 0, 1),
+(87, '2006', 'I 2006-2007', 0, 1),
+(88, '2007', 'I 2007-2008', 0, 1),
+(89, '2008', 'I 2008-2009', 0, 1),
+(90, '2008', 'II 2008-2009', 0, 1),
+(91, '2009', 'II 2009-2010', 0, 1),
+(92, '2009', 'I 2009-2010', 0, 1),
+(93, '2010', 'I 2010-2011', 0, 1),
+(94, '2010', 'II 2010-2011', 0, 1),
+(95, '2011', 'I 2011-2012', 0, 1),
+(96, '2023', 'MAYO 2023 - AGOSTO 2023', 1, 1),
+(97, '2016', 'ABRIL 2016 - AGOSTO 2016', 0, 1),
+(99, '2011', 'II 2011-2012', 0, 1),
+(100, '2007', 'II 2007-2008', 0, 1),
+(101, '2021', 'ABRIL-AGOSTO 2021', 0, 1),
+(102, '2020', 'ABRIL-AGOSTO2020', 0, 1),
+(103, '2020', 'ENERO-AGOSTO 2020', 0, 1),
+(104, '2019', 'OCTUBRE 2019 - FEBRERO 2020', 0, 1),
+(105, '2020', 'AGOSTO 2020 - FEBRERO 2021', 0, 1),
+(106, '2018', 'OCTUBRE 2018 - ENERO 2019', 0, 1),
+(107, '2017', 'ABRIL 2017 - AGOSTO 2019', 0, 1),
+(108, '2018', 'ABRIL 2018 - AGOSTO 2018', 0, 1),
+(109, '2013', 'PRIMER SEMESTRE SEPTIEMBRE 2013-ENERO 2014  ', 0, 1),
+(110, '2013', 'SEGUNDO SEMESTRE SEPTIEMBRE 2013-ENERO 2014  ', 0, 1),
+(111, '2012', 'II 2012-2013', 0, 1),
+(112, '2012', 'I 2012-2013', 0, 1),
+(113, '2018', 'ABRIL 2018 - AGOSTO 2018', 0, 1);
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `tbl_periodo`
+--
+ALTER TABLE `tbl_periodo`
+  ADD PRIMARY KEY (`PER_ID`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `tbl_periodo`
+--
+ALTER TABLE `tbl_periodo`
+  MODIFY `PER_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
