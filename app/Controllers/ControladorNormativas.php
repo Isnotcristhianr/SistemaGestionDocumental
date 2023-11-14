@@ -168,14 +168,15 @@ class ControladorNormativas extends BaseController
             if (is_file($rutaArchivo)) {
                 // Obtener información del archivo
                 $finfo = finfo_open(FILEINFO_MIME_TYPE);
-                $tipo_mime = finfo_file($finfo, $rutaArchivo);
-                finfo_close($finfo);
+                /*  $tipo_mime = finfo_file($finfo, $rutaArchivo);
+                finfo_close($finfo); */
 
                 // Obtener información del archivo
                 $tamanio = filesize($rutaArchivo);
 
                 // Enviar headers
-                header('Content-Type: ' . $tipo_mime);
+                //   header('Content-Type: ' . $tipo_mime);
+                header('Content-Type: application/pdf');
                 header('Content-Length: ' . $tamanio);
                 header('Content-Disposition: attachment; filename="' . $archivo . '"');
 
@@ -365,14 +366,15 @@ class ControladorNormativas extends BaseController
             if (is_file($rutaArchivo)) {
                 // Obtener información del archivo
                 $finfo = finfo_open(FILEINFO_MIME_TYPE);
-                $tipo_mime = finfo_file($finfo, $rutaArchivo);
+                /*  $tipo_mime = finfo_file($finfo, $rutaArchivo);
                 finfo_close($finfo);
-
+ */
                 // Obtener información del archivo
                 $tamanio = filesize($rutaArchivo);
 
                 // Enviar headers
-                header('Content-Type: ' . $tipo_mime);
+                //  header('Content-Type: ' . $tipo_mime);
+                header('Content-Type: application/pdf');
                 header('Content-Length: ' . $tamanio);
                 header('Content-Disposition: attachment; filename="' . $archivo . '"');
 
