@@ -26,9 +26,9 @@ class Database extends Config
      */
     public array $default = [
         'DSN'      => '',
-        'hostname' => 'localhost',
+        'hostname' => 'mysql', // Cambiado a "mysql" para coincidir con el nombre del contenedor MySQL
         'username' => 'root',
-        'password' => '',
+        'password' => 'root', // Cambiado a "root" para coincidir con la configuración del contenedor MySQL
         'database' => 'gestion_documental',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',

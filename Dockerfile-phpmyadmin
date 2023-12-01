@@ -1,0 +1,9 @@
+# Usa una imagen base con phpMyAdmin
+FROM phpmyadmin/phpmyadmin
+
+# Configura las variables de entorno para phpMyAdmin
+ENV PMA_HOST=mysql
+ENV PMA_PORT=3306
+
+# Expón el puerto 80
+EXPOSE 80

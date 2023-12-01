@@ -5,3 +5,22 @@ services:
     build: .
     ports:
       - "8080:80"
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: gestion_documental
+    ports:
+      - "3306:3306"
+
+  phpmyadmin:
+    build:
+      context: .
+      dockerfile: Dockerfile-phpmyadmin
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: mysql
