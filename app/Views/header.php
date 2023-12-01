@@ -38,7 +38,7 @@
     <div class="container-fluid">
       <a class="navbar-brand fs-4" href="<?php echo base_url('/index.php/inicio') ?>">
         <img src="<?php echo base_url('/public/imgs/logoPucesi.png') ?>" alt="" height="75" class="d-inline-block align-text-center">
-        Gestión Documental PUCE-I
+        Gestións Documental PUCE-I
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -108,7 +108,7 @@
       <div class="d-flex">
         <div class="dropdown me-2">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            Nombre Usuario
+            Usuario
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <li><a class="dropdown-item" href="#">Perfil</a></li>
