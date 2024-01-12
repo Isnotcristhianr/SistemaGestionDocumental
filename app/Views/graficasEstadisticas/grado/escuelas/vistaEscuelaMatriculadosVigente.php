@@ -157,7 +157,7 @@
                     /* Carreras nombre */
                     '<br><b>Carreras: </b>' +
                     carrerasNombre
-            },
+            },  
             xAxis: {
                 crosshair: true,
                 /* Nombre escuela */
