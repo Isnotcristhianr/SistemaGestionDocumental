@@ -189,7 +189,7 @@
                 text: 'Total Estudiantes Grado PUCE-I'
             },
             subtitle: {
-                text: 'Matriculados - Graduados <br> ' +
+                text: 'Matriculados <br> ' +
                     '<b>Escuela: </b>' +
                     /* nombre de la escuela */
                     escuela_nombre + '<br>' +
